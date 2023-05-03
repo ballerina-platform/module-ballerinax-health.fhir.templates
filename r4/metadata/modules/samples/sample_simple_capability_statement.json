@@ -1,0 +1,180 @@
+{
+    "resourceType": "CapabilityStatement",
+    "status": "active",
+    "date": "2022-03-01",
+    "kind": "instance",
+    "implementation": {
+        "url": "https://localhost:9443",
+        "description": "WSO2 Open Healthcare"
+    },
+    "fhirVersion": "4.0.1",
+    "format": [
+        "json",
+        "xml"
+    ],
+    "patchFormat": [
+        "application/json-patch+json"
+    ],
+    "rest": [
+        {
+            "mode": "server",
+            "resource": [
+                {
+                    "type": "MedicationKnowledge",
+                    "supportedProfile": [
+                        "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-FormularyDrug"
+                    ],
+                    "interaction": [
+                        {
+                            "code": "create"
+                        },
+                        {
+                            "code": "delete"
+                        },
+                        {
+                            "code": "update"
+                        },
+                        {
+                            "code": "history-type"
+                        },
+                        {
+                            "code": "search-type"
+                        },
+                        {
+                            "code": "vread"
+                        },
+                        {
+                            "code": "read"
+                        }
+                    ],
+                    "versioning": "versioned",
+                    "conditionalCreate": false,
+                    "conditionalRead": "not-supported",
+                    "conditionalUpdate": false,
+                    "conditionalDelete": "not-supported",
+                    "searchParam": [
+                        {
+                            "name": "DrugTier",
+                            "type": "string"
+                        },
+                        {
+                            "name": "DrugPlan",
+                            "type": "string"
+                        },
+                        {
+                            "name": "DrugName",
+                            "type": "string"
+                        },
+                        {
+                            "name": "lastUpdated",
+                            "type": "string"
+                        },
+                        {
+                            "name": "security",
+                            "type": "string"
+                        },
+                        {
+                            "name": "tag",
+                            "type": "string"
+                        },
+                        {
+                            "name": "source",
+                            "type": "string"
+                        },
+                        {
+                            "name": "profile",
+                            "type": "string"
+                        },
+                        {
+                            "name": "id",
+                            "type": "number"
+                        }
+                    ]
+                }
+            ],
+            "interaction": [
+                {
+                    "code": "search-system"
+                }
+            ]
+        },
+        {
+            "mode": "server",
+            "resource": [
+                {
+                    "type": "Patient",
+                    "supportedProfile": [
+                        "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-FormularyDrug"
+                    ],
+                    "interaction": [
+                        {
+                            "code": "create"
+                        },
+                        {
+                            "code": "delete"
+                        },
+                        {
+                            "code": "update"
+                        },
+                        {
+                            "code": "history-type"
+                        },
+                        {
+                            "code": "search-type"
+                        },
+                        {
+                            "code": "vread"
+                        },
+                        {
+                            "code": "read"
+                        }
+                    ],
+                    "versioning": "versioned",
+                    "conditionalCreate": false,
+                    "conditionalRead": "not-supported",
+                    "conditionalUpdate": false,
+                    "conditionalDelete": "not-supported",
+                    "searchParam": [
+                        {
+                            "name": "DrugTier",
+                            "type": "string"
+                        },
+                        {
+                            "name": "DrugPlan",
+                            "type": "string"
+                        },
+                        {
+                            "name": "DrugName",
+                            "type": "string"
+                        },
+                        {
+                            "name": "lastUpdated",
+                            "type": "string"
+                        },
+                        {
+                            "name": "security",
+                            "type": "string"
+                        },
+                        {
+                            "name": "tag",
+                            "type": "string"
+                        },
+                        {
+                            "name": "source",
+                            "type": "string"
+                        },
+                        {
+                            "name": "profile",
+                            "type": "string"
+                        }
+                    ]
+                }
+            ],
+            "interaction": [
+                {
+                    "code": "search-system"
+                }
+            ]
+        }
+    ]
+}
