@@ -1,0 +1,44 @@
+## smart-configuration
+[smart_configuration]
+authorization_endpoint = "<AUTHORIZATION_ENDPOINT>"
+token_endpoint = "<TOKEN_ENDPOINT>"
+introspection_endpoint = "<INTROSPECTION_ENDPOINT>"
+code_challenge_methods_supported = ["S256"]
+grant_types_supported = ["authorization_code"]
+revocation_endpoint = "<REVOCATION_ENDPOINT>"
+token_endpoint_auth_methods_supported = ["private_key_jwt", "client_secret_basic"]
+token_endpoint_auth_signing_alg_values_supported = ["RS384","ES384"]
+scopes_supported = [
+    "openid",
+    "fhirUser",
+    "launch",
+    "launch/patient",
+    "patient/*.cruds",
+    "user/*.cruds",
+    "offline_access",
+]
+response_types_supported = [
+    "code",
+    "id_token",
+    "token",
+    "device",
+    "id_token token"
+]
+capabilities = [
+    "launch-ehr",
+    "launch-standalone",
+    "client-public",
+    "client-confidential-symmetric",
+    "client-confidential-asymmetric",
+    "context-passthrough-banner",
+    "context-passthrough-style",
+    "context-ehr-patient",
+    "context-ehr-encounter",
+    "context-standalone-patient",
+    "context-standalone-encounter",
+    "permission-offline",
+    "permission-patient",
+    "permission-user",
+    "permission-v2",
+    "authorize-post"
+]

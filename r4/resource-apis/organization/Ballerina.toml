@@ -1,0 +1,23 @@
+[package]
+org = "ballerinax"
+name = "health.fhir.templates.r4.organization"
+version = "1.0.0"
+distribution = "2201.4.1"
+authors = ["Ballerina"]
+keywords = ["Healthcare", "FHIR", "Organization", "r4", "international"]
+template = true
+repository="https://github.com/ballerina-platform/module-ballerinax-health.fhir.templates"
+
+[build-options]
+observabilityIncluded = true
+
+[[dependency]]
+org = "ballerinax"
+name = "health.fhir.r4"
+version = "1.0.0"
+
+[[dependency]]
+org = "ballerinax"
+name = "health.base"
+version = "1.0.0"
+
