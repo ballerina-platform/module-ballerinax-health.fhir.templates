@@ -1,0 +1,24 @@
+[package]
+org = "ballerinax"
+name = "health.fhir.templates.r4.epicconnect"
+displayName = "Epic FHIR API"
+description = "Exposes Epic FHIR APIs as managed APIs"
+version = "1.0.0"
+authors = ["Ballerina"]
+keywords = ["Healthcare", "FHIR", "Epic"]
+distribution = "2201.4.1"
+template=true
+repository="https://github.com/ballerina-platform/module-ballerinax-health.fhir.templates"
+
+[build-options]
+observabilityIncluded = true
+
+[[dependency]]
+org = "ballerinax"
+name = "health.clients.fhir"
+version="1.0.0"
+
+[[dependency]]
+org = "ballerinax"
+name = "health.base"
+version="1.0.0"

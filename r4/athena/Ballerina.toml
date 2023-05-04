@@ -1,0 +1,19 @@
+[package]
+org = "ballerinax"
+name = "health.fhir.templates.r4.athenaconnect"
+displayName = "AthenaHealth FHIR API"
+description = "Exposes AthenaHealth FHIR APIs as managed APIs"
+version = "1.0.0"
+authors = ["Ballerina"]
+keywords = ["Healthcare", "FHIR", "AthenaHealth"]
+distribution = "2201.4.1"
+template=true
+repository="https://github.com/ballerina-platform/module-ballerinax-health.fhir.templates"
+
+[build-options]
+observabilityIncluded = true
+
+[[dependency]]
+org = "ballerinax"
+name = "health.clients.fhir"
+version="1.0.0"
