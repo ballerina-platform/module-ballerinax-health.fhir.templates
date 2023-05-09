@@ -16,12 +16,11 @@ This template provides a boilerplate code for rapid implementation of FHIR APIs 
 
 ### Dependency List
 
-| Module                                   | Version |
-|------------------------------------------|---------|
-| ballerinax/health.fhir.r4        | 0.1.12  |
-| ballerinax/health.fhir.r4.uscore | 0.1.0   |
-| ballerinax/health.base           | 0.1.3   |
-|
+| Module                                      | Version |
+|---------------------------------------------|---------|
+| ballerinax/health.fhir.r4                   | 1.0.0   |
+| ballerinax/health.fhir.r4.uscore501         | 1.0.0   |
+| ballerinax/health.base                      | 1.0.0   |
 
 This template includes,
 
