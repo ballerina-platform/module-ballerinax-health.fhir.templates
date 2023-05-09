@@ -21,7 +21,6 @@ This template provides a boilerplate code for rapid implementation of FHIR APIs 
 | ballerinax/health.fhir.r4                   | 1.0.0   |
 | ballerinax/health.fhir.r4.uscore501         | 1.0.0   |
 | ballerinax/health.base                      | 1.0.0   |
-|
 
 This template includes,
 
