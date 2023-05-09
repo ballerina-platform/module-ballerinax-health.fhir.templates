@@ -1,6 +1,6 @@
 This template can be used to create a project for exposing Epic as managed API.
 
-## Cenrner FHIR API Template
+## Epic FHIR API Template
 
 This template can be used to create a project for exposing Epic as managed API. The template uses the [FHIR client connector](https://central.ballerina.io/ballerinax/health.clients.fhir) to connect to the Epic endpoint. The support for authenticating to Epic has also been added to the template. It is sufficient to only create a project from this template and configure it.
 
