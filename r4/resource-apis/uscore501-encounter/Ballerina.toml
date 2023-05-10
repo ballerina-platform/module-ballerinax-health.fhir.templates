@@ -1,7 +1,7 @@
 [package]
 org = "ballerinax"
 name = "health.fhir.templates.r4.uscore501.encounter"
-version = "1.0.1"
+version = "1.0.2"
 distribution = "2201.4.1"
 authors = ["Ballerina"]
 keywords = ["Healthcare", "FHIR", "Encounter", "r4", "uscore"]
@@ -14,16 +14,14 @@ observabilityIncluded = true
 [[dependency]]
 org = "ballerinax"
 name = "health.fhir.r4"
-version = "1.0.1"
+version = "1.0.2"
 
 [[dependency]]
 org = "ballerinax"
 name = "health.base"
-version = "1.0.0"
+version = "1.0.1"
 
 [[dependency]]
 org = "ballerinax"
 name = "health.fhir.r4.uscore501"
-version = "1.0.1"
-
-
+version = "1.0.2"

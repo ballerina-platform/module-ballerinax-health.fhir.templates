@@ -65,7 +65,7 @@ service / on new http:Listener(9090) {
             log:printError("Error in source connection processing");
         }
         log:printDebug("[END]FHIR interaction : search");
-        return;
+        return {};
     }
     // Read the current state of a resource by id.
     resource function get fhir/r4/Organization/[string id](http:RequestContext ctx) returns @http:Payload {mediaType: [r4:FHIR_MIME_TYPE_JSON, r4:FHIR_MIME_TYPE_XML]} json|xml|r4:FHIRError {
@@ -83,7 +83,7 @@ service / on new http:Listener(9090) {
             log:printError("Error in source connection processing");
         }
         log:printDebug("[END]FHIR interaction : read");
-        return;
+        return {};
 
     }
     // Create a new resource with a server assigned id.

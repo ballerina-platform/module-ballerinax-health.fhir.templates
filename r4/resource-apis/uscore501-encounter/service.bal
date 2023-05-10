@@ -67,7 +67,7 @@ service / on new http:Listener(9090) {
             return process;
         }
         log:printDebug("[END]FHIR interaction : search");
-        return;
+        return {};
     }
     // Read the current state of the resource
     resource function get fhir/r4/Encounter/[string id](http:RequestContext ctx) returns @http:Payload {mediaType: ["application/fhir+json", "application/fhir+xml"]} json|xml|r4:FHIRError {
@@ -87,7 +87,7 @@ service / on new http:Listener(9090) {
         }
 
         log:printDebug("[END]FHIR interaction : read");
-        return;
+        return {};
 
     }
     // Create a new resource with a server assigned id
