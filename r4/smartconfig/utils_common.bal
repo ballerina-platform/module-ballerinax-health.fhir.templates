@@ -14,10 +14,32 @@
 // specific language governing permissions and limitations
 // under the License.
 
-# ExtensionExtension record
-# + url - ExtensionExtension url  
-# + extension - ExtensionExtension extension
-public type Extension record {
-    string url;
-    anydata[] extension?;
-};
+import ballerina/log;
+
+# Debug logger.
+# 
+# + msg - debug message 
+public isolated function LogDebug(string msg) {
+    log:printDebug(msg);
+}
+
+# Error logger.
+#
+# + err - error message
+public isolated function LogError(error err) {
+    log:printError(string `message: ${err.detail().toString()}, stacktrace: ${err.stackTrace().toString()}`);
+}
+
+# Info logger.
+# 
+# + msg - info message 
+public isolated function LogInfo(string msg) {
+    log:printInfo(msg);
+}
+
+# Warn logger.
+# 
+# + msg - warn message 
+public isolated function LogWarn(string msg) {
+    log:printWarn(msg);
+}

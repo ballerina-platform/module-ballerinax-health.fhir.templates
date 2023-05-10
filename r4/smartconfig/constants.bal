@@ -14,12 +14,11 @@
 // specific language governing permissions and limitations
 // under the License.
 
-# Generic error record
-# + message - Error message  
-# + severity - Error severity  
-# + 'type - Error type
-public type Error record {
-    string message;
-    string severity;
-    string 'type;
-};
+public const SMART_CONFIGURATION = "SmartConfiguration";
+public const OPERATION_OUTCOME = "OperationOutcome";
+
+public const VALUE_NOT_FOUND = "Value not found";
+public const INTERNAL_SERVER_ERROR = "Internal server error occured";
+public const ERROR_OCCURRED = "Error occurred";
+public const SMART_CONFIGURATION_FAILED = "Smart configuration generation failed";
+public const CONTACT_SERVER_ADMIN = "Please contact server admin if the issue persists";

@@ -14,51 +14,34 @@
 // specific language governing permissions and limitations
 // under the License.
 
-import health.fhir.templates.r4.smartconfiguration.constants;
-import health.fhir.templates.r4.smartconfiguration.handlers;
-import health.fhir.templates.r4.smartconfiguration.models;
-import ballerina/time;
 import ballerina/http;
+import ballerina/time;
+import ballerinax/health.fhir.r4;
 
-SmartConfigurationGenerator smartConfigurationGenerator = new ();
-final readonly & models:SmartConfiguration smartConfiguration = check smartConfigurationGenerator.generate().cloneReadOnly();
-
-service class ServiceErrorInterceptor {
-    *http:ResponseErrorInterceptor;
-    remote function interceptResponseError(error err) returns http:InternalServerError {
-        handlers:IssueHandler issueHandler = new ("Service");
-        issueHandler.addServiceError(createServiceError(constants:FATAL, constants:PROCESSING, err, constants:INTERNAL_SERVER_ERROR));
-        return handleServiceErrors(issueHandler);
-    }
-}
-
-# The service representing well known API
-# Bound to port defined by configs
-# Service response error interceptor
-ServiceErrorInterceptor serviceErrorInterceptor = new ();
+## The service representing well known API
+final readonly & SmartConfiguration smartConfiguration = check generateSmartConfiguration().cloneReadOnly();
 
 # The service representing well known API
 # Bound to port defined by configs
 @http:ServiceConfig {
-    interceptors: [serviceErrorInterceptor]
+    interceptors: [
+        new r4:FHIRResponseErrorInterceptor()
+    ]
 }
+
 service / on new http:Listener(9090) {
 
     # The authorization endpoints accepted by a FHIR resource server are exposed as a Well-Known Uniform Resource Identifiers (URIs) (RFC5785) JSON document.
     # Reference: https://build.fhir.org/ig/HL7/smart-app-launch/conformance.html#using-well-known
     # + return - Smart configuration
-    resource isolated function get fhir/r4/\.well\-known/smart\-configuration() returns http:Ok|http:InternalServerError {
-        handlers:IssueHandler issueHandler = new ("Service");
-        handlers:LogHandler logHandler = new ("Service");
-
+    resource isolated function get fhir/r4/\.well\-known/smart\-configuration() returns json|r4:FHIRError {
         json|error response = smartConfiguration.toJson();
 
         if response is json {
-            logHandler.Debug("Smart configuration served at " + time:utcNow()[0].toString());
-            return handleSuccessResponse(response);
+            LogDebug("Smart configuration served at " + time:utcNow()[0].toString());
+            return response;
         } else {
-            issueHandler.addServiceError(createServiceError(constants:FATAL, constants:PROCESSING, response, constants:INTERNAL_SERVER_ERROR));
-            return handleServiceErrors(issueHandler);
+            return r4:createFHIRError(response.message(), r4:FATAL, r4:TRANSIENT_EXCEPTION, response.detail().toString(), cause = response);
         }
     }
 }
