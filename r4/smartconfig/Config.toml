@@ -1,14 +1,15 @@
-## smart-configuration
-[smart_configuration]
-authorization_endpoint = "<AUTHORIZATION_ENDPOINT>"
-token_endpoint = "<TOKEN_ENDPOINT>"
-introspection_endpoint = "<INTROSPECTION_ENDPOINT>"
-code_challenge_methods_supported = ["S256"]
-grant_types_supported = ["authorization_code"]
-revocation_endpoint = "<REVOCATION_ENDPOINT>"
-token_endpoint_auth_methods_supported = ["private_key_jwt", "client_secret_basic"]
-token_endpoint_auth_signing_alg_values_supported = ["RS384","ES384"]
-scopes_supported = [
+[configs]
+discoveryEndpoint = "https://api.asgardeo.io/t/bifrost/oauth2/token/.well-known/openid-configuration"
+
+[configs.smartConfiguration]
+tokenEndpoint = "<TOKEN_ENDPOINT>"
+introspectionEndpoint = "<INTROSPECTION_ENDPOINT>"
+codeChallengeMethodsSupported = ["S256"]
+grantTypesSupported = ["authorization_code"]
+revocationEndpoint = "<REVOCATION_ENDPOINT>"
+tokenEndpointAuthMethodsSupported = ["private_key_jwt", "client_secret_basic"]
+tokenEndpointAuthSigningAlgValuesSupported = ["RS384","ES384"]
+scopesSupported = [
     "openid",
     "fhirUser",
     "launch",
@@ -17,7 +18,7 @@ scopes_supported = [
     "user/*.cruds",
     "offline_access",
 ]
-response_types_supported = [
+responseTypesSupported = [
     "code",
     "id_token",
     "token",
@@ -42,3 +43,6 @@ capabilities = [
     "permission-v2",
     "authorize-post"
 ]
+
+[ballerina.log]
+level = "DEBUG"
