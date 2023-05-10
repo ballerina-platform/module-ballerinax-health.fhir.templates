@@ -3,7 +3,7 @@ org = "ballerinax"
 name = "health.fhir.templates.r4.epicconnect"
 displayName = "Epic FHIR API"
 description = "Exposes Epic FHIR APIs as managed APIs"
-version = "1.0.0"
+version = "1.0.1"
 authors = ["Ballerina"]
 keywords = ["Healthcare", "FHIR", "Epic"]
 distribution = "2201.4.1"
@@ -16,9 +16,9 @@ observabilityIncluded = true
 [[dependency]]
 org = "ballerinax"
 name = "health.clients.fhir"
-version="1.0.0"
+version="1.0.1"
 
 [[dependency]]
 org = "ballerinax"
 name = "health.base"
-version="1.0.0"
+version="1.0.1"
