@@ -1,7 +1,7 @@
 [package]
 org = "ballerinax"
 name = "health.fhir.templates.r4.metadata"
-version = "1.0.0"
+version = "1.0.1-snapshot"
 authors = ["Ballerina"]
 keywords = ["Healthcare", "FHIR", "Metadata"]
 distribution = "2201.4.1"
