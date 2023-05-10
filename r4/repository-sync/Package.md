@@ -19,7 +19,7 @@ Once deployed to Choreo as a Scheduled Trigger Component, this template will per
 
 | Module                              | Version |
 | ----------------------------------- |---------|
-| ballerinax/health.fhir.r4           | 1.0.0   |
+| ballerinax/health.fhir.r4           | 1.0.1   |
 | ballerinax/health.base              | 1.0.0   |
 | ballerinax/health.clients.fhir      | 1.0.0   |
 
