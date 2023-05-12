@@ -1,0 +1,16 @@
+[
+  {
+    "type": "Patient",
+    "versioning": "versioned",
+    "conditionalCreate": false,
+    "conditionalRead": "not-supported",
+    "conditionalUpdate": false,
+    "conditionalDelete": "not-supported",
+    "referencePolicies": ["resolves"],
+    "searchRevIncludes": ["null"],
+    "supportedProfiles": ["http://hl7.org/fhir/StructureDefinition/Patient"],
+    "interactions": ["create", "delete", "update", "history-type", "search-type", "vread", "read"],
+    "searchParamString": ["_lastUpdated", "_security", "_tag", "_source", "_profile"],
+    "searchParamNumber": ["_id"]
+  }
+]

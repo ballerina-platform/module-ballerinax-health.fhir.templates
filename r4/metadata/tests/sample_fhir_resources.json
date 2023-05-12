@@ -1,0 +1,29 @@
+[
+    {
+      "type": "Patient",
+      "versioning": "versioned",
+      "conditionalCreate": false,
+      "conditionalRead": "not-supported",
+      "conditionalUpdate": false,
+      "conditionalDelete": "not-supported",
+      "referencePolicies": ["resolves"],
+      "searchRevIncludes": ["null"],
+      "supportedProfiles": ["http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-FormularyDrug"],
+      "interactions": ["create", "delete", "update", "history-type", "search-type", "vread", "read"],
+      "searchParamString": ["DrugTier", "DrugPlan", "DrugName", "lastUpdated", "security", "tag", "source", "profile"],
+      "searchParamNumber": ["id"]
+    },
+    {
+      "type": "Patient",
+      "versioning": "versioned",
+      "conditionalCreate": false,
+      "conditionalRead": "not-supported",
+      "conditionalUpdate": false,
+      "conditionalDelete": "not-supported",
+      "referencePolicies": ["resolves"],
+      "searchRevIncludes": ["null"],
+      "supportedProfiles": ["http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-FormularyDrug"],
+      "interactions": ["create", "delete", "update", "history-type", "search-type", "vread", "read"],
+      "searchParamString": ["DrugTier", "DrugPlan", "DrugName", "lastUpdated", "security", "tag", "source", "profile"]
+    }
+]

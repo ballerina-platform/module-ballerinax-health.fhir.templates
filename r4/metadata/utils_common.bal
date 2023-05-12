@@ -14,22 +14,32 @@
 // specific language governing permissions and limitations
 // under the License.
 
-# Rest record
-# + mode - Rest mode  
-# + documentation - Rest documentation  
-# + security - Rest security  
-# + 'resource - Rest resource  
-# + interaction - Rest interaction  
-# + searchParam - Rest searchParam  
-# + operation - Rest operation  
-# + compartment - Rest compartment
-public type Rest record {|
-    string mode;
-    anydata documentation?;
-    Security security?;
-    Resource[] 'resource?;
-    Interaction[] interaction?;
-    SearchParam searchParam?;
-    Operation operation?;
-    string compartment?;
-|};
+import ballerina/log;
+
+# Debug logger.
+# 
+# + msg - debug message 
+public isolated function LogDebug(string msg) {
+    log:printDebug(msg);
+}
+
+# Error logger.
+#
+# + err - error to be logged
+public isolated function LogError(error err) {
+    log:printError(err.message(), stacktrace = err.stackTrace().toString());
+}
+
+# Info logger.
+# 
+# + msg - info message 
+public isolated function LogInfo(string msg) {
+    log:printInfo(msg);
+}
+
+# Warn logger.
+# 
+# + msg - warn message 
+public isolated function LogWarn(string msg) {
+    log:printWarn(msg);
+}

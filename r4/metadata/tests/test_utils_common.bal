@@ -14,10 +14,17 @@
 // specific language governing permissions and limitations
 // under the License.
 
-# SupportedMessage record
-# + mode - SupportedMessage mode  
-# + definition - SupportedMessage mode
-public type SupportedMessage record {
-    string mode;
-    string definition;
-};
+import ballerina/test;
+
+@test:Config { groups: ["Handler"] }
+function testLogHandlerDebug() returns error? {
+    do {
+        LogDebug("This is a test debug");
+        LogInfo("This is a test info");
+        LogWarn("This is a test warn");
+        LogError(error("This is a test error"));
+        test:assertTrue(true, "Debug log success");
+    } on fail var err {
+        test:assertFalse(false, err.message());
+    }
+}

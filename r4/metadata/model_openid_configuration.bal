@@ -14,12 +14,19 @@
 // specific language governing permissions and limitations
 // under the License.
 
-# Generic error record
-# + message - Error message  
-# + severity - Error severity  
-# + 'type - Error type
-public type Error record {
-    string message;
-    string severity;
-    string 'type;
+# OpenID configuration.
+#
+# + token_endpoint - token endpoint  
+# + authorization_endpoint - authorization endpoint  
+# + revocation_endpoint - revocation endpoint  
+# + introspection_endpoint - introspection endpoint  
+# + registration_endpoint - registration endpoint
+# + management_endpoint - management endpoint
+public type OpenIDConfiguration record {
+    string token_endpoint?;
+    string authorization_endpoint?;
+    string revocation_endpoint?;
+    string introspection_endpoint?;
+    string registration_endpoint?;
+    string management_endpoint?;
 };
