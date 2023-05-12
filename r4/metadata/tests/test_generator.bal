@@ -14,10 +14,16 @@
 // specific language governing permissions and limitations
 // under the License.
 
-# ExtensionExtension record
-# + url - ExtensionExtension url  
-# + extension - ExtensionExtension extension
-public type Extension record {
-    string url;
-    anydata[] extension?;
-};
+import ballerina/test;
+import wso2healthcare/healthcare.fhir.r4;
+
+@test:Config {groups: ["Generator"]}
+function testGenerateCapabilityStatement() returns error? {
+    r4:CapabilityStatement|error capabilityStatement = generateCapabilityStatement();
+
+    if capabilityStatement is r4:CapabilityStatement {
+        test:assertTrue(true, "Capability generation success");
+    } else {
+        test:assertFail("Capability generation failed");
+    }
+}

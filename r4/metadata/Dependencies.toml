@@ -300,17 +300,56 @@ version = "2.2.3"
 dependencies = [
 	{org = "ballerina", name = "jballerina.java"}
 ]
+modules = [
+	{org = "ballerina", packageName = "url", moduleName = "url"}
+]
 
 [[package]]
-org = "ballerinai"
-name = "observe"
-version = "0.0.0"
+org = "ballerina"
+name = "uuid"
+version = "1.5.0"
 dependencies = [
+	{org = "ballerina", name = "crypto"},
 	{org = "ballerina", name = "jballerina.java"},
-	{org = "ballerina", name = "observe"}
+	{org = "ballerina", name = "lang.int"},
+	{org = "ballerina", name = "regex"},
+	{org = "ballerina", name = "time"}
+]
+
+[[package]]
+org = "ballerinax"
+name = "health.base"
+version = "1.0.2"
+dependencies = [
+	{org = "ballerina", name = "http"},
+	{org = "ballerina", name = "io"},
+	{org = "ballerina", name = "jwt"},
+	{org = "ballerina", name = "log"},
+	{org = "ballerina", name = "mime"},
+	{org = "ballerina", name = "time"},
+	{org = "ballerina", name = "uuid"}
+]
+
+[[package]]
+org = "ballerinax"
+name = "health.fhir.r4"
+version = "1.0.3"
+dependencies = [
+	{org = "ballerina", name = "constraint"},
+	{org = "ballerina", name = "http"},
+	{org = "ballerina", name = "jwt"},
+	{org = "ballerina", name = "lang.value"},
+	{org = "ballerina", name = "log"},
+	{org = "ballerina", name = "regex"},
+	{org = "ballerina", name = "time"},
+	{org = "ballerina", name = "uuid"},
+	{org = "ballerinax", name = "health.base"}
 ]
 modules = [
-	{org = "ballerinai", packageName = "observe", moduleName = "observe"}
+	{org = "ballerinax", packageName = "health.fhir.r4", moduleName = "health.fhir.r4"},
+	{org = "ballerinax", packageName = "health.fhir.r4", moduleName = "health.fhir.r4.parser"},
+	{org = "ballerinax", packageName = "health.fhir.r4", moduleName = "health.fhir.r4.terminology"},
+	{org = "ballerinax", packageName = "health.fhir.r4", moduleName = "health.fhir.r4.validator"}
 ]
 
 [[package]]
@@ -323,14 +362,47 @@ dependencies = [
 	{org = "ballerina", name = "log"},
 	{org = "ballerina", name = "test"},
 	{org = "ballerina", name = "time"},
-	{org = "ballerinai", name = "observe"}
+	{org = "ballerina", name = "url"},
+	{org = "ballerinax", name = "health.fhir.r4"},
+	{org = "wso2healthcare", name = "healthcare.fhir.r4"}
 ]
 modules = [
-	{org = "ballerinax", packageName = "health.fhir.templates.r4.metadata", moduleName = "health.fhir.templates.r4.metadata"},
-	{org = "ballerinax", packageName = "health.fhir.templates.r4.metadata", moduleName = "health.fhir.templates.r4.metadata.config"},
-	{org = "ballerinax", packageName = "health.fhir.templates.r4.metadata", moduleName = "health.fhir.templates.r4.metadata.constants"},
-	{org = "ballerinax", packageName = "health.fhir.templates.r4.metadata", moduleName = "health.fhir.templates.r4.metadata.handlers"},
-	{org = "ballerinax", packageName = "health.fhir.templates.r4.metadata", moduleName = "health.fhir.templates.r4.metadata.models"},
-	{org = "ballerinax", packageName = "health.fhir.templates.r4.metadata", moduleName = "health.fhir.templates.r4.metadata.samples"}
+	{org = "ballerinax", packageName = "health.fhir.templates.r4.metadata", moduleName = "health.fhir.templates.r4.metadata"}
+]
+
+[[package]]
+org = "wso2healthcare"
+name = "healthcare.base"
+version = "0.1.3"
+dependencies = [
+	{org = "ballerina", name = "http"},
+	{org = "ballerina", name = "io"},
+	{org = "ballerina", name = "jwt"},
+	{org = "ballerina", name = "log"},
+	{org = "ballerina", name = "mime"},
+	{org = "ballerina", name = "time"},
+	{org = "ballerina", name = "uuid"}
+]
+
+[[package]]
+org = "wso2healthcare"
+name = "healthcare.fhir.r4"
+version = "0.1.18"
+dependencies = [
+	{org = "ballerina", name = "constraint"},
+	{org = "ballerina", name = "http"},
+	{org = "ballerina", name = "jwt"},
+	{org = "ballerina", name = "lang.value"},
+	{org = "ballerina", name = "log"},
+	{org = "ballerina", name = "regex"},
+	{org = "ballerina", name = "time"},
+	{org = "ballerina", name = "uuid"},
+	{org = "wso2healthcare", name = "healthcare.base"}
+]
+modules = [
+	{org = "wso2healthcare", packageName = "healthcare.fhir.r4", moduleName = "healthcare.fhir.r4"},
+	{org = "wso2healthcare", packageName = "healthcare.fhir.r4", moduleName = "healthcare.fhir.r4.parser"},
+	{org = "wso2healthcare", packageName = "healthcare.fhir.r4", moduleName = "healthcare.fhir.r4.terminology"},
+	{org = "wso2healthcare", packageName = "healthcare.fhir.r4", moduleName = "healthcare.fhir.r4.validator"}
 ]
 

@@ -14,349 +14,399 @@
 // specific language governing permissions and limitations
 // under the License.
 
-import health.fhir.templates.r4.metadata.config;
-import health.fhir.templates.r4.metadata.constants;
-import health.fhir.templates.r4.metadata.handlers;
-import health.fhir.templates.r4.metadata.models;
+import ballerina/time;
 import ballerina/io;
+import ballerinax/health.fhir.r4;
 
 # # metadata of server and rest components as configurables
-configurable config:ServerInfo server_info = ?;
-configurable config:Security security = {};
+configurable ConfigFHIRServer configFHIRServer = ?;
+configurable ConfigRest configRest = {};
 
 // TODO: uncomment below line when Choreo supports object arrays in configurable editor. 
 // configurable config:Resource[] resources = ?;
+string resourcePath = "";
 
-# generator class for capability statement
-public class CapabilityStatementGenerator {
-    handlers:LogHandler logHandler;
-    handlers:IssueHandler issueHandler;
-    string resourcePath;
+# Generate capability statement from configurables.
+# 
+# + return - capabilitity statement object
+isolated function generateCapabilityStatement() returns r4:CapabilityStatement|error {
+    LogDebug("Generating capability statement started");
 
-    public isolated function init(string resourcePath) {
-        self.issueHandler = new ("CapabilityStatementGenerator");
-        self.logHandler = new ("CapabilityStatementGenerator");
-        self.logHandler.Debug("Generating capability statement initialized");
-        self.resourcePath = resourcePath;
+    r4:CapabilityStatementStatus capabilityStatementStatus = check configFHIRServer.status.ensureType(r4:CapabilityStatementStatus);
+    r4:CapabilityStatementKind capabilityStatementKind = check configFHIRServer.kind.ensureType(r4:CapabilityStatementKind);
+
+    r4:CapabilityStatementFormat[] capabilityStatementFormat = [];
+    foreach string configFormat in configFHIRServer.format {
+        r4:CapabilityStatementFormat format = check configFormat.ensureType(r4:CapabilityStatementFormat);
+        capabilityStatementFormat.push(format);
     }
 
-    # method to build capability statement from metadata configurables
-    # + return - capabilitity statement json object
-    isolated function generate() returns models:CapabilityStatement|error {
-        self.logHandler.Debug("Generating capability statement started");
-
-        models:Implementation implementation = {
-            description: server_info.implementation_description
-        };
-
-        string? implementationURL = server_info.implementation_url;
-
-        if implementationURL is string {
-            implementation.url = implementationURL;
-        }
-
-        models:CapabilityStatement capabilityStatement = {
-            resourceType: constants:CAPABILITY_STATEMENT,
-            status: server_info.status,
-            date: server_info.date,
-            kind: server_info.kind,
-            implementation: implementation,
-            fhirVersion: server_info.fhir_version,
-            format: server_info.format,
-            rest: []
-        };
-
-        string[]? patchFormats = server_info.patch_format;
-
-        if patchFormats is string[] {
-            capabilityStatement.patchFormat = patchFormats;
-        }
-
-        models:Coding seviceCoding = {
-            system: constants:SERVICE_SYSTEM,
-            code: constants:SERVICE_CODE,
-            display: constants:SERVICE_DISPLAY
-        };
-
-        models:CodeableConcept securityService = {
-            coding: [seviceCoding]
-        };
-
-        models:Extension tokenExtension = {
-            url: constants:SECURITY_TOKEN,
-            [constants:SECURITY_EXT_VALUEURL] : security.token_url
-        };
-
-        models:Extension revokeExtension = {
-            url: constants:SECURITY_REVOKE,
-            [constants:SECURITY_EXT_VALUEURL] : security.revoke_url
-        };
-
-        models:Extension authorizeExtension = {
-            url: constants:SECURITY_AUTHORIZE,
-            [constants:SECURITY_EXT_VALUEURL] : security.authorize_url
-        };
-
-        models:Extension introspectExtension = {
-            url: constants:SECURITY_INTROSPECT,
-            [constants:SECURITY_EXT_VALUEURL] : security.introspect_url
-        };
-
-        models:Extension registerExtension = {
-            url: constants:SECURITY_REGISTER,
-            [constants:SECURITY_EXT_VALUEURL] : security.register_url
-        };
-
-        models:Extension manageExtension = {
-            url: constants:SECURITY_MANAGE,
-            [constants:SECURITY_EXT_VALUEURL] : security.manage_url
-        };
-
-        models:Extension securityExtension = {
-            url: constants:SECURITY_EXT_URL,
-            extension: []
-        };
-
-        anydata[]? subExtensions = securityExtension.extension;
-        if subExtensions is anydata[] {
-            if tokenExtension[constants:SECURITY_EXT_VALUEURL] != () && tokenExtension[constants:SECURITY_EXT_VALUEURL] != "" {
-                subExtensions.push(tokenExtension);
-            }
-            if revokeExtension[constants:SECURITY_EXT_VALUEURL] != () && revokeExtension[constants:SECURITY_EXT_VALUEURL] != "" {
-                subExtensions.push(revokeExtension);
-            }
-            if authorizeExtension[constants:SECURITY_EXT_VALUEURL] != () && authorizeExtension[constants:SECURITY_EXT_VALUEURL] != "" {
-                subExtensions.push(authorizeExtension);
-            }
-            if introspectExtension[constants:SECURITY_EXT_VALUEURL] != () && introspectExtension[constants:SECURITY_EXT_VALUEURL] != "" {
-                subExtensions.push(introspectExtension);
-            }
-            if registerExtension[constants:SECURITY_EXT_VALUEURL] != () && registerExtension[constants:SECURITY_EXT_VALUEURL] != "" {
-                subExtensions.push(registerExtension);
-            }
-            if manageExtension[constants:SECURITY_EXT_VALUEURL] != () && manageExtension[constants:SECURITY_EXT_VALUEURL] != "" {
-                subExtensions.push(manageExtension);
-            }
-        }
-
-        models:Security restSecurity = {
-            cors: ()
-        };
-
-        boolean? cors = security["cors"];
-        if cors is boolean {
-            restSecurity.cors = cors;
-        } else {
-            self.logHandler.Debug(constants:NO_CORS);
-        }
-
-        restSecurity.'service = securityService;
-
-        models:Extension[]? securityExtensions = [];
-        if securityExtension.extension != [] {
-            restSecurity.extension = [];
-            securityExtensions = restSecurity.extension;
-            if securityExtensions is models:Extension[] {
-                securityExtensions.push(securityExtension);
-            }
-        }
-
-        models:Rest rest = {
-            mode: constants:REST_MODE_SERVER,
-            security: restSecurity,
-            'resource: []
-        };
-
-        self.logHandler.Debug("Populating resources");
-        // TODO - Remove lines (128-136) when Choreo supports object arrays in configurable editor. 
-        // Refer Issue: https://github.com/wso2-enterprise/open-healthcare/issues/847
-        config:Resource[] resources = [];
-        do {
-            json resourcesJSON = check io:fileReadJson(self.resourcePath);
-            resources = check resourcesJSON.cloneWithType();
-        } on fail var err {
-            self.logHandler.Debug("Populating resources failed");
-            self.issueHandler.addServiceError(createServiceError(constants:ERROR, constants:NOT_FOUND, err));
-        }
-        //
-
-        if resources.length() > 0 {
-            foreach config:Resource resourceConfig in resources {
-
-                models:Resource 'resource = {
-                    'type: resourceConfig.'type
-                };
-
-                string[]? supportedProfile = resourceConfig.supportedProfiles;
-                if supportedProfile is string[] {
-                    'resource.supportedProfile = supportedProfile;
-                } else {
-                    self.logHandler.Debug(constants:NO_SUPPORTED_PROFILE);
-                }
-
-                'resource.interaction = [];
-                models:Interaction[]? resourceInteractions = 'resource.interaction;
-                string[]? interactions = resourceConfig.interactions;
-                if interactions is string[] {
-                    if resourceInteractions is models:Interaction[] {
-                        foreach string interactionCode in interactions {
-                            models:Interaction interaction = {
-                                code: interactionCode
-                            };
-                            resourceInteractions.push(interaction);
-                        }
-                    } else {
-                        self.logHandler.Debug(constants:NO_RESOURCE_INTERACTION);
-                    }
-                } else {
-                    self.logHandler.Debug(constants:NO_RESOURCE_INTERACTION);
-                }
-
-                string? versioning = resourceConfig.versioning;
-                if versioning is string {
-                    'resource.versioning = versioning;
-                } else {
-                    self.logHandler.Debug(constants:NO_RESOURCE_VERSIONING);
-                }
-
-                boolean? conditionalCreate = resourceConfig.conditionalCreate;
-                if conditionalCreate is boolean {
-                    'resource.conditionalCreate = conditionalCreate;
-                } else {
-                    self.logHandler.Debug(constants:NO_RESOURCE_CONDITIONAL_CREATE);
-                }
-
-                string? conditionalRead = resourceConfig.conditionalRead;
-                if conditionalRead is string {
-                    'resource.conditionalRead = conditionalRead;
-                } else {
-                    self.logHandler.Debug(constants:NO_RESOURCE_CONDITIONAL_READ);
-                }
-
-                boolean? conditionalUpdate = resourceConfig.conditionalUpdate;
-                if conditionalUpdate is boolean {
-                    'resource.conditionalUpdate = conditionalUpdate;
-                } else {
-                    self.logHandler.Debug(constants:NO_RESOURCE_CONDITIONAL_UPDATE);
-                }
-
-                string? conditionalDelete = resourceConfig.conditionalDelete;
-                if conditionalDelete is string {
-                    'resource.conditionalDelete = conditionalDelete;
-                } else {
-                    self.logHandler.Debug(constants:NO_RESOURCE_CONDITIONAL_DELETE);
-                }
-
-                string[]? referencePolicies = 'resource.referencePolicy;
-                string[]? referencePoliciesConfig = resourceConfig.referencePolicies;
-                if referencePoliciesConfig is string[] {
-                    if referencePolicies is string[] {
-                        foreach string referencePolicy in referencePolicies {
-                            referencePolicies.push(referencePolicy);
-                        }
-                    } else {
-                        self.logHandler.Debug(constants:NO_RESOURCE_REFERENCE_POLICIES);
-                    }
-                } else {
-                    self.logHandler.Debug(constants:NO_RESOURCE_REFERENCE_POLICIES);
-                }
-
-                string[]? searchRevIncludes = 'resource.searchRevInclude;
-                string[]? searchRevIncludesConfig = resourceConfig.searchRevIncludes;
-                if searchRevIncludesConfig is string[] {
-                    if searchRevIncludes is string[] {
-                        foreach string searchRevInclude in searchRevIncludesConfig {
-                            searchRevIncludes.push(searchRevInclude);
-                        }
-                    } else {
-                        self.logHandler.Debug(constants:NO_RESOURCE_SEARCHREV_INCLUDE);
-                    }
-                } else {
-                    self.logHandler.Debug(constants:NO_RESOURCE_SEARCHREV_INCLUDE);
-                }
-
-                'resource.searchParam = [];
-                models:SearchParam[]? resourceSearchParams = 'resource.searchParam;
-                string[]? searchParamsConfig = resourceConfig.searchParamString;
-                self.setSearchParam(resourceSearchParams, searchParamsConfig, constants:STRING);
-
-                searchParamsConfig = resourceConfig.searchParamNumber;
-                self.setSearchParam(resourceSearchParams, searchParamsConfig, constants:NUMBER);
-
-                searchParamsConfig = resourceConfig.searchParamToken;
-                self.setSearchParam(resourceSearchParams, searchParamsConfig, constants:TOKEN);
-
-                searchParamsConfig = resourceConfig.searchParamDate;
-                self.setSearchParam(resourceSearchParams, searchParamsConfig, constants:DATE);
-
-                rest.interaction = [];
-                models:Interaction[]? restInteractions = rest.interaction;
-                string[]? restInteractionsConfig = server_info.interactions;
-                if restInteractionsConfig is string[] {
-                    if restInteractions is models:Interaction[] {
-                        foreach string interactionCode in restInteractionsConfig {
-                            models:Interaction interaction = {
-                                code: interactionCode
-                            };
-                            restInteractions.push(interaction);
-                        }
-                    } else {
-                        self.logHandler.Debug(constants:NO_REST_INTERACTIONS);
-                    }
-                } else {
-                    self.logHandler.Debug(constants:NO_REST_INTERACTIONS);
-                }
-
-                models:Resource[]? restResources = rest.'resource;
-                if restResources is models:Resource[] {
-                    restResources.push('resource);
-                }
-
-                models:Rest[]? rests = capabilityStatement.rest;
-                if rests is models:Rest[] {
-                    rests.push(rest);
-                }
-            }
-        } else {
-            self.logHandler.Debug(constants:NO_FHIR_RESOURCES);
-        }
-
-        if self.issueHandler.getIssues().length() > 0 {
-            models:Issue[] fatalIssues = from models:Issue issue in self.issueHandler.getIssues()
-                where issue.severity == constants:ERROR || issue.severity == constants:EXCEPTION
-                select issue;
-
-            if fatalIssues.length() > 0 {
-                self.logHandler.Debug("Generating capability statement failed");
-                return error(constants:CAPABILITY_STATEMENT_FAILED);
-            }
-        }
-
-        self.logHandler.Debug("Generating capability statement ended");
-        return capabilityStatement;
+    string capabilityStatementDate;
+    string? date = configFHIRServer.date;
+    if date is string {
+        capabilityStatementDate = date;
+    } else {
+        time:Civil dateTimeCivil =  time:utcToCivil(time:utcNow());
+        capabilityStatementDate = string `${dateTimeCivil.year}-${dateTimeCivil.month}-${dateTimeCivil.day}`;
     }
 
-    # Set search param method
-    #
-    # + resourceSearchParamsRef - resource search params reference 
-    # + params - search params  
-    # + 'type - search params type
-    isolated function setSearchParam(models:SearchParam[]? resourceSearchParamsRef, string[]? params, string 'type) {
-        string[]? searchParamsConfig = params;
-        if searchParamsConfig is string[] {
-            if resourceSearchParamsRef is models:SearchParam[] {
-                foreach string searchParamString in searchParamsConfig {
-                    models:SearchParam searchParam = {
-                        name: searchParamString,
-                        'type: 'type.toString()
-                    };
-                    resourceSearchParamsRef.push(searchParam);
-                }
+    r4:CapabilityStatement capabilityStatement = {
+        status: capabilityStatementStatus,
+        date: capabilityStatementDate,
+        kind: capabilityStatementKind,
+        fhirVersion: configFHIRServer.fhirVersion,
+        format: capabilityStatementFormat
+    };
+
+    r4:CapabilityStatementImplementation capabilityStatementImplementation = {
+        description: configFHIRServer.implementationDescription,
+        url: configFHIRServer.implementationUrl
+    };
+    capabilityStatement.implementation = capabilityStatementImplementation;
+
+    r4:code[] patchFormat = [];
+    string[]? configPatchFormat = configFHIRServer.patchFormat;
+    if configPatchFormat is string[] {
+        foreach string configPatchFormatItem in configPatchFormat {
+            r4:code patchFormatItem = check configPatchFormatItem.ensureType(r4:code);
+            patchFormat.push(patchFormatItem);
+        }
+        capabilityStatement.patchFormat = patchFormat;
+    }
+
+    r4:CapabilityStatementRest? capabilityStatementRest = check populateCapabilityStatementRest();
+    if capabilityStatementRest is r4:CapabilityStatementRest {
+        capabilityStatement.rest = [capabilityStatementRest];
+    } else {
+        LogDebug(string `${VALUE_NOT_FOUND}: capabilityStatementRest`);
+    }
+
+    LogDebug("Generating capability statement ended");
+    return capabilityStatement;
+}
+
+# populate capability statement rest component from configurables.
+# 
+# + return - capability statement rest object
+isolated function populateCapabilityStatementRest() returns r4:CapabilityStatementRest?|error {
+    r4:CapabilityStatementRest rest = {
+        mode: REST_MODE_SERVER
+    };
+
+    r4:CapabilityStatementRestSecurity? restSecurity = check populateCapabilityStatementRestSecurity();
+    if restSecurity is r4:CapabilityStatementRestSecurity {
+        rest.security = restSecurity;
+    } else {
+        LogDebug(string `${VALUE_NOT_FOUND}: restSecurity`);
+    }
+
+    r4:CapabilityStatementRestResourceInteraction[] restInteraction = [];
+    string[]? configRestInteraction = configRest.interaction;
+    if configRestInteraction is string[] {
+        foreach string configInteractionCode in configRestInteraction {
+            r4:CapabilityStatementRestResourceInteractionCode interactionCode = check configInteractionCode.ensureType(r4:CapabilityStatementRestResourceInteractionCode);
+            r4:CapabilityStatementRestResourceInteraction interaction = {
+                code: interactionCode
+            };
+            restInteraction.push(interaction);           
+        }
+        rest.interaction = restInteraction;
+    } else {
+        LogDebug(VALUE_NOT_FOUND);
+    }
+
+    r4:CapabilityStatementRestResource[]? restResources = check populateCapabilityStatementRestResources(configRest.resourceFilePath);
+    if restResources is r4:CapabilityStatementRestResource[] {
+        rest.'resource = restResources;
+    } else {
+        LogDebug(string `${VALUE_NOT_FOUND}: restResources`);
+    }
+    return rest;
+}
+
+# populate capability statement rest security component from configurables.
+# 
+# + return - capability statement rest security object
+isolated function populateCapabilityStatementRestSecurity() returns r4:CapabilityStatementRestSecurity?|error {
+    r4:CapabilityStatementRestSecurity restSecurity = {};
+
+    boolean? cors = configRest.security["cors"];
+    if cors is boolean {
+        restSecurity.cors = cors;
+    } else {
+        LogDebug(string `${VALUE_NOT_FOUND}: cors`);
+    }
+
+    r4:Coding seviceCoding = {
+        system: SERVICE_SYSTEM,
+        code: SERVICE_CODE,
+        display: SERVICE_DISPLAY
+    };
+
+    r4:CodeableConcept securityService = {
+        coding: [seviceCoding]
+    };
+
+    restSecurity.'service = [securityService];
+
+    r4:ExtensionExtension securityExtension = {
+        url: SECURITY_EXT_URL
+    };
+    r4:Extension[] nestedExtensions = [];
+
+    OpenIDConfiguration openIdConfigurations = {};
+    string? discoveryEndpoint = configRest.security?.discoveryEndpoint;
+    if discoveryEndpoint is string && discoveryEndpoint != "" {
+        openIdConfigurations = check getOpenidConfigurations(discoveryEndpoint).cloneReadOnly();
+    } else {
+        LogDebug(string `${VALUE_NOT_FOUND}: discoveryEndpoint`);
+    }
+
+    string? configTokenEndpoint = configRest.security?.tokenEndpoint;
+    populateSecurityExtensions(nestedExtensions, SECURITY_TOKEN, openIdConfigurations.token_endpoint, configTokenEndpoint);
+
+    string? configAuthorizeEndpoint = configRest.security?.authorizeEndpoint;
+    populateSecurityExtensions(nestedExtensions, SECURITY_AUTHORIZE, openIdConfigurations.authorization_endpoint, configAuthorizeEndpoint);
+
+    string? configIntrospectEndpoint = configRest.security?.introspectEndpoint;
+    populateSecurityExtensions(nestedExtensions, SECURITY_INTROSPECT, openIdConfigurations.introspection_endpoint, configIntrospectEndpoint);
+
+    string? configRevokeEndpoint = configRest.security?.revocationEndpoint;
+    populateSecurityExtensions(nestedExtensions, SECURITY_REVOKE, openIdConfigurations.revocation_endpoint, configRevokeEndpoint);
+
+    string? configRegistrationEndpoint = configRest.security?.registrationEndpoint;
+    populateSecurityExtensions(nestedExtensions, SECURITY_REGISTER, openIdConfigurations.registration_endpoint, configRegistrationEndpoint);
+
+    string? confingManagementEndpoint = configRest.security?.managementEndpoint;
+    populateSecurityExtensions(nestedExtensions, SECURITY_MANAGE, openIdConfigurations.management_endpoint, confingManagementEndpoint);
+
+    if nestedExtensions.length() > 0 {
+        securityExtension.extension = nestedExtensions;
+        restSecurity.extension = [securityExtension];
+    }
+    return restSecurity;
+}
+
+isolated function populateSecurityExtensions(r4:Extension[] extensions, string extensionUrl, string? endpointOpenid, string? configEndpoint) {
+    string? endpoint = ();
+    if endpointOpenid is string {
+        endpoint = endpointOpenid;
+    } else {
+        LogDebug(string `${VALUE_NOT_FOUND}: ${extensionUrl} in Openid configuration`);
+        if configEndpoint is string {
+            endpoint = configEndpoint;
+        } else {
+            LogDebug(string `${VALUE_NOT_FOUND}: ${extensionUrl}`);
+        }
+    }
+
+    if endpoint is string {
+        r4:Extension securityExtension = {
+            url: extensionUrl,
+            valueUrl: endpoint.toString()
+        };
+        extensions.push(securityExtension);
+    }
+}
+
+# populate capability statement rest resources component from configurables.
+#
+# + resourceFilePath - resource file path
+# + return - capability statement rest resources list
+isolated function populateCapabilityStatementRestResources(string? resourceFilePath = ()) returns r4:CapabilityStatementRestResource[]?|error {
+    LogDebug("Populating resources");
+
+    r4:CapabilityStatementRestResource[] resources = [];
+
+    // TODO - Fix line 256, when Choreo supports object arrays in configurable editor. 
+    // Refer Issue: https://github.com/wso2-enterprise/open-healthcare/issues/847
+    ConfigResource[] configResources = [];
+    string? filePath = resourceFilePath;
+    if filePath is string {
+        json resourcesJSON = check io:fileReadJson(filePath);
+        configResources = check resourcesJSON.cloneWithType();
+        LogDebug(string `Resource file path: ${filePath}`);
+    } else {
+        LogDebug(string `${VALUE_NOT_FOUND}: resourceFilePath`);
+        return;
+    }
+
+    if configResources.length() > 0 {
+        foreach ConfigResource configResource in configResources {
+
+            r4:CapabilityStatementRestResource 'resource = {
+                'type: configResource.'type
+            };
+
+            string[]? supportedProfile = configResource.supportedProfile;
+            if supportedProfile is string[] {
+                'resource.supportedProfile = supportedProfile;
             } else {
-                self.logHandler.Debug(constants:NO_SEARCH_PARAMS + ": " + 'type);
+                LogDebug(string `${VALUE_NOT_FOUND}: supportedProfile`);
             }
-        } else {
-            self.logHandler.Debug(constants:NO_SEARCH_PARAMS + ": " + 'type);
+
+            r4:CapabilityStatementRestResourceInteraction[] resourceInteraction = [];
+            string[]? configInteraction = configResource.interaction;
+            if configInteraction is string[] {
+                foreach string configInteractionCode in configInteraction {
+                    r4:CapabilityStatementRestResourceInteractionCode interactionCode = check configInteractionCode.ensureType(r4:CapabilityStatementRestResourceInteractionCode);
+                    r4:CapabilityStatementRestResourceInteraction interaction = {
+                        code: interactionCode
+                    };
+                    resourceInteraction.push(interaction);
+                }
+                'resource.interaction = resourceInteraction;
+            } else {
+                LogDebug(string `${VALUE_NOT_FOUND}: resourceInteraction`);
+            }
+
+            string? configVersioning = configResource.versioning;
+            if configVersioning is string {
+                r4:CapabilityStatementRestResourceVersioning versioning = check configVersioning.ensureType(r4:CapabilityStatementRestResourceVersioning);
+                'resource.versioning = versioning;
+            } else {
+                LogDebug(string `${VALUE_NOT_FOUND}: versioning`);
+            }
+
+            boolean? conditionalCreate = configResource.conditionalCreate;
+            if conditionalCreate is boolean {
+                'resource.conditionalCreate = conditionalCreate;
+            } else {
+                LogDebug(string `${VALUE_NOT_FOUND}: conditionalCreate`);
+            }
+
+            string? configConditionalRead = configResource.conditionalRead;
+            if configConditionalRead is string {
+                r4:CapabilityStatementRestResourceConditionalRead conditionalRead = check configConditionalRead.ensureType(r4:CapabilityStatementRestResourceConditionalRead);
+                'resource.conditionalRead = conditionalRead;
+            } else {
+                LogDebug(string `${VALUE_NOT_FOUND}: conditionalRead`);
+            }
+
+            boolean? conditionalUpdate = configResource.conditionalUpdate;
+            if conditionalUpdate is boolean {
+                'resource.conditionalUpdate = conditionalUpdate;
+            } else {
+                LogDebug(string `${VALUE_NOT_FOUND}: conditionalUpdate`);
+            }
+
+            
+            string? configConditionalDelete = configResource.conditionalDelete;
+            if configConditionalDelete is string {
+                r4:CapabilityStatementRestResourceConditionalDelete conditionalDelete = check configConditionalDelete.ensureType(r4:CapabilityStatementRestResourceConditionalDelete);
+                'resource.conditionalDelete = conditionalDelete;
+            } else {
+                LogDebug(string `${VALUE_NOT_FOUND}: conditionalDelete`);
+            }
+
+            r4:CapabilityStatementRestResourceReferencePolicy[] referencePolicy = [];
+            string[]? configReferencePolicy = configResource.referencePolicy;
+            if configReferencePolicy is string[] {
+                foreach string configReferencePolicyItem in configReferencePolicy {
+                    r4:CapabilityStatementRestResourceReferencePolicy referencePolicyItem = check configReferencePolicyItem.ensureType(r4:CapabilityStatementRestResourceReferencePolicy);
+                    referencePolicy.push(referencePolicyItem);
+                }
+                'resource.referencePolicy = referencePolicy;
+            } else {
+                LogDebug(string `${VALUE_NOT_FOUND}: referencePolicy`);
+            }
+
+            string[] searchRevInclude = [];
+            string[]? configSearchRevIncludes = configResource.searchRevInclude;
+            if configSearchRevIncludes is string[] {
+                foreach string configSearchRevIncludeItem in configSearchRevIncludes {
+                    searchRevInclude.push(configSearchRevIncludeItem);
+                }
+                'resource.searchRevInclude = searchRevInclude;
+            } else {
+                LogDebug(string `${VALUE_NOT_FOUND}: searchRevInclude`);
+            }
+
+            r4:CapabilityStatementRestResourceSearchParam[] resourceSearchParams = [];
+            do {
+                string[]? configStringParams = configResource.searchParamString;
+                r4:CapabilityStatementRestResourceSearchParam[] stringSearchParams = check populateSearchParams(configStringParams, r4:CODE_TYPE_STRING);
+                resourceSearchParams.push(...stringSearchParams);
+
+                string[]? configNumberParams = configResource.searchParamNumber;
+                r4:CapabilityStatementRestResourceSearchParam[] numberSearchParams = check populateSearchParams(configNumberParams, r4:CODE_TYPE_NUMBER);
+                resourceSearchParams.push(...numberSearchParams);
+
+                string[]? configDateParams = configResource.searchParamDate;
+                r4:CapabilityStatementRestResourceSearchParam[] dateSearchParams = check populateSearchParams(configDateParams, r4:CODE_TYPE_DATE);
+                resourceSearchParams.push(...dateSearchParams);
+
+                string[]? configTokenParams = configResource.searchParamToken;
+                r4:CapabilityStatementRestResourceSearchParam[] tokenSearchParams = check populateSearchParams(configTokenParams, r4:CODE_TYPE_TOKEN);
+                resourceSearchParams.push(...tokenSearchParams);
+
+                string[]? configReferenceParams = configResource.searchParamReference;
+                r4:CapabilityStatementRestResourceSearchParam[] referenceSearchParams = check populateSearchParams(configReferenceParams, r4:CODE_TYPE_REFERENCE);
+                resourceSearchParams.push(...referenceSearchParams);
+
+                string[]? configCompositeParams = configResource.searchParamComposite;
+                r4:CapabilityStatementRestResourceSearchParam[] compositeSearchParams = check populateSearchParams(configCompositeParams, r4:CODE_TYPE_COMPOSITE);
+                resourceSearchParams.push(...compositeSearchParams);
+
+                string[]? configQuantityParams = configResource.searchParamQuantity;
+                r4:CapabilityStatementRestResourceSearchParam[] quantitySearchParams = check populateSearchParams(configQuantityParams, r4:CODE_TYPE_QUANTITY);
+                resourceSearchParams.push(...quantitySearchParams);
+
+                string[]? configUriParams = configResource.searchParamURI;
+                r4:CapabilityStatementRestResourceSearchParam[] uriSearchParams = check populateSearchParams(configUriParams, r4:CODE_TYPE_URI);
+                resourceSearchParams.push(...uriSearchParams);
+
+                string[]? configSpecialParams = configResource.searchParamSpecial;
+                r4:CapabilityStatementRestResourceSearchParam[] specialSearchParams = check populateSearchParams(configSpecialParams, r4:CODE_TYPE_SPECIAL);
+                resourceSearchParams.push(...specialSearchParams);
+
+                'resource.searchParam = resourceSearchParams;
+            } on fail var err {
+                return err;
+            }
+            resources.push('resource);
         }
+    } else {
+        LogDebug(string `${VALUE_NOT_FOUND}: restResources`);
+        return;
     }
+    return resources;
+}
+
+# Populate search params
+#
+# + configSearchParams - search params from config
+# + 'type - search param type
+# + return - search params
+isolated function populateSearchParams(string[]? configSearchParams, r4:CapabilityStatementRestResourceSearchParamType 'type) returns r4:CapabilityStatementRestResourceSearchParam[]|error {
+    r4:CapabilityStatementRestResourceSearchParam[] searchParams = [];
+    r4:CapabilityStatementRestResourceSearchParam[]? typeSearchParams = check populateSearchParamType(configSearchParams, 'type);
+    if typeSearchParams is r4:CapabilityStatementRestResourceSearchParam[] {
+        searchParams.push(...typeSearchParams);
+    } else {
+        LogDebug(string `${VALUE_NOT_FOUND}: searchParams: ${'type}`);
+    }
+    return searchParams;
+}
+
+# Populate search param type.
+#
+# + configTypeSearchParams - config type search params
+# + configSearchParamType - config search param type
+# + return - search params
+isolated function populateSearchParamType(string[]? configTypeSearchParams, string configSearchParamType) returns r4:CapabilityStatementRestResourceSearchParam[]?|error {
+    r4:CapabilityStatementRestResourceSearchParam[] searchParams = [];
+    if configTypeSearchParams is string[] {
+        foreach string configTypeSearchParam in configTypeSearchParams {
+            r4:CapabilityStatementRestResourceSearchParamType searchParamType = check configSearchParamType.ensureType(r4:CapabilityStatementRestResourceSearchParamType);
+            r4:CapabilityStatementRestResourceSearchParam searchParam = {
+                name: configTypeSearchParam,
+                'type: searchParamType
+            };
+            searchParams.push(searchParam);
+        }
+    } else {
+        return;
+    }
+    return searchParams;
 }
