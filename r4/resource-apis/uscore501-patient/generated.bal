@@ -30,17 +30,14 @@ isolated final readonly & r4:FHIRSourceConnectInteraction srcConnectImpl = {
     search: patientSearchImpl,
     create: patientCreateImpl
 };
-//Default profile is set to International Resource URL
+//Default profile is set to international Resource URL
 final readonly & string defaultProfile = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient";
 
 isolated function patientSearchImpl(map<r4:RequestSearchParameter[]> params, http:RequestContext ctx) returns r4:BundleEntry[]|r4:FHIRError {
-
     lock {
         r4:FHIRContext fhirContext = check r4:getFHIRContext(ctx);
-
         value:Cloneable|object {} activeProfile = defaultProfile;
-
-        // Since profile based function implementation is applied for search operation, 
+        // Since profile based function implementation is applied for search operation,
         // active profile is retreived from the context.
         if fhirContext.getRequestSearchParameters().hasKey("_profile") {
             activeProfile = ctx.get("_OH_activeProfile");
@@ -52,13 +49,13 @@ isolated function patientSearchImpl(map<r4:RequestSearchParameter[]> params, htt
             sourceConnect = profileImpl.get(activeProfile);
         }
         log:printDebug(string `[SearchImpl] Calling source system with parameters  ${params.toBalString()}`);
-        r4:Bundle|Patient[] patients = check sourceConnect.search(params.clone(), fhirContext);
+        r4:Bundle|Patient[]|r4:FHIRError resourceResults = check sourceConnect.search(params.clone(), fhirContext);
         r4:BundleEntry[] entries = [];
 
-        if patients is r4:Bundle {
-            entries = patients.entry ?: [];
-        } else if patients is Patient[] {
-            foreach Patient item in patients {
+        if resourceResults is r4:Bundle {
+            entries = resourceResults.entry ?: [];
+        } else if resourceResults is Patient[] {
+            foreach Patient item in resourceResults {
                 r4:BundleEntry entry = {
                     fullUrl: "",
                     'resource: item
@@ -68,47 +65,49 @@ isolated function patientSearchImpl(map<r4:RequestSearchParameter[]> params, htt
         }
         log:printDebug(string `[SearchImpl] Resultant entries list:  ${entries.toJsonString()}`);
         return entries.clone();
+
     }
 }
 
 isolated function patientReadImpl(string id, http:RequestContext ctx) returns r4:FHIRResourceEntity|r4:FHIRError {
-
     lock {
-        log:printDebug(string `[ReadImpl] Calling source system with Id:  ${id}`);
-        PatientSourceConnect sourceConnect = profileImpl.get(defaultProfile);
         r4:FHIRContext fhirContext = check r4:getFHIRContext(ctx);
 
-        Patient patient = check sourceConnect.read(id, fhirContext);
-        log:printDebug(string `[ReadImpl] Retrieved resource:  ${patient.toJsonString()}`);
+        log:printDebug(string `[ReadImpl] Calling source system with Id:  ${id}`);
+        PatientSourceConnect sourceConnect = profileImpl.get(defaultProfile);
 
-        return new (patient);
+        Patient|r4:FHIRError resourceResult = check sourceConnect.read(id, fhirContext);
+
+        r4:FHIRResourceEntity entity = new (check resourceResult);
+        return entity;
+
     }
 }
 
 isolated function patientCreateImpl(r4:FHIRResourceEntity resourceEntity, http:RequestContext ctx) returns string|r4:FHIRError {
-
     lock {
+        r4:FHIRContext fhirContext = check r4:getFHIRContext(ctx);
         PatientSourceConnect sourceConnect = profileImpl.get(defaultProfile);
 
         value:Cloneable resourceRecord = resourceEntity.unwrap();
 
         if resourceRecord is Patient {
             log:printDebug(string `[CreateImpl] Request payload: ${resourceRecord.toString()}`);
-            r4:FHIRContext fhirContext = check r4:getFHIRContext(ctx);
             string|r4:FHIRError createResponse = check sourceConnect.create(resourceEntity, fhirContext);
             return createResponse;
         } else {
             string diagMsg = string `Expected r4:Patient FHIR resource model not found. Instead, found a model of type:" ${(typeof resourceRecord).toBalString()}`;
             return r4:createInternalFHIRError("Incoming r4:Patient resource model not found", r4:ERROR, r4:PROCESSING_NOT_FOUND, diagnostic = diagMsg);
         }
+
     }
 }
 
 public type PatientSourceConnect object {
     isolated function profile() returns r4:uri;
-    isolated function read(string id, r4:FHIRContext ctx) returns Patient|r4:FHIRError;
-    isolated function search(map<r4:RequestSearchParameter[]> searchParameters, r4:FHIRContext ctx) returns r4:Bundle|Patient[]|r4:FHIRError;
-    isolated function create(r4:FHIRResourceEntity patient, r4:FHIRContext ctx) returns string|r4:FHIRError;
+    isolated function search(map<r4:RequestSearchParameter[]> params, r4:FHIRContext fhirContext) returns r4:Bundle|Patient[]|r4:FHIRError;
+    isolated function read(string id, r4:FHIRContext fhirContext) returns Patient|r4:FHIRError;
+    isolated function create(r4:FHIRResourceEntity resourceEntity, r4:FHIRContext fhirContext) returns string|r4:FHIRError;
 };
 
 public type ProfileImplementations record {
