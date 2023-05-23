@@ -21,73 +21,111 @@
 
 import ballerinax/health.fhir.r4;
 import ballerinax/health.fhir.r4.uscore501;
+import ballerina/http;
+import ballerinax/health.fhir.r4.parser;
 
-public isolated class Uscore501PatientSourceConnect {
+configurable string sourceSystem = "http://localhost:9595/uscore";
+
+final string READ = sourceSystem.endsWith("/") ? "read/" : "/read/";
+final string SEARCH = sourceSystem.endsWith("/") ? "search" : "/search";
+final string CREATE = sourceSystem.endsWith("/") ? "create" : "/create";
+
+final http:Client sourceEp = check new (sourceSystem);
+
+public isolated class UscorePatientSourceConnect {
 
     *PatientSourceConnect;
     isolated function profile() returns r4:uri {
         return "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient";
     }
 
-    isolated function read(string id, r4:FHIRContext ctx) returns Patient|r4:FHIRError {
+    isolated function read(string id, r4:FHIRContext fhirContext) returns Patient|r4:FHIRError {
 
-        //Implement source system connection here and retreive data.
-        //Create FHIR resource from retreived data.
-        uscore501:USCorePatientProfile example = {
-            id: "12d39",
-            meta: {
-                versionId: "abc12s3",
-                profile: ["http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"]
-            },
-            identifier: [
-            ],
-            implicitRules: "https://www.hl7.org/fhir",
-            language: "en-US",
-            gender: "unknown", 
-            name: []};
-        return example;
+        http:Response|http:ClientError res =  sourceEp->get(READ + id);
+        if (res is http:ClientError) {
+            r4:FHIRError fhirError = r4:createFHIRError("Error occured when calling the source system.", r4:CODE_SEVERITY_ERROR,r4:TRANSIENT_EXCEPTION);
+            return fhirError;
+        } else {
+            json|error payload = res.getJsonPayload();
+            if (payload is error) {
+                r4:FHIRError fhirError = r4:createFHIRError("Unable to extract JSON payload from the source response.", r4:CODE_SEVERITY_ERROR,r4:TRANSIENT_EXCEPTION);
+                return fhirError;
+            } else {
+                uscore501:USCorePatientProfile|error fhirResource = <uscore501:USCorePatientProfile>check parser:parse(payload, uscore501:USCorePatientProfile);
+                
+                if (fhirResource is error) {
+                    r4:FHIRError fhirError = r4:createFHIRError("Did not get a FHIR Resource from source.", r4:CODE_SEVERITY_ERROR,r4:TRANSIENT_EXCEPTION);
+                    return fhirError;
+                } else {
+                    return fhirResource;
+                }
+            }
+        }
     }
 
-    isolated function search(map<r4:RequestSearchParameter[]> searchParameters, r4:FHIRContext ctx) returns r4:Bundle|Patient[]|r4:FHIRError {
+    isolated function search(map<r4:RequestSearchParameter[]> params, r4:FHIRContext fhirContext) returns r4:Bundle|Patient[]|r4:FHIRError {
 
-        uscore501:USCorePatientProfile[] patients = [];
+        //convert search parameters to map<string|string[]>
+        map<string|string[]> searchParams = {};
+        foreach var [key, value] in params.entries() {
+            foreach var param in value {
+                searchParams[key] = param.value;
+            }
+        }
+        //convert search parameters to query string
+        string queryString = "";
+        foreach var [key, value] in searchParams.entries() {
+            // check if value is an array
+            if (value is string[]) {
+                foreach var v in value {
+                    queryString = queryString + key + "=" + v + "&";
+                }
+            } else {
+                queryString = queryString + key + "=" + <string>value + "&";
+            }
+        }
+        //remove last & if query string is not empty
+        if (queryString != "") {
+            queryString = "?" + queryString.substring(0, queryString.length() - 1);
+        }
 
-        //Implement source system connection here and retreive data.
-        //Create FHIR resource from retreived data.
-        uscore501:USCorePatientProfile example = {
-            id: "12d39",
-            meta: {
-                versionId: "abc12s3",
-                profile: ["http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"]
-            },
-            identifier: [
-            ],
-            implicitRules: "https://www.hl7.org/fhir",
-            language: "en-US"
-        ,gender: "unknown", name: []};
-        uscore501:USCorePatientProfile example1 = {
-            id: "12c39",
-            meta: {
-                versionId: "abc12s3",
-                profile: ["http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"]
-            },
-            identifier: [
-            ],
-            implicitRules: "https://www.hl7.org/fhir",
-            language: "en-US"
-        ,gender: "unknown", name: []};
-        patients.push(example);
-        patients.push(example1);
-        return patients;
+        http:Response|http:ClientError res = sourceEp->get(SEARCH + queryString);
+        if (res is http:ClientError) {
+            r4:FHIRError fhirError = r4:createFHIRError("Error occured when calling the source system.", r4:CODE_SEVERITY_ERROR, r4:TRANSIENT_EXCEPTION);
+            return fhirError;
+        } else {
+            json|error payload = res.getJsonPayload();
+            if (payload is error) {
+                r4:FHIRError fhirError = r4:createFHIRError("Unable to extract JSON payload from the source response.", r4:CODE_SEVERITY_ERROR, r4:TRANSIENT_EXCEPTION);
+                return fhirError;
+            } else {
+                if (payload is json[]) {
+                    json[] payloadArray = <json[]>payload;
+                    Patient[] fhirResources = [];
+                    foreach var p in payloadArray {
+                        uscore501:USCorePatientProfile|error fhirResource = <uscore501:USCorePatientProfile>check parser:parse(payload, uscore501:USCorePatientProfile);
+                        if (fhirResource is error) {
+                            r4:FHIRError fhirError = r4:createFHIRError("Did not get a FHIR Resource from source.", r4:CODE_SEVERITY_ERROR, r4:TRANSIENT_EXCEPTION);
+                            return fhirError;
+                        } else {
+                            fhirResources.push(fhirResource);
+                        }
+                    }
+                    return fhirResources;
+                } else {
+                    r4:FHIRError fhirError = r4:createFHIRError("Did not get a JSON[] from the source.", r4:CODE_SEVERITY_ERROR, r4:TRANSIENT_EXCEPTION);
+                    return fhirError;
+                }
+            }
+        }
     }
 
-    isolated function create(r4:FHIRResourceEntity patient, r4:FHIRContext ctx) returns string|r4:FHIRError {
+    isolated function create(r4:FHIRResourceEntity resourceEntity, r4:FHIRContext fhirContext) returns string|r4:FHIRError {
 
         //Implement source system connection here and persist FHIR resource.
         //Must respond with ID in order to create Location header
 
-        string resourceId = "logicalId"; //returned from the source system
-        return resourceId;
+        r4:FHIRError fhirError = r4:createFHIRError("Not implemented", r4:CODE_SEVERITY_ERROR, r4:TRANSIENT_EXCEPTION, httpStatusCode = 415);
+        return fhirError;
     }
 }
-

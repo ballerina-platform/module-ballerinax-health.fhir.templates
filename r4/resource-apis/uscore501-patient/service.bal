@@ -25,14 +25,14 @@ import ballerinax/health.fhir.r4.uscore501;
 import ballerina/log;
 import ballerina/http;
 
-# Generic type to wrap all implemented profiles. 
+# Generic type to wrap all implemented profiles.
 # Add required profile types here.
 # public type Patient r4:Patient|r4:USCorePatient;
 public type Patient r4:Patient | uscore501:USCorePatientProfile;
 
 //add implemented profiles to this map. profileURL:implementation
 isolated final map<PatientSourceConnect> profileImpl = {
-    "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient": new Uscore501PatientSourceConnect()
+    "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient": new UscorePatientSourceConnect()
 };
 
 # A service representing a network-accessible API
@@ -40,8 +40,8 @@ isolated final map<PatientSourceConnect> profileImpl = {
 @http:ServiceConfig {
     interceptors: [
         new r4:FHIRReadRequestInterceptor(apiConfig),
-        new r4:FHIRCreateRequestInterceptor(apiConfig),
         new r4:FHIRSearchRequestInterceptor(apiConfig),
+        new r4:FHIRCreateRequestInterceptor(apiConfig),
         new r4:FHIRResponseErrorInterceptor(),
         new r4:FHIRRequestErrorInterceptor(),
         new r4:FHIRResponseInterceptor(apiConfig)
@@ -49,36 +49,16 @@ isolated final map<PatientSourceConnect> profileImpl = {
 }
 service / on new http:Listener(9090) {
 
-    // Search the resource type based on some filter criteria
-    isolated resource function get fhir/r4/Patient(http:RequestContext ctx, http:Request request) returns @http:Payload {mediaType: ["application/fhir+json", "application/fhir+xml"]} json|xml|r4:FHIRError {
-
-        r4:FHIRContext fhirContext = check r4:getFHIRContext(ctx);
-        r4:RequestSearchParameter[]? & readonly profileUrls = fhirContext.getRequestSearchParameter("_profile");
-        r4:FHIRRequest resourceName = <r4:FHIRRequest>fhirContext.getFHIRRequest();
-
-        log:printDebug(string `FHIR API request is received. Interaction: SEARCH, [profiles]: ${profileUrls.toBalString()} 
-        [resource]: ${resourceName.getResourceType().toBalString()}`);
-
-        //Passing the Interaction processing to the r4 package with current context.
-        r4:FHIRError? process = r4:processFHIRSourceConnections(srcConnectImpl, ctx);
-
-        if process is error {
-            log:printError("Error in source connection processing");
-            return process;
-        }
-        log:printDebug("[END]FHIR interaction : search");
-        return {};
-    }
     // Read the current state of the resource
-    resource function get fhir/r4/Patient/[string id](http:RequestContext ctx) returns @http:Payload {mediaType: ["application/fhir+json", "application/fhir+xml"]} json|xml|r4:FHIRError {
+    isolated resource function get fhir/r4/Patient/[string id](http:RequestContext ctx, http:Request request) returns @http:Payload {mediaType: ["application/fhir+json", "application/fhir+xml"]} json|xml|r4:FHIRError {
 
         r4:FHIRContext fhirContext = check r4:getFHIRContext(ctx);
         r4:FHIRRequest resourceName = <r4:FHIRRequest>fhirContext.getFHIRRequest();
 
-        log:printDebug(string `FHIR API request is received. Interaction: READ, 
-        [resource]: ${resourceName.getResourceType().toBalString()}`);
+        log:printDebug(string `FHIR API request is received. Interaction: read,
+            [resource]: \${resourceName.getResourceType().toBalString()}`);
 
-        //Passing the Interaction processing to the r4 package with current context.
+        // Passing the Interaction processing to the r4 package with current context.
         r4:FHIRError? process = r4:processFHIRSourceConnections(srcConnectImpl, ctx);
 
         if process is error {
@@ -90,16 +70,38 @@ service / on new http:Listener(9090) {
         return {};
 
     }
-    // Create a new resource with a server assigned id
-    resource function post fhir/r4/Patient(http:RequestContext ctx, http:Request request) returns @http:Payload {mediaType: ["application/fhir+json", "application/fhir+xml"]} json|xml|r4:FHIRError {
+    // Search the resource type based on some filter criteria
+    isolated resource function get fhir/r4/Patient(http:RequestContext ctx, http:Request request) returns @http:Payload {mediaType: ["application/fhir+json", "application/fhir+xml"]} json|xml|r4:FHIRError {
 
         r4:FHIRContext fhirContext = check r4:getFHIRContext(ctx);
         r4:FHIRRequest resourceName = <r4:FHIRRequest>fhirContext.getFHIRRequest();
 
-        log:printDebug(string `FHIR API request is received. Interaction: CREATE, 
-        [resource]: ${resourceName.getResourceType().toBalString()}`);
+        r4:RequestSearchParameter[]? & readonly profileUrls = fhirContext.getRequestSearchParameter("_profile");
+        log:printDebug(string `FHIR API request is received. Interaction: SEARCH, [profiles]: ${profileUrls.toBalString()}
+            [resource]: ${resourceName.getResourceType().toBalString()}`);
 
-        //Passing the Interaction processing to the r4 package with current context.
+        // Passing the Interaction processing to the r4 package with current context.
+        r4:FHIRError? process = r4:processFHIRSourceConnections(srcConnectImpl, ctx);
+
+        if process is error {
+            log:printError("Error in source connection processing");
+            return process;
+        }
+
+        log:printDebug("[END]FHIR interaction : search");
+        return {};
+
+    }
+    // Create a new resource with a server assigned id
+    isolated resource function post fhir/r4/Patient(http:RequestContext ctx, http:Request request) returns @http:Payload {mediaType: ["application/fhir+json", "application/fhir+xml"]} json|xml|r4:FHIRError {
+
+        r4:FHIRContext fhirContext = check r4:getFHIRContext(ctx);
+        r4:FHIRRequest resourceName = <r4:FHIRRequest>fhirContext.getFHIRRequest();
+
+        log:printDebug(string `FHIR API request is received. Interaction: create,
+            [resource]: \${resourceName.getResourceType().toBalString()}`);
+
+        // Passing the Interaction processing to the r4 package with current context.
         r4:FHIRError? process = r4:processFHIRSourceConnections(srcConnectImpl, ctx);
 
         if process is error {
