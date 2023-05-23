@@ -32,7 +32,7 @@ public type Patient r4:Patient | uscore501:USCorePatientProfile;
 
 //add implemented profiles to this map. profileURL:implementation
 isolated final map<PatientSourceConnect> profileImpl = {
-    "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient": new UscorePatientSourceConnect()
+    "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient": new Uscore501PatientSourceConnect()
 };
 
 # A service representing a network-accessible API
@@ -56,7 +56,7 @@ service / on new http:Listener(9090) {
         r4:FHIRRequest resourceName = <r4:FHIRRequest>fhirContext.getFHIRRequest();
 
         log:printDebug(string `FHIR API request is received. Interaction: read,
-            [resource]: \${resourceName.getResourceType().toBalString()}`);
+            [resource]: ${resourceName.getResourceType().toBalString()}`);
 
         // Passing the Interaction processing to the r4 package with current context.
         r4:FHIRError? process = r4:processFHIRSourceConnections(srcConnectImpl, ctx);
@@ -99,7 +99,7 @@ service / on new http:Listener(9090) {
         r4:FHIRRequest resourceName = <r4:FHIRRequest>fhirContext.getFHIRRequest();
 
         log:printDebug(string `FHIR API request is received. Interaction: create,
-            [resource]: \${resourceName.getResourceType().toBalString()}`);
+            [resource]: ${resourceName.getResourceType().toBalString()}`);
 
         // Passing the Interaction processing to the r4 package with current context.
         r4:FHIRError? process = r4:processFHIRSourceConnections(srcConnectImpl, ctx);

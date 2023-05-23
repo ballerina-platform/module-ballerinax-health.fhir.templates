@@ -32,7 +32,7 @@ final string CREATE = sourceSystem.endsWith("/") ? "create" : "/create";
 
 final http:Client sourceEp = check new (sourceSystem);
 
-public isolated class UscorePatientSourceConnect {
+public isolated class Uscore501PatientSourceConnect {
 
     *PatientSourceConnect;
     isolated function profile() returns r4:uri {
