@@ -43,17 +43,17 @@ final fhir:FHIRConnector fhirConnectorObj = check new (athenahealthConfig);
     interceptors: [new fhir:URLRewriteInterceptor(base, customDomain)]
 }
 service http:Service / on new http:Listener(9090) {
-    
+
     // Get resource by ID
     isolated resource function get fhir/r4/[string resType]/[string id]() returns http:Response {
-        
+
         fhir:FHIRResponse|fhir:FHIRError fhirResponse = fhirConnectorObj->getById(resType, id);
         return fhir:handleResponse(fhirResponse);
     }
 
     // Create a resource
     isolated resource function post fhir/r4/[string resType](@http:Payload json|xml resPayload) returns http:Response {
-        
+
         string|error rtype = fhir:extractResourceType(resPayload);
         if rtype is error {
             return fhir:handleError(string `${rtype.message()} : ${resType}`, http:STATUS_BAD_REQUEST);
@@ -67,7 +67,7 @@ service http:Service / on new http:Listener(9090) {
 
     // Patch a resource
     isolated resource function patch fhir/r4/[string resType]/[string id](http:Request request, @http:Payload json|xml resPayload) returns http:Response {
-        
+
         fhir:PatchContentType patchType;
         string contentType = request.getContentType();
         if (contentType is fhir:PatchContentType) {
@@ -81,14 +81,14 @@ service http:Service / on new http:Listener(9090) {
 
     // Delete a resource
     isolated resource function delete fhir/r4/[string resType]/[string id]() returns http:Response {
-        
+
         fhir:FHIRResponse|fhir:FHIRError fhirResponse = fhirConnectorObj->delete(resType, id);
         return fhir:handleResponse(fhirResponse);
     }
 
     // Update a resource
     isolated resource function put fhir/r4/[string resType](@http:Payload json|xml resPayload) returns http:Response {
-        
+
         string|error rtype = fhir:extractResourceType(resPayload);
         if rtype is error {
             return fhir:handleError(string `${rtype.message()} : ${resType}`, http:STATUS_BAD_REQUEST);
@@ -102,17 +102,17 @@ service http:Service / on new http:Listener(9090) {
 
     // Get metadata
     isolated resource function get fhir/r4/metadata(http:Request r) returns http:Response {
-        
+
         fhir:FHIRResponse|fhir:FHIRError fhirResponse = fhirConnectorObj->getConformance();
         return fhir:handleResponse(fhirResponse);
     }
 
     // Search through a resource type
     isolated resource function get fhir/r4/[string resType](http:Request request) returns http:Response {
-        
+
         fhir:FHIRResponse|fhir:FHIRError fhirResponse = fhirConnectorObj->search(resType, request.getQueryParams());
         return fhir:handleResponse(fhirResponse);
-    
+
     }
 
     isolated resource function 'default [string... paths](http:Request req) returns http:Response {
