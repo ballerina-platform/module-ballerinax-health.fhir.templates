@@ -1,0 +1,48 @@
+[configs]
+discoveryEndpoint = "https://api.asgardeo.io/t/bifrost/oauth2/token/.well-known/openid-configuration"
+
+[configs.smartConfiguration]
+tokenEndpoint = "<TOKEN_ENDPOINT>"
+introspectionEndpoint = "<INTROSPECTION_ENDPOINT>"
+codeChallengeMethodsSupported = ["S256"]
+grantTypesSupported = ["authorization_code"]
+revocationEndpoint = "<REVOCATION_ENDPOINT>"
+tokenEndpointAuthMethodsSupported = ["private_key_jwt", "client_secret_basic"]
+tokenEndpointAuthSigningAlgValuesSupported = ["RS384","ES384"]
+scopesSupported = [
+    "openid",
+    "fhirUser",
+    "launch",
+    "launch/patient",
+    "patient/*.cruds",
+    "user/*.cruds",
+    "offline_access",
+]
+responseTypesSupported = [
+    "code",
+    "id_token",
+    "token",
+    "device",
+    "id_token token"
+]
+capabilities = [
+    "launch-ehr",
+    "launch-standalone",
+    "client-public",
+    "client-confidential-symmetric",
+    "client-confidential-asymmetric",
+    "context-passthrough-banner",
+    "context-passthrough-style",
+    "context-ehr-patient",
+    "context-ehr-encounter",
+    "context-standalone-patient",
+    "context-standalone-encounter",
+    "permission-offline",
+    "permission-patient",
+    "permission-user",
+    "permission-v2",
+    "authorize-post"
+]
+
+[ballerina.log]
+level = "DEBUG"
