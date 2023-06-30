@@ -3,10 +3,10 @@ org = "ballerinax"
 name = "health.fhir.templates.r4.cernerconnect"
 displayName = "Cerner FHIR API"
 description = "Exposes Cerner FHIR APIs as managed APIs"
-version = "1.0.3-snapshot"
+version = "1.0.3"
 authors = ["Ballerina"]
 keywords = ["Healthcare", "FHIR", "Cerner"]
-distribution = "2201.5.0"
+distribution = "2201.6.0"
 template = true
 repository = "https://github.com/ballerina-platform/module-ballerinax-health.fhir.templates"
 
@@ -16,9 +16,9 @@ observabilityIncluded = true
 [[dependency]]
 org = "ballerinax"
 name = "health.clients.fhir"
-version = "1.0.2"
+version = "1.0.3"
 
 [[dependency]]
 org = "ballerinax"
 name = "health.base"
-version = "1.0.2"
+version = "1.0.3"

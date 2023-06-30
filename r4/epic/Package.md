@@ -57,10 +57,10 @@ This template can be used to create a project for exposing Epic as managed API. 
 
 Create a file `Config.toml` in the project's root directory and add the following configurations.
 
-| Configuration     | Description                                                                                           |
-|-------------------|-------------------------------------------------------------------------------------------------------|
-| `base`            | Epic base URL                                                                                         |
-| `tokenUrl`        | Epic's token endpoint                                                                                 |
-| `clientId`        | Client ID of the application registered with Epic                                                     |
-| `keyFile`         | Private key that will be used to sign the authentication JWT                                          |
-| `customDomain`    | URL that should replace the Epic base URL in the responses, if URL-rewrite interceptor is engaged     |
+| Configuration     | Description                                                                               |
+|-------------------|-------------------------------------------------------------------------------------------|
+| `base`            | Epic base URL                                                                             |
+| `tokenUrl`        | Epic's token endpoint                                                                     |
+| `clientId`        | Client ID of the application registered with Epic                                         |
+| `keyFile`         | Private key that will be used to sign the authentication JWT                              |
+| `customDomain`    | URL that should replace the Epic base URL in the responses, if URL-rewrite is enabled     |

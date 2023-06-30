@@ -30,14 +30,13 @@ fhir:FHIRConnectorConfig epicConfig = {
         clientId: clientId,
         tokenEndpoint: tokenUrl,
         keyFile: keyFile
-    }
+    },
+    urlRewrite: true,
+    replacementURL: customDomain
 };
 
 final fhir:FHIRConnector fhirConnectorObj = check new (epicConfig);
 
-@http:ServiceConfig{
-    interceptors: [new fhir:URLRewriteInterceptor(base, customDomain)]
-}
 service http:Service / on new http:Listener(9090) {
     
     // Get resource by ID
