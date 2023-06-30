@@ -34,14 +34,13 @@ http:OAuth2ClientCredentialsGrantConfig athenahealthOauth = {
 fhir:FHIRConnectorConfig athenahealthConfig = {
     baseURL: base,
     mimeType: fhir:FHIR_JSON,
-    authConfig: athenahealthOauth
+    authConfig: athenahealthOauth,
+    urlRewrite: true,
+    replacementURL: customDomain
 };
 
 final fhir:FHIRConnector fhirConnectorObj = check new (athenahealthConfig);
 
-@http:ServiceConfig{
-    interceptors: [new fhir:URLRewriteInterceptor(base, customDomain)]
-}
 service http:Service / on new http:Listener(9090) {
 
     // Get resource by ID

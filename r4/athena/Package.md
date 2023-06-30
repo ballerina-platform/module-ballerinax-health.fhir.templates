@@ -57,11 +57,11 @@ This template can be used to create a project for exposing AthenaHealth as manag
 
 Create a file `Config.toml` in the project's root directory and add the following configurations.
 
-| Configuration     | Description                                                                                                   |
-|-------------------|---------------------------------------------------------------------------------------------------------------|
-| `base`            | AthenaHealth base URL                                                                                         |
-| `tokenUrl`        | AthenaHealth's token endpoint                                                                                 |
-| `clientId`        | Client ID of the application registered with AthenaHealth                                                     |
-| `clientSecret`    | Client secret of the application registered with AthenaHealth                                                 |
-| `scopes`          | Comma-seperated list of scopes                                                                                |
-| `customDomain`    | URL that should replace the AthenaHealth base URL in the responses, if URL-rewrite interceptor is engaged     |
+| Configuration     | Description                                                                                       |
+|-------------------|---------------------------------------------------------------------------------------------------|
+| `base`            | AthenaHealth base URL                                                                             |
+| `tokenUrl`        | AthenaHealth's token endpoint                                                                     |
+| `clientId`        | Client ID of the application registered with AthenaHealth                                         |
+| `clientSecret`    | Client secret of the application registered with AthenaHealth                                     |
+| `scopes`          | Comma-seperated list of scopes                                                                    |
+| `customDomain`    | URL that should replace the AthenaHealth base URL in the responses, if URL-rewrite is enabled     |
