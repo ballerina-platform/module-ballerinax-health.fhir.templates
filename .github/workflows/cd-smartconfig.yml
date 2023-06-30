@@ -1,4 +1,4 @@
-name: CD - resourceapis Smart Config
+name: CD - Smart Config
 
 on:
   workflow_dispatch:
