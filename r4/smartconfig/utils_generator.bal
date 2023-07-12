@@ -16,6 +16,7 @@
 
 import ballerina/http;
 import ballerina/url;
+import ballerina/log;
 import ballerina/io;
 
 # Call the discovery endpoint to get the OpenID configuration.
@@ -26,8 +27,12 @@ public isolated function getOpenidConfigurations(string discoveryEndpoint) retur
     LogDebug("Retrieving openid configuration started");
     string discoveryEndpointUrl = check url:decode(discoveryEndpoint, "UTF8");
     io:print(discoveryEndpointUrl);
-    http:Client discoveryEpClient = check new (discoveryEndpointUrl.toString());
-    OpenIDConfiguration openidConfiguration = check discoveryEpClient ->/;
+    http:Client discoveryEpClient = check new (discoveryEndpointUrl);
+    OpenIDConfiguration|error openidConfiguration = discoveryEpClient ->/;
+    if (openidConfiguration is error) {
+        log:printError("", openidConfiguration, stackTrace = openidConfiguration.stackTrace());
+        return openidConfiguration;
+    }
     LogDebug("Retrieving openid configuration ended");
     return openidConfiguration;
 }

@@ -1,5 +1,5 @@
 [configs]
-discoveryEndpoint = "https://api.asgardeo.io/t/bifrost/oauth2/token/.well-known/openid-configuration"
+discoveryEndpoint = "http://api.asgardeo.io/t/bifrost/oauth2/token/.well-known/openid-configuration"
 
 [configs.smartConfiguration]
 tokenEndpoint = "<TOKEN_ENDPOINT>"
@@ -46,3 +46,6 @@ capabilities = [
 
 [ballerina.log]
 level = "DEBUG"
+
+[ballerina.http.traceLogAdvancedConfig]
+console = true

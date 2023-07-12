@@ -19,7 +19,7 @@ import ballerina/test;
 
 @test:Config {groups: ["Service"]}
 function testService() returns error? {
-    http:Client testClient = check new ("http://localhost:9090");
+    http:Client testClient = check new ("https://127.0.0.1:9090");
     json|error response = testClient -> /fhir/r4/\.well\-known/smart\-configuration;
     if response is error {
         test:assertFail(response.message());
@@ -29,7 +29,7 @@ function testService() returns error? {
 
 @test:Config {groups: ["Service"]}
 function testServiceWithSample() returns error? {
-    http:Client testClient = check new ("http://localhost:9090");
+    http:Client testClient = check new ("http://127.0.0.1:9090");
     json|error response = testClient -> /fhir/r4/\.well\-known/smart\-configuration;
     if response is error {
         test:assertFail(response.message());
@@ -39,7 +39,7 @@ function testServiceWithSample() returns error? {
 
 @test:Config {groups: ["Service"]}
 function testServiceWithSampleError() returns error? {
-    http:Client testClient = check new ("http://localhost:9090");
+    http:Client testClient = check new ("http://127.0.0.1:9090");
     http:Response response = check testClient -> /fhir/r4/\.well\-known/smart\-configuration.post(message = "");
     json payload = check response.getJsonPayload();
     string resourceType = check payload.resourceType;
