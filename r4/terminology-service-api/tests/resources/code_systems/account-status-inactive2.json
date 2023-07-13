@@ -1,0 +1,19 @@
+{
+    "parameter": [
+        {
+            "name": "result",
+            "value": "true",
+            "resource": null
+        },
+        {
+            "name": "display",
+            "value": "Inactive",
+            "resource": null
+        },
+        {
+            "name": "definition",
+            "value": "This account is inactive and should not be used to track financial information.",
+            "resource": null
+        }
+    ]
+}
