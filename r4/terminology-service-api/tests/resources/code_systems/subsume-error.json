@@ -1,0 +1,24 @@
+{
+    "resourceType": "OperationOutcome",
+    "meta": {
+        "profile": [
+            "http://hl7.org/fhir/StructureDefinition/OperationOutcome"
+        ]
+    },
+    "issue": [
+        {
+            "severity": "error",
+            "diagnostics": "01ee1fd3-5c2b-1d10-877c-b29ac6c03308 : The request should conain 2 code concepts or 2 coding concepts and CodeSystem system URL",
+            "code": "required",
+            "details": {
+                "coding": [
+                    {
+                        "system": "http://hl7.org/fhir/issue-type",
+                        "code": "400"
+                    }
+                ],
+                "text": "Missing required input parameters"
+            }
+        }
+    ]
+}

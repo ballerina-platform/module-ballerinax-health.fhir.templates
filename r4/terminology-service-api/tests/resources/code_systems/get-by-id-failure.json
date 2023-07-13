@@ -1,0 +1,24 @@
+{
+    "resourceType": "OperationOutcome",
+    "meta": {
+        "profile": [
+            "http://hl7.org/fhir/StructureDefinition/OperationOutcome"
+        ]
+    },
+    "issue": [
+        {
+            "severity": "error",
+            "diagnostics": "01ee1f1d-f467-17e8-847a-bf9e7d43b3a2",
+            "code": "not-found",
+            "details": {
+                "coding": [
+                    {
+                        "system": "http://hl7.org/fhir/issue-type",
+                        "code": "404"
+                    }
+                ],
+                "text": "Unknown CodeSystem: 'account-status2'"
+            }
+        }
+    ]
+}

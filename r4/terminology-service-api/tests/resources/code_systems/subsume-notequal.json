@@ -1,0 +1,14 @@
+{
+    "resourceType": "Parameters",
+    "meta": {
+        "profile": [
+            "http://hl7.org/fhir/StructureDefinition/Parameters"
+        ]
+    },
+    "parameter": [
+        {
+            "valueCode": "not-subsumed",
+            "name": "outcome"
+        }
+    ]
+}
