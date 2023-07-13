@@ -125,31 +125,6 @@ public isolated function valueSetValidateCode(http:Request request, string? id =
     return {
         'parameter: params
     };
-
-    // if concept is r4:CodeSystemConcept {
-    //     r4:Parameters p = {
-    //         'parameter: [
-    //             {name: "result", valueBoolean: true},
-    //             {name: "display", valueString: concept.display},
-    //             {name: "definition", valueString: concept.definition}
-    //         ]
-    //     };
-    //     return p;
-    // } else if concept.length() > 0 {
-    //     r4:ParametersParameter[] params = [];
-    //     foreach var c in concept {
-    //         params.push({name: "result", valueBoolean: true});
-    //         params.push({name: "display", valueString: c.display});
-    //         params.push({name: "definition", valueString: c.definition});
-    //     }
-    //     return {
-    //         'parameter: params
-    //     };
-    // } else {
-    //     return {
-    //         'parameter: [{name: "result", valueBoolean: false}]
-    //     };
-    // }
 }
 
 public isolated function codeSystemLookUp(http:RequestContext ctx, http:Request request, string? id = ()) returns r4:Parameters|r4:FHIRError {

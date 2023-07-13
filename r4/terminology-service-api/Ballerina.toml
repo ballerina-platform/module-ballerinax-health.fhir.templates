@@ -8,7 +8,7 @@ template=true
 [[dependency]]
 org = "ballerinax"
 name = "health.fhir.r4"
-version = "2.0.1"
+version = "3.0.1"
 repository = "local"
 
 [build-options]
