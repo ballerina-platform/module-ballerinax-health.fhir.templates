@@ -367,7 +367,6 @@ isolated function prepareRequestSearchParameter(map<string[]> params) returns ma
                     tempList.push(createRequestSearchParameter("status", value, 'type = r4:REFERENCE));
                 }
                 searchParams["status"] = tempList;
-
             }
 
             "valueSetVersion" => {

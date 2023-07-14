@@ -20,7 +20,7 @@ public function getByIdCodeSystem1() returns error? {
     groups: ["codesystem", "get_by_id_codesystem", "successful_scenario"]
 }
 public function getByIdCodeSystem2() returns error? {
-    http:Response response = check csClient->get("/account-status%7C4.3.0");
+    http:Response response = check csClient->get("/account-status%7C4.0.1");
 
     json expected = returnCodeSystemData("account-status");
     test:assertEquals(response.getJsonPayload(), expected);
@@ -245,7 +245,7 @@ public function getByIdValueSet1() returns error? {
     groups: ["valueSet", "get_by_id_valueSet", "successful_scenario"]
 }
 public function getByIdValueSet2() returns error? {
-    http:Response response = check vsClient->get("/account-status%7C4.3.0");
+    http:Response response = check vsClient->get("/account-status%7C4.0.1");
 
     json expected = returnValueSetData("account-status");
     test:assertEquals(response.getJsonPayload(), expected);
@@ -395,7 +395,7 @@ public function validateCodeValueSet4() returns error? {
     groups: ["valueset", "expand_valueset", "successful_scenario"]
 }
 public function expandValueSet1() returns error? {
-    http:Response response = check vsClient->post("/expand?url=http://hl7.org/fhir/ValueSet/account-status&filter=inactive", ());
+    http:Response response = check vsClient->post("/expand?url=http://hl7.org/fhir/ValueSet/account-status&filter=account", ());
     json actualJson = check response.getJsonPayload();
     r4:ValueSet actual = check actualJson.cloneWithType(r4:ValueSet);
 
@@ -410,7 +410,7 @@ public function expandValueSet1() returns error? {
     groups: ["valueset", "expand_valueset", "successful_scenario"]
 }
 public function expandValueSet2() returns error? {
-    http:Response response = check vsClient->post("/account-status/expand?filter=inactive", ());
+    http:Response response = check vsClient->post("/account-status/expand?filter=account", ());
     json actualJson = check response.getJsonPayload();
     r4:ValueSet actual = check actualJson.cloneWithType(r4:ValueSet);
 
