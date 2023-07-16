@@ -184,7 +184,7 @@ public function subsumeCodeSystem4() returns error? {
 
     r4:Coding codingA = check terminology:createCoding("http://hl7.org/fhir/account-status", "inactive");
     r4:Coding codingB = check terminology:createCoding("http://hl7.org/fhir/account-status", "inactive");
-    
+
     r4:ParametersParameter cA = {name: "codingA", valueCoding: codingA};
     r4:ParametersParameter cB = {name: "codingB", valueCoding: codingB};
     r4:Parameters requestPayload = {'parameter: [cA, cB]};
@@ -421,22 +421,22 @@ public function expandValueSet2() returns error? {
     test:assertEquals(actual, expected);
 }
 
-// @test:Config {
-//     groups: ["valueset", "expand_valueset", "successful_scenario"]
-// }
-// public function expandValueSet3() returns error? {
-//     json requestPayload = returnValueSetData("account-status");
-//     http:Response response = check vsClient->post("/expand?filter=inactive", requestPayload);
+@test:Config {
+    groups: ["valueset", "expand_valueset", "successful_scenario"]
+}
+public function expandValueSet3() returns error? {
+    json requestPayload = returnValueSetData("account-status-as-parameter");
+    http:Response response = check vsClient->post("/expand?filter=account", requestPayload);
 
-//     json actualJson = check response.getJsonPayload();
-//     r4:ValueSet actual = check actualJson.cloneWithType(r4:ValueSet);
+    json actualJson = check response.getJsonPayload();
+    r4:ValueSet actual = check actualJson.cloneWithType(r4:ValueSet);
 
-//     json expectedJson = returnValueSetData("expanded-account-status");
-//     r4:ValueSet expected = check expectedJson.cloneWithType(r4:ValueSet);
+    json expectedJson = returnValueSetData("expanded-account-status");
+    r4:ValueSet expected = check expectedJson.cloneWithType(r4:ValueSet);
 
-//     expected.expansion.timestamp = (<r4:ValueSetExpansion>actual.expansion).timestamp;
-//     test:assertEquals(actual, expected);
-// }
+    expected.expansion.timestamp = (<r4:ValueSetExpansion>actual.expansion).timestamp;
+    test:assertEquals(actual, expected);
+}
 
 @test:Config {
     groups: ["valueset", "expand_valueset", "failure_scenario"]

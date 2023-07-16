@@ -76,7 +76,7 @@ public isolated function valueSetExpansion(http:Request request, string? id = ()
                 foreach var item in <r4:ParametersParameter[]>parameters.'parameter {
                     match item.name {
                         "valueSet" => {
-                            anydata temp = item.'resource is r4:Resource ? item.'resource : ();
+                            anydata temp = item.'resource is r4:DomainResource ? item.'resource : ();
                             r4:ValueSet|error cloneWithType = temp.cloneWithType(r4:ValueSet);
                             valueSet = cloneWithType is r4:ValueSet ? cloneWithType : valueSet;
                         }
@@ -129,7 +129,6 @@ public isolated function valueSetValidateCode(http:Request request, string? id =
 
 public isolated function codeSystemLookUp(http:RequestContext ctx, http:Request request, string? id = ()) returns r4:Parameters|r4:FHIRError {
     r4:code|r4:Coding codeValue = "";
-    r4:CodeSystem codeSystem = {content: "example", status: "unknown"};
 
     string? system = request.getQueryParamValue("system");
     string? code = request.getQueryParamValue("code");
@@ -142,12 +141,6 @@ public isolated function codeSystemLookUp(http:RequestContext ctx, http:Request 
                 match item.name {
                     "coding" => {
                         codeValue = item.valueCoding ?: codeValue;
-                    }
-
-                    "valueSet" => {
-                        anydata temp = item.'resource is r4:Resource ? item.'resource : ();
-                        r4:CodeSystem|error cloneWithType = temp.cloneWithType(r4:CodeSystem);
-                        codeSystem = cloneWithType is r4:CodeSystem ? cloneWithType : codeSystem;
                     }
                 }
             }
@@ -218,7 +211,7 @@ public isolated function valueSetLookUp(http:Request request, string? id = ()) r
                     }
 
                     "valueSet" => {
-                        anydata temp = item.'resource is r4:Resource ? item.'resource : ();
+                        anydata temp = item.'resource is r4:DomainResource ? item.'resource : ();
                         r4:ValueSet|error cloneWithType = temp.cloneWithType(r4:ValueSet);
                         valueSet = cloneWithType is r4:ValueSet ? cloneWithType : valueSet;
                     }
@@ -329,7 +322,6 @@ public isolated function subsumes(http:RequestContext ctx, http:Request request)
 }
 
 isolated function prepareRequestSearchParameter(map<string[]> params) returns map<r4:RequestSearchParameter[]> {
-
     map<r4:RequestSearchParameter[]> searchParams = {};
     foreach var 'key in params.keys() {
         match 'key {
@@ -386,7 +378,6 @@ isolated function prepareRequestSearchParameter(map<string[]> params) returns ma
             }
         }
     }
-
     return searchParams;
 }
 

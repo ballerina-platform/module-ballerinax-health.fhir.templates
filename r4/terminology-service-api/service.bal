@@ -6,7 +6,6 @@ listener http:Listener interceptorListener = new (9090);
 
 service http:InterceptableService / on interceptorListener {
 
-    // Creates the interceptor pipeline. The function can return a single interceptor or an array of interceptors as the interceptor pipeline. If the interceptor pipeline is an array, then the request interceptor services will be executed from head to tail.
     public function createInterceptors() returns r4:FHIRResponseErrorInterceptor {
         return new r4:FHIRResponseErrorInterceptor();
     }
