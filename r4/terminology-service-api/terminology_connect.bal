@@ -251,19 +251,36 @@ isolated function codesystemConceptsToParameters(r4:CodeSystemConcept[]|r4:CodeS
     return parameters;
 }
 
-public isolated function subsumes(http:RequestContext ctx, http:Request request) returns r4:Parameters|r4:FHIRError {
+public isolated function subsumesGet(http:RequestContext ctx, http:Request request) returns r4:Parameters|r4:FHIRError {
 
     string? 'version = request.getQueryParamValue("version");
     r4:uri? system = request.getQueryParamValue("system");
     r4:code? codeA = request.getQueryParamValue("codeA");
     r4:code? codeB = request.getQueryParamValue("codeB");
 
+    if system is string && codeA is r4:code && codeB is r4:code {
+        return terminology:subsumes(codeA, codeB, system = system, version = 'version);
+    } else {
+        return r4:createFHIRError(
+            "Missing required input parameters",
+            r4:ERROR,
+            r4:INVALID_REQUIRED,
+            diagnostic = "The request should conain 2 code concepts and CodeSystem system URL",
+            httpStatusCode = http:STATUS_BAD_REQUEST);
+    }
+}
+
+public isolated function subsumesPost(http:RequestContext ctx, http:Request request) returns r4:Parameters|r4:FHIRError {
+    string? 'version = ();
+    r4:uri? system = ();
+    r4:Coding? codingA = ();
+    r4:Coding? codingB = ();
+
     json|http:ClientError jsonPayload = request.getJsonPayload();
     if jsonPayload is json {
         r4:Parameters|error parameters = jsonPayload.cloneWithType(r4:Parameters);
         if parameters is r4:Parameters && parameters.'parameter is r4:ParametersParameter[] {
-            r4:Coding codingA = {};
-            r4:Coding codingB = {};
+
             foreach var item in <r4:ParametersParameter[]>parameters.'parameter {
                 match item.name {
                     "codingA" => {
@@ -275,31 +292,32 @@ public isolated function subsumes(http:RequestContext ctx, http:Request request)
                     }
 
                     "version" => {
-                        'version = item.valueString ?: 'version;
+                        'version = item.valueString ?: ();
                     }
 
                     "system" => {
-                        system = item.valueUri ?: system;
+                        system = item.valueUri ?: ();
                     }
                 }
             }
-            return terminology:subsumes(codingA, codingB, system = system, version = 'version);
-        } else {
-            return r4:createFHIRError(
-            "Invalid payload",
+        }
+    } else {
+        return r4:createFHIRError(
+            "Empty request payload or invalid json format",
             r4:ERROR,
             r4:INVALID_REQUIRED,
-            diagnostic = "The payload should contain 2 Coding concepts to execute this operation",
+            diagnostic = "Payload should contains ValueSet record and Coding data",
             httpStatusCode = http:STATUS_BAD_REQUEST);
-        }
-    } else if system is string && codeA is r4:code && codeB is r4:code {
-        return terminology:subsumes(codeA, codeB, system = system, version = 'version);
+    }
+
+    if system is string && codingA is r4:Coding && codingB is r4:Coding {
+        return terminology:subsumes(codingA, codingB, system = system, version = 'version);
     } else {
         return r4:createFHIRError(
             "Missing required input parameters",
             r4:ERROR,
             r4:INVALID_REQUIRED,
-            diagnostic = "The request should conain 2 code concepts or 2 coding concepts and CodeSystem system URL",
+            diagnostic = "The request should conain 2 coding concepts and CodeSystem system URL",
             httpStatusCode = http:STATUS_BAD_REQUEST);
     }
 }
@@ -318,7 +336,7 @@ public isolated function valueSetLookUpPost(http:Request request) returns r4:Par
                         codingValue = <r4:Coding>item.valueCoding;
                     }
 
-                    "codeableConcept" =>{
+                    "codeableConcept" => {
                         codingValue = <r4:CodeableConcept>item.valueCodeableConcept;
                     }
 
@@ -349,7 +367,7 @@ public isolated function valueSetLookUpPost(http:Request request) returns r4:Par
             httpStatusCode = http:STATUS_BAD_REQUEST);
     }
 
-    if valueSet is r4:ValueSet && (codingValue is r4:Coding || codingValue is r4:CodeableConcept){
+    if valueSet is r4:ValueSet && (codingValue is r4:Coding || codingValue is r4:CodeableConcept) {
         return codesystemConceptsToParameters(check terminology:valueSetLookUp(codingValue, vs = valueSet));
     } else {
         return r4:createFHIRError(
