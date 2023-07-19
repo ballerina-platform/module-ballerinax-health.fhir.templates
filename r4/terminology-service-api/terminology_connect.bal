@@ -59,7 +59,22 @@ public isolated function searchCodeSystem(http:Request request) returns r4:Bundl
     };
 }
 
-public isolated function valueSetExpansion(http:Request request, string? id = ()) returns r4:ValueSet|r4:FHIRError {
+public isolated function valueSetExpansionGet(http:Request request, string? id = ()) returns r4:ValueSet|r4:FHIRError {
+
+    map<string[]> searchParams = request.getQueryParams();
+    map<r4:RequestSearchParameter[]> searchParameters = prepareRequestSearchParameter(searchParams);
+
+    r4:ValueSet valueSet = {status: "unknown"};
+    if id is string {
+        valueSet = check terminology:valueSetExpansion(searchParameters, vs = check readValueSetById(id));
+    } else {
+        string|() system = request.getQueryParamValue("url") ?: ();
+        valueSet = check terminology:valueSetExpansion(searchParameters, system = system);
+    }
+    return valueSet;
+}
+
+public isolated function valueSetExpansionPost(http:Request request, string? id = ()) returns r4:ValueSet|r4:FHIRError {
 
     map<string[]> searchParams = request.getQueryParams();
     map<r4:RequestSearchParameter[]> searchParameters = prepareRequestSearchParameter(searchParams);
@@ -85,7 +100,7 @@ public isolated function valueSetExpansion(http:Request request, string? id = ()
                 valueSet = check terminology:valueSetExpansion(searchParameters, vs = valueSet);
             } else {
                 return r4:createFHIRError(
-            "Invalide request payload",
+            "Invalid request payload",
             r4:ERROR,
             r4:INVALID_REQUIRED,
             cause = parameters is error ? parameters : (),
@@ -99,10 +114,17 @@ public isolated function valueSetExpansion(http:Request request, string? id = ()
     return valueSet;
 }
 
-public isolated function valueSetValidateCode(http:Request request, string? id = ()) returns r4:Parameters|r4:FHIRError {
+public isolated function valueSetValidateCodePost(http:Request request) returns r4:Parameters|r4:FHIRError {
+    r4:Parameters|r4:FHIRError concept = valueSetLookUpPost(request);
+    return validationResultToParameters(concept);
+}
 
-    r4:Parameters|r4:FHIRError concept = valueSetLookUp(request, id);
+public isolated function valueSetValidateCodeGet(http:Request request, string? id = ()) returns r4:Parameters|r4:FHIRError {
+    r4:Parameters|r4:FHIRError concept = valueSetLookUpGet(request, id);
+    return validationResultToParameters(concept);
+}
 
+isolated function validationResultToParameters(r4:Parameters|r4:FHIRError concept) returns r4:Parameters|r4:FHIRError {
     r4:ParametersParameter[] params = [];
     if concept is r4:FHIRError {
         if concept.message().matches(re `Can not find any valid concepts for the code:.*`) {
@@ -127,42 +149,16 @@ public isolated function valueSetValidateCode(http:Request request, string? id =
     };
 }
 
-public isolated function codeSystemLookUp(http:RequestContext ctx, http:Request request, string? id = ()) returns r4:Parameters|r4:FHIRError {
-    r4:code|r4:Coding codeValue = "";
+public isolated function codeSystemLookUpGet(http:RequestContext ctx, http:Request request, string? id = ()) returns r4:Parameters|r4:FHIRError {
 
     string? system = request.getQueryParamValue("system");
-    string? code = request.getQueryParamValue("code");
-
-    json|http:ClientError jsonPayload = request.getJsonPayload();
-    if jsonPayload is json {
-        r4:Parameters|error parse = jsonPayload.cloneWithType(r4:Parameters);
-        if parse is r4:Parameters && parse.'parameter is r4:ParametersParameter[] {
-            foreach var item in <r4:ParametersParameter[]>parse.'parameter {
-                match item.name {
-                    "coding" => {
-                        codeValue = item.valueCoding ?: codeValue;
-                    }
-                }
-            }
-        } else {
-            return r4:createFHIRError(
-            "Invalide Coding value",
-            r4:ERROR,
-            r4:INVALID_REQUIRED,
-            cause = parse is error ? parse : (),
-            httpStatusCode = http:STATUS_BAD_REQUEST);
-        }
-    }
-
-    if codeValue is "" && code is string {
-        codeValue = code;
-    }
+    string? codeValue = request.getQueryParamValue("code");
 
     r4:CodeSystemConcept[]|r4:CodeSystemConcept result;
     if id is string {
-        result = check terminology:codeSystemLookUp(codeValue, cs = check readCodeSystemById(id));
+        result = check terminology:codeSystemLookUp(<r4:code>codeValue, cs = check readCodeSystemById(id));
     } else if system is string {
-        result = check terminology:codeSystemLookUp(codeValue, cs = check readCodeSystemByUrl(system));
+        result = check terminology:codeSystemLookUp(<r4:code>codeValue, cs = check readCodeSystemByUrl(system));
     } else {
         return r4:createFHIRError(
             "Can not find a CodeSystem",
@@ -172,33 +168,12 @@ public isolated function codeSystemLookUp(http:RequestContext ctx, http:Request 
             httpStatusCode = http:STATUS_BAD_REQUEST);
     }
 
-    r4:Parameters parameters = {};
-    if result is r4:CodeSystemConcept {
-        parameters = {
-            'parameter: [
-                {name: "name", valueString: result.code},
-                {name: "display", valueString: result.display},
-                {name: "definition", valueString: result.definition}
-            ]
-        };
-    } else {
-        r4:ParametersParameter[] p = [];
-        foreach r4:CodeSystemConcept item in result {
-            p.push({name: "name", valueString: item.code},
-                    {name: "display", valueString: item.display},
-                    {name: "definition", valueString: item.definition});
-        }
-        parameters = {'parameter: p};
-    }
-    return parameters;
+    return codesystemConceptsToParameters(result);
 }
 
-public isolated function valueSetLookUp(http:Request request, string? id = ()) returns r4:Parameters|r4:FHIRError {
-    r4:code|r4:Coding codeValue = "";
-    r4:ValueSet|() valueSet = ();
-
-    string? system = request.getQueryParamValue("system");
-    string? code = request.getQueryParamValue("code");
+public isolated function codeSystemLookUpPost(http:RequestContext ctx, http:Request request) returns r4:Parameters|r4:FHIRError {
+    r4:Coding? codingValue = ();
+    r4:uri? system = ();
 
     json|http:ClientError jsonPayload = request.getJsonPayload();
     if jsonPayload is json {
@@ -207,58 +182,66 @@ public isolated function valueSetLookUp(http:Request request, string? id = ()) r
             foreach var item in <r4:ParametersParameter[]>parse.'parameter {
                 match item.name {
                     "coding" => {
-                        codeValue = item.valueCoding ?: codeValue;
-                    }
-
-                    "valueSet" => {
-                        anydata temp = item.'resource is r4:DomainResource ? item.'resource : ();
-                        r4:ValueSet|error cloneWithType = temp.cloneWithType(r4:ValueSet);
-                        valueSet = cloneWithType is r4:ValueSet ? cloneWithType : valueSet;
+                        codingValue = item.valueCoding;
+                        if (<r4:Coding>codingValue).system is r4:uri {
+                            system = (<r4:Coding>codingValue).system;
+                        }
                     }
                 }
             }
         } else {
             return r4:createFHIRError(
-            "Invalide request payload",
+            "Invalid Coding value",
             r4:ERROR,
             r4:INVALID_REQUIRED,
+            diagnostic = "Payload should contains a Coding data",
             cause = parse is error ? parse : (),
             httpStatusCode = http:STATUS_BAD_REQUEST);
         }
-    }
-
-    if codeValue is "" && code is string {
-        codeValue = code;
-    }
-
-    r4:CodeSystemConcept[]|r4:CodeSystemConcept result;
-    if valueSet is r4:ValueSet {
-        result = check terminology:valueSetLookUp(codeValue, vs = valueSet);
-    } else if id is string {
-        result = check terminology:valueSetLookUp(codeValue, vs = check readValueSetById(id));
-    } else if system is string {
-        result = check terminology:valueSetLookUp(codeValue, vs = check readValueSetByUrl(system));
     } else {
         return r4:createFHIRError(
-            "Can not find a ValueSet",
+            "Empty request payload",
             r4:ERROR,
             r4:INVALID_REQUIRED,
-            diagnostic = "Either ValueSet record or system URL should be provided as input",
+            diagnostic = "Payload should contains a Coding data",
             httpStatusCode = http:STATUS_BAD_REQUEST);
     }
 
+    r4:CodeSystemConcept[]|r4:CodeSystemConcept result;
+    if codingValue !is r4:Coding {
+        return r4:createFHIRError(
+            "Invalid request payload",
+            r4:ERROR,
+            r4:INVALID_REQUIRED,
+            diagnostic = "Payload should contains a Coding data",
+            httpStatusCode = http:STATUS_BAD_REQUEST);
+    } else if system is string {
+        result = check terminology:codeSystemLookUp(codingValue, cs = check readCodeSystemByUrl(system));
+    } else {
+        return r4:createFHIRError(
+            "Can not find a CodeSystem",
+            r4:ERROR,
+            r4:INVALID_REQUIRED,
+            diagnostic = "Can not find the system URL in the provided Coding data",
+            httpStatusCode = http:STATUS_BAD_REQUEST);
+    }
+
+    return codesystemConceptsToParameters(result);
+}
+
+isolated function codesystemConceptsToParameters(r4:CodeSystemConcept[]|r4:CodeSystemConcept concepts) returns r4:Parameters {
     r4:Parameters parameters = {};
-    if result is r4:CodeSystemConcept {
+    if concepts is r4:CodeSystemConcept {
         parameters = {
             'parameter: [
-                {name: "name", valueString: result.code},
-                {name: "display", valueString: result.display},
-                {name: "definition", valueString: result.definition}
+                {name: "name", valueString: concepts.code},
+                {name: "display", valueString: concepts.display},
+                {name: "definition", valueString: concepts.definition}
             ]
         };
     } else {
         r4:ParametersParameter[] p = [];
-        foreach r4:CodeSystemConcept item in result {
+        foreach r4:CodeSystemConcept item in concepts {
             p.push({name: "name", valueString: item.code},
                     {name: "display", valueString: item.display},
                     {name: "definition", valueString: item.definition});
@@ -303,7 +286,7 @@ public isolated function subsumes(http:RequestContext ctx, http:Request request)
             return terminology:subsumes(codingA, codingB, system = system, version = 'version);
         } else {
             return r4:createFHIRError(
-            "Invalide payload",
+            "Invalid payload",
             r4:ERROR,
             r4:INVALID_REQUIRED,
             diagnostic = "The payload should contain 2 Coding concepts to execute this operation",
@@ -319,6 +302,84 @@ public isolated function subsumes(http:RequestContext ctx, http:Request request)
             diagnostic = "The request should conain 2 code concepts or 2 coding concepts and CodeSystem system URL",
             httpStatusCode = http:STATUS_BAD_REQUEST);
     }
+}
+
+public isolated function valueSetLookUpPost(http:Request request) returns r4:Parameters|r4:FHIRError {
+    r4:Coding?|r4:CodeableConcept? codingValue = ();
+    r4:ValueSet? valueSet = ();
+
+    json|http:ClientError jsonPayload = request.getJsonPayload();
+    if jsonPayload is json {
+        r4:Parameters|error parse = jsonPayload.cloneWithType(r4:Parameters);
+        if parse is r4:Parameters && parse.'parameter is r4:ParametersParameter[] {
+            foreach var item in <r4:ParametersParameter[]>parse.'parameter {
+                match item.name {
+                    "coding" => {
+                        codingValue = <r4:Coding>item.valueCoding;
+                    }
+
+                    "codeableConcept" =>{
+                        codingValue = <r4:CodeableConcept>item.valueCodeableConcept;
+                    }
+
+                    "valueSet" => {
+                        anydata temp = item.'resource is r4:DomainResource ? item.'resource : ();
+                        r4:ValueSet|error cloneWithType = temp.cloneWithType(r4:ValueSet);
+                        if cloneWithType is r4:ValueSet {
+                            valueSet = cloneWithType;
+                        }
+                    }
+                }
+            }
+        } else {
+            return r4:createFHIRError(
+            "Invalid request payload",
+            r4:ERROR,
+            r4:INVALID_REQUIRED,
+            diagnostic = "Payload should contains ValueSet record and Coding data",
+            cause = parse is error ? parse : (),
+            httpStatusCode = http:STATUS_BAD_REQUEST);
+        }
+    } else {
+        return r4:createFHIRError(
+            "Empty request payload",
+            r4:ERROR,
+            r4:INVALID_REQUIRED,
+            diagnostic = "Payload should contains ValueSet record and Coding data",
+            httpStatusCode = http:STATUS_BAD_REQUEST);
+    }
+
+    if valueSet is r4:ValueSet && (codingValue is r4:Coding || codingValue is r4:CodeableConcept){
+        return codesystemConceptsToParameters(check terminology:valueSetLookUp(codingValue, vs = valueSet));
+    } else {
+        return r4:createFHIRError(
+            "Invalid request payload",
+            r4:ERROR,
+            r4:INVALID_REQUIRED,
+            diagnostic = "Payload should contains ValueSet record or Coding data or Codeable Concept data with proper system URL",
+            httpStatusCode = http:STATUS_BAD_REQUEST);
+    }
+}
+
+public isolated function valueSetLookUpGet(http:Request request, string? id = ()) returns r4:Parameters|r4:FHIRError {
+
+    string? system = request.getQueryParamValue("system");
+    r4:code? codeValue = request.getQueryParamValue("code");
+
+    r4:CodeSystemConcept[]|r4:CodeSystemConcept result;
+    if id is string {
+        result = check terminology:valueSetLookUp(<r4:code>codeValue, vs = check readValueSetById(id));
+    } else if system is string {
+        result = check terminology:valueSetLookUp(<r4:code>codeValue, vs = check readValueSetByUrl(system));
+    } else {
+        return r4:createFHIRError(
+            "Can not find a ValueSet",
+            r4:ERROR,
+            r4:INVALID_REQUIRED,
+            diagnostic = "Either ValueSet record or system URL should be provided as input",
+            httpStatusCode = http:STATUS_BAD_REQUEST);
+    }
+    return codesystemConceptsToParameters(result);
 }
 
 isolated function prepareRequestSearchParameter(map<string[]> params) returns map<r4:RequestSearchParameter[]> {

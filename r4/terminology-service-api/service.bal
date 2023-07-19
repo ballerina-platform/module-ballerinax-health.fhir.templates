@@ -10,45 +10,45 @@ service http:InterceptableService / on interceptorListener {
         return new r4:FHIRResponseErrorInterceptor();
     }
 
-    isolated resource function post fhir/r4/Valueset/lookup(http:RequestContext ctx, http:Request request) returns json|xml|r4:FHIRError {
-        log:printDebug(string `FHIR Terminology request is received. Interaction: ValueSet Lookup`);
+    isolated resource function get fhir/r4/Valueset/expand(http:RequestContext ctx, http:Request request) returns json|xml|r4:FHIRError {
+        log:printDebug(string `FHIR Terminology request is received. Interaction: ValueSet Expand`);
 
-        r4:Parameters concept = check valueSetLookUp(request);
-        return concept.toJson();
+        r4:ValueSet valueSet = check valueSetExpansionGet(request);
+        return valueSet.toJson();
     }
 
     isolated resource function post fhir/r4/Valueset/expand(http:RequestContext ctx, http:Request request) returns json|xml|r4:FHIRError {
         log:printDebug(string `FHIR Terminology request is received. Interaction: ValueSet Expand`);
 
-        r4:ValueSet valueSet = check valueSetExpansion(request);
+        r4:ValueSet valueSet = check valueSetExpansionPost(request);
         return valueSet.toJson();
+    }
+
+    isolated resource function get fhir/r4/Valueset/validate_code(http:RequestContext ctx, http:Request request) returns json|xml|r4:FHIRError {
+        log:printDebug(string `FHIR Terminology request is received. Interaction: ValueSet Validate Code`);
+
+        r4:Parameters parameters = check valueSetValidateCodeGet(request);
+        return parameters.toJson();
     }
 
     isolated resource function post fhir/r4/Valueset/validate_code(http:RequestContext ctx, http:Request request) returns json|xml|r4:FHIRError {
         log:printDebug(string `FHIR Terminology request is received. Interaction: ValueSet Validate Code`);
 
-        r4:Parameters parameters = check valueSetValidateCode(request);
+        r4:Parameters parameters = check valueSetValidateCodePost(request);
         return parameters.toJson();
     }
 
-    isolated resource function post fhir/r4/Valueset/[string id]/lookup(http:RequestContext ctx, http:Request request) returns json|xml|r4:FHIRError {
-        log:printDebug(string `FHIR Terminology request is received. Interaction: ValueSet Lookup with ValueSet Id: ${id}`);
-
-        r4:Parameters concept = check valueSetLookUp(request, id);
-        return concept.toJson();
-    }
-
-    isolated resource function post fhir/r4/Valueset/[string id]/expand(http:RequestContext ctx, http:Request request) returns json|xml|r4:FHIRError {
+    isolated resource function get fhir/r4/Valueset/[string id]/expand(http:RequestContext ctx, http:Request request) returns json|xml|r4:FHIRError {
         log:printDebug(string `FHIR Terminology request is received. Interaction: ValueSet Expand with ValueSet Id: ${id}`);
 
-        r4:ValueSet valueSet = check valueSetExpansion(request, id);
+        r4:ValueSet valueSet = check valueSetExpansionGet(request, id);
         return valueSet.toJson();
     }
 
-    isolated resource function post fhir/r4/Valueset/[string id]/validate_code(http:RequestContext ctx, http:Request request) returns json|xml|r4:FHIRError {
+    isolated resource function get fhir/r4/Valueset/[string id]/validate_code(http:RequestContext ctx, http:Request request) returns json|xml|r4:FHIRError {
         log:printDebug(string `FHIR Terminology request is received. Interaction: ValueSet Validate Code with ValueSet Id: ${id}`);
 
-        r4:Parameters parameters = check valueSetValidateCode(request, id);
+        r4:Parameters parameters = check valueSetValidateCodeGet(request, id);
         return parameters.toJson();
     }
 
@@ -66,10 +66,19 @@ service http:InterceptableService / on interceptorListener {
         return valueSet.toJson();
     }
 
+    // ===============================================================================================================================
+
+    isolated resource function get fhir/r4/Codesystem/lookup(http:RequestContext ctx, http:Request request) returns json|xml|r4:FHIRError|error {
+        log:printDebug(string `FHIR Terminology request is received. Interaction: CodeSystem Lookup`);
+
+        r4:Parameters codeSystemLookUpResult = check codeSystemLookUpGet(ctx, request);
+        return codeSystemLookUpResult.toJson();
+    }
+
     isolated resource function post fhir/r4/Codesystem/lookup(http:RequestContext ctx, http:Request request) returns json|xml|r4:FHIRError|error {
         log:printDebug(string `FHIR Terminology request is received. Interaction: CodeSystem Lookup`);
 
-        r4:Parameters codeSystemLookUpResult = check codeSystemLookUp(ctx, request);
+        r4:Parameters codeSystemLookUpResult = check codeSystemLookUpPost(ctx, request);
         return codeSystemLookUpResult.toJson();
     }
 
@@ -80,10 +89,10 @@ service http:InterceptableService / on interceptorListener {
         return subsumesResult.toJson();
     }
 
-    isolated resource function post fhir/r4/Codesystem/[string id]/lookup(http:RequestContext ctx, http:Request request) returns json|xml|r4:FHIRError|error {
+    isolated resource function get fhir/r4/Codesystem/[string id]/lookup(http:RequestContext ctx, http:Request request) returns json|xml|r4:FHIRError|error {
         log:printDebug(string `FHIR Terminology request is received. Interaction: CodeSystem Lookup with Id: ${id}`);
 
-        r4:Parameters codeSystemLookUpResult = check codeSystemLookUp(ctx, request, id);
+        r4:Parameters codeSystemLookUpResult = check codeSystemLookUpGet(ctx, request, id);
         return codeSystemLookUpResult.toJson();
     }
 

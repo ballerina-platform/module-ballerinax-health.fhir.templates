@@ -60,7 +60,7 @@ public function searchCodeSystem2() returns error? {
     groups: ["codesystem", "lookup_codesystem", "successful_scenario"]
 }
 public function lookupCodeSystem1() returns error? {
-    http:Response response = check csClient->post("/lookup?system=http://hl7.org/fhir/account-status&code=inactive", ());
+    http:Response response = check csClient->get("/lookup?system=http://hl7.org/fhir/account-status&code=inactive");
     json actual = check response.getJsonPayload();
 
     json expected = returnCodeSystemData("account-status-inactive");
@@ -71,7 +71,7 @@ public function lookupCodeSystem1() returns error? {
     groups: ["codesystem", "lookup_codesystem", "successful_scenario"]
 }
 public function lookupCodeSystem2() returns error? {
-    http:Response response = check csClient->post("/account-status/lookup?code=inactive", ());
+    http:Response response = check csClient->get("/account-status/lookup?code=inactive", ());
     json actual = check response.getJsonPayload();
 
     json expected = returnCodeSystemData("account-status-inactive");
@@ -84,20 +84,7 @@ public function lookupCodeSystem2() returns error? {
 public function lookupCodeSystem3() returns error? {
     r4:Coding|r4:FHIRError coding = terminology:createCoding("http://hl7.org/fhir/account-status", "inactive");
     r4:Parameters p = {'parameter: [{name: "coding", valueCoding: check coding}]};
-    http:Response response = check csClient->post("/account-status/lookup", p);
-    json actual = check response.getJsonPayload();
-
-    json expected = returnCodeSystemData("account-status-inactive");
-    test:assertEquals(actual, expected);
-}
-
-@test:Config {
-    groups: ["codesystem", "lookup_codesystem", "successful_scenario"]
-}
-public function lookupCodeSystem4() returns error? {
-    r4:Coding|r4:FHIRError coding = terminology:createCoding("http://hl7.org/fhir/account-status", "inactive");
-    r4:Parameters p = {'parameter: [{name: "coding", valueCoding: check coding}]};
-    http:Response response = check csClient->post("/lookup?system=http://hl7.org/fhir/account-status", p);
+    http:Response response = check csClient->post("/lookup", p);
     json actual = check response.getJsonPayload();
 
     json expected = returnCodeSystemData("account-status-inactive");
@@ -107,8 +94,18 @@ public function lookupCodeSystem4() returns error? {
 @test:Config {
     groups: ["codesystem", "lookup_codesystem", "failure_scenario"]
 }
+public function lookupCodeSystem4() returns error? {
+    http:Response response = check csClient->post("/lookup", ());
+    json actualJson = check response.getJsonPayload();
+    r4:OperationOutcome actual = check actualJson.cloneWithType(r4:OperationOutcome);
+    test:assertEquals((<r4:CodeableConcept>actual.issue[0].details).text, "Empty request payload");
+}
+
+@test:Config {
+    groups: ["codesystem", "lookup_codesystem", "failure_scenario"]
+}
 public function lookupCodeSystem5() returns error? {
-    http:Response response = check csClient->post("/lookup?code=inactive", ());
+    http:Response response = check csClient->get("/lookup?code=inactive", ());
     json actualJson = check response.getJsonPayload();
     r4:OperationOutcome actual = check actualJson.cloneWithType(r4:OperationOutcome);
 
@@ -124,7 +121,7 @@ public function lookupCodeSystem5() returns error? {
 }
 public function lookupCodeSystem6() returns error? {
     json codingJson = returnCodeSystemData("invalid-json-payload");
-    http:Response response = check csClient->post("/lookup?code=inactive", codingJson);
+    http:Response response = check csClient->post("/lookup", codingJson);
     json actualJson = check response.getJsonPayload();
     r4:OperationOutcome actual = check actualJson.cloneWithType(r4:OperationOutcome);
 
@@ -133,6 +130,50 @@ public function lookupCodeSystem6() returns error? {
 
     expected.issue[0].diagnostics = (<r4:OperationOutcomeIssue[]>actual.issue)[0].diagnostics;
     test:assertEquals(actual, expected);
+}
+
+@test:Config {
+    groups: ["codesystem", "lookup_codesystem", "failure_scenario"]
+}
+public function lookupCodeSystem7() returns error? {
+    http:Response response = check csClient->post("/lookup", ());
+    json actualJson = check response.getJsonPayload();
+    r4:OperationOutcome actual = check actualJson.cloneWithType(r4:OperationOutcome);
+    test:assertEquals((<r4:CodeableConcept>actual.issue[0].details).text, "Empty request payload");
+}
+
+@test:Config {
+    groups: ["codesystem", "lookup_codesystem", "failure_scenario"]
+}
+public function lookupCodeSystem8() returns error? {
+    http:Response response = check csClient->post("/lookup", {});
+    json actualJson = check response.getJsonPayload();
+    r4:OperationOutcome actual = check actualJson.cloneWithType(r4:OperationOutcome);
+    test:assertEquals((<r4:CodeableConcept>actual.issue[0].details).text, "Invalide Coding value");
+}
+
+@test:Config {
+    groups: ["codesystem", "lookup_codesystem", "failure_scenario"]
+}
+public function lookupCodeSystem9() returns error? {
+    r4:Parameters parameters = {'parameter: [{name: "sample"}]};
+    http:Response response = check csClient->post("/lookup", parameters);
+    json actualJson = check response.getJsonPayload();
+    r4:OperationOutcome actual = check actualJson.cloneWithType(r4:OperationOutcome);
+    test:assertEquals((<r4:CodeableConcept>actual.issue[0].details).text, "Invalide request payload");
+}
+
+@test:Config {
+    groups: ["codesystem", "lookup_codesystem", "failure_scenario"]
+}
+public function lookupCodeSystem10() returns error? {
+    r4:Coding coding = check terminology:createCoding("http://hl7.org/fhir/account-status", "inactive");
+    coding.system = ();
+    r4:Parameters parameters = {'parameter: [{name: "coding", valueCoding: coding}]};
+    http:Response response = check csClient->post("/lookup", parameters);
+    json actualJson = check response.getJsonPayload();
+    r4:OperationOutcome actual = check actualJson.cloneWithType(r4:OperationOutcome);
+    test:assertEquals((<r4:CodeableConcept>actual.issue[0].details).text, "Can not find a CodeSystem");
 }
 
 @test:Config {
@@ -265,89 +306,10 @@ public function searchValueSet1() returns error? {
 }
 
 @test:Config {
-    groups: ["valueset", "lookup_valueset", "successful_scenario"]
-}
-public function lookupValueSet1() returns error? {
-    http:Response response = check vsClient->post("/lookup?system=http://hl7.org/fhir/ValueSet/account-status&code=inactive", ());
-    json actual = check response.getJsonPayload();
-
-    json expected = returnCodeSystemData("account-status-inactive");
-    test:assertEquals(actual, expected);
-}
-
-@test:Config {
-    groups: ["valueset", "lookup_valueset", "successful_scenario"]
-}
-public function lookupValueSet2() returns error? {
-    r4:Coding|r4:FHIRError coding = terminology:createCoding("http://hl7.org/fhir/account-status", "inactive");
-    r4:Parameters p = {'parameter: [{name: "coding", valueCoding: check coding}]};
-    http:Response response = check vsClient->post("/lookup?system=http://hl7.org/fhir/ValueSet/account-status", p);
-    json actual = check response.getJsonPayload();
-
-    json expected = returnCodeSystemData("account-status-inactive");
-    test:assertEquals(actual, expected);
-}
-
-@test:Config {
-    groups: ["valueset", "lookup_valueset", "successful_scenario"]
-}
-public function lookupValueSet3() returns error? {
-    r4:Coding|r4:FHIRError coding = terminology:createCoding("http://hl7.org/fhir/account-status", "inactive");
-    r4:Parameters p = {'parameter: [{name: "coding", valueCoding: check coding}]};
-    http:Response response = check vsClient->post("/account-status/lookup", p);
-    json actual = check response.getJsonPayload();
-
-    json expected = returnCodeSystemData("account-status-inactive");
-    test:assertEquals(actual, expected);
-}
-
-@test:Config {
-    groups: ["valueset", "lookup_valueset", "successful_scenario"]
-}
-public function lookupValueSet4() returns error? {
-    http:Response response = check vsClient->post("/account-status/lookup?code=inactive", ());
-    json actual = check response.getJsonPayload();
-
-    json expected = returnCodeSystemData("account-status-inactive");
-    test:assertEquals(actual, expected);
-}
-
-@test:Config {
-    groups: ["valueset", "lookup_valueset", "failure_scenario"]
-}
-public function lookupValueSet5() returns error? {
-    http:Response response = check vsClient->post("/lookup?code=inactive", ());
-    json actualJson = check response.getJsonPayload();
-    r4:OperationOutcome actual = check actualJson.cloneWithType(r4:OperationOutcome);
-
-    json expectedjson = returnValueSetData("lookup-error");
-    r4:OperationOutcome expected = check expectedjson.cloneWithType(r4:OperationOutcome);
-
-    expected.issue[0].diagnostics = (<r4:OperationOutcomeIssue[]>actual.issue)[0].diagnostics;
-    test:assertEquals(actual, expected);
-}
-
-@test:Config {
-    groups: ["valueset", "lookup_valueset", "failure_scenario"]
-}
-public function lookupValueSet6() returns error? {
-    json codingJson = returnCodeSystemData("invalid-json-payload");
-    http:Response response = check vsClient->post("/lookup?code=inactive", codingJson);
-    json actualJson = check response.getJsonPayload();
-    r4:OperationOutcome actual = check actualJson.cloneWithType(r4:OperationOutcome);
-
-    json expectedjson = returnValueSetData("lookup-error2");
-    r4:OperationOutcome expected = check expectedjson.cloneWithType(r4:OperationOutcome);
-
-    expected.issue[0].diagnostics = (<r4:OperationOutcomeIssue[]>actual.issue)[0].diagnostics;
-    test:assertEquals(actual, expected);
-}
-
-@test:Config {
     groups: ["valueset", "validate_code_valueset", "successful_scenario"]
 }
 public function validateCodeValueSet1() returns error? {
-    http:Response response = check vsClient->post("/validate_code?system=http://hl7.org/fhir/ValueSet/account-status&code=inactive", ());
+    http:Response response = check vsClient->get("/validate_code?system=http://hl7.org/fhir/ValueSet/account-status&code=inactive", ());
     json actual = check response.getJsonPayload();
 
     json expected = returnValueSetData("validate-code");
@@ -358,9 +320,8 @@ public function validateCodeValueSet1() returns error? {
     groups: ["valueset", "validate_code_valueset", "successful_scenario"]
 }
 public function validateCodeValueSet2() returns error? {
-    r4:Coding|r4:FHIRError coding = terminology:createCoding("http://hl7.org/fhir/account-status", "inactive");
-    r4:Parameters p = {'parameter: [{name: "coding", valueCoding: check coding}]};
-    http:Response response = check vsClient->post("/validate_code?system=http://hl7.org/fhir/ValueSet/account-status", p);
+    json requestPayload = returnValueSetData("account-status-as-parameter");
+    http:Response response = check vsClient->post("/validate_code", requestPayload);
     json actual = check response.getJsonPayload();
 
     json expected = returnValueSetData("validate-code");
@@ -371,7 +332,7 @@ public function validateCodeValueSet2() returns error? {
     groups: ["valueset", "validate_code_valueset", "successful_scenario"]
 }
 public function validateCodeValueSet3() returns error? {
-    http:Response response = check vsClient->post("/account-status/validate_code?code=inactive", ());
+    http:Response response = check vsClient->get("/account-status/validate_code?code=inactive", ());
     json actual = check response.getJsonPayload();
 
     json expected = returnValueSetData("validate-code");
@@ -382,9 +343,8 @@ public function validateCodeValueSet3() returns error? {
     groups: ["valueset", "validate_code_valueset", "successful_scenario"]
 }
 public function validateCodeValueSet4() returns error? {
-    r4:Coding|r4:FHIRError coding = terminology:createCoding("http://hl7.org/fhir/account-status", "inactive");
-    r4:Parameters p = {'parameter: [{name: "coding", valueCoding: check coding}]};
-    http:Response response = check vsClient->post("/account-status/validate_code", p);
+    json requestPayload = returnValueSetData("account-status-as-parameter");
+    http:Response response = check vsClient->post("/validate_code", requestPayload);
     json actual = check response.getJsonPayload();
 
     json expected = returnValueSetData("validate-code");
@@ -392,10 +352,71 @@ public function validateCodeValueSet4() returns error? {
 }
 
 @test:Config {
+    groups: ["valueset", "validate_code_valueset", "successful_scenario"]
+}
+public function validateCodeValueSet5() returns error? {
+    json requestPayload = returnValueSetData("account-status-as-parameter2");
+    r4:Parameters parameters = check requestPayload.cloneWithType(r4:Parameters);
+    r4:CodeableConcept codeableConcept = check r4:terminologyProcessor.createCodeableConcept("http://hl7.org/fhir/ValueSet/account-status", "inactive");
+    _ = (<r4:ParametersParameter[]>parameters.'parameter).push({name: "codeableConcept", valueCodeableConcept: codeableConcept});
+
+    http:Response response = check vsClient->post("/validate_code", parameters);
+    json actual = check response.getJsonPayload();
+
+    json expected = returnValueSetData("validate-code");
+    test:assertEquals(actual, expected);
+}
+
+@test:Config {
+    groups: ["valueset", "validate_code_valueset", "failure_scenario"]
+}
+public function validateCodeValueSet6() returns error? {
+    http:Response response = check vsClient->post("/validate_code", ());
+    json actualJson = check response.getJsonPayload();
+    r4:OperationOutcome actual = check actualJson.cloneWithType(r4:OperationOutcome);
+
+    test:assertEquals((<r4:CodeableConcept>actual.issue[0].details).text, "Empty request payload");
+}
+
+@test:Config {
+    groups: ["valueset", "validate_code_valueset", "failure_scenario"]
+}
+public function validateCodeValueSet7() returns error? {
+    http:Response response = check vsClient->post("/validate_code", {});
+    json actualJson = check response.getJsonPayload();
+    r4:OperationOutcome actual = check actualJson.cloneWithType(r4:OperationOutcome);
+
+    test:assertEquals((<r4:CodeableConcept>actual.issue[0].details).text, "Invalide request payload");
+}
+
+@test:Config {
+    groups: ["valueset", "validate_code_valueset", "failure_scenario"]
+}
+public function validateCodeValueSet8() returns error? {
+    json requestPayload = returnValueSetData("coding-as-parameter");
+    http:Response response = check vsClient->post("/validate_code", requestPayload);
+    json actualJson = check response.getJsonPayload();
+    r4:OperationOutcome actual = check actualJson.cloneWithType(r4:OperationOutcome);
+
+    test:assertEquals((<r4:CodeableConcept>actual.issue[0].details).text, "Invalide request payload");
+}
+
+@test:Config {
+    groups: ["valueset", "validate_code_valueset", "failure_scenario"]
+}
+public function validateCodeValueSet9() returns error? {
+    http:Response response = check vsClient->get("/validate_code");
+    json actualJson = check response.getJsonPayload();
+    r4:OperationOutcome actual = check actualJson.cloneWithType(r4:OperationOutcome);
+
+    test:assertEquals((<r4:CodeableConcept>actual.issue[0].details).text, "Can not find a ValueSet");
+}
+
+@test:Config {
     groups: ["valueset", "expand_valueset", "successful_scenario"]
 }
 public function expandValueSet1() returns error? {
-    http:Response response = check vsClient->post("/expand?url=http://hl7.org/fhir/ValueSet/account-status&filter=account", ());
+    http:Response response = check vsClient->get("/expand?url=http://hl7.org/fhir/ValueSet/account-status&filter=account", ());
     json actualJson = check response.getJsonPayload();
     r4:ValueSet actual = check actualJson.cloneWithType(r4:ValueSet);
 
@@ -410,7 +431,7 @@ public function expandValueSet1() returns error? {
     groups: ["valueset", "expand_valueset", "successful_scenario"]
 }
 public function expandValueSet2() returns error? {
-    http:Response response = check vsClient->post("/account-status/expand?filter=account", ());
+    http:Response response = check vsClient->get("/account-status/expand?filter=account", ());
     json actualJson = check response.getJsonPayload();
     r4:ValueSet actual = check actualJson.cloneWithType(r4:ValueSet);
 
@@ -442,7 +463,7 @@ public function expandValueSet3() returns error? {
     groups: ["valueset", "expand_valueset", "failure_scenario"]
 }
 public function expandValueSet4() returns error? {
-    http:Response response = check vsClient->post("/expand?filter=inactive", ());
+    http:Response response = check vsClient->post("/expand", ());
 
     json actualJson = check response.getJsonPayload();
     r4:OperationOutcome actual = check actualJson.cloneWithType(r4:OperationOutcome);
@@ -452,4 +473,15 @@ public function expandValueSet4() returns error? {
 
     expected.issue[0].diagnostics = (<r4:OperationOutcomeIssue[]>actual.issue)[0].diagnostics;
     test:assertEquals(actual, expected);
+}
+
+@test:Config {
+    groups: ["valueset", "expand_valueset", "failure_scenario"]
+}
+public function expandValueSet5() returns error? {
+    http:Response response = check vsClient->post("/expand", {});
+
+    json actualJson = check response.getJsonPayload();
+    r4:OperationOutcome actual = check actualJson.cloneWithType(r4:OperationOutcome);
+    test:assertEquals((<r4:CodeableConcept>actual.issue[0].details).text, "Invalide request payload");
 }
