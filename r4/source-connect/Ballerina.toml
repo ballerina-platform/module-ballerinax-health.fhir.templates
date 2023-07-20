@@ -1,0 +1,10 @@
+[package]
+org = "ballerinax"
+name = "health.fhir.templates.r4.sourceconnect"
+version = "1.0.0"
+distribution = "2201.6.0"
+template = true
+repository = "https://github.com/ballerina-platform/module-ballerinax-health.fhir.templates"
+
+[build-options]
+observabilityIncluded = true
