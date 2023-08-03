@@ -21,7 +21,7 @@ jobs:
       - uses: actions/checkout@v3
 
       - name: Ballerina Build Smart Config
-        uses: ballerina-platform/ballerina-action@2201.6.0
+        uses: ballerina-platform/ballerina-action@2201.7.0
         with:
           args:
             pack
@@ -31,7 +31,7 @@ jobs:
 
       - name: Push to Staging Smart Config
         if: github.event.inputs.bal_central_environment == 'STAGE'
-        uses: ballerina-platform/ballerina-action@2201.6.0
+        uses: ballerina-platform/ballerina-action@2201.7.0
         with:
           args:
             push
@@ -43,7 +43,7 @@ jobs:
 
       - name: Push to Dev Smart Config
         if: github.event.inputs.bal_central_environment == 'DEV'
-        uses: ballerina-platform/ballerina-action@2201.6.0
+        uses: ballerina-platform/ballerina-action@2201.7.0
         with:
           args:
             push
@@ -55,7 +55,7 @@ jobs:
 
       - name: Push to Prod Smart Config
         if: github.event.inputs.bal_central_environment == 'PROD'
-        uses: ballerina-platform/ballerina-action@2201.6.0
+        uses: ballerina-platform/ballerina-action@2201.7.0
         with:
           args:
             push
@@ -101,7 +101,7 @@ jobs:
 
       - name: Ballerina Build after incrementing version
         if: ${{ github.event.inputs.bal_central_environment == 'PROD' }}
-        uses: ballerina-platform/ballerina-action@2201.6.0
+        uses: ballerina-platform/ballerina-action@2201.7.0
         with:
           args:
             pack
