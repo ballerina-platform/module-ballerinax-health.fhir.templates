@@ -27,7 +27,7 @@ final readonly & SmartConfiguration smartConfiguration = check generateSmartConf
 service http:InterceptableService / on new http:Listener(9090) {
 
     public function createInterceptors() returns r4:FHIRResponseErrorInterceptor {
-        return new r4:FHIRRequestInterceptor();
+        return new r4:FHIRResponseErrorInterceptor();
     }
 
     # The authorization endpoints accepted by a FHIR resource server are exposed as a Well-Known Uniform Resource Identifiers (URIs) (RFC5785) JSON document.
