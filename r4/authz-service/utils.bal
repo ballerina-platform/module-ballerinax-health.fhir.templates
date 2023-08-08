@@ -14,6 +14,7 @@
 // specific language governing permissions and limitations
 // under the License.
 import ballerinax/health.fhir.r4;
+import ballerina/log;
 
 // This is done ONLY for reference and by no means for a production use case. 
 // Customize this logic to suit your requirements.
@@ -48,18 +49,24 @@ isolated function authorizePrivilegeUsers(AuthzRequest authzRequest) returns Aut
     if (privilegedClaimUrl is string) {
         anydata|error authenticatedPriviledgedClaim = getClaimValue(privilegedClaimUrl, authzRequest);
         if (authenticatedPriviledgedClaim is string && "true".equalsIgnoreCaseAscii(authenticatedPriviledgedClaim)) {
+            log:printDebug("[Authorize Privileged User] Privileged claim url is set to `true`.", claim_url = privilegedClaimUrl);
             return {isAuthorized: true, scope: PRIVILEGED};
         }
+        log:printDebug("[Authorize Privileged User] Privileged claim url is not set to `true`.", claim_url = privilegedClaimUrl,
+        claim_value = authenticatedPriviledgedClaim is anydata ? authenticatedPriviledgedClaim : "null");
     }
+    log:printDebug("[Authorize Privileged User] Privileged claim url is not set in the request.");
     return {isAuthorized: false};
 }
 
 isolated function getClaimValue(string claimName, AuthzRequest payload) returns anydata|error {
     r4:JWT? & readonly jwt = payload.fhirSecurity.jwt;
     if (jwt is r4:JWT && jwt.payload.hasKey(claimName)) {
+        log:printDebug("[Get Claim Value] Claim found.", claim_name = claimName, claim_value = jwt.payload[claimName]);
         return jwt.payload[claimName];
     }
-    return error("Invalid JWT");
+    log:printDebug("[Get Claim Value] Claim not found.", claim_name = claimName);
+    return error("Claim not found.");
 }
 
 // start of - records related to the data model 

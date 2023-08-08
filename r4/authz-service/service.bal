@@ -16,6 +16,7 @@
 
 import ballerina/http;
 import ballerinax/health.fhir.r4;
+import ballerina/log;
 
 // Implement this function type if you want to customize the default authorization logic for practitioners.
 type AuthorizePractitionersType isolated function (string patientId, string practitionerId) returns AuthzResponse;
@@ -59,28 +60,39 @@ service / on new http:Listener(9090) {
     isolated resource function post authorize(AuthzRequest & readonly authzRequest) returns AuthzResponse {
         string? pid = authzRequest.patientId;
         if (pid is ()) {
+            log:printDebug("[Request Type] All patient data access.");
             // Trying to retrieve data of more than one patient requires privileged access.
             return authzPrivilegeUsers(authzRequest);
         }
+        log:printDebug("[Request Type] Single patient data access.", patient_id = pid);
+        log:printDebug("[Authorize Patient] Checking whether the user is authorized as a patient.");
         anydata|error authenticatedPatientId = getClaimValue(PATIENT_ID_CLAIM, authzRequest);
         if (authenticatedPatientId is string) {
             // When the user is authenticated as a patient.
+            log:printDebug("[Authorize Patient] Patient id is present.", patient_id = authenticatedPatientId);
             if (pid == authenticatedPatientId) {
                 // Patient is authorized to access ONLY his/her own data.
+                log:printDebug("[Authorize Patient] User is authorized as a patient.", patient_id = authenticatedPatientId);
                 return {isAuthorized: true, scope: PATIENT};
             }
+            log:printDebug("[Authorize Patient] User is not authorized as a patient.", data_of_patient_id = pid,
+            authenticated_user_patient_id = authenticatedPatientId);
             // A patient can be a practitioner or a privilged user as well, hence letting the flow to continue
         }
+        log:printDebug("[Authorize Practitioner] Checking whether the user is authorized as a practitioner.");
         anydata|error authenticatedPractitionerId = getClaimValue(PRACTITIONER_ID_CLAIM, authzRequest);
         if (authenticatedPractitionerId is string) {
             // When the user is authenticated as a practitioner
+            log:printDebug("[Authorize Practitioner] Practitioner id is present.", practitioner_id = authenticatedPractitionerId);
             if (authzPractitioner(pid, authenticatedPractitionerId).isAuthorized) {
                 // Practitioner is authorized to access data of the patient he/she is associated with
+                log:printDebug("[Authorize Practitioner] User is authorized as a practitioner.", practitioner_id = authenticatedPractitionerId);
                 return {isAuthorized: true, scope: PRACTITIONER};
             }
         }
         // Lastly, check whether the user is a privileged user
         // This is done lastly in patient access case to determine the correct fine-grained scope.
+        log:printDebug("[Authorize Privilege User] Checking whether the user is authorized as a privileged user.");
         return authzPrivilegeUsers(authzRequest);
     }
 }
