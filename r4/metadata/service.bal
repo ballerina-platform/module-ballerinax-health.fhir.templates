@@ -23,13 +23,12 @@ final readonly & r4:CapabilityStatement capabilityStatement = check generateCapa
 
 # The service representing well known API
 # Bound to port defined by configs
-@http:ServiceConfig {
-    interceptors: [
-        new r4:FHIRResponseErrorInterceptor()
-    ]
-}
+service http:InterceptableService / on new http:Listener(9090) {
 
-service / on new http:Listener(9090) {
+    public function createInterceptors() returns r4:FHIRResponseErrorInterceptor {
+        return new r4:FHIRResponseErrorInterceptor();
+    }
+
     # The capability statement is a key part of the overall conformance framework in FHIR. It is used as a statement of the
     # features of actual software, or of a set of rules for an application to provide. This statement connects to all the
     # detailed statements of functionality, such as StructureDefinitions and ValueSets. This composite statement of application

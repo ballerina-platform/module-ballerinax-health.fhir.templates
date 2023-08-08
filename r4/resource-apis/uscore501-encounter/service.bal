@@ -28,7 +28,7 @@ import ballerina/http;
 # Generic type to wrap all implemented profiles. 
 # Add required profile types here.
 # public type Encounter r4:Encounter|<Other_Encounter_Profile>;
-public type Encounter r4:Encounter | uscore501:USCoreEncounterProfile;
+public type Encounter r4:Encounter|uscore501:USCoreEncounterProfile;
 
 //add implemented profiles to this map. profileURL:implementation
 isolated final map<EncounterSourceConnect> profileImpl = {
@@ -37,17 +37,25 @@ isolated final map<EncounterSourceConnect> profileImpl = {
 
 # A service representing a network-accessible API
 # bound to port `9090`.
-@http:ServiceConfig {
-    interceptors: [
-        new r4:FHIRReadRequestInterceptor(apiConfig),
-        new r4:FHIRCreateRequestInterceptor(apiConfig),
-        new r4:FHIRSearchRequestInterceptor(apiConfig),
-        new r4:FHIRResponseErrorInterceptor(),
-        new r4:FHIRRequestErrorInterceptor(),
-        new r4:FHIRResponseInterceptor(apiConfig)
-    ]
-}
-service / on new http:Listener(9090) {
+service http:InterceptableService / on new http:Listener(9090) {
+
+    public function createInterceptors() returns [
+        r4:FHIRReadRequestInterceptor,
+        r4:FHIRCreateRequestInterceptor,
+        r4:FHIRSearchRequestInterceptor,
+        r4:FHIRResponseErrorInterceptor,
+        r4:FHIRRequestErrorInterceptor,
+        r4:FHIRResponseInterceptor
+    ] {
+        return [
+            new r4:FHIRReadRequestInterceptor(apiConfig),
+            new r4:FHIRCreateRequestInterceptor(apiConfig),
+            new r4:FHIRSearchRequestInterceptor(apiConfig),
+            new r4:FHIRResponseErrorInterceptor(),
+            new r4:FHIRRequestErrorInterceptor(),
+            new r4:FHIRResponseInterceptor(apiConfig)
+        ];
+    }
 
     // Search the resource type based on some filter criteria
     isolated resource function get fhir/r4/Encounter(http:RequestContext ctx, http:Request request) returns @http:Payload {mediaType: ["application/fhir+json", "application/fhir+xml"]} json|xml|r4:FHIRError {

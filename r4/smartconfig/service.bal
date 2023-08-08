@@ -23,13 +23,12 @@ final readonly & SmartConfiguration smartConfiguration = check generateSmartConf
 
 # The service representing well known API
 # Bound to port defined by configs
-@http:ServiceConfig {
-    interceptors: [
-        new r4:FHIRResponseErrorInterceptor()
-    ]
-}
 
-service / on new http:Listener(9090) {
+service http:InterceptableService / on new http:Listener(9090) {
+
+    public function createInterceptors() returns r4:FHIRResponseErrorInterceptor {
+        return new r4:FHIRRequestInterceptor();
+    }
 
     # The authorization endpoints accepted by a FHIR resource server are exposed as a Well-Known Uniform Resource Identifiers (URIs) (RFC5785) JSON document.
     # Reference: https://build.fhir.org/ig/HL7/smart-app-launch/conformance.html#using-well-known

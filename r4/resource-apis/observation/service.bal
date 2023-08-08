@@ -36,17 +36,25 @@ isolated final map<ObservationSourceConnect> profileImpl = {
 
 # A service representing a network-accessible API
 # bound to port `9090`.
-@http:ServiceConfig {
-    interceptors: [
-        new r4:FHIRReadRequestInterceptor(apiConfig),
-        new r4:FHIRCreateRequestInterceptor(apiConfig),
-        new r4:FHIRSearchRequestInterceptor(apiConfig),
-        new r4:FHIRRequestErrorInterceptor(),
-        new r4:FHIRResponseInterceptor(apiConfig),
-        new r4:FHIRResponseErrorInterceptor()
-    ]
-}
-service / on new http:Listener(9090) {
+service http:InterceptableService / on new http:Listener(9090) {
+
+    public function createInterceptors() returns [
+        r4:FHIRReadRequestInterceptor,
+        r4:FHIRCreateRequestInterceptor,
+        r4:FHIRSearchRequestInterceptor,
+        r4:FHIRRequestErrorInterceptor,
+        r4:FHIRResponseInterceptor,
+        r4:FHIRResponseErrorInterceptor
+    ] {
+        return [
+            new r4:FHIRReadRequestInterceptor(apiConfig),
+            new r4:FHIRCreateRequestInterceptor(apiConfig),
+            new r4:FHIRSearchRequestInterceptor(apiConfig),
+            new r4:FHIRRequestErrorInterceptor(),
+            new r4:FHIRResponseInterceptor(apiConfig),
+            new r4:FHIRResponseErrorInterceptor()
+        ];
+    }
 
     // Search the resource type based on some filter criteria.
     isolated resource function get fhir/r4/Observation(http:RequestContext ctx, http:Request request) returns @http:Payload {mediaType: [r4:FHIR_MIME_TYPE_JSON, r4:FHIR_MIME_TYPE_XML]} json|xml|r4:FHIRError|error {
