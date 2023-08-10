@@ -1,0 +1,12 @@
+[package]
+org = "ballerinax"
+name = "health.fhir.authzservice"
+version = "0.9.0"
+distribution = "2201.7.0"
+authors = ["Ballerina"]
+keywords = ["Healthcare", "FHIR", "Authorization", "Service"]
+template = true
+repository = "https://github.com/ballerina-platform/module-ballerinax-health.fhir.templates"
+
+[build-options]
+observabilityIncluded = true

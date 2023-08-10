@@ -1,0 +1,37 @@
+openapi: 3.0.1
+info:
+  title: Service Openapi Yaml
+  version: 0.9.0
+servers:
+- url: "{server}:{port}/"
+  variables:
+    server:
+      default: http://localhost
+    port:
+      default: "9090"
+paths:
+  /authorize:
+    post:
+      operationId: postAuthorize
+      responses:
+        "201":
+          description: Created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AuthzResponse'
+components:
+  schemas:
+    AuthzResponse:
+      required:
+      - isAuthorized
+      type: object
+      properties:
+        isAuthorized:
+          type: boolean
+        scope:
+          type: string
+          enum:
+          - PRIVILEGED
+          - PRACTITIONER
+          - PATIENT
