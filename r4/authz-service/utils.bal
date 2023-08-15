@@ -20,7 +20,7 @@ import ballerina/log;
 // Customize this logic to suit your requirements.
 // This uses sample in-memory data.
 
-isolated function authorizePractitioners(string patientId, string practitionerId) returns AuthzResponse {
+isolated function authorizePractitioners(string patientId, string practitionerId) returns r4:AuthzResponse {
     // This is a sample implementation using some dummy data and inmemory tables.
     map<string> filteredHospitalIds = patients.reduce(isolated function(map<string> hospitalIds, PatientTable patient) returns map<string> {
         if (patient.patientId == patientId) {
@@ -38,19 +38,19 @@ isolated function authorizePractitioners(string patientId, string practitionerId
     // Practitioner has to be registered in at least one hospital that the patient is registered in.
     foreach PractitionerTable practitioner in practitionersHospitals {
         if (hospitalIds.hasKey(practitioner.hospitalId)) {
-            return {isAuthorized: true, scope: PRACTITIONER};
+            return {isAuthorized: true, scope: r4:PRACTITIONER};
         }
     }
     return {isAuthorized: false};
 }
 
-isolated function authorizePrivilegeUsers(AuthzRequest authzRequest) returns AuthzResponse {
+isolated function authorizePrivilegeUsers(r4:AuthzRequest authzRequest) returns r4:AuthzResponse {
     string? privilegedClaimUrl = authzRequest.privilegedClaimUrl;
     if (privilegedClaimUrl is string) {
         anydata|error authenticatedPriviledgedClaim = getClaimValue(privilegedClaimUrl, authzRequest);
         if (authenticatedPriviledgedClaim is string && "true".equalsIgnoreCaseAscii(authenticatedPriviledgedClaim)) {
             log:printDebug("[Authorize Privileged User] Privileged claim url is set to `true`.", claim_url = privilegedClaimUrl);
-            return {isAuthorized: true, scope: PRIVILEGED};
+            return {isAuthorized: true, scope: r4:PRIVILEGED};
         }
         log:printDebug("[Authorize Privileged User] Privileged claim url is not set to `true`.", claim_url = privilegedClaimUrl,
         claim_value = authenticatedPriviledgedClaim is anydata ? authenticatedPriviledgedClaim : "null");
@@ -59,7 +59,7 @@ isolated function authorizePrivilegeUsers(AuthzRequest authzRequest) returns Aut
     return {isAuthorized: false};
 }
 
-isolated function getClaimValue(string claimName, AuthzRequest payload) returns anydata|error {
+isolated function getClaimValue(string claimName, r4:AuthzRequest payload) returns anydata|error {
     r4:JWT? & readonly jwt = payload.fhirSecurity.jwt;
     if (jwt is r4:JWT && jwt.payload.hasKey(claimName)) {
         log:printDebug("[Get Claim Value] Claim found.", claim_name = claimName, claim_value = jwt.payload[claimName]);
