@@ -1,0 +1,11 @@
+[package]
+org = "sameerag"
+name = "health.fhir.ccdatofhir_service"
+version = "0.1.0"
+distribution = "2201.7.0"
+authors = ["Ballerina"]
+keywords = ["Healthcare", "CCDA to FHIR", "FHIR", "CCDA"]
+template = true
+
+[build-options]
+observabilityIncluded = true
