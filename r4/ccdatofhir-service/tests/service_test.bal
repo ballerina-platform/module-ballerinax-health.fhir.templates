@@ -34,7 +34,7 @@ function testCcdaDocumentToFhir() returns error? {
     http:Response|error response = testClient->/transform.post(cdaDocumentMap["patient"]);
     test:assertTrue(response is http:Response, "Error occurred while transforming CCDA document to FHIR!");
     if (response is http:Response) {
-        test:assertEquals(response.statusCode,200, "Response status code mismatched!");
+        test:assertEquals(response.statusCode, 200, "Response status code mismatched!");
         json jsonPayload = check response.getJsonPayload();
         test:assertEquals(jsonPayload.resourceType, "Bundle", "Error occurred while transforming CCDA document to FHIR!");
         json[] entries = <json[]>check jsonPayload.entry;
@@ -47,11 +47,13 @@ function testCcdaDocumentToFhir() returns error? {
 function testErrorneousCcdaDocument() returns error? {
     http:Response|error response = testClient->/transform.post(cdaDocumentMap["invalid"]);
     if (response is http:Response) {
-        test:assertEquals(response.statusCode,400, "Response status code mismatched!");
+        test:assertEquals(response.statusCode, 400, "Response status code mismatched!");
         json jsonPayload = check response.getJsonPayload();
         test:assertEquals(jsonPayload.resourceType, "OperationOutcome", "Response should be an OperationOutcome!");
         json[] issues = <json[]>check jsonPayload.issue;
-        test:assertEquals(check issues[0].details.text, "Invalid xml document.", "Incorrect error message from the invalid document conversion!");
+        json textElement = check issues[0].details.text;
+        test:assertTrue(string:startsWith(textElement.toString(), "Invalid xml document."),
+            "Incorrect error message from the invalid document conversion!");
     }
 }
 

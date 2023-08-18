@@ -15,6 +15,7 @@
 // under the License.
 
 import ballerina/http;
+import ballerina/log;
 import ballerinax/health.fhir.r4;
 import ballerinax/health.fhir.r4utils.ccdatofhir;
 
@@ -31,8 +32,14 @@ service / on new http:Listener(9090) {
         http:Response response = new;
         if xmlPayload is error {
             response.statusCode = http:STATUS_BAD_REQUEST;
+            string diagnosticMsg = xmlPayload.message();
+            error? cause = xmlPayload.cause();
+            if cause is error {
+                diagnosticMsg = cause.message();
+            }
             r4:OperationOutcome operationOutcome = r4:errorToOperationOutcome(r4:createFHIRError(
-                "Invalid xml document.", r4:CODE_SEVERITY_ERROR,r4:TRANSIENT_EXCEPTION, cause = xmlPayload));
+                "Invalid xml document.", r4:CODE_SEVERITY_ERROR, r4:TRANSIENT_EXCEPTION, diagnostic = diagnosticMsg));
+            log:printError(string `Invalid xml document.`, diagnosic = diagnosticMsg);
             response.setJsonPayload(operationOutcome.toJson());
             return response;
         }
@@ -41,9 +48,11 @@ service / on new http:Listener(9090) {
         // If the success scenario, return the transformed FHIR bundle.
         if ccdaToFhir is r4:Bundle {
             response.statusCode = http:STATUS_OK;
+            log:printDebug(string`Transformed message: ${ccdaToFhir.toJsonString()}`);
             response.setJsonPayload(ccdaToFhir.toJson());
             return response;
         }
+        log:printError("Error occurred in CCDA to FHIR transformation.", ccdaToFhir);
         response.statusCode = http:STATUS_INTERNAL_SERVER_ERROR;
         response.setJsonPayload(r4:errorToOperationOutcome(ccdaToFhir).toJson());
         return response;

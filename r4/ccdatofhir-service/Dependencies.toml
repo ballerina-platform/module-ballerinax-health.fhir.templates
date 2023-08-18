@@ -214,6 +214,9 @@ dependencies = [
 	{org = "ballerina", name = "lang.value"},
 	{org = "ballerina", name = "observe"}
 ]
+modules = [
+	{org = "ballerina", packageName = "log", moduleName = "log"}
+]
 
 [[package]]
 org = "ballerina"
@@ -383,18 +386,19 @@ modules = [
 ]
 
 [[package]]
-org = "sameerag"
+org = "ballerinax"
 name = "health.fhir.templates.r4.ccdatofhir_service"
 version = "0.1.0"
 dependencies = [
 	{org = "ballerina", name = "http"},
 	{org = "ballerina", name = "io"},
+	{org = "ballerina", name = "log"},
 	{org = "ballerina", name = "test"},
 	{org = "ballerinai", name = "observe"},
 	{org = "ballerinax", name = "health.fhir.r4"},
 	{org = "ballerinax", name = "health.fhir.r4utils.ccdatofhir"}
 ]
 modules = [
-	{org = "sameerag", packageName = "health.fhir.templates.r4.ccdatofhir_service", moduleName = "health.fhir.templates.r4.ccdatofhir_service"}
+	{org = "ballerinax", packageName = "health.fhir.templates.r4.ccdatofhir_service", moduleName = "health.fhir.templates.r4.ccdatofhir_service"}
 ]
 
