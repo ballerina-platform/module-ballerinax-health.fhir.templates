@@ -384,7 +384,7 @@ modules = [
 
 [[package]]
 org = "sameerag"
-name = "health.fhir.ccdatofhir_service"
+name = "health.fhir.templates.r4.ccdatofhir_service"
 version = "0.1.0"
 dependencies = [
 	{org = "ballerina", name = "http"},
@@ -395,6 +395,6 @@ dependencies = [
 	{org = "ballerinax", name = "health.fhir.r4utils.ccdatofhir"}
 ]
 modules = [
-	{org = "sameerag", packageName = "health.fhir.ccdatofhir_service", moduleName = "health.fhir.ccdatofhir_service"}
+	{org = "sameerag", packageName = "health.fhir.templates.r4.ccdatofhir_service", moduleName = "health.fhir.templates.r4.ccdatofhir_service"}
 ]
 
