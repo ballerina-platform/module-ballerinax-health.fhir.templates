@@ -16,7 +16,7 @@
 
 import ballerina/http;
 import ballerina/test;
-import wso2healthcare/healthcare.fhir.r4;
+import ballerinax/health.fhir.r4;
 
 # A resource for generating capability statement
 # + return - capability statement as a json

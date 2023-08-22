@@ -15,7 +15,7 @@
 // under the License.
 
 import ballerina/test;
-import wso2healthcare/healthcare.fhir.r4;
+import ballerinax/health.fhir.r4;
 
 @test:Config {groups: ["Generator"]}
 function testGenerateCapabilityStatement() returns error? {
