@@ -1,0 +1,75 @@
+{
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:1.3.6.1.4.1.12009.10.1.219"
+    }
+  ],
+  "copyright": "This material contains content from LOINC (http://loinc.org). LOINC is copyright ©1995-2023, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc.",
+  "url": "http://loinc.org/vs/LL1051-3",
+  "version": "Beta.1",
+  "name": "Inj Location",
+  "status": "active",
+  "publisher": "Regenstrief Institute, Inc.",
+  "id": "LL1051-3",
+  "contact": [
+    {
+      "name": "Regenstrief Institute, Inc.",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://loinc.org"
+        }
+      ]
+    }
+  ],
+  "compose": {
+    "include": [
+      {
+        "system": "http://loinc.org",
+        "concept": [
+          {
+            "code": "LA14084-0",
+            "display": "Home"
+          },
+          {
+            "code": "LA14085-7",
+            "display": "Residential institution"
+          },
+          {
+            "code": "LA14086-5",
+            "display": "School"
+          },
+          {
+            "code": "LA14087-3",
+            "display": "Public institution"
+          },
+          {
+            "code": "LA14088-1",
+            "display": "Sports or recreational area"
+          },
+          {
+            "code": "LA14089-9",
+            "display": "Street or highway"
+          },
+          {
+            "code": "LA14090-7",
+            "display": "Trade or service area"
+          },
+          {
+            "code": "LA14091-5",
+            "display": "Industrial or construction area"
+          },
+          {
+            "code": "LA14092-3",
+            "display": "Farm"
+          },
+          {
+            "code": "LA14093-1",
+            "display": "Unspecified"
+          }
+        ]
+      }
+    ]
+  }
+}

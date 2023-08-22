@@ -1,0 +1,162 @@
+{
+  "code": "45686-3",
+  "display": "Septicemia [Minimum Data Set]",
+  "property": [
+    {
+      "code": "CLASSTYPE",
+      "valueString": "4"
+    },
+    {
+      "code": "VersionLastChanged",
+      "valueString": "2.50"
+    },
+    {
+      "code": "STATUS",
+      "valueString": "ACTIVE"
+    },
+    {
+      "code": "VersionFirstReleased",
+      "valueString": "2.17"
+    },
+    {
+      "code": "CHNG_TYPE",
+      "valueString": "MIN"
+    },
+    {
+      "code": "COMMON_TEST_RANK",
+      "valueString": "0"
+    },
+    {
+      "code": "LONG_COMMON_NAME",
+      "valueString": "Septicemia [Minimum Data Set]"
+    },
+    {
+      "code": "COMMON_ORDER_RANK",
+      "valueString": "0"
+    },
+    {
+      "code": "UNITSREQUIRED",
+      "valueString": "N"
+    },
+    {
+      "code": "EXTERNAL_COPYRIGHT_NOTICE",
+      "valueString": "InterRAI holds the copyright to Version 2.0 of the RAI for long term care outside of the US. Supplemental help and contextual information for MDS items in LOINC was derived from Version 2.0 of the RAI/MDS manual, and should not be reproduced outside of the United States without permission of InterRAI. Within the US, Version 2.0 is in the public domain. As a not for profit corporation under the US Tax Code, interRAI holds the copyright to a number of assessment systems, including the Resident Assessment Instrument (RAI) for long term care facilities outside of the US (the RAI is in the public domain within the US), as well as the assessment systems for Home Care (HC), Assisted Living (AL), Palliative Care (PC), Mental Health (MH) (outside of Canada), and Acute Care (RAI-AC).    The scales, algorithms, and case-mix measures based on these assessment instruments cannot be copyrighted and are thus available to everyone (although the individual items on which they are based are usually copyrighted).    The major clauses of our royalty-free licenses follow:        * the instrument is not to be changed substantially (excepting individual identifiers and demographics);      * the license is limited to non-commercial use (i.e., the instrument will not be not incorporated into products to be sold to others);      * no royalties will be charged;      * the organization will make appropriate efforts to inform others of the copyright status of the instrument;      * interRAI\u0027s logo and copyright notice are to appear on the form;      * authors, author institutions, and translators (as appropriate) are to be acknowledged in any document where authors would regularly be indicated (e.g., publication of a training manual);      * publication of any training manual is limited to the period until a commercially-published version is available;      * data from use of the instrument are to be shared with interRAI, subject to existing laws on confidentiality.    Commercial use usually requires royalties. In this instance, interRAI may omit the data requirement, but retains the other requirements for a logo, attribution, etc.    We will be pleased in any contract negotiations to acknowledge the participation of individuals or organizations which have played a substantial role in getting the instrument to the point of implementation.    For more information on licensing with interRAI, please contact the president of the Board:    Brant E. Fries, Ph.D.  Institute of Gerontology  University of Michigan  300 North Ingalls  Ann Arbor, Michigan USA 48109  Email: bfries@umich.edu"
+    },
+    {
+      "code": "RELATEDNAMES2",
+      "valueString": "Finding; Findings; Ordinal; Point in time; QL; Qual; Qualitative; Random; Screen; Survey; SURVEY.MDS"
+    },
+    {
+      "code": "EXTERNAL_COPYRIGHT_LINK",
+      "valueString": "interRAI"
+    },
+    {
+      "code": "parent",
+      "valueCoding": {
+        "code": "LP248772-8",
+        "display": "Survey terms not yet categorized",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "answer-list",
+      "valueString": "LL50-6"
+    },
+    {
+      "code": "COMPONENT",
+      "valueCoding": {
+        "code": "LP75611-1",
+        "display": "Septicemia",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "PROPERTY",
+      "valueCoding": {
+        "code": "LP6813-2",
+        "display": "Find",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "TIME_ASPCT",
+      "valueCoding": {
+        "code": "LP6960-1",
+        "display": "Pt",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "SYSTEM",
+      "valueCoding": {
+        "code": "LP310005-6",
+        "display": "^Patient",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "SCALE_TYP",
+      "valueCoding": {
+        "code": "LP7751-3",
+        "display": "Ord",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "METHOD_TYP",
+      "valueCoding": {
+        "code": "LP76084-0",
+        "display": "MDS",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "analyte",
+      "valueCoding": {
+        "code": "LP75611-1",
+        "display": "Septicemia",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "time-core",
+      "valueCoding": {
+        "code": "LP6960-1",
+        "display": "Pt",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "super-system",
+      "valueCoding": {
+        "code": "LP6985-8",
+        "display": "Patient",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "analyte-core",
+      "valueCoding": {
+        "code": "LP75611-1",
+        "display": "Septicemia",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "category",
+      "valueCoding": {
+        "code": "LP29696-9",
+        "display": "Survey instruments",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "CLASS",
+      "valueCoding": {
+        "code": "LP40268-2",
+        "display": "SURVEY.MDS",
+        "system": "http://loinc.org"
+      }
+    }
+  ]
+}

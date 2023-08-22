@@ -1,0 +1,71 @@
+{
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:1.3.6.1.4.1.12009.10.1.262"
+    }
+  ],
+  "copyright": "This material contains content from LOINC (http://loinc.org). LOINC is copyright ©1995-2023, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc.",
+  "url": "http://loinc.org/vs/LL1093-5",
+  "version": "Beta.1",
+  "name": "PhenX06_16_job hx industry",
+  "status": "active",
+  "publisher": "Regenstrief Institute, Inc.",
+  "id": "LL1093-5",
+  "contact": [
+    {
+      "name": "Regenstrief Institute, Inc.",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://loinc.org"
+        }
+      ]
+    }
+  ],
+  "compose": {
+    "include": [
+      {
+        "system": "http://loinc.org",
+        "concept": [
+          {
+            "code": "LA14207-7",
+            "display": "Ma \u003d Manufacturer"
+          },
+          {
+            "code": "LA14208-5",
+            "display": "R \u003d Retailer"
+          },
+          {
+            "code": "LA14209-3",
+            "display": "W \u003d Wholesaler"
+          },
+          {
+            "code": "LA14210-1",
+            "display": "S \u003d Service Provider"
+          },
+          {
+            "code": "LA14211-9",
+            "display": "C \u003d Construction"
+          },
+          {
+            "code": "LA14212-7",
+            "display": "Mi \u003d Mining"
+          },
+          {
+            "code": "LA14213-5",
+            "display": "F \u003d Farming/ Fishing/ Forestry"
+          },
+          {
+            "code": "LA14214-3",
+            "display": "G \u003d Government"
+          },
+          {
+            "code": "LA14215-0",
+            "display": "O \u003d Other"
+          }
+        ]
+      }
+    ]
+  }
+}

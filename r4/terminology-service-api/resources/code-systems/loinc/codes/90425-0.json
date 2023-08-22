@@ -1,0 +1,293 @@
+{
+  "code": "90425-0",
+  "display": "Microorganism preliminary growth detection panel - Platelets from Blood product unit by Culture",
+  "property": [
+    {
+      "code": "CLASSTYPE",
+      "valueString": "1"
+    },
+    {
+      "code": "VersionLastChanged",
+      "valueString": "2.65"
+    },
+    {
+      "code": "STATUS",
+      "valueString": "ACTIVE"
+    },
+    {
+      "code": "VersionFirstReleased",
+      "valueString": "2.65"
+    },
+    {
+      "code": "CHNG_TYPE",
+      "valueString": "ADD"
+    },
+    {
+      "code": "ORDER_OBS",
+      "valueString": "Order"
+    },
+    {
+      "code": "COMMON_TEST_RANK",
+      "valueString": "0"
+    },
+    {
+      "code": "DefinitionDescription",
+      "valueString": "This panel includes the individual terms for reporting whether or not a viable microorganism is present in a patient specimen based on different culture methods. A single specimen may be split among one or more types of culture devices (e.g., aerobic and anaerobic bottles), depending on the clinical context. The results for the terms in this panel are typically exchanged between laboratory devices and/or stored within the laboratory information system (LIS/LIMS). This term was created for, but is not limited in use to, the bioMerieux BacT culture bottles for the recovery and detection of microorganisms (bacteria and fungi) from platelet specimens."
+    },
+    {
+      "code": "SHORTNAME",
+      "valueString": "Microorg prel grow det pnl Plts BPU Cult"
+    },
+    {
+      "code": "LONG_COMMON_NAME",
+      "valueString": "Microorganism preliminary growth detection panel - Platelets from Blood product unit by Culture"
+    },
+    {
+      "code": "PanelType",
+      "valueString": "Panel"
+    },
+    {
+      "code": "COMMON_ORDER_RANK",
+      "valueString": "0"
+    },
+    {
+      "code": "RELATEDNAMES2",
+      "valueString": "Blood product unit; Blood Product Unit (Pack); C\u0026S; Cult; Cultures; ID; Infectious Disease; InfectiousDisease; InternalLabUse; Microbiology; Microorg prel grow; Microorg prel grow det pnl; Microorganisms; Org; Organism; Organisms; Pan; PANEL.MICROBIOLOGY; Panl; Platelet; Plt; Plts; Pnl; Point in time; Random; Thrb; Thrombocyte; Thrombocytes"
+    },
+    {
+      "code": "DisplayName",
+      "valueString": "Microorganism preliminary growth detection panel Cx (Plts BPU)"
+    },
+    {
+      "code": "parent",
+      "valueCoding": {
+        "code": "LP380057-2",
+        "display": "Microorganism preliminary growth detection panel | Blood product unit | Platelets | Microbiology Panels",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "COMPONENT",
+      "valueCoding": {
+        "code": "LP269209-5",
+        "display": "Microorganism preliminary growth detection panel",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "PROPERTY",
+      "valueCoding": {
+        "code": "LP6769-6",
+        "display": "-",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "TIME_ASPCT",
+      "valueCoding": {
+        "code": "LP6960-1",
+        "display": "Pt",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "SYSTEM",
+      "valueCoding": {
+        "code": "LP281817-9",
+        "display": "Platelets^BPU",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "SCALE_TYP",
+      "valueCoding": {
+        "code": "LP7747-1",
+        "display": "-",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "METHOD_TYP",
+      "valueCoding": {
+        "code": "LP6209-3",
+        "display": "Culture",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "analyte",
+      "valueCoding": {
+        "code": "LP269209-5",
+        "display": "Microorganism preliminary growth detection panel",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "time-core",
+      "valueCoding": {
+        "code": "LP6960-1",
+        "display": "Pt",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "system-core",
+      "valueCoding": {
+        "code": "LP7631-7",
+        "display": "Platelets",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "super-system",
+      "valueCoding": {
+        "code": "LP7739-8",
+        "display": "BPU",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "analyte-core",
+      "valueCoding": {
+        "code": "LP269209-5",
+        "display": "Microorganism preliminary growth detection panel",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "search",
+      "valueCoding": {
+        "code": "LP14559-6",
+        "display": "Microorganism",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "search",
+      "valueCoding": {
+        "code": "LP268250-0",
+        "display": "Microorganism preliminary growth",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "category",
+      "valueCoding": {
+        "code": "LP29693-6",
+        "display": "Laboratory",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "category",
+      "valueCoding": {
+        "code": "LP343406-7",
+        "display": "Microbiology and Antimicrobial susceptibility",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "category",
+      "valueCoding": {
+        "code": "LP415704-8",
+        "display": "InfectiousDisease",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "category",
+      "valueCoding": {
+        "code": "LP7819-8",
+        "display": "Microbiology",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "category",
+      "valueCoding": {
+        "code": "LP7835-4",
+        "display": "Microbiology Panels",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "CLASS",
+      "valueCoding": {
+        "code": "LP7835-4",
+        "display": "PANEL.MICRO",
+        "system": "http://loinc.org"
+      }
+    }
+  ],
+  "designation": [
+    {
+      "value": "Microorg prel grow det pnl Plts BPU Cult"
+    },
+    {
+      "value": "Microorganism preliminary growth detection panel culture, Blood Product Unit"
+    },
+    {
+      "language": "es-MX",
+      "value": "Panel de detección de crecimiento preliminar de microorganismos:-:Punto temporal:Plaquetas ^ Unidad de hemoderivado:-:Cultura",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "es-MX",
+      "value": "Panel de detección de crecimiento preliminar de microorganismos: Plaquetas Unidad de hemoderivado: Punto temporal: -: -: Cultura",
+      "use": {
+        "code": "LONG_COMMON_NAME",
+        "display": "LONG_COMMON_NAME",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "zh-CN",
+      "value": "微生物初步生长情况检测组套:-:时间点:血小板^血液制品单位:-:培养",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "es-ES",
+      "value": "Panel de detección de crecimiento preliminar de microorganismos:Propiedades mixtas (sólo paneles):Punto temporal:Plaquetas^Unidad de hemoderivado:-:Cultivo",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "it-IT",
+      "value": "Microrganismo, panel rilevamento preliminare crescita:-:Pt:Piastrine^Unità prodotto sangue:-:Coltura",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "fr-FR",
+      "value": "Microorganisme détection pousse primaire panel:-:Ponctuel:Poche de plaquettes:-:Culture",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "fr-FR",
+      "value": "Microorganisme détection pousse primaire panel [-] Poche de plaquettes ; - ; Culture",
+      "use": {
+        "code": "LONG_COMMON_NAME",
+        "display": "LONG_COMMON_NAME",
+        "system": "http://loinc.org"
+      }
+    }
+  ]
+}

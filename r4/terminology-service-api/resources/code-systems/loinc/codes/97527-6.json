@@ -1,0 +1,289 @@
+{
+  "code": "97527-6",
+  "display": "Acanthamoeba sp Ag [Presence] in Specimen by Immunofluorescence",
+  "property": [
+    {
+      "code": "CLASSTYPE",
+      "valueString": "1"
+    },
+    {
+      "code": "VersionLastChanged",
+      "valueString": "2.70"
+    },
+    {
+      "code": "STATUS",
+      "valueString": "ACTIVE"
+    },
+    {
+      "code": "VersionFirstReleased",
+      "valueString": "2.70"
+    },
+    {
+      "code": "CHNG_TYPE",
+      "valueString": "ADD"
+    },
+    {
+      "code": "ORDER_OBS",
+      "valueString": "Both"
+    },
+    {
+      "code": "COMMON_TEST_RANK",
+      "valueString": "0"
+    },
+    {
+      "code": "SHORTNAME",
+      "valueString": "Acanthamoeba Ag Spec Ql IF"
+    },
+    {
+      "code": "LONG_COMMON_NAME",
+      "valueString": "Acanthamoeba sp Ag [Presence] in Specimen by Immunofluorescence"
+    },
+    {
+      "code": "COMMON_ORDER_RANK",
+      "valueString": "0"
+    },
+    {
+      "code": "UNITSREQUIRED",
+      "valueString": "N"
+    },
+    {
+      "code": "RELATEDNAMES2",
+      "valueString": "ACIF; Amebic keratitis; Amebic meningoencephalitis; Anticomplement Immunofluorescence; Antigen; Antigens; DFA; FA; Fluorescent antibody; Fluoresent; ID; IFA; Immune fluorescence; Immunoflour; Immunofluor; Immunofluorescence; Infectious Disease; InfectiousDisease; Microbiology; Misc; Miscellaneous; Ordinal; Other; Point in time; PR; QL; Qual; Qualitative; Random; Screen; Soil amoeba; Spec; species; spp; Time Resolved Fluorescence; To be specified in another part of the message; TRF; Unspecified"
+    },
+    {
+      "code": "DisplayName",
+      "valueString": "Acanthamoeba sp Ag IF Ql (Specimen)"
+    },
+    {
+      "code": "parent",
+      "valueCoding": {
+        "code": "LP248770-2",
+        "display": "Lab terms not yet categorized",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "answer-list",
+      "valueString": "LL2009-0"
+    },
+    {
+      "code": "COMPONENT",
+      "valueCoding": {
+        "code": "LP427315-9",
+        "display": "Acanthamoeba sp Ag",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "PROPERTY",
+      "valueCoding": {
+        "code": "LP217195-9",
+        "display": "PrThr",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "TIME_ASPCT",
+      "valueCoding": {
+        "code": "LP6960-1",
+        "display": "Pt",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "SYSTEM",
+      "valueCoding": {
+        "code": "LP7735-6",
+        "display": "XXX",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "SCALE_TYP",
+      "valueCoding": {
+        "code": "LP7751-3",
+        "display": "Ord",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "METHOD_TYP",
+      "valueCoding": {
+        "code": "LP6323-2",
+        "display": "IF",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "analyte",
+      "valueCoding": {
+        "code": "LP427315-9",
+        "display": "Acanthamoeba sp Ag",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "time-core",
+      "valueCoding": {
+        "code": "LP6960-1",
+        "display": "Pt",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "system-core",
+      "valueCoding": {
+        "code": "LP7735-6",
+        "display": "XXX",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "analyte-core",
+      "valueCoding": {
+        "code": "LP14798-0",
+        "display": "Acanthamoeba sp",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "analyte-suffix",
+      "valueCoding": {
+        "code": "LP20666-1",
+        "display": "Ag",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "category",
+      "valueCoding": {
+        "code": "LP29693-6",
+        "display": "Laboratory",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "category",
+      "valueCoding": {
+        "code": "LP415704-8",
+        "display": "InfectiousDisease",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "CLASS",
+      "valueCoding": {
+        "code": "LP7819-8",
+        "display": "MICRO",
+        "system": "http://loinc.org"
+      }
+    }
+  ],
+  "designation": [
+    {
+      "value": "Acanthamoeba Ag Spec Ql IF"
+    },
+    {
+      "value": "Acanthamoeba sp antigen, Specimen"
+    },
+    {
+      "language": "es-MX",
+      "value": "Acanthamoeba sp Ag:PrThr:Punto temporal:No especificado:Ordinal:SI",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "es-MX",
+      "value": "Acanthamoeba sp Ag:No especificado :Punto temporal:PrThr:Ordinal:SI",
+      "use": {
+        "code": "LONG_COMMON_NAME",
+        "display": "LONG_COMMON_NAME",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "zh-CN",
+      "value": "棘阿米巴属单个未知种 抗原:存在情况或阈值:时间点:XXX:序数型:免疫荧光法",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "fr-CA",
+      "value": "Acanthamœba sp , Ag:Présence-Seuil:Temps ponctuel:XXX:Ordinal:Immunofluorescence",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "et-EE",
+      "value": "Acanthamoeba sp antigeen:PrThr:Pt:XXX:Ord:IF",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "es-ES",
+      "value": "Acanthamoeba sp Antígeno:PrThr:Punto temporal:XXX:Ord:Inmunofluorescencia (IF)",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "it-IT",
+      "value": "Acanthamoeba sp , Ag:PrThr:Pt:XXX:Ord:IF",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "tr-TR",
+      "value": "Acanthamoeba sp Ag:MevcEşik:Zmlı:XXX:Srl:IF",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "ru-RU",
+      "value": "Acanthamoeba sp Аг:PrThr:ТчкВрм:XXX:Пор:ИФ",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "nl-NL",
+      "value": "Acanthamoeba sp. Ag:aanwezigheid:moment:XXX:ordinaal:immunofluorescentie",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "fr-BE",
+      "value": "Acanthamoeba sp Ag:PrThr:Temps ponctuel:XXX:Ordinal:Immunofluorescence",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    }
+  ]
+}

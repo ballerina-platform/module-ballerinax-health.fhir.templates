@@ -1,0 +1,190 @@
+{
+  "code": "69413-3",
+  "display": "Continuity Assessment Record and Evaluation (CARE) tool - Long term care hospital (LTCH) - Planned discharge - version 1.0",
+  "property": [
+    {
+      "code": "CLASSTYPE",
+      "valueString": "4"
+    },
+    {
+      "code": "VersionLastChanged",
+      "valueString": "2.73"
+    },
+    {
+      "code": "STATUS",
+      "valueString": "DISCOURAGED"
+    },
+    {
+      "code": "VersionFirstReleased",
+      "valueString": "2.38"
+    },
+    {
+      "code": "CHNG_TYPE",
+      "valueString": "PANEL"
+    },
+    {
+      "code": "COMMON_TEST_RANK",
+      "valueString": "0"
+    },
+    {
+      "code": "LONG_COMMON_NAME",
+      "valueString": "Continuity Assessment Record and Evaluation (CARE) tool - Long term care hospital (LTCH) - Planned discharge - version 1.0"
+    },
+    {
+      "code": "PanelType",
+      "valueString": "Panel"
+    },
+    {
+      "code": "STATUS_TEXT",
+      "valueString": "Discouraged as items are from a legacy demonstration tool that is no longer maintained."
+    },
+    {
+      "code": "COMMON_ORDER_RANK",
+      "valueString": "0"
+    },
+    {
+      "code": "UNITSREQUIRED",
+      "valueString": "N"
+    },
+    {
+      "code": "RELATEDNAMES2",
+      "valueString": "Assessment; CARE; CARE Survey; CARE tool - LTCH - planned d/c v1.0; Continuity Assessment Record and Evaluation (CARE) Pnl; Disch; Eval; H\u0026P; History and physical; Hosp; Pan; Panel; Panl; Pnl; Point in time; Random; Survey"
+    },
+    {
+      "code": "parent",
+      "valueCoding": {
+        "code": "LP248772-8",
+        "display": "Survey terms not yet categorized",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "COMPONENT",
+      "valueCoding": {
+        "code": "LP136190-8",
+        "display": "Continuity assessment record and evaluation tool - long term care hospital - planned discharge - version 1.0",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "PROPERTY",
+      "valueCoding": {
+        "code": "LP6769-6",
+        "display": "-",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "TIME_ASPCT",
+      "valueCoding": {
+        "code": "LP6960-1",
+        "display": "Pt",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "SYSTEM",
+      "valueCoding": {
+        "code": "LP310005-6",
+        "display": "^Patient",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "SCALE_TYP",
+      "valueCoding": {
+        "code": "LP7747-1",
+        "display": "-",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "METHOD_TYP",
+      "valueCoding": {
+        "code": "LP68340-6",
+        "display": "CARE",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "analyte",
+      "valueCoding": {
+        "code": "LP136190-8",
+        "display": "Continuity assessment record and evaluation tool - long term care hospital - planned discharge - version 1.0",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "time-core",
+      "valueCoding": {
+        "code": "LP6960-1",
+        "display": "Pt",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "super-system",
+      "valueCoding": {
+        "code": "LP6985-8",
+        "display": "Patient",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "analyte-core",
+      "valueCoding": {
+        "code": "LP136190-8",
+        "display": "Continuity assessment record and evaluation tool - long term care hospital - planned discharge - version 1.0",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "search",
+      "valueCoding": {
+        "code": "LP149706-6",
+        "display": "Discharge",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "search",
+      "valueCoding": {
+        "code": "LP28648-1",
+        "display": "Hospital",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "search",
+      "valueCoding": {
+        "code": "LP73671-7",
+        "display": "Version",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "search",
+      "valueCoding": {
+        "code": "LP73913-3",
+        "display": "Assessment",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "category",
+      "valueCoding": {
+        "code": "LP29696-9",
+        "display": "Survey instruments",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "CLASS",
+      "valueCoding": {
+        "code": "LP68336-4",
+        "display": "PANEL.SURVEY.CARE",
+        "system": "http://loinc.org"
+      }
+    }
+  ]
+}

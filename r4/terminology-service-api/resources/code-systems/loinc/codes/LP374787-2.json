@@ -1,0 +1,46 @@
+{
+  "code": "LP374787-2",
+  "display": "Escherichia coli verotoxin 2 | Stool | Microbiology",
+  "property": [
+    {
+      "code": "parent",
+      "valueCoding": {
+        "code": "LP17141-0",
+        "display": "Escherichia coli verotoxin 2",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "child",
+      "valueCoding": {
+        "code": "6576-3",
+        "display": "Escherichia coli verotoxin 2 [Presence] in Stool",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "child",
+      "valueCoding": {
+        "code": "31382-5",
+        "display": "Escherichia coli verotoxin 2 Ab [Units/volume] in Stool",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "child",
+      "valueCoding": {
+        "code": "22609-2",
+        "display": "Escherichia coli verotoxin 2 Ab [Titer] in Stool",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "child",
+      "valueCoding": {
+        "code": "6577-1",
+        "display": "Escherichia coli verotoxin 2 neutralizing antibody [Titer] in Stool by Neutralization test",
+        "system": "http://loinc.org"
+      }
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:1.3.6.1.4.1.12009.10.1.271"
+    }
+  ],
+  "copyright": "This material contains content from LOINC (http://loinc.org). LOINC is copyright ©1995-2023, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc.",
+  "url": "http://loinc.org/vs/LL1103-2",
+  "version": "Beta.1",
+  "name": "PhenX06_26_Hs in sun",
+  "status": "active",
+  "publisher": "Regenstrief Institute, Inc.",
+  "id": "LL1103-2",
+  "contact": [
+    {
+      "name": "Regenstrief Institute, Inc.",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://loinc.org"
+        }
+      ]
+    }
+  ],
+  "compose": {
+    "include": [
+      {
+        "system": "http://loinc.org",
+        "concept": [
+          {
+            "code": "LA12717-7",
+            "display": "Less than 1 hour"
+          },
+          {
+            "code": "LA14241-6",
+            "display": "1 or 2 hours"
+          },
+          {
+            "code": "LA14242-4",
+            "display": "3 or 4 hours"
+          },
+          {
+            "code": "LA14243-2",
+            "display": "5 or 6 hours"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "code": "LP229125-2",
+  "display": "NPHS2 gene targeted mutation analysis",
+  "property": [
+    {
+      "code": "parent",
+      "valueCoding": {
+        "code": "LP101430-9",
+        "display": "NPHS2 gene",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "child",
+      "valueCoding": {
+        "code": "LP410069-1",
+        "display": "NPHS2 gene targeted mutation analysis | Blood or Tissue | Mutations",
+        "system": "http://loinc.org"
+      }
+    }
+  ],
+  "designation": [
+    {
+      "value": "NPHS2 gene targeted mutation analysis"
+    }
+  ]
+}

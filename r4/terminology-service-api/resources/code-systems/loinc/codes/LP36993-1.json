@@ -1,0 +1,27 @@
+{
+  "code": "LP36993-1",
+  "display": "Afipia felis Ab.IgG",
+  "property": [
+    {
+      "code": "parent",
+      "valueCoding": {
+        "code": "LP36994-9",
+        "display": "Afipia felis Ab",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "child",
+      "valueCoding": {
+        "code": "LP373847-5",
+        "display": "Afipia felis IgG | Serum | Microbiology",
+        "system": "http://loinc.org"
+      }
+    }
+  ],
+  "designation": [
+    {
+      "value": "Afipia felis IgG"
+    }
+  ]
+}

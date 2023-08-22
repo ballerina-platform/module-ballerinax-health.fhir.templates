@@ -1,0 +1,22 @@
+{
+  "code": "LP380335-2",
+  "display": "Famciclovir | Isolate | Antibiotic susceptibilities",
+  "property": [
+    {
+      "code": "parent",
+      "valueCoding": {
+        "code": "LP157326-2",
+        "display": "Famciclovir",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "child",
+      "valueCoding": {
+        "code": "72839-4",
+        "display": "Famciclovir [Susceptibility] by Genotype method",
+        "system": "http://loinc.org"
+      }
+    }
+  ]
+}

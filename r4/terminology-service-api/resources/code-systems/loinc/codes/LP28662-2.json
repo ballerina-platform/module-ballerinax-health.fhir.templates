@@ -1,0 +1,595 @@
+{
+  "code": "LP28662-2",
+  "display": "Diameter",
+  "property": [
+    {
+      "code": "parent",
+      "valueCoding": {
+        "code": "LP29672-0",
+        "display": "CARD.US",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "child",
+      "valueCoding": {
+        "code": "LP406804-7",
+        "display": "Diameter | Aorta | Cardiac ultrasound",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "child",
+      "valueCoding": {
+        "code": "LP406805-4",
+        "display": "Diameter | Aorta isthmus | Cardiac ultrasound",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "child",
+      "valueCoding": {
+        "code": "LP406806-2",
+        "display": "Diameter | Aorta root | Cardiac ultrasound",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "child",
+      "valueCoding": {
+        "code": "LP406807-0",
+        "display": "Diameter | Aorta root annulo-aortic junction | Cardiac ultrasound",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "child",
+      "valueCoding": {
+        "code": "LP406808-8",
+        "display": "Diameter | Aorta.sinotubular junction | Cardiac ultrasound",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "child",
+      "valueCoding": {
+        "code": "LP406809-6",
+        "display": "Diameter | Aorta arch and Neck | Cardiac ultrasound",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "child",
+      "valueCoding": {
+        "code": "LP406810-4",
+        "display": "Diameter | Aorta thoracic ascending | Cardiac ultrasound",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "child",
+      "valueCoding": {
+        "code": "LP406811-2",
+        "display": "Diameter | Aorta thoracic descending | Cardiac ultrasound",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "child",
+      "valueCoding": {
+        "code": "LP406812-0",
+        "display": "Diameter | Aortic valve | Cardiac ultrasound",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "child",
+      "valueCoding": {
+        "code": "LP406813-8",
+        "display": "Diameter | Aortic valve annulus | Cardiac ultrasound",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "child",
+      "valueCoding": {
+        "code": "LP406814-6",
+        "display": "Diameter | Circulatory system XXX | Cardiac ultrasound",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "child",
+      "valueCoding": {
+        "code": "LP406815-3",
+        "display": "Diameter | Heart ventricle Left outflow tract | Cardiac ultrasound",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "child",
+      "valueCoding": {
+        "code": "LP406816-1",
+        "display": "Diameter | Heart ventricle Right outflow tract | Cardiac ultrasound",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "child",
+      "valueCoding": {
+        "code": "LP411916-2",
+        "display": "Diameter | Right ventricular outflow tract proximal | Cardiac ultrasound",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "child",
+      "valueCoding": {
+        "code": "LP406817-9",
+        "display": "Diameter | Mitral valve | Cardiac ultrasound",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "child",
+      "valueCoding": {
+        "code": "LP406818-7",
+        "display": "Diameter | Mitral valve annulus | Cardiac ultrasound",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "child",
+      "valueCoding": {
+        "code": "LP406819-5",
+        "display": "Diameter | Left pulmonary artery | Cardiac ultrasound",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "child",
+      "valueCoding": {
+        "code": "LP406820-3",
+        "display": "Diameter | Pulmonary artery main | Cardiac ultrasound",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "child",
+      "valueCoding": {
+        "code": "LP406821-1",
+        "display": "Diameter | Right pulmonary artery | Cardiac ultrasound",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "child",
+      "valueCoding": {
+        "code": "LP410984-1",
+        "display": "Diameter | Pulmonic valve | Cardiac ultrasound",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "child",
+      "valueCoding": {
+        "code": "LP406823-7",
+        "display": "Diameter | Pulmonic valve annulus | Cardiac ultrasound",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "child",
+      "valueCoding": {
+        "code": "LP406824-5",
+        "display": "Diameter | Tricuspid valve | Cardiac ultrasound",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "child",
+      "valueCoding": {
+        "code": "LP406825-2",
+        "display": "Diameter | Tricuspid valve annulus | Cardiac ultrasound",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "child",
+      "valueCoding": {
+        "code": "LP406826-0",
+        "display": "Diameter | Inferior vena cava | Cardiac ultrasound",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "child",
+      "valueCoding": {
+        "code": "LP406827-8",
+        "display": "Diameter | Superior vena cava | Cardiac ultrasound",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "parent",
+      "valueCoding": {
+        "code": "LP7830-5",
+        "display": "OB.US",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "child",
+      "valueCoding": {
+        "code": "LP416182-6",
+        "display": "Diameter | Bowel | OB ultrasound",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "child",
+      "valueCoding": {
+        "code": "LP416183-4",
+        "display": "Diameter | Cervical canal | OB ultrasound",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "child",
+      "valueCoding": {
+        "code": "LP416184-2",
+        "display": "Diameter | Cervical canal external os | OB ultrasound",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "child",
+      "valueCoding": {
+        "code": "LP416185-9",
+        "display": "Diameter | Cervical canal internal os | OB ultrasound",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "child",
+      "valueCoding": {
+        "code": "LP416186-7",
+        "display": "Diameter | Colon lumen | OB ultrasound",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "child",
+      "valueCoding": {
+        "code": "LP416187-5",
+        "display": "Diameter | Follicle | OB ultrasound",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "child",
+      "valueCoding": {
+        "code": "LP416188-3",
+        "display": "Diameter | Gestational sac | OB ultrasound",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "child",
+      "valueCoding": {
+        "code": "LP416189-1",
+        "display": "Diameter | Heart ventricle Left outflow tract | OB ultrasound",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "child",
+      "valueCoding": {
+        "code": "LP416190-9",
+        "display": "Diameter | Heart ventricle Right outflow tract | OB ultrasound",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "child",
+      "valueCoding": {
+        "code": "LP416191-7",
+        "display": "Diameter | Pulmonary artery | OB ultrasound",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "child",
+      "valueCoding": {
+        "code": "LP416192-5",
+        "display": "Diameter | Renal pelvis Left | OB ultrasound",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "child",
+      "valueCoding": {
+        "code": "LP416193-3",
+        "display": "Diameter | Renal pelvis Right | OB ultrasound",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "child",
+      "valueCoding": {
+        "code": "LP416194-1",
+        "display": "Diameter | Small bowel | OB ultrasound",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "child",
+      "valueCoding": {
+        "code": "LP416196-6",
+        "display": "Diameter | Fetus | OB ultrasound",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "child",
+      "valueCoding": {
+        "code": "LP416197-4",
+        "display": "Diameter | Fetus | Aortic valve | OB ultrasound",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "child",
+      "valueCoding": {
+        "code": "LP416198-2",
+        "display": "Diameter | Fetus | Bowel | OB ultrasound",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "child",
+      "valueCoding": {
+        "code": "LP416199-0",
+        "display": "Diameter | Fetus | Colon lumen | OB ultrasound",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "child",
+      "valueCoding": {
+        "code": "LP416200-6",
+        "display": "Diameter | Fetus | Eye | OB ultrasound",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "child",
+      "valueCoding": {
+        "code": "LP416201-4",
+        "display": "Diameter | Fetus | Right eye | OB ultrasound",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "child",
+      "valueCoding": {
+        "code": "LP416202-2",
+        "display": "Diameter | Fetus | Heart ventricle Left outflow tract | OB ultrasound",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "child",
+      "valueCoding": {
+        "code": "LP416203-0",
+        "display": "Diameter | Fetus | Heart ventricle Right outflow tract | OB ultrasound",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "child",
+      "valueCoding": {
+        "code": "LP416204-8",
+        "display": "Diameter | Fetus | Lung Left | OB ultrasound",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "child",
+      "valueCoding": {
+        "code": "LP416205-5",
+        "display": "Diameter | Fetus | Lung Right | OB ultrasound",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "child",
+      "valueCoding": {
+        "code": "LP416206-3",
+        "display": "Diameter | Fetus | Mitral valve | OB ultrasound",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "child",
+      "valueCoding": {
+        "code": "LP416207-1",
+        "display": "Diameter | Fetus | Pulmonary artery | OB ultrasound",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "child",
+      "valueCoding": {
+        "code": "LP416208-9",
+        "display": "Diameter | Fetus | Pulmonic valve | OB ultrasound",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "child",
+      "valueCoding": {
+        "code": "LP416209-7",
+        "display": "Diameter | Fetus | Renal pelvis Left | OB ultrasound",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "child",
+      "valueCoding": {
+        "code": "LP416210-5",
+        "display": "Diameter | Fetus | Renal pelvis Right | OB ultrasound",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "child",
+      "valueCoding": {
+        "code": "LP416211-3",
+        "display": "Diameter | Fetus | Small bowel | OB ultrasound",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "child",
+      "valueCoding": {
+        "code": "LP416212-1",
+        "display": "Diameter | Fetus | Tricuspid valve | OB ultrasound",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "child",
+      "valueCoding": {
+        "code": "LP416213-9",
+        "display": "Diameter | Fetus | Umbilical vein | OB ultrasound",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "child",
+      "valueCoding": {
+        "code": "LP416214-7",
+        "display": "Diameter | Fetus | Urinary bladder | OB ultrasound",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "child",
+      "valueCoding": {
+        "code": "LP416215-4",
+        "display": "Diameter | Fetus | Yolk sac | OB ultrasound",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "parent",
+      "valueCoding": {
+        "code": "LP29673-8",
+        "display": "EYE.CONTACT_LENS",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "child",
+      "valueCoding": {
+        "code": "LP408387-1",
+        "display": "Diameter | Left contact lens | Contact lens",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "child",
+      "valueCoding": {
+        "code": "LP408388-9",
+        "display": "Diameter | Right contact lens | Contact lens",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "child",
+      "valueCoding": {
+        "code": "LP419031-2",
+        "display": "Diameter | Left pupil | Ophthalmology and Optometry",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "child",
+      "valueCoding": {
+        "code": "LP419032-0",
+        "display": "Diameter | Right pupil | Ophthalmology and Optometry",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "parent",
+      "valueCoding": {
+        "code": "LP29677-9",
+        "display": "EYE.REFRACTION",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "child",
+      "valueCoding": {
+        "code": "LP419208-6",
+        "display": "Diameter | Left pupil | Refraction",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "child",
+      "valueCoding": {
+        "code": "LP419031-2",
+        "display": "Diameter | Left pupil | Ophthalmology and Optometry",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "child",
+      "valueCoding": {
+        "code": "LP419209-4",
+        "display": "Diameter | Right pupil | Refraction",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "child",
+      "valueCoding": {
+        "code": "LP419032-0",
+        "display": "Diameter | Right pupil | Ophthalmology and Optometry",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "parent",
+      "valueCoding": {
+        "code": "LP7840-4",
+        "display": "PULM",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "child",
+      "valueCoding": {
+        "code": "LP408910-0",
+        "display": "Diameter | Suction catheter | Respiratory measures and Ventilator management",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "child",
+      "valueCoding": {
+        "code": "LP408911-8",
+        "display": "Diameter | Tracheostomy tube | Respiratory measures and Ventilator management",
+        "system": "http://loinc.org"
+      }
+    }
+  ],
+  "designation": [
+    {
+      "value": "Diameter"
+    }
+  ]
+}

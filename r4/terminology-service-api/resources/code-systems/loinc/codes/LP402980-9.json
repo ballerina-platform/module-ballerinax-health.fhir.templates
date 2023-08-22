@@ -1,0 +1,14 @@
+{
+  "code": "LP402980-9",
+  "display": "Clindamycin induced platelet IgM | Serum or Plasma | Serology - non-micro",
+  "property": [
+    {
+      "code": "parent",
+      "valueCoding": {
+        "code": "LP164607-6",
+        "display": "Clindamycin induced platelet Ab.IgM",
+        "system": "http://loinc.org"
+      }
+    }
+  ]
+}

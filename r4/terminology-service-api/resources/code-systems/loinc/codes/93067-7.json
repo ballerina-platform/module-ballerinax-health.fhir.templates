@@ -1,0 +1,190 @@
+{
+  "code": "93067-7",
+  "display": "Are you feeling bothered, upset, or worried at this point in your pregnancy about the quality of your medical care during pregnancy [NuPDQ]",
+  "property": [
+    {
+      "code": "CLASSTYPE",
+      "valueString": "4"
+    },
+    {
+      "code": "VersionLastChanged",
+      "valueString": "2.67"
+    },
+    {
+      "code": "STATUS",
+      "valueString": "ACTIVE"
+    },
+    {
+      "code": "VersionFirstReleased",
+      "valueString": "2.67"
+    },
+    {
+      "code": "CHNG_TYPE",
+      "valueString": "ADD"
+    },
+    {
+      "code": "ORDER_OBS",
+      "valueString": "Observation"
+    },
+    {
+      "code": "COMMON_TEST_RANK",
+      "valueString": "0"
+    },
+    {
+      "code": "LONG_COMMON_NAME",
+      "valueString": "Are you feeling bothered, upset, or worried at this point in your pregnancy about the quality of your medical care during pregnancy [NuPDQ]"
+    },
+    {
+      "code": "COMMON_ORDER_RANK",
+      "valueString": "0"
+    },
+    {
+      "code": "SURVEY_QUEST_TEXT",
+      "valueString": "Are you feeling bothered, upset or worried at this point in your pregnancy about the quality of your medical care during pregnancy?"
+    },
+    {
+      "code": "EXTERNAL_COPYRIGHT_NOTICE",
+      "valueString": "Copyright © 2008 Marci Lobel. Used with permission."
+    },
+    {
+      "code": "RELATEDNAMES2",
+      "valueString": "Finding; Findings; Gestation; Gestations; Gravida; Ordinal; Point in time; Pregnancies; QL; Qual; Qualitative; Random; Screen; Survey; SURVEY.MTLHLTH"
+    },
+    {
+      "code": "EXTERNAL_COPYRIGHT_LINK",
+      "valueString": "NuPDQ"
+    },
+    {
+      "code": "parent",
+      "valueCoding": {
+        "code": "LP248772-8",
+        "display": "Survey terms not yet categorized",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "answer-list",
+      "valueString": "LL5083-2"
+    },
+    {
+      "code": "COMPONENT",
+      "valueCoding": {
+        "code": "LP268192-4",
+        "display": "Are you feeling bothered, upset, or worried at this point in your pregnancy about the quality of your medical care during pregnancy",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "PROPERTY",
+      "valueCoding": {
+        "code": "LP6813-2",
+        "display": "Find",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "TIME_ASPCT",
+      "valueCoding": {
+        "code": "LP6960-1",
+        "display": "Pt",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "SYSTEM",
+      "valueCoding": {
+        "code": "LP310005-6",
+        "display": "^Patient",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "SCALE_TYP",
+      "valueCoding": {
+        "code": "LP7751-3",
+        "display": "Ord",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "METHOD_TYP",
+      "valueCoding": {
+        "code": "LP268126-2",
+        "display": "NuPDQ",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "analyte",
+      "valueCoding": {
+        "code": "LP268192-4",
+        "display": "Are you feeling bothered, upset, or worried at this point in your pregnancy about the quality of your medical care during pregnancy",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "time-core",
+      "valueCoding": {
+        "code": "LP6960-1",
+        "display": "Pt",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "super-system",
+      "valueCoding": {
+        "code": "LP6985-8",
+        "display": "Patient",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "analyte-core",
+      "valueCoding": {
+        "code": "LP268192-4",
+        "display": "Are you feeling bothered, upset, or worried at this point in your pregnancy about the quality of your medical care during pregnancy",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "search",
+      "valueCoding": {
+        "code": "LP133213-1",
+        "display": "Pregnancy",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "search",
+      "valueCoding": {
+        "code": "LP421836-0",
+        "display": "Quality",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "search",
+      "valueCoding": {
+        "code": "LP74841-5",
+        "display": "Feeling",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "CLASS",
+      "valueCoding": {
+        "code": "LP145934-8",
+        "display": "SURVEY.MTLHLTH",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "category",
+      "valueCoding": {
+        "code": "LP29696-9",
+        "display": "Survey instruments",
+        "system": "http://loinc.org"
+      }
+    }
+  ]
+}

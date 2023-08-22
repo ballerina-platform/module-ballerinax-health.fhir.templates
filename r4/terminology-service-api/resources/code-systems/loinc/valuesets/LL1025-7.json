@@ -1,0 +1,55 @@
+{
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:1.3.6.1.4.1.12009.10.1.193"
+    }
+  ],
+  "copyright": "This material contains content from LOINC (http://loinc.org). LOINC is copyright ©1995-2023, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc.",
+  "url": "http://loinc.org/vs/LL1025-7",
+  "version": "Beta.1",
+  "name": "[PROMIS] W no troub|Lit tr|Some tr|Lot tr|Not able",
+  "status": "active",
+  "publisher": "Regenstrief Institute, Inc.",
+  "id": "LL1025-7",
+  "contact": [
+    {
+      "name": "Regenstrief Institute, Inc.",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://loinc.org"
+        }
+      ]
+    }
+  ],
+  "compose": {
+    "include": [
+      {
+        "system": "http://loinc.org",
+        "concept": [
+          {
+            "code": "LA13953-7",
+            "display": "With no trouble"
+          },
+          {
+            "code": "LA13954-5",
+            "display": "With a little trouble"
+          },
+          {
+            "code": "LA13955-2",
+            "display": "With some trouble"
+          },
+          {
+            "code": "LA13956-0",
+            "display": "With a lot of trouble"
+          },
+          {
+            "code": "LA13957-8",
+            "display": "Not able to do"
+          }
+        ]
+      }
+    ]
+  }
+}

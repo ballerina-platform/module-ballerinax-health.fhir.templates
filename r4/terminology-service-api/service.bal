@@ -128,4 +128,10 @@ service http:InterceptableService / on interceptorListener {
         r4:Bundle codeSystem = check searchCodeSystem(request);
         return codeSystem.toJson();
     }
+
+    isolated resource function post fhir/r4/create(http:RequestContext ctx, http:Request request) returns json|error|r4:FHIRError {
+        log:printDebug(string `FHIR Terminology request is received. Interaction: Create CodeSystem or ValueSet`);
+
+        return create(request);
+    }
 }

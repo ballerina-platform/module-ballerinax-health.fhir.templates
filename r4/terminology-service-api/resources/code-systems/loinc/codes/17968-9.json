@@ -1,0 +1,357 @@
+{
+  "code": "17968-9",
+  "display": "Bacteria # 6 identified in Stool by Culture",
+  "property": [
+    {
+      "code": "CLASSTYPE",
+      "valueString": "1"
+    },
+    {
+      "code": "VersionLastChanged",
+      "valueString": "2.19"
+    },
+    {
+      "code": "STATUS",
+      "valueString": "ACTIVE"
+    },
+    {
+      "code": "VersionFirstReleased",
+      "valueString": "1.0l"
+    },
+    {
+      "code": "CHNG_TYPE",
+      "valueString": "MIN"
+    },
+    {
+      "code": "ORDER_OBS",
+      "valueString": "Observation"
+    },
+    {
+      "code": "COMMON_TEST_RANK",
+      "valueString": "0"
+    },
+    {
+      "code": "SHORTNAME",
+      "valueString": "Bacteria Stl Cult org #6"
+    },
+    {
+      "code": "LONG_COMMON_NAME",
+      "valueString": "Bacteria # 6 identified in Stool by Culture"
+    },
+    {
+      "code": "COMMON_ORDER_RANK",
+      "valueString": "0"
+    },
+    {
+      "code": "RELATEDNAMES2",
+      "valueString": "Bact; Bowel movement; C\u0026S; Cult; Cultures; Faecal; Faeces; Fecal; Feces; Gastro; Gastroenterology; GI; ID; Identity or presence; Infectious Disease; InfectiousDisease; Isolated; Microbiology; Nominal; Point in time; Random; Stl; Stool \u003d Fecal"
+    },
+    {
+      "code": "DisplayName",
+      "valueString": "Bacteria identified # 6 Cx Nom (Stl)"
+    },
+    {
+      "code": "parent",
+      "valueCoding": {
+        "code": "LP373680-0",
+        "display": "Bacteria | Stool | Microbiology",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "COMPONENT",
+      "valueCoding": {
+        "code": "LP308261-9",
+        "display": "Bacteria identified^^^6",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "PROPERTY",
+      "valueCoding": {
+        "code": "LP6850-4",
+        "display": "Prid",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "TIME_ASPCT",
+      "valueCoding": {
+        "code": "LP6960-1",
+        "display": "Pt",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "SYSTEM",
+      "valueCoding": {
+        "code": "LP7604-4",
+        "display": "Stool",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "SCALE_TYP",
+      "valueCoding": {
+        "code": "LP7750-5",
+        "display": "Nom",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "METHOD_TYP",
+      "valueCoding": {
+        "code": "LP6209-3",
+        "display": "Culture",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "analyte",
+      "valueCoding": {
+        "code": "LP37205-9",
+        "display": "Bacteria identified",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "time-core",
+      "valueCoding": {
+        "code": "LP6960-1",
+        "display": "Pt",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "system-core",
+      "valueCoding": {
+        "code": "LP7604-4",
+        "display": "Stool",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "count",
+      "valueCoding": {
+        "code": "LP20594-5",
+        "display": "6",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "analyte-core",
+      "valueCoding": {
+        "code": "LP14082-9",
+        "display": "Bacteria",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "analyte-suffix",
+      "valueCoding": {
+        "code": "LP29257-0",
+        "display": "identified",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "search",
+      "valueCoding": {
+        "code": "LP98185-9",
+        "display": "Bacteria.",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "category",
+      "valueCoding": {
+        "code": "LP190554-8",
+        "display": "Gastroenterology",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "category",
+      "valueCoding": {
+        "code": "LP29693-6",
+        "display": "Laboratory",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "category",
+      "valueCoding": {
+        "code": "LP343406-7",
+        "display": "Microbiology and Antimicrobial susceptibility",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "category",
+      "valueCoding": {
+        "code": "LP415704-8",
+        "display": "InfectiousDisease",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "category",
+      "valueCoding": {
+        "code": "LP7819-8",
+        "display": "Microbiology",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "CLASS",
+      "valueCoding": {
+        "code": "LP7819-8",
+        "display": "MICRO",
+        "system": "http://loinc.org"
+      }
+    }
+  ],
+  "designation": [
+    {
+      "value": "Bacteria Stl Cult org #6"
+    },
+    {
+      "value": "Bacterial culture, Stool"
+    },
+    {
+      "language": "es-MX",
+      "value": "Bacterias identificadas ^^^6.0:Presencia o identidad:Punto temporal:Heces:Nominal:Cultura",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "es-MX",
+      "value": "Bacterias identificadas : Heces : Punto temporal: Presencia o identidad: Nominal: Cultura",
+      "use": {
+        "code": "LONG_COMMON_NAME",
+        "display": "LONG_COMMON_NAME",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "zh-CN",
+      "value": "细菌 已鉴定的^^^6:存在与否或特征标识:时间点:大便:名义型:培养",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "es-AR",
+      "value": "microorganismo identificado^^^6:presencia o identidad:punto en el tiempo:materia fecal:Nominal:coprocultivo",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "es-AR",
+      "value": "microorganismo identificado^^^6:presencia o identidad:punto en el tiempo:materia fecal:Nominal:coprocultivo",
+      "use": {
+        "code": "SHORTNAME",
+        "display": "SHORTNAME",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "pt-BR",
+      "value": "Identificação de Bactéria^^^6:Ident:Pt:Fezes:Nom:Cultura",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "pt-BR",
+      "value": "Bacteria Stl Cult org #6",
+      "use": {
+        "code": "SHORTNAME",
+        "display": "SHORTNAME",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "es-ES",
+      "value": "Bacteria identificado^^^6:Presencia o identidad:Punto temporal:Heces:Nom:Cultivo",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "ko-KR",
+      "value": "세균 동정^^^6:존재:검사시점:대변:명칭결과:배양",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "it-IT",
+      "value": "Batteri , identificato^^^6:Prid:Pt:Feci:Nom:Coltura",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "fr-FR",
+      "value": "Bactérie 6 identifiée:Identification:Ponctuel:Selles:Résultat nominal:Culture",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "fr-FR",
+      "value": "Bactérie 6 identifiée [Identification] Selles ; Résultat nominal ; Culture",
+      "use": {
+        "code": "LONG_COMMON_NAME",
+        "display": "LONG_COMMON_NAME",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "tr-TR",
+      "value": "Bakteri tanımlanmış^^^6:MevcKimlik:Zmlı:Dışkı:Snf:Kültür",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "ru-RU",
+      "value": "Бактерии идентифицированный^^^6:ПрИд:ТчкВрм:Фекалии:Ном:Культура",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "nl-NL",
+      "value": "bacteriën geïdentificeerd^^^6:identificator:moment:feces:nominaal:kweek",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    }
+  ]
+}

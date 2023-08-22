@@ -1,0 +1,310 @@
+{
+  "code": "81865-8",
+  "display": "MYBPC3 gene mutation analysis limited to known familial mutations in Blood or Tissue by Molecular genetics method",
+  "property": [
+    {
+      "code": "CLASSTYPE",
+      "valueString": "1"
+    },
+    {
+      "code": "VersionLastChanged",
+      "valueString": "2.65"
+    },
+    {
+      "code": "STATUS",
+      "valueString": "ACTIVE"
+    },
+    {
+      "code": "VersionFirstReleased",
+      "valueString": "2.56"
+    },
+    {
+      "code": "CHNG_TYPE",
+      "valueString": "MIN"
+    },
+    {
+      "code": "ORDER_OBS",
+      "valueString": "Both"
+    },
+    {
+      "code": "COMMON_TEST_RANK",
+      "valueString": "0"
+    },
+    {
+      "code": "SHORTNAME",
+      "valueString": "MYBPC3 Fam Mut Anl Bld/T"
+    },
+    {
+      "code": "LONG_COMMON_NAME",
+      "valueString": "MYBPC3 gene mutation analysis limited to known familial mutations in Blood or Tissue by Molecular genetics method"
+    },
+    {
+      "code": "COMMON_ORDER_RANK",
+      "valueString": "0"
+    },
+    {
+      "code": "RELATEDNAMES2",
+      "valueString": "Blood; CMD1MM; CMH4; Document; Fam Mut Anl; Finding; Findings; Genetics; Heredity; Heritable; Inherited; LMTED; LTD; LVNC10; Molecular genetics; Molecular pathology; MOLPATH; MOLPATH.MUTATIONS; Mut; Mutation; Mutations; Muts; MYBP-C; myosin binding protein C, cardiac; PCR; Point in time; Random; Tissue; Tissue, unspecified; WB; Whole blood; Whole blood or Tissue"
+    },
+    {
+      "code": "DisplayName",
+      "valueString": "MYBPC3 gene familial mut analysis Molgen Doc (Bld/Tiss)"
+    },
+    {
+      "code": "parent",
+      "valueCoding": {
+        "code": "LP248770-2",
+        "display": "Lab terms not yet categorized",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "COMPONENT",
+      "valueCoding": {
+        "code": "LP229072-6",
+        "display": "MYBPC3 gene mutation analysis limited to known familial mutations",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "PROPERTY",
+      "valueCoding": {
+        "code": "LP6813-2",
+        "display": "Find",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "TIME_ASPCT",
+      "valueCoding": {
+        "code": "LP6960-1",
+        "display": "Pt",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "SYSTEM",
+      "valueCoding": {
+        "code": "LP7061-7",
+        "display": "Bld/Tiss",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "SCALE_TYP",
+      "valueCoding": {
+        "code": "LP32888-7",
+        "display": "Doc",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "METHOD_TYP",
+      "valueCoding": {
+        "code": "LP6404-0",
+        "display": "Molgen",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "analyte",
+      "valueCoding": {
+        "code": "LP229072-6",
+        "display": "MYBPC3 gene mutation analysis limited to known familial mutations",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "time-core",
+      "valueCoding": {
+        "code": "LP6960-1",
+        "display": "Pt",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "system-core",
+      "valueCoding": {
+        "code": "LP7061-7",
+        "display": "Bld/Tiss",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "analyte-core",
+      "valueCoding": {
+        "code": "LP207902-0",
+        "display": "MYBPC3 gene",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "analyte-suffix",
+      "valueCoding": {
+        "code": "LP135775-7",
+        "display": "mutation analysis limited to known familial mutations",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "analyte-gene",
+      "valueCoding": {
+        "code": "LP288389-2",
+        "display": "MYBPC3 gene",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "search",
+      "valueCoding": {
+        "code": "LP199195-1",
+        "display": "Gene",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "search",
+      "valueCoding": {
+        "code": "LP263655-5",
+        "display": "Gene mutation analysis limited to known familial mutations",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "search",
+      "valueCoding": {
+        "code": "LP411082-3",
+        "display": "Mutations",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "search",
+      "valueCoding": {
+        "code": "LP7057-5",
+        "display": "Bld",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "search",
+      "valueCoding": {
+        "code": "LP7641-6",
+        "display": "Tiss",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "category",
+      "valueCoding": {
+        "code": "LP29693-6",
+        "display": "Laboratory",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "category",
+      "valueCoding": {
+        "code": "LP415703-0",
+        "display": "Genetics",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "CLASS",
+      "valueCoding": {
+        "code": "LP7824-8",
+        "display": "MOLPATH.MUT",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "AssociatedObservations",
+      "valueCoding": {
+        "code": "81247-9",
+        "display": "Master HL7 genetic variant reporting panel",
+        "system": "http://loinc.org"
+      }
+    }
+  ],
+  "designation": [
+    {
+      "value": "MYBPC3 Fam Mut Anl Bld/T"
+    },
+    {
+      "value": "MYBPC3 gene familial variant analysis, Blood or tissue specimen"
+    },
+    {
+      "language": "es-MX",
+      "value": "Análisis de mutación del gen MYBPC3 limitado a mutaciones familiares conocidas:Hallazgo:Punto temporal:Sangre o tejido:Documento:Genética molecular",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "es-MX",
+      "value": "Análisis de mutación del gen MYBPC3 limitado a mutaciones familiares conocidas: Sangre o tejido : Punto temporal: Hallazgo: Documento: Genética molecular",
+      "use": {
+        "code": "LONG_COMMON_NAME",
+        "display": "LONG_COMMON_NAME",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "zh-CN",
+      "value": "MYBPC3 基因 局限于已知家族性突变的突变分析:发现:时间点:全血/组织:文档型:分子遗传学类实验室方法",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "es-ES",
+      "value": "Gen MYBPC3 Análisis de mutaciones limitado al conocimiento de las mutaciones familiares:Hallazgo:Punto temporal:Sangre o tejido:Doc:Genética molecular",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "it-IT",
+      "value": "Gene MYBPC3 , analisi di mutazione limitata a mutazioni familiari note:Osservazione:Pt:Sangue/Tess:Doc:Molgen",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "fr-FR",
+      "value": "MYBPC3 gène mutation recherche limitée aux mutations familiales connues:Recherche:Ponctuel:Sang/Tissu:Document:Biologie moléculaire",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "fr-FR",
+      "value": "MYBPC3 gène mutation recherche limitée aux mutations familiales connues [Recherche] Sang/Tissu ; Document ; Biologie moléculaire",
+      "use": {
+        "code": "LONG_COMMON_NAME",
+        "display": "LONG_COMMON_NAME",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "nl-NL",
+      "value": "MYBPC3-gen mutatieanalyse gelimiteerd tot bekende familiaire mutaties:bevinding:moment:bloed of weefsel:document:moleculair genetisch onderzoek",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    }
+  ]
+}

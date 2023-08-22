@@ -1,0 +1,14 @@
+{
+  "code": "LP379106-0",
+  "display": "Varicella zoster virus DNA | Ocular fluid | Microbiology",
+  "property": [
+    {
+      "code": "parent",
+      "valueCoding": {
+        "code": "LP40115-5",
+        "display": "Varicella zoster virus DNA",
+        "system": "http://loinc.org"
+      }
+    }
+  ]
+}

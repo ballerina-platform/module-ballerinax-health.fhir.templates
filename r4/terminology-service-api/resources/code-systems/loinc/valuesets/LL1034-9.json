@@ -1,0 +1,47 @@
+{
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:1.3.6.1.4.1.12009.10.1.203"
+    }
+  ],
+  "copyright": "This material contains content from LOINC (http://loinc.org). LOINC is copyright ©1995-2023, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc.",
+  "url": "http://loinc.org/vs/LL1034-9",
+  "version": "Beta.1",
+  "name": "Normal|Abnormal|Clinical significance unknown",
+  "status": "active",
+  "publisher": "Regenstrief Institute, Inc.",
+  "id": "LL1034-9",
+  "contact": [
+    {
+      "name": "Regenstrief Institute, Inc.",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://loinc.org"
+        }
+      ]
+    }
+  ],
+  "compose": {
+    "include": [
+      {
+        "system": "http://loinc.org",
+        "concept": [
+          {
+            "code": "LA6626-1",
+            "display": "Normal"
+          },
+          {
+            "code": "LA12748-2",
+            "display": "Abnormal"
+          },
+          {
+            "code": "LA14007-1",
+            "display": "Clinical significance unknown"
+          }
+        ]
+      }
+    ]
+  }
+}

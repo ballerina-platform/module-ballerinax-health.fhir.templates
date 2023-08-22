@@ -1,0 +1,265 @@
+{
+  "code": "88571-5",
+  "display": "Fetal Monosomy X risk [Interpretation] based on Plasma cell-free DNA by Dosage of chromosome-specific cfDNA Qualitative",
+  "property": [
+    {
+      "code": "CLASSTYPE",
+      "valueString": "1"
+    },
+    {
+      "code": "VersionLastChanged",
+      "valueString": "2.66"
+    },
+    {
+      "code": "STATUS",
+      "valueString": "ACTIVE"
+    },
+    {
+      "code": "VersionFirstReleased",
+      "valueString": "2.64"
+    },
+    {
+      "code": "CHNG_TYPE",
+      "valueString": "NAM"
+    },
+    {
+      "code": "ORDER_OBS",
+      "valueString": "Observation"
+    },
+    {
+      "code": "COMMON_TEST_RANK",
+      "valueString": "0"
+    },
+    {
+      "code": "DefinitionDescription",
+      "valueString": "The ordinal risk interpretation (e.g. high risk/low risk or high probability/low probability) of the fetus having monosomy X aneuploidy based on dosage of chromosome specific cell-free DNA (cf DNA) in maternal plasma that contains both fetal and maternal DNA. Results may also be based on the mother\u0027s current age, IVF status (self, non-self, or not applicable), and gestational age. This code is based, but not limited in use to, the submitter\u0027s test, the Harmony Prenatal Test, a non-invasive prenatal test for screening of fetal aneuploidy."
+    },
+    {
+      "code": "SHORTNAME",
+      "valueString": "Fet Ms X risk Plas.cfDNA Ql"
+    },
+    {
+      "code": "LONG_COMMON_NAME",
+      "valueString": "Fetal Monosomy X risk [Interpretation] based on Plasma cell-free DNA by Dosage of chromosome-specific cfDNA Qualitative"
+    },
+    {
+      "code": "COMMON_ORDER_RANK",
+      "valueString": "0"
+    },
+    {
+      "code": "RELATEDNAMES2",
+      "valueString": "Chromosom; Chromosomes; Impression; Impression/interpretation of study; Impressions; Interp; Interpretation; Molecular pathology; MOLPATH; Ms X risk; Ordinal; Pl; Plasma; Plsm; Point in time; QL; Qual; Qualitative; Random; Screen; Spec; Turner syndrome"
+    },
+    {
+      "code": "CHANGE_REASON_PUBLIC",
+      "valueString": "Added \"Fetal\" to Component to clarify that the result is about the fetus."
+    },
+    {
+      "code": "DisplayName",
+      "valueString": "Monosomy X risk Dosage of chromosome-specific cfDNA Ql (cfDNA) [Interp]"
+    },
+    {
+      "code": "parent",
+      "valueCoding": {
+        "code": "LP401842-2",
+        "display": "Fetal monosomy X risk | Plasma cell-free DNA | Molecular pathology",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "answer-list",
+      "valueString": "LL4771-3"
+    },
+    {
+      "code": "COMPONENT",
+      "valueCoding": {
+        "code": "LP185775-6",
+        "display": "Fetal monosomy X risk",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "PROPERTY",
+      "valueCoding": {
+        "code": "LP6819-9",
+        "display": "Imp",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "TIME_ASPCT",
+      "valueCoding": {
+        "code": "LP6960-1",
+        "display": "Pt",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "SYSTEM",
+      "valueCoding": {
+        "code": "LP185795-4",
+        "display": "Plas.cfDNA",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "SCALE_TYP",
+      "valueCoding": {
+        "code": "LP7751-3",
+        "display": "Ord",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "METHOD_TYP",
+      "valueCoding": {
+        "code": "LP172871-8",
+        "display": "Dosage of chromosome specific cf DNA",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "analyte",
+      "valueCoding": {
+        "code": "LP185775-6",
+        "display": "Fetal monosomy X risk",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "time-core",
+      "valueCoding": {
+        "code": "LP6960-1",
+        "display": "Pt",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "system-core",
+      "valueCoding": {
+        "code": "LP185795-4",
+        "display": "Plas.cfDNA",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "analyte-core",
+      "valueCoding": {
+        "code": "LP185775-6",
+        "display": "Fetal monosomy X risk",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "search",
+      "valueCoding": {
+        "code": "LP158077-0",
+        "display": "cfDNA",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "search",
+      "valueCoding": {
+        "code": "LP7479-1",
+        "display": "Plas",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "category",
+      "valueCoding": {
+        "code": "LP29693-6",
+        "display": "Laboratory",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "category",
+      "valueCoding": {
+        "code": "LP7822-2",
+        "display": "Molecular pathology",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "CLASS",
+      "valueCoding": {
+        "code": "LP7822-2",
+        "display": "MOLPATH",
+        "system": "http://loinc.org"
+      }
+    }
+  ],
+  "designation": [
+    {
+      "value": "Fet Ms X risk Plas.cfDNA Ql"
+    },
+    {
+      "value": "Fetal Monosomy X Risk"
+    },
+    {
+      "language": "es-MX",
+      "value": "Riesgo de monosomía X fetal:Impresión / interpretación del estudio:Punto temporal:ADN libre de células plasmáticas:Ordinal:Dosis de cfDNA cromosómico específico",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "es-MX",
+      "value": "Riesgo de monosomía X fetal: ADN libre de células plasmáticas : Punto temporal: Impresión / interpretación del estudio: Ordinal: Dosis de cfDNA cromosómico específico",
+      "use": {
+        "code": "LONG_COMMON_NAME",
+        "display": "LONG_COMMON_NAME",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "zh-CN",
+      "value": "胎儿单体型 X 风险:印象:时间点:血浆.cfDNA:序数型:染色体特异性 cfDNA 剂量测定",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "es-ES",
+      "value": "Riesgo de monosomía X:Impresión/interpretación del estudio:Punto temporal:ADN en plasma libre de células:Ord:Dosificación de ADN ccf de cromosoma específico",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "it-IT",
+      "value": "Monosomia X, rischio:Imp:Pt:Plasma.DNA libero circolante:Ord:Dosaggio di DNA libero fetale circolante cromosoma specifico",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "fr-FR",
+      "value": "Risque de monosomie X foetale:Interprétation:Ponctuel:Plasma avec ADN libre circulant:Qualitatif:Dosage d\u0027ADN libre circulant spécifiques aux chromosomes",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "fr-FR",
+      "value": "Risque de monosomie X foetale [Interprétation] Plasma avec ADN libre circulant ; Qualitatif ; Dosage d\u0027ADN libre circulant spécifiques aux chromosomes",
+      "use": {
+        "code": "LONG_COMMON_NAME",
+        "display": "LONG_COMMON_NAME",
+        "system": "http://loinc.org"
+      }
+    }
+  ]
+}

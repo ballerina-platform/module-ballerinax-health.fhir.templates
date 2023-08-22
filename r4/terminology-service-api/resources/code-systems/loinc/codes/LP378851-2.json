@@ -1,0 +1,14 @@
+{
+  "code": "LP378851-2",
+  "display": "Parvovirus B19 DNA | Tissue and Smears | Microbiology",
+  "property": [
+    {
+      "code": "parent",
+      "valueCoding": {
+        "code": "LP39314-7",
+        "display": "Parvovirus B19 DNA",
+        "system": "http://loinc.org"
+      }
+    }
+  ]
+}

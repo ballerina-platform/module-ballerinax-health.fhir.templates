@@ -1,0 +1,379 @@
+{
+  "code": "26012-5",
+  "display": "17-Hydroxycorticosteroids [Moles/time] in 24 hour Urine --1 day post XXX challenge",
+  "property": [
+    {
+      "code": "CLASSTYPE",
+      "valueString": "1"
+    },
+    {
+      "code": "VersionLastChanged",
+      "valueString": "2.40"
+    },
+    {
+      "code": "STATUS",
+      "valueString": "ACTIVE"
+    },
+    {
+      "code": "VersionFirstReleased",
+      "valueString": "2.00"
+    },
+    {
+      "code": "CHNG_TYPE",
+      "valueString": "MIN"
+    },
+    {
+      "code": "ORDER_OBS",
+      "valueString": "Observation"
+    },
+    {
+      "code": "COMMON_TEST_RANK",
+      "valueString": "0"
+    },
+    {
+      "code": "SHORTNAME",
+      "valueString": "17OHCS 1D p chal 24h Ur-sRate"
+    },
+    {
+      "code": "LONG_COMMON_NAME",
+      "valueString": "17-Hydroxycorticosteroids [Moles/time] in 24 hour Urine --1 day post XXX challenge"
+    },
+    {
+      "code": "COMMON_ORDER_RANK",
+      "valueString": "0"
+    },
+    {
+      "code": "UNITSREQUIRED",
+      "valueString": "Y"
+    },
+    {
+      "code": "RELATEDNAMES2",
+      "valueString": "1 day; 17-CS; 17-hydroxy corticosteroids; 17OHCS; 17-OHCS; 1D p chal; 24 hours; 24HR; After; CHEMISTRY.CHALLENGE TESTING; p chal; PST; QNT; Quan; Quant; Quantitative; sRate; Substance Rate; UA; UR; Urn"
+    },
+    {
+      "code": "EXAMPLE_UNITS",
+      "valueString": "umol/d"
+    },
+    {
+      "code": "DisplayName",
+      "valueString": "17-Hydroxycorticosteroids 1 day post Unsp challenge (24H U) [Moles/Time]"
+    },
+    {
+      "code": "EXAMPLE_UCUM_UNITS",
+      "valueString": "umol/(24.h)"
+    },
+    {
+      "code": "parent",
+      "valueCoding": {
+        "code": "LP387093-0",
+        "display": "17-Hydroxycorticosteroids | Urine | Chemistry - challenge",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "COMPONENT",
+      "valueCoding": {
+        "code": "LP304683-8",
+        "display": "17-Hydroxycorticosteroids^1D post XXX challenge",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "PROPERTY",
+      "valueCoding": {
+        "code": "LP6867-8",
+        "display": "SRat",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "TIME_ASPCT",
+      "valueCoding": {
+        "code": "LP6924-7",
+        "display": "24H",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "SYSTEM",
+      "valueCoding": {
+        "code": "LP7681-2",
+        "display": "Urine",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "SCALE_TYP",
+      "valueCoding": {
+        "code": "LP7753-9",
+        "display": "Qn",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "analyte",
+      "valueCoding": {
+        "code": "LP15290-7",
+        "display": "17-Hydroxycorticosteroids",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "time-core",
+      "valueCoding": {
+        "code": "LP6924-7",
+        "display": "24H",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "system-core",
+      "valueCoding": {
+        "code": "LP7681-2",
+        "display": "Urine",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "challenge",
+      "valueCoding": {
+        "code": "LP20872-5",
+        "display": "1D post XXX challenge",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "analyte-core",
+      "valueCoding": {
+        "code": "LP15290-7",
+        "display": "17-Hydroxycorticosteroids",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "search",
+      "valueCoding": {
+        "code": "LP32602-2",
+        "display": "XXX challenge",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "search",
+      "valueCoding": {
+        "code": "LP32606-3",
+        "display": "post",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "search",
+      "valueCoding": {
+        "code": "LP72238-6",
+        "display": "Challenge",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "search",
+      "valueCoding": {
+        "code": "LP20461-7",
+        "display": "post XXX challenge",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "category",
+      "valueCoding": {
+        "code": "LP29693-6",
+        "display": "Laboratory",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "category",
+      "valueCoding": {
+        "code": "LP343631-0",
+        "display": "Chemistry and Chemistry - challenge",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "category",
+      "valueCoding": {
+        "code": "LP7784-4",
+        "display": "Chemistry - challenge",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "CLASS",
+      "valueCoding": {
+        "code": "LP7784-4",
+        "display": "CHAL",
+        "system": "http://loinc.org"
+      }
+    }
+  ],
+  "designation": [
+    {
+      "value": "17OHCS 1D p chal 24h Ur-sRate"
+    },
+    {
+      "value": "17-Hydroxycorticosteroids 1 day after challenge, Urine"
+    },
+    {
+      "language": "es-MX",
+      "value": "17-hidroxicorticosteroides^1D después del desafío XXX:Tasa de sustancia:24H:Orina:Cuantitativo:",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "es-MX",
+      "value": "17-hidroxicorticosteroides : Orina : 24H: Tasa de sustancia: Cuantitativo:",
+      "use": {
+        "code": "LONG_COMMON_NAME",
+        "display": "LONG_COMMON_NAME",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "zh-CN",
+      "value": "17-羟基皮质类固醇^在XXX刺激之后1天:物质的量速率:24小时:尿液:定量型:",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "es-AR",
+      "value": "17-hidroxicorticosteroides^1 día después de la provocación XXX:índice de sustancia:24 horas:orina:cuantitativo:",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "es-AR",
+      "value": "17-hidroxicorticosteroides^1 día después de la provocación XXX:índice de sustancia:24 horas:orina:cuantitativo:",
+      "use": {
+        "code": "SHORTNAME",
+        "display": "SHORTNAME",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "fr-CA",
+      "value": "17-hydroxycorticostéroïdes^1 j post test de provocation XXX:Débit de substance:24 h:Urine:Quantitatif:",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "et-EE",
+      "value": "17-hüdroksükortikosteroidid^1 päev pärast XXX manustamist:SRat:24 tunni:U:Qn:",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "pt-BR",
+      "value": "17-hidroxicorticosteróides^1 dia após administração de XXX:SRat:24H:Urina:Qn:",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "pt-BR",
+      "value": "17OHCS 1D p chal 24H Ur-sRate",
+      "use": {
+        "code": "SHORTNAME",
+        "display": "SHORTNAME",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "es-ES",
+      "value": "17-Hidroxicorticosteroides^1 día pos provocación con XXX:Indice de susbtancia:24 horas:Orina:Qn:",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "it-IT",
+      "value": "17-Idrossicorticosteroidi^1 gg post XXX provocazione:SRat:24h:Urine:Qn:",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "fr-FR",
+      "value": "17-hydroxycorticostéroïdes TJ01 après épreuve:Moles/Temps:24H:Urine:Numérique:",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "fr-FR",
+      "value": "17-hydroxycorticostéroïdes TJ01 après épreuve [Moles/Temps] 24H ; Urine ; Numérique",
+      "use": {
+        "code": "LONG_COMMON_NAME",
+        "display": "LONG_COMMON_NAME",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "tr-TR",
+      "value": "17-Hidroksikortikosteroidler^1G snr XXX girişimi:SubHz:24Sa:İdrar:Kant:",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "ru-RU",
+      "value": "17-Гидроксикортикостероиды^1 день после XXX пробы:МольРасх:24 часа:Моча:Колич:",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "nl-NL",
+      "value": "17-hydroxycorticosteroïden^1 dag na XXX belasting:mol/tijd:24 uur:urine:kwantitatief:",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "fr-BE",
+      "value": "17-hydroxycorticostéroïdes^1 d post test de provocation XXX:Débit de substance:24 h:Urine:Quantitatif:",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    }
+  ]
+}

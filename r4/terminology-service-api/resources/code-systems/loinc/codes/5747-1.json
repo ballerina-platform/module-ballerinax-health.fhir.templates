@@ -1,0 +1,340 @@
+{
+  "code": "5747-1",
+  "display": "Tin [Mass/volume] in Blood",
+  "property": [
+    {
+      "code": "CLASSTYPE",
+      "valueString": "1"
+    },
+    {
+      "code": "VersionLastChanged",
+      "valueString": "2.73"
+    },
+    {
+      "code": "STATUS",
+      "valueString": "ACTIVE"
+    },
+    {
+      "code": "VersionFirstReleased",
+      "valueString": "1.0"
+    },
+    {
+      "code": "CHNG_TYPE",
+      "valueString": "MIN"
+    },
+    {
+      "code": "ORDER_OBS",
+      "valueString": "Both"
+    },
+    {
+      "code": "COMMON_TEST_RANK",
+      "valueString": "14725"
+    },
+    {
+      "code": "SHORTNAME",
+      "valueString": "Tin Bld-mCnc"
+    },
+    {
+      "code": "LONG_COMMON_NAME",
+      "valueString": "Tin [Mass/volume] in Blood"
+    },
+    {
+      "code": "COMMON_ORDER_RANK",
+      "valueString": "0"
+    },
+    {
+      "code": "UNITSREQUIRED",
+      "valueString": "Y"
+    },
+    {
+      "code": "RELATEDNAMES2",
+      "valueString": "Blood; DRUG/TOXICOLOGY; Drugs; Level; Mass concentration; Point in time; QNT; Quan; Quant; Quantitative; Random; SN; WB; Whole blood"
+    },
+    {
+      "code": "EXAMPLE_UNITS",
+      "valueString": "ug/L"
+    },
+    {
+      "code": "DisplayName",
+      "valueString": "Tin (Bld) [Mass/Vol]"
+    },
+    {
+      "code": "EXAMPLE_UCUM_UNITS",
+      "valueString": "ug/L"
+    },
+    {
+      "code": "parent",
+      "valueCoding": {
+        "code": "LP388495-6",
+        "display": "Tin | Blood | Drug toxicology",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "COMPONENT",
+      "valueCoding": {
+        "code": "LP16838-2",
+        "display": "Tin",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "PROPERTY",
+      "valueCoding": {
+        "code": "LP6827-2",
+        "display": "MCnc",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "TIME_ASPCT",
+      "valueCoding": {
+        "code": "LP6960-1",
+        "display": "Pt",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "SYSTEM",
+      "valueCoding": {
+        "code": "LP7057-5",
+        "display": "Bld",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "SCALE_TYP",
+      "valueCoding": {
+        "code": "LP7753-9",
+        "display": "Qn",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "analyte",
+      "valueCoding": {
+        "code": "LP16838-2",
+        "display": "Tin",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "time-core",
+      "valueCoding": {
+        "code": "LP6960-1",
+        "display": "Pt",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "system-core",
+      "valueCoding": {
+        "code": "LP7057-5",
+        "display": "Bld",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "analyte-core",
+      "valueCoding": {
+        "code": "LP16838-2",
+        "display": "Tin",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "category",
+      "valueCoding": {
+        "code": "LP29693-6",
+        "display": "Laboratory",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "category",
+      "valueCoding": {
+        "code": "LP7790-1",
+        "display": "Drug toxicology",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "CLASS",
+      "valueCoding": {
+        "code": "LP7790-1",
+        "display": "DRUG/TOX",
+        "system": "http://loinc.org"
+      }
+    }
+  ],
+  "designation": [
+    {
+      "value": "Tin Bld-mCnc"
+    },
+    {
+      "value": "Tin, Blood"
+    },
+    {
+      "language": "es-MX",
+      "value": "Estaño:Concentración de masa:Punto temporal:Sangre:Cuantitativo:",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "es-MX",
+      "value": "Estaño: Sangre : Punto temporal: Concentración de masa: Cuantitativo:",
+      "use": {
+        "code": "LONG_COMMON_NAME",
+        "display": "LONG_COMMON_NAME",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "zh-CN",
+      "value": "锡:质量浓度:时间点:全血:定量型:",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "es-AR",
+      "value": "estaño:concentración de masa:punto en el tiempo:sangre:cuantitativo:",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "es-AR",
+      "value": "estaño:concentración de masa:punto en el tiempo:sangre:cuantitativo:",
+      "use": {
+        "code": "SHORTNAME",
+        "display": "SHORTNAME",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "fr-CA",
+      "value": "Étain:Concentration de masse:Temps ponctuel:Sang:Quantitatif:",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "et-EE",
+      "value": "Tina:MCnc:Pt:B:Qn:",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "pt-BR",
+      "value": "Estanho:MCnc:Pt:SgTotal:Qn:",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "pt-BR",
+      "value": "Tin Sg-mCnc",
+      "use": {
+        "code": "SHORTNAME",
+        "display": "SHORTNAME",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "es-ES",
+      "value": "Estaño:Concentración de masa:Punto temporal:Sangre:Qn:",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "ko-KR",
+      "value": "주석:질량농도:검사시점:전혈:정량:",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "it-IT",
+      "value": "Stagno:MCnc:Pt:Sangue:Qn:",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "fr-FR",
+      "value": "Étain:Masse/Volume:Ponctuel:Sang:Numérique:",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "fr-FR",
+      "value": "Étain [Masse/Volume] Sang ; Numérique",
+      "use": {
+        "code": "LONG_COMMON_NAME",
+        "display": "LONG_COMMON_NAME",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "tr-TR",
+      "value": "Kalay:KütlKons:Zmlı:Kan:Kant:",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "ru-RU",
+      "value": "Олово:МассКонц:ТчкВрм:Кр:Колич:",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "nl-NL",
+      "value": "tin:massa/volume:moment:bloed:kwantitatief:",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "fr-BE",
+      "value": "Étain:Concentration de masse:Temps ponctuel:Sang:Quantitatif:",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    }
+  ]
+}

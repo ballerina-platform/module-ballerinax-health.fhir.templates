@@ -1,0 +1,222 @@
+{
+  "code": "100533-9",
+  "display": "Solid Organ Transplant Outpatient Progress note",
+  "property": [
+    {
+      "code": "CLASSTYPE",
+      "valueString": "2"
+    },
+    {
+      "code": "VersionLastChanged",
+      "valueString": "2.73"
+    },
+    {
+      "code": "STATUS",
+      "valueString": "ACTIVE"
+    },
+    {
+      "code": "VersionFirstReleased",
+      "valueString": "2.73"
+    },
+    {
+      "code": "CHNG_TYPE",
+      "valueString": "ADD"
+    },
+    {
+      "code": "ORDER_OBS",
+      "valueString": "Both"
+    },
+    {
+      "code": "COMMON_TEST_RANK",
+      "valueString": "0"
+    },
+    {
+      "code": "SHORTNAME",
+      "valueString": "Solid Org Transplant OP Prog note"
+    },
+    {
+      "code": "LONG_COMMON_NAME",
+      "valueString": "Solid Organ Transplant Outpatient Progress note"
+    },
+    {
+      "code": "COMMON_ORDER_RANK",
+      "valueString": "0"
+    },
+    {
+      "code": "UNITSREQUIRED",
+      "valueString": "N"
+    },
+    {
+      "code": "RELATEDNAMES2",
+      "valueString": "DOC.ONT; Document; Encounter; Evaluation and management; Evaluation and management note; Finding; Findings; notes; OP; Point in time; Prog note; Random; Solid Org Transplant; subsequent evaluation; subsequent visit evaluation; Visit note"
+    },
+    {
+      "code": "parent",
+      "valueCoding": {
+        "code": "LP416689-0",
+        "display": "Progress note | Outpatient | Document ontology",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "document-kind",
+      "valueCoding": {
+        "code": "LP173418-7",
+        "display": "Note",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "document-type-of-service",
+      "valueCoding": {
+        "code": "LP173213-2",
+        "display": "Progress",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "document-setting",
+      "valueCoding": {
+        "code": "LP173051-6",
+        "display": "Outpatient",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "document-subject-matter-domain",
+      "valueCoding": {
+        "code": "LP417852-3",
+        "display": "Solid organ transplant",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "COMPONENT",
+      "valueCoding": {
+        "code": "LP74253-3",
+        "display": "Progress note",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "PROPERTY",
+      "valueCoding": {
+        "code": "LP6813-2",
+        "display": "Find",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "TIME_ASPCT",
+      "valueCoding": {
+        "code": "LP6960-1",
+        "display": "Pt",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "SYSTEM",
+      "valueCoding": {
+        "code": "LP32889-5",
+        "display": "Outpatient",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "SCALE_TYP",
+      "valueCoding": {
+        "code": "LP32888-7",
+        "display": "Doc",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "METHOD_TYP",
+      "valueCoding": {
+        "code": "LP417854-9",
+        "display": "Solid organ transplant",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "analyte-core",
+      "valueCoding": {
+        "code": "LP74253-3",
+        "display": "Progress note",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "search",
+      "valueCoding": {
+        "code": "LP175755-0",
+        "display": "Progress",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "search",
+      "valueCoding": {
+        "code": "LP72988-6",
+        "display": "Note",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "category",
+      "valueCoding": {
+        "code": "LP32519-8",
+        "display": "Document ontology",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "CLASS",
+      "valueCoding": {
+        "code": "LP32519-8",
+        "display": "DOC.ONTOLOGY",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "category",
+      "valueCoding": {
+        "code": "LP7787-7",
+        "display": "Clinical",
+        "system": "http://loinc.org"
+      }
+    }
+  ],
+  "designation": [
+    {
+      "value": "Solid Org Transplant OP Prog note"
+    },
+    {
+      "language": "zh-CN",
+      "value": "病程记录:发现:时间点:门诊病人:文档型:实体器官移植",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "it-IT",
+      "value": "Progresso, nota:Osservazione:Pt:Paziente esterno:Doc:Trapianto di organo solido",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "nl-NL",
+      "value": "voortgangsrapport:bevinding:moment:poliklinisch:document:transplantatie van solide orgaan",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    }
+  ]
+}

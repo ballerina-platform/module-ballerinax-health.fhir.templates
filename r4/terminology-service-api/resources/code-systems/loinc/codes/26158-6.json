@@ -1,0 +1,359 @@
+{
+  "code": "26158-6",
+  "display": "XR Shoulder - left Views",
+  "property": [
+    {
+      "code": "CLASSTYPE",
+      "valueString": "2"
+    },
+    {
+      "code": "VersionLastChanged",
+      "valueString": "2.73"
+    },
+    {
+      "code": "STATUS",
+      "valueString": "ACTIVE"
+    },
+    {
+      "code": "VersionFirstReleased",
+      "valueString": "2.00"
+    },
+    {
+      "code": "CHNG_TYPE",
+      "valueString": "MIN"
+    },
+    {
+      "code": "ORDER_OBS",
+      "valueString": "Both"
+    },
+    {
+      "code": "COMMON_TEST_RANK",
+      "valueString": "6542"
+    },
+    {
+      "code": "SHORTNAME",
+      "valueString": "XR Should-L Views"
+    },
+    {
+      "code": "LONG_COMMON_NAME",
+      "valueString": "XR Shoulder - left Views"
+    },
+    {
+      "code": "COMMON_ORDER_RANK",
+      "valueString": "0"
+    },
+    {
+      "code": "RELATEDNAMES2",
+      "valueString": "Arm; Document; EXT; Extr-L; Films; Finding; Findings; Imaging; L; LT; LUE; MSK; Musculoskeletal; Ortho; Orthopedics; Plain Films; Point in time; Rad; Radiology; Random; Should-L; UE; UE-L; Up; Upper extremity joint; View; VWS; Xray; X-ray"
+    },
+    {
+      "code": "CHANGE_REASON_PUBLIC",
+      "valueString": "The scale has been changed from \"Nar\" to \"Doc\" to fit with the CDA model.; Changed System from \"Shoulder.left\" based on the LOINC/RadLex unified model."
+    },
+    {
+      "code": "HL7_ATTACHMENT_STRUCTURE",
+      "valueString": "IG exists"
+    },
+    {
+      "code": "parent",
+      "valueCoding": {
+        "code": "LP405953-3",
+        "display": "Shoulder - left | X-ray | Radiology",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "rad-modality-modality-type",
+      "valueCoding": {
+        "code": "LP212285-3",
+        "display": "XR",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "rad-anatomic-location-region-imaged",
+      "valueCoding": {
+        "code": "LP200031-5",
+        "display": "Upper extremity",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "rad-anatomic-location-imaging-focus",
+      "valueCoding": {
+        "code": "LP200011-7",
+        "display": "Shoulder",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "rad-anatomic-location-imaging-focus",
+      "valueCoding": {
+        "code": "LP200011-7",
+        "display": "Shoulder",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "rad-view-view-aggregation",
+      "valueCoding": {
+        "code": "LP221404-9",
+        "display": "Views",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "rad-anatomic-location-laterality-presence",
+      "valueCoding": {
+        "code": "LP199954-1",
+        "display": "True",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "rad-anatomic-location-laterality",
+      "valueCoding": {
+        "code": "LP199952-5",
+        "display": "Left",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "COMPONENT",
+      "valueCoding": {
+        "code": "LP28726-5",
+        "display": "Views",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "PROPERTY",
+      "valueCoding": {
+        "code": "LP6813-2",
+        "display": "Find",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "TIME_ASPCT",
+      "valueCoding": {
+        "code": "LP6960-1",
+        "display": "Pt",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "SYSTEM",
+      "valueCoding": {
+        "code": "LP229972-7",
+        "display": "Upper extremity.left\u003eShoulder",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "SCALE_TYP",
+      "valueCoding": {
+        "code": "LP32888-7",
+        "display": "Doc",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "METHOD_TYP",
+      "valueCoding": {
+        "code": "LP21166-1",
+        "display": "XR",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "rad-view-aggregation",
+      "valueCoding": {
+        "code": "LP221404-9",
+        "display": "Views",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "analyte-core",
+      "valueCoding": {
+        "code": "LP28726-5",
+        "display": "Views",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "search",
+      "valueCoding": {
+        "code": "LP221202-7",
+        "display": "(Views",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "search",
+      "valueCoding": {
+        "code": "LP29945-0",
+        "display": "Extremity",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "search",
+      "valueCoding": {
+        "code": "LP29947-6",
+        "display": "Extremity.left",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "search",
+      "valueCoding": {
+        "code": "LP29957-5",
+        "display": "Upper extremity",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "search",
+      "valueCoding": {
+        "code": "LP29960-9",
+        "display": "Upper extremity.left",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "search",
+      "valueCoding": {
+        "code": "LP7584-8",
+        "display": "Shoulder",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "category",
+      "valueCoding": {
+        "code": "LP29684-5",
+        "display": "Radiology",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "CLASS",
+      "valueCoding": {
+        "code": "LP29684-5",
+        "display": "RAD",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "category",
+      "valueCoding": {
+        "code": "LP415708-9",
+        "display": "Orthopedics",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "category",
+      "valueCoding": {
+        "code": "LP7787-7",
+        "display": "Clinical",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "AssociatedObservations",
+      "valueCoding": {
+        "code": "81220-6",
+        "display": "Diagnostic imaging report - recommended C-CDA R2.0 and R2.1 sections",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "AssociatedObservations",
+      "valueCoding": {
+        "code": "72230-6",
+        "display": "Diagnostic imaging report - recommended C-CDA R1.1 sections",
+        "system": "http://loinc.org"
+      }
+    }
+  ],
+  "designation": [
+    {
+      "value": "XR Should-L Views"
+    },
+    {
+      "language": "es-MX",
+      "value": "Puntos de vista:Tipo:Punto temporal:Extremidad superior izquierda\u003e hombro:Documento:XR",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "es-MX",
+      "value": "Puntos de vista:Extremidad superior izquierda\u003e hombro :Punto temporal:Tipo:Documento:XR",
+      "use": {
+        "code": "LONG_COMMON_NAME",
+        "display": "LONG_COMMON_NAME",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "zh-CN",
+      "value": "多重视图:发现:时间点:上肢.左侧\u003e肩部:文档型:X射线摄影术",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "es-AR",
+      "value": "proyecciones:hallazgo:punto en el tiempo:hombro.izquierdo:Narrativo:radiografía",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "es-AR",
+      "value": "proyecciones:hallazgo:punto en el tiempo:hombro.izquierdo:Narrativo:radiografía",
+      "use": {
+        "code": "SHORTNAME",
+        "display": "SHORTNAME",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "pt-BR",
+      "value": "Incidências:Achado:Pt:Ombro.esquerdo:Nar:RX",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "pt-BR",
+      "value": "Should-L XR",
+      "use": {
+        "code": "SHORTNAME",
+        "display": "SHORTNAME",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "it-IT",
+      "value": "Viste:Osservazione:Pt:Estremità superiore.sinistra\u003eSpalla:Doc:XR",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "code": "LP395622-6",
+  "display": "Aspergillus flavus IgE | Serum | Allergy",
+  "property": [
+    {
+      "code": "parent",
+      "valueCoding": {
+        "code": "LP147965-0",
+        "display": "Aspergillus flavus Ab.IgE",
+        "system": "http://loinc.org"
+      }
+    }
+  ]
+}

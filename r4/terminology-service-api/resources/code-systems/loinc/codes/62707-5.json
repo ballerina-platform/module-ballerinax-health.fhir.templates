@@ -1,0 +1,220 @@
+{
+  "code": "62707-5",
+  "display": "PhenX - refractive error - child protocol 111402",
+  "property": [
+    {
+      "code": "CLASSTYPE",
+      "valueString": "2"
+    },
+    {
+      "code": "VersionLastChanged",
+      "valueString": "2.66"
+    },
+    {
+      "code": "STATUS",
+      "valueString": "TRIAL"
+    },
+    {
+      "code": "VersionFirstReleased",
+      "valueString": "2.36"
+    },
+    {
+      "code": "CHNG_TYPE",
+      "valueString": "NAM"
+    },
+    {
+      "code": "COMMON_TEST_RANK",
+      "valueString": "0"
+    },
+    {
+      "code": "DefinitionDescription",
+      "valueString": "Refractive error in children is measured using cycloplegic autorefraction with the Retinomax. Eyes undergo cycloplegia after pupillary dilating eyedrops and eight readings of refractive error of each eye are taken with the Retinomax in the Refractions and Keratometry mode. In instances where cycloplegic autorefraction cannot be obtained on an eye or when it is of poor quality (Retinomax confidence rating \u003c\u003d 7), cycloplegic retinoscopy is performed to obtain a measure of refractive error.  This protocol uses Retinomax to measure refractive error in children. Other instruments can be used to measure refractive error. If other instruments are used, the reproducibility of the measurements should be comparable to those acquired with this protocol. In addition, when other instruments are used to collect these measurements, the manufacturer and model of equipment should be recorded. These other devices may require some different steps than are described in this protocol. Investigators should follow the equipment manufacturer\u0027s instructions to ensure quality control."
+    },
+    {
+      "code": "SHORTNAME",
+      "valueString": "Refractive error child proto"
+    },
+    {
+      "code": "LONG_COMMON_NAME",
+      "valueString": "PhenX - refractive error - child protocol 111402"
+    },
+    {
+      "code": "PanelType",
+      "valueString": "Panel"
+    },
+    {
+      "code": "COMMON_ORDER_RANK",
+      "valueString": "0"
+    },
+    {
+      "code": "UNITSREQUIRED",
+      "valueString": "N"
+    },
+    {
+      "code": "RELATEDNAMES2",
+      "valueString": "Pan; Panel; PANEL.PHENX; Panl; Pnl; Point in time; Random; Refractive error child proto"
+    },
+    {
+      "code": "CHANGE_REASON_PUBLIC",
+      "valueString": "Updated the PhenX ID from \"PhenX.\u003cID\u003e\" to \"PX\u003cID\u003e\" in Survey Question Source field to align with the variable identifier used in the PhenX Toolkit.; Added the PhenX protocol ID to the Component to clearly define the protocol version for which this panel is based upon."
+    },
+    {
+      "code": "SURVEY_QUEST_SRC",
+      "valueString": "PX111402"
+    },
+    {
+      "code": "parent",
+      "valueCoding": {
+        "code": "LP248771-0",
+        "display": "Clinical terms not yet categorized",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "COMPONENT",
+      "valueCoding": {
+        "code": "LP112275-5",
+        "display": "PhenX - refractive error - child protocol 111402",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "PROPERTY",
+      "valueCoding": {
+        "code": "LP6769-6",
+        "display": "-",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "TIME_ASPCT",
+      "valueCoding": {
+        "code": "LP6960-1",
+        "display": "Pt",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "SYSTEM",
+      "valueCoding": {
+        "code": "LP310005-6",
+        "display": "^Patient",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "SCALE_TYP",
+      "valueCoding": {
+        "code": "LP7747-1",
+        "display": "-",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "METHOD_TYP",
+      "valueCoding": {
+        "code": "LP95333-8",
+        "display": "PhenX",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "analyte",
+      "valueCoding": {
+        "code": "LP112275-5",
+        "display": "PhenX - refractive error - child protocol 111402",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "time-core",
+      "valueCoding": {
+        "code": "LP6960-1",
+        "display": "Pt",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "super-system",
+      "valueCoding": {
+        "code": "LP6985-8",
+        "display": "Patient",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "analyte-core",
+      "valueCoding": {
+        "code": "LP112275-5",
+        "display": "PhenX - refractive error - child protocol 111402",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "category",
+      "valueCoding": {
+        "code": "LP7787-7",
+        "display": "Clinical",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "CLASS",
+      "valueCoding": {
+        "code": "LP95319-7",
+        "display": "PANEL.PHENX",
+        "system": "http://loinc.org"
+      }
+    }
+  ],
+  "designation": [
+    {
+      "value": "Refractive error child proto"
+    },
+    {
+      "language": "es-MX",
+      "value": "PhenX - error refractivo - protocolo secundario 111402:-:Punto temporal:^ Paciente:-:PhenX",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "es-MX",
+      "value": "PhenX - error refractivo - protocolo secundario 111402: Paciente:Punto temporal:-:-:PhenX",
+      "use": {
+        "code": "LONG_COMMON_NAME",
+        "display": "LONG_COMMON_NAME",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "zh-CN",
+      "value": "PhenX - 屈光不正 - 儿童方案 111402:-:时间点:^患者:-:PhenX",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "it-IT",
+      "value": "PhenX - errori di rifrazione - bambino, protocollo:-:Pt:^Paziente:-:PhenX",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "ru-RU",
+      "value": "PhenX - рефракционная ошибка - детский протокол:-:ТчкВрм:^Пациент:-:PhenX",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    }
+  ]
+}

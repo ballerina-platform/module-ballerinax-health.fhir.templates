@@ -1,0 +1,377 @@
+{
+  "code": "31701-6",
+  "display": "West Nile virus IgG Ab [Presence] in Serum",
+  "property": [
+    {
+      "code": "CLASSTYPE",
+      "valueString": "1"
+    },
+    {
+      "code": "VersionLastChanged",
+      "valueString": "2.73"
+    },
+    {
+      "code": "STATUS",
+      "valueString": "ACTIVE"
+    },
+    {
+      "code": "VersionFirstReleased",
+      "valueString": "2.07"
+    },
+    {
+      "code": "CHNG_TYPE",
+      "valueString": "MIN"
+    },
+    {
+      "code": "ORDER_OBS",
+      "valueString": "Both"
+    },
+    {
+      "code": "COMMON_TEST_RANK",
+      "valueString": "7834"
+    },
+    {
+      "code": "SHORTNAME",
+      "valueString": "WNV IgG Ser Ql"
+    },
+    {
+      "code": "LONG_COMMON_NAME",
+      "valueString": "West Nile virus IgG Ab [Presence] in Serum"
+    },
+    {
+      "code": "COMMON_ORDER_RANK",
+      "valueString": "0"
+    },
+    {
+      "code": "UNITSREQUIRED",
+      "valueString": "N"
+    },
+    {
+      "code": "RELATEDNAMES2",
+      "valueString": "ABS; Aby; Antby; Anti; Antibodies; Antibody; Autoantibodies; Autoantibody; ID; Immune globulin G; Immunoglobulin G; Infectious Disease; InfectiousDisease; Microbiology; Ordinal; Point in time; PR; QL; Qual; Qualitative; Random; Screen; Serum; SR; WNV"
+    },
+    {
+      "code": "CHANGE_REASON_PUBLIC",
+      "valueString": "The PrThr property is used for LOINC terms whose results are reported using an ordered categorical scale, regardless of whether or not an internal threshold was used to make that determination. This change was approved by the Laboratory LOINC Committee in June 2016."
+    },
+    {
+      "code": "DisplayName",
+      "valueString": "West Nile virus IgG Ql (S)"
+    },
+    {
+      "code": "parent",
+      "valueCoding": {
+        "code": "LP248770-2",
+        "display": "Lab terms not yet categorized",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "COMPONENT",
+      "valueCoding": {
+        "code": "LP40160-1",
+        "display": "West Nile virus Ab.IgG",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "PROPERTY",
+      "valueCoding": {
+        "code": "LP217195-9",
+        "display": "PrThr",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "TIME_ASPCT",
+      "valueCoding": {
+        "code": "LP6960-1",
+        "display": "Pt",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "SYSTEM",
+      "valueCoding": {
+        "code": "LP7567-3",
+        "display": "Ser",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "SCALE_TYP",
+      "valueCoding": {
+        "code": "LP7751-3",
+        "display": "Ord",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "analyte",
+      "valueCoding": {
+        "code": "LP40160-1",
+        "display": "West Nile virus Ab.IgG",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "time-core",
+      "valueCoding": {
+        "code": "LP6960-1",
+        "display": "Pt",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "system-core",
+      "valueCoding": {
+        "code": "LP7567-3",
+        "display": "Ser",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "analyte-core",
+      "valueCoding": {
+        "code": "LP28423-9",
+        "display": "West Nile virus",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "analyte-suffix",
+      "valueCoding": {
+        "code": "LP32401-9",
+        "display": "Ab.IgG",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "search",
+      "valueCoding": {
+        "code": "LP14672-7",
+        "display": "IgG",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "search",
+      "valueCoding": {
+        "code": "LP14855-8",
+        "display": "Virus",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "search",
+      "valueCoding": {
+        "code": "LP40159-3",
+        "display": "West Nile virus Ab",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "category",
+      "valueCoding": {
+        "code": "LP29693-6",
+        "display": "Laboratory",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "category",
+      "valueCoding": {
+        "code": "LP415704-8",
+        "display": "InfectiousDisease",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "CLASS",
+      "valueCoding": {
+        "code": "LP7819-8",
+        "display": "MICRO",
+        "system": "http://loinc.org"
+      }
+    }
+  ],
+  "designation": [
+    {
+      "value": "WNV IgG Ser Ql"
+    },
+    {
+      "value": "West Nile virus IgG antibody, Blood"
+    },
+    {
+      "language": "es-MX",
+      "value": "Ab.IgG del virus del Nilo Occidental:Presencia o umbral:Punto temporal:Suero:Ordinal:",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "es-MX",
+      "value": "Ab.IgG del virus del Nilo Occidental: Suero : Punto temporal: Presencia o umbral: Ordinal:",
+      "use": {
+        "code": "LONG_COMMON_NAME",
+        "display": "LONG_COMMON_NAME",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "zh-CN",
+      "value": "西尼罗河病毒 抗体.IgG:存在情况或阈值:时间点:血清:序数型:",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "es-AR",
+      "value": "anticuerpo contra virus del Nilo occidental.inmunoglobulina G:concentración arbitraria:punto en el tiempo:suero:ordinal:",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "es-AR",
+      "value": "anticuerpo contra virus del Nilo occidental.inmunoglobulina G:concentración arbitraria:punto en el tiempo:suero:ordinal:",
+      "use": {
+        "code": "SHORTNAME",
+        "display": "SHORTNAME",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "fr-CA",
+      "value": "Virus du Nil occidental , IgG:Présence-Seuil:Temps ponctuel:Sérum:Ordinal:",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "pt-BR",
+      "value": "Vírus do Nilo Ocidental Ac.IgG:ACnc:Pt:Soro:Ord:",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "pt-BR",
+      "value": "WNV IgG Ser Ql",
+      "use": {
+        "code": "SHORTNAME",
+        "display": "SHORTNAME",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "es-ES",
+      "value": "Virus Nilo Occidental IgG:PrThr:Punto temporal:Suero:Ord:",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "ko-KR",
+      "value": "웨스트 나일 바이러스 항체.면역글로불린 G:임의농도:검사시점:혈청:순위척도:",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "de-DE",
+      "value": "West-Nil-Virus Ak.IgG:Nachweis oder Schwellenwert:Zeitpunkt:Serum:Ordinal:",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "de-DE",
+      "value": "West-Nil-Virus-IgG-Antikörper [Nachweis] in Serum",
+      "use": {
+        "code": "LONG_COMMON_NAME",
+        "display": "LONG_COMMON_NAME",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "it-IT",
+      "value": "Nilo occidentale, virus Ab.IgG:PrThr:Pt:Siero:Ord:",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "fr-FR",
+      "value": "West Nile virus Ac IgG:Présence/Seuil:Ponctuel:Sérum:Qualitatif:",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "fr-FR",
+      "value": "West Nile virus Ac IgG [Présence/Seuil] Sérum ; Qualitatif",
+      "use": {
+        "code": "LONG_COMMON_NAME",
+        "display": "LONG_COMMON_NAME",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "tr-TR",
+      "value": "Batı Nil virüsü Ab.IgG:MevcEşik:Zmlı:Ser:Srl:",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "ru-RU",
+      "value": "Западный Нил вирус Ат.IgG:PrThr:ТчкВрм:Сыв:Пор:",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "nl-NL",
+      "value": "West-Nijlvirus As.IgG:aanwezigheid:moment:serum:ordinaal:",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "fr-BE",
+      "value": "Virus du Nil occidental Anticorps. IgG:PrThr:Temps ponctuel:Sérum:Ordinal:",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    }
+  ]
+}

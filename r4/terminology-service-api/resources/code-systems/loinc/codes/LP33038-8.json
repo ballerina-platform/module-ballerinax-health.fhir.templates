@@ -1,0 +1,27 @@
+{
+  "code": "LP33038-8",
+  "display": "Pipamperone",
+  "property": [
+    {
+      "code": "parent",
+      "valueCoding": {
+        "code": "LP18073-4",
+        "display": "Antipsychotics",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "child",
+      "valueCoding": {
+        "code": "LP391359-9",
+        "display": "Pipamperone | Serum or Plasma | Drug toxicology",
+        "system": "http://loinc.org"
+      }
+    }
+  ],
+  "designation": [
+    {
+      "value": "Pipamperone"
+    }
+  ]
+}

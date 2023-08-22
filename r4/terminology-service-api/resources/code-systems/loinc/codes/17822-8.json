@@ -1,0 +1,400 @@
+{
+  "code": "17822-8",
+  "display": "CD3+CD4+ (T4 helper) cells/100 cells in Body fluid",
+  "property": [
+    {
+      "code": "CLASSTYPE",
+      "valueString": "1"
+    },
+    {
+      "code": "VersionLastChanged",
+      "valueString": "2.73"
+    },
+    {
+      "code": "STATUS",
+      "valueString": "ACTIVE"
+    },
+    {
+      "code": "VersionFirstReleased",
+      "valueString": "1.0l"
+    },
+    {
+      "code": "CHNG_TYPE",
+      "valueString": "MIN"
+    },
+    {
+      "code": "ORDER_OBS",
+      "valueString": "Observation"
+    },
+    {
+      "code": "COMMON_TEST_RANK",
+      "valueString": "18458"
+    },
+    {
+      "code": "SHORTNAME",
+      "valueString": "CD3+CD4+ Cells NFr Fld"
+    },
+    {
+      "code": "LONG_COMMON_NAME",
+      "valueString": "CD3+CD4+ (T4 helper) cells/100 cells in Body fluid"
+    },
+    {
+      "code": "COMMON_ORDER_RANK",
+      "valueString": "0"
+    },
+    {
+      "code": "UNITSREQUIRED",
+      "valueString": "Y"
+    },
+    {
+      "code": "RELATEDNAMES2",
+      "valueString": "B/F; BF; bod; Bodies; Body fluid; Body fluid, unsp; CD3 Cells; CD3+CD4+ Cells; CD3-CD4+; CD4+ T cells; Cell; CELL MARKERS; Cellularity; Fl; Fld; FLU; Fluid; Gated cells; Helper T cells; Inducer T cells; L3T4; Leu3; Leu-3; Leu4; Leu-4; Number fraction; Percent; Point in time; QNT; Quan; Quant; Quantitative; Random; T3; T4; T-4; T4 helper/inducer cells; W3/25"
+    },
+    {
+      "code": "EXAMPLE_UNITS",
+      "valueString": "%"
+    },
+    {
+      "code": "CHANGE_REASON_PUBLIC",
+      "valueString": "In order to confirm CD4 T-cells, CD3 is required to identify the fact these are T-cells."
+    },
+    {
+      "code": "DisplayName",
+      "valueString": "CD3+CD4+ (T4 helper) cells/100 cells (Body fld)"
+    },
+    {
+      "code": "EXAMPLE_UCUM_UNITS",
+      "valueString": "%"
+    },
+    {
+      "code": "parent",
+      "valueCoding": {
+        "code": "LP248770-2",
+        "display": "Lab terms not yet categorized",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "COMPONENT",
+      "valueCoding": {
+        "code": "LP285423-2",
+        "display": "Cells.CD3+CD4+/100 cells",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "PROPERTY",
+      "valueCoding": {
+        "code": "LP6838-9",
+        "display": "NFr",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "TIME_ASPCT",
+      "valueCoding": {
+        "code": "LP6960-1",
+        "display": "Pt",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "SYSTEM",
+      "valueCoding": {
+        "code": "LP7238-1",
+        "display": "Body fld",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "SCALE_TYP",
+      "valueCoding": {
+        "code": "LP7753-9",
+        "display": "Qn",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "analyte",
+      "valueCoding": {
+        "code": "LP285423-2",
+        "display": "Cells.CD3+CD4+/100 cells",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "time-core",
+      "valueCoding": {
+        "code": "LP6960-1",
+        "display": "Pt",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "system-core",
+      "valueCoding": {
+        "code": "LP7238-1",
+        "display": "Body fld",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "analyte-core",
+      "valueCoding": {
+        "code": "LP14441-7",
+        "display": "Cells.CD3+CD4+",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "analyte-divisor",
+      "valueCoding": {
+        "code": "LP31958-9",
+        "display": "100 cells",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "search",
+      "valueCoding": {
+        "code": "LP14442-5",
+        "display": "Cells.CD3",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "search",
+      "valueCoding": {
+        "code": "LP14624-8",
+        "display": "CD3",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "search",
+      "valueCoding": {
+        "code": "LP14738-6",
+        "display": "Cells",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "search",
+      "valueCoding": {
+        "code": "LP183563-8",
+        "display": "Cells.CD3-CD4+",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "search",
+      "valueCoding": {
+        "code": "LP285485-1",
+        "display": "Cells.CD3-CD4+/100 cells",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "search",
+      "valueCoding": {
+        "code": "LP68352-1",
+        "display": "CD4",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "search",
+      "valueCoding": {
+        "code": "LP94627-4",
+        "display": "100 cells",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "category",
+      "valueCoding": {
+        "code": "LP29693-6",
+        "display": "Laboratory",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "CLASS",
+      "valueCoding": {
+        "code": "LP7783-6",
+        "display": "CELLMARK",
+        "system": "http://loinc.org"
+      }
+    }
+  ],
+  "designation": [
+    {
+      "value": "CD3+CD4+ Cells NFr Fld"
+    },
+    {
+      "value": "CD3+CD4+ (T4 Helper) Cells per 100 cells, Body fluid"
+    },
+    {
+      "language": "es-MX",
+      "value": "Cells.CD3 + CD4 + / 100 células:Fracción numérica:Punto temporal:Fluído corporal:Cuantitativo:",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "es-MX",
+      "value": "Cells.CD3 + CD4 + / 100 células: Fluído corporal : Punto temporal: Fracción numérica: Cuantitativo:",
+      "use": {
+        "code": "LONG_COMMON_NAME",
+        "display": "LONG_COMMON_NAME",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "zh-CN",
+      "value": "细胞.CD3+CD4+/100 个细胞:计数型分数:时间点:体液:定量型:",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "es-AR",
+      "value": "células.CD4/100 células:fracción de un número:punto en el tiempo:líquido corporal, no especificado:cuantitativo:",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "es-AR",
+      "value": "células.CD4/100 células:fracción de un número:punto en el tiempo:líquido corporal, no especificado:cuantitativo:",
+      "use": {
+        "code": "SHORTNAME",
+        "display": "SHORTNAME",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "fr-CA",
+      "value": "Cellules.CD3+CD4+/100 cellules:Fraction numérique:Temps ponctuel:Liquide biologique:Quantitatif:",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "et-EE",
+      "value": "Rakud.CD3+CD4+/100 raku kohta:NFr:Pt:Fx:Qn:",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "pt-BR",
+      "value": "Células.CD4/100 células:NFr:Pt:LiqOrg:Qn:",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "pt-BR",
+      "value": "CD4 Cells Fr Fld",
+      "use": {
+        "code": "SHORTNAME",
+        "display": "SHORTNAME",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "es-ES",
+      "value": "Células CD3+CD4+/100 células:Fracción numérica:Punto temporal:Fluido corporal:Qn:",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "ko-KR",
+      "value": "세포.CD4/100 세포:숫자분획:검사시점:체액:정량:",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "it-IT",
+      "value": "Cellule.CD3+CD4+/100 cellule:NFr:Pt:Liquido corporeo:Qn:",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "fr-FR",
+      "value": "CD3+CD4+/100 cellules:Fraction de nombres:Ponctuel:Liquide biologique:Numérique:",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "fr-FR",
+      "value": "CD3+CD4+/100 cellules [Fraction de nombres] Liquide biologique ; Numérique",
+      "use": {
+        "code": "LONG_COMMON_NAME",
+        "display": "LONG_COMMON_NAME",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "tr-TR",
+      "value": "Hücreler.CD3+CD4+/100 hücre:SayFr:Zmlı:Vücut sv:Kant:",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "ru-RU",
+      "value": "Клетки.CD3+CD4+/100 клеток:КолДоля:ТчкВрм:Тело ждк:Колич:",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "nl-NL",
+      "value": "cellen.CD3+CD4+/100 cellen:getalsfractie:moment:lichaamsvocht:kwantitatief:",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "fr-BE",
+      "value": "Cellules.CD3+CD4+/100 cellules:Fraction numérique:Temps ponctuel:Liquide biologique:Quantitatif:",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    }
+  ]
+}

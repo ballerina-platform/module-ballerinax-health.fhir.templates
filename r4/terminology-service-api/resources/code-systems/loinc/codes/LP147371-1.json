@@ -1,0 +1,27 @@
+{
+  "code": "LP147371-1",
+  "display": "Anisakis Ab.IgE",
+  "property": [
+    {
+      "code": "parent",
+      "valueCoding": {
+        "code": "LP14932-5",
+        "display": "Anisakis",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "child",
+      "valueCoding": {
+        "code": "LP395608-5",
+        "display": "Anisakis IgE | Serum | Allergy",
+        "system": "http://loinc.org"
+      }
+    }
+  ],
+  "designation": [
+    {
+      "value": "Anisakis IgE"
+    }
+  ]
+}

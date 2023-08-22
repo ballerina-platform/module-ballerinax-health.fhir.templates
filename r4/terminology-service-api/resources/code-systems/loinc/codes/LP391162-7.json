@@ -1,0 +1,14 @@
+{
+  "code": "LP391162-7",
+  "display": "Amitriptyline/Creatinine | Urine | Drug toxicology",
+  "property": [
+    {
+      "code": "parent",
+      "valueCoding": {
+        "code": "LP284966-1",
+        "display": "Amitriptyline/Creatinine",
+        "system": "http://loinc.org"
+      }
+    }
+  ]
+}

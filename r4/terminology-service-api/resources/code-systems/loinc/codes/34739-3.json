@@ -1,0 +1,361 @@
+{
+  "code": "34739-3",
+  "display": "NR0B1 gene targeted mutation analysis in Blood or Tissue by Molecular genetics method",
+  "property": [
+    {
+      "code": "CLASSTYPE",
+      "valueString": "1"
+    },
+    {
+      "code": "VersionLastChanged",
+      "valueString": "2.66"
+    },
+    {
+      "code": "STATUS",
+      "valueString": "ACTIVE"
+    },
+    {
+      "code": "VersionFirstReleased",
+      "valueString": "2.11"
+    },
+    {
+      "code": "CHNG_TYPE",
+      "valueString": "MAJ"
+    },
+    {
+      "code": "ORDER_OBS",
+      "valueString": "Both"
+    },
+    {
+      "code": "COMMON_TEST_RANK",
+      "valueString": "0"
+    },
+    {
+      "code": "SHORTNAME",
+      "valueString": "NR0B1 gene Mut Anl Bld/T"
+    },
+    {
+      "code": "LONG_COMMON_NAME",
+      "valueString": "NR0B1 gene targeted mutation analysis in Blood or Tissue by Molecular genetics method"
+    },
+    {
+      "code": "COMMON_ORDER_RANK",
+      "valueString": "0"
+    },
+    {
+      "code": "UNITSREQUIRED",
+      "valueString": "N"
+    },
+    {
+      "code": "EXMPL_ANSWERS",
+      "valueString": "PERFORMED AT BAYLOR COLLEGE OF MEDICINE; (NOTE) RESULTS: IN SITU HYBRIDIZATION ANALYSIS OF 40 CELLS (4 CELLS IMAGED) SHOWED ISH DEL(X)(P21P21)(222C5-,AD8E10-,DAX1+). INTERPRETATION: Abnormal FISH ANALYSIS SHOWING A DELETION OF THE STEROID SULFATASE CRITICAL REGION ON ONE CHROMOSOME X BUT NO DELETION INVOLVING THE ADRENAL HYPOPLASIA CONGENITA CRITICAL REGION. SOME PATIENTS WITH ADRENAL HYPOPLASIA CONGENITA WILL SHOW MUTATIONS IN THE DAX1 GENE Not detected BY FISH. IF THERE IS SIGNIFICANT CLINCIAL CONCERN, FURTHER MOLECULAR STUDIES SHOULD BE CONSIDERED."
+    },
+    {
+      "code": "RELATEDNAMES2",
+      "valueString": "Adrenal hypoplasia congenita; AHC; AHCH; AHCX; AHX; Blood; DAX1; DAX-1; Document; DSS; Finding; Findings; Genetics; GTD; Heredity; Heritable; HHG; Inherited; Molecular genetics; Molecular pathology; MOLPATH; MOLPATH.MUTATIONS; Mut; Mut Anl; Mutations; NROB1; nuclear receptor subfamily 0, group B, member 1; PCR; Point in time; Random; SRXY2; Tissue; Tissue, unspecified; WB; Whole blood; Whole blood or Tissue"
+    },
+    {
+      "code": "CHANGE_REASON_PUBLIC",
+      "valueString": "Based on LOINC Committee review (June 2016), \"targeted\" was added to the Component to clarify that this test is looking for a specific set of mutations as described in the LOINC User Guide under the Molecular Genetics section.; Based on LOINC Committee review (June 2019), updated the Property from \"Prid\" to \"Find\" and Scale from \"Nar\" to \"Doc\" to align with the current LOINC model for naming collections of information reported in narrative and/or structured formats."
+    },
+    {
+      "code": "DisplayName",
+      "valueString": "NR0B1 gene targeted mutation analysis Molgen Doc (Bld/Tiss)"
+    },
+    {
+      "code": "parent",
+      "valueCoding": {
+        "code": "LP248770-2",
+        "display": "Lab terms not yet categorized",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "COMPONENT",
+      "valueCoding": {
+        "code": "LP229127-8",
+        "display": "NR0B1 gene targeted mutation analysis",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "PROPERTY",
+      "valueCoding": {
+        "code": "LP6813-2",
+        "display": "Find",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "TIME_ASPCT",
+      "valueCoding": {
+        "code": "LP6960-1",
+        "display": "Pt",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "SYSTEM",
+      "valueCoding": {
+        "code": "LP7061-7",
+        "display": "Bld/Tiss",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "SCALE_TYP",
+      "valueCoding": {
+        "code": "LP32888-7",
+        "display": "Doc",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "METHOD_TYP",
+      "valueCoding": {
+        "code": "LP6404-0",
+        "display": "Molgen",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "analyte",
+      "valueCoding": {
+        "code": "LP229127-8",
+        "display": "NR0B1 gene targeted mutation analysis",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "time-core",
+      "valueCoding": {
+        "code": "LP6960-1",
+        "display": "Pt",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "system-core",
+      "valueCoding": {
+        "code": "LP7061-7",
+        "display": "Bld/Tiss",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "analyte-core",
+      "valueCoding": {
+        "code": "LP32799-6",
+        "display": "NR0B1 gene",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "analyte-suffix",
+      "valueCoding": {
+        "code": "LP32419-1",
+        "display": "targeted mutation analysis",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "analyte-gene",
+      "valueCoding": {
+        "code": "LP288414-8",
+        "display": "NR0B1 gene",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "search",
+      "valueCoding": {
+        "code": "LP199195-1",
+        "display": "Gene",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "search",
+      "valueCoding": {
+        "code": "LP7057-5",
+        "display": "Bld",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "search",
+      "valueCoding": {
+        "code": "LP7641-6",
+        "display": "Tiss",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "category",
+      "valueCoding": {
+        "code": "LP29693-6",
+        "display": "Laboratory",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "category",
+      "valueCoding": {
+        "code": "LP415703-0",
+        "display": "Genetics",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "CLASS",
+      "valueCoding": {
+        "code": "LP7824-8",
+        "display": "MOLPATH.MUT",
+        "system": "http://loinc.org"
+      }
+    }
+  ],
+  "designation": [
+    {
+      "value": "NR0B1 gene Mut Anl Bld/T"
+    },
+    {
+      "value": "NR0B1 gene variant analysis, Blood or tissue specimen"
+    },
+    {
+      "language": "es-MX",
+      "value": "Análisis de mutaciones dirigidas al gen NR0B1:Hallazgo:Punto temporal:Sangre o tejido:Documento:Genética molecular",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "es-MX",
+      "value": "Análisis de mutaciones dirigidas al gen NR0B1: Sangre o tejido : Punto temporal: Hallazgo: Documento: Genética molecular",
+      "use": {
+        "code": "LONG_COMMON_NAME",
+        "display": "LONG_COMMON_NAME",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "zh-CN",
+      "value": "NR0B1 基因 突变分析:发现:时间点:全血/组织:文档型:分子遗传学类实验室方法",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "es-AR",
+      "value": "gen NR0B1:presencia o identidad:punto en el tiempo:sangre entera/tejido:Narrativo:genética molecular",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "es-AR",
+      "value": "gen NR0B1:presencia o identidad:punto en el tiempo:sangre entera/tejido:Narrativo:genética molecular",
+      "use": {
+        "code": "SHORTNAME",
+        "display": "SHORTNAME",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "pt-BR",
+      "value": "NR0B1 análise de mutação genética:Ident:Pt:Sg/Tecido:Nar:Genética molecular",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "pt-BR",
+      "value": "NR0B1 gene Mut Anal Sg/T",
+      "use": {
+        "code": "SHORTNAME",
+        "display": "SHORTNAME",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "es-ES",
+      "value": "Gen NR0B1 Analisis de mutaciones:Hallazgo:Punto temporal:Sangre o tejido:Doc:Genética molecular",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "ko-KR",
+      "value": "NR0B1 유전자 돌연변이 분석:존재:검사시점:전혈/조직:설명적인:분자유전",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "it-IT",
+      "value": "NR0B1, gene analisi di mutazione mirata:Osservazione:Pt:Sangue/Tess:Doc:Molgen",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "fr-FR",
+      "value": "NR0B1 gène mutation cible trouvée:Recherche:Ponctuel:Sang/Tissu:Document:Biologie moléculaire",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "fr-FR",
+      "value": "NR0B1 gène mutation cible trouvée [Recherche] Sang/Tissu ; Document ; Biologie moléculaire",
+      "use": {
+        "code": "LONG_COMMON_NAME",
+        "display": "LONG_COMMON_NAME",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "tr-TR",
+      "value": "NR0B1 geni Mutasyon analizi:Bulgu:Zmlı:Kan/Dk:Dokm:Molgen",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "ru-RU",
+      "value": "NR0B1 ген исследование на мутацию:Находка:ТчкВрм:Кр/Тк:Док:МолГен",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "nl-NL",
+      "value": "NR0B1-gen doelgerichte mutatie-analyse:bevinding:moment:bloed of weefsel:document:moleculair genetisch onderzoek",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    }
+  ]
+}

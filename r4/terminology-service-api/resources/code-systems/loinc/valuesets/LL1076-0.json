@@ -1,0 +1,87 @@
+{
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:1.3.6.1.4.1.12009.10.1.245"
+    }
+  ],
+  "copyright": "This material contains content from LOINC (http://loinc.org). LOINC is copyright ©1995-2023, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc.",
+  "url": "http://loinc.org/vs/LL1076-0",
+  "version": "Beta.1",
+  "name": "PhenX01_13_health insurance",
+  "status": "active",
+  "publisher": "Regenstrief Institute, Inc.",
+  "id": "LL1076-0",
+  "contact": [
+    {
+      "name": "Regenstrief Institute, Inc.",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://loinc.org"
+        }
+      ]
+    }
+  ],
+  "compose": {
+    "include": [
+      {
+        "system": "http://loinc.org",
+        "concept": [
+          {
+            "code": "LA15651-5",
+            "display": "Private health insurance"
+          },
+          {
+            "code": "LA15652-3",
+            "display": "Medicare"
+          },
+          {
+            "code": "LA15653-1",
+            "display": "Medi-Gap"
+          },
+          {
+            "code": "LA15654-9",
+            "display": "Medicaid (if available, display plan name)"
+          },
+          {
+            "code": "LA15655-6",
+            "display": "SCHIP (CHIP/Children\u0027s health insurance program)"
+          },
+          {
+            "code": "LA15656-4",
+            "display": "Military health care (tricare/VA, Champ-VA)"
+          },
+          {
+            "code": "LA15657-2",
+            "display": "Indian health service"
+          },
+          {
+            "code": "LA15658-0",
+            "display": "State-sponsored health plan (if available, display state plan name)"
+          },
+          {
+            "code": "LA15659-8",
+            "display": "Other government program"
+          },
+          {
+            "code": "LA15660-6",
+            "display": "Single service plan (e.g. dental, vision, prescriptions)"
+          },
+          {
+            "code": "LA15661-4",
+            "display": "No coverage of any type"
+          },
+          {
+            "code": "LA4389-8",
+            "display": "Refused"
+          },
+          {
+            "code": "LA12688-0",
+            "display": "Don\u0027t know"
+          }
+        ]
+      }
+    ]
+  }
+}

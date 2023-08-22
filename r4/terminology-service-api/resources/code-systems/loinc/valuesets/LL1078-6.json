@@ -1,0 +1,63 @@
+{
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:1.3.6.1.4.1.12009.10.1.246"
+    }
+  ],
+  "copyright": "This material contains content from LOINC (http://loinc.org). LOINC is copyright ©1995-2023, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc.",
+  "url": "http://loinc.org/vs/LL1078-6",
+  "version": "Beta.1",
+  "name": "PhenX06_01_dwelling type",
+  "status": "active",
+  "publisher": "Regenstrief Institute, Inc.",
+  "id": "LL1078-6",
+  "contact": [
+    {
+      "name": "Regenstrief Institute, Inc.",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://loinc.org"
+        }
+      ]
+    }
+  ],
+  "compose": {
+    "include": [
+      {
+        "system": "http://loinc.org",
+        "concept": [
+          {
+            "code": "LA14148-3",
+            "display": "Detached house"
+          },
+          {
+            "code": "LA14149-1",
+            "display": "Duplex/triplex"
+          },
+          {
+            "code": "LA14150-9",
+            "display": "Row house"
+          },
+          {
+            "code": "LA14151-7",
+            "display": "Low rise apartment (1-3 floors)"
+          },
+          {
+            "code": "LA14152-5",
+            "display": "High rise apartment (\u003e3 floors)"
+          },
+          {
+            "code": "LA14153-3",
+            "display": "Mobile home / trailer"
+          },
+          {
+            "code": "LA6310-2",
+            "display": "Other (specify)"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:1.3.6.1.4.1.12009.10.1.249"
+    }
+  ],
+  "copyright": "This material contains content from LOINC (http://loinc.org). LOINC is copyright ©1995-2023, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc.",
+  "url": "http://loinc.org/vs/LL1081-0",
+  "version": "Beta.1",
+  "name": "PhenX06_04_heating fuel",
+  "status": "active",
+  "publisher": "Regenstrief Institute, Inc.",
+  "id": "LL1081-0",
+  "contact": [
+    {
+      "name": "Regenstrief Institute, Inc.",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://loinc.org"
+        }
+      ]
+    }
+  ],
+  "compose": {
+    "include": [
+      {
+        "system": "http://loinc.org",
+        "concept": [
+          {
+            "code": "LA14169-9",
+            "display": "Gas: from underground pipes serving the neighborhood"
+          },
+          {
+            "code": "LA14170-7",
+            "display": "Gas: bottled, tank, or LP"
+          },
+          {
+            "code": "LA14171-5",
+            "display": "Electricity"
+          },
+          {
+            "code": "LA14172-3",
+            "display": "Fuel oil, kerosene, etc"
+          },
+          {
+            "code": "LA14173-1",
+            "display": "Coal or coke"
+          },
+          {
+            "code": "LA14174-9",
+            "display": "Wood"
+          },
+          {
+            "code": "LA14175-6",
+            "display": "Solar energy"
+          },
+          {
+            "code": "LA14176-4",
+            "display": "Other fuel"
+          },
+          {
+            "code": "LA14177-2",
+            "display": "No fuel used"
+          },
+          {
+            "code": "LA12688-0",
+            "display": "Don\u0027t know"
+          }
+        ]
+      }
+    ]
+  }
+}

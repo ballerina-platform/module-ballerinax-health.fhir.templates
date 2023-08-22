@@ -2,7 +2,21 @@ import ballerinax/health.fhir.r4.terminology;
 import ballerinax/health.fhir.r4;
 import ballerina/regex;
 import ballerina/http;
+import ballerina/mime;
 import ballerina/time;
+import ballerina/file;
+import ballerina/log;
+
+isolated FinderImpl? finder = ();
+
+function init() returns error? {
+    lock {
+        if IS_DB_CONNECTED {
+            finder = new;
+            terminology:setFinder(<Finder>finder);
+        }
+    }
+}
 
 public isolated function readCodeSystemById(string id) returns r4:CodeSystem|r4:FHIRError {
     string[] split = regex:split(id, string `\|`);
@@ -124,31 +138,6 @@ public isolated function valueSetValidateCodeGet(http:Request request, string? i
     return validationResultToParameters(concept);
 }
 
-isolated function validationResultToParameters(r4:Parameters|r4:FHIRError concept) returns r4:Parameters|r4:FHIRError {
-    r4:ParametersParameter[] params = [];
-    if concept is r4:FHIRError {
-        if concept.message().matches(re `Can not find any valid concepts for the code:.*`) {
-            params.push({name: "result", valueBoolean: false});
-        } else {
-            return concept;
-        }
-    } else {
-        if (<r4:ParametersParameter[]>concept.'parameter).length() > 0 {
-            foreach var c in <r4:ParametersParameter[]>concept.'parameter {
-                _ = c.name == "name" ? params.push({name: "result", valueBoolean: true}) : "";
-                _ = c.name == "display" ? params.push(c) : "";
-                _ = c.name == "definition" ? params.push(c) : "";
-            }
-        } else {
-            params.push({name: "result", valueBoolean: false});
-        }
-    }
-
-    return {
-        'parameter: params
-    };
-}
-
 public isolated function codeSystemLookUpGet(http:RequestContext ctx, http:Request request, string? id = ()) returns r4:Parameters|r4:FHIRError {
 
     string? system = request.getQueryParamValue("system");
@@ -156,9 +145,9 @@ public isolated function codeSystemLookUpGet(http:RequestContext ctx, http:Reque
 
     r4:CodeSystemConcept[]|r4:CodeSystemConcept result;
     if id is string {
-        result = check terminology:codeSystemLookUp(<r4:code>codeValue, cs = check readCodeSystemById(id));
+        result = check terminology:codeSystemLookUp(<r4:code>codeValue, system = (check readCodeSystemById(id)).url);
     } else if system is string {
-        result = check terminology:codeSystemLookUp(<r4:code>codeValue, cs = check readCodeSystemByUrl(system));
+        result = check terminology:codeSystemLookUp(<r4:code>codeValue, system = system);
     } else {
         return r4:createFHIRError(
             "Can not find a CodeSystem",
@@ -216,7 +205,7 @@ public isolated function codeSystemLookUpPost(http:RequestContext ctx, http:Requ
             diagnostic = "Payload should contains a Coding data",
             httpStatusCode = http:STATUS_BAD_REQUEST);
     } else if system is string {
-        result = check terminology:codeSystemLookUp(codingValue, cs = check readCodeSystemByUrl(system));
+        result = check terminology:codeSystemLookUp(codingValue, system = system, version = codingValue.version);
     } else {
         return r4:createFHIRError(
             "Can not find a CodeSystem",
@@ -227,99 +216,6 @@ public isolated function codeSystemLookUpPost(http:RequestContext ctx, http:Requ
     }
 
     return codesystemConceptsToParameters(result);
-}
-
-isolated function codesystemConceptsToParameters(r4:CodeSystemConcept[]|r4:CodeSystemConcept concepts) returns r4:Parameters {
-    r4:Parameters parameters = {};
-    if concepts is r4:CodeSystemConcept {
-        parameters = {
-            'parameter: [
-                {name: "name", valueString: concepts.code},
-                {name: "display", valueString: concepts.display},
-                {name: "definition", valueString: concepts.definition}
-            ]
-        };
-    } else {
-        r4:ParametersParameter[] p = [];
-        foreach r4:CodeSystemConcept item in concepts {
-            p.push({name: "name", valueString: item.code},
-                    {name: "display", valueString: item.display},
-                    {name: "definition", valueString: item.definition});
-        }
-        parameters = {'parameter: p};
-    }
-    return parameters;
-}
-
-public isolated function subsumesGet(http:RequestContext ctx, http:Request request) returns r4:Parameters|r4:FHIRError {
-
-    string? 'version = request.getQueryParamValue("version");
-    r4:uri? system = request.getQueryParamValue("system");
-    r4:code? codeA = request.getQueryParamValue("codeA");
-    r4:code? codeB = request.getQueryParamValue("codeB");
-
-    if system is string && codeA is r4:code && codeB is r4:code {
-        return terminology:subsumes(codeA, codeB, system = system, version = 'version);
-    } else {
-        return r4:createFHIRError(
-            "Missing required input parameters",
-            r4:ERROR,
-            r4:INVALID_REQUIRED,
-            diagnostic = "The request should conain 2 code concepts and CodeSystem system URL",
-            httpStatusCode = http:STATUS_BAD_REQUEST);
-    }
-}
-
-public isolated function subsumesPost(http:RequestContext ctx, http:Request request) returns r4:Parameters|r4:FHIRError {
-    string? 'version = ();
-    r4:uri? system = ();
-    r4:Coding? codingA = ();
-    r4:Coding? codingB = ();
-
-    json|http:ClientError jsonPayload = request.getJsonPayload();
-    if jsonPayload is json {
-        r4:Parameters|error parameters = jsonPayload.cloneWithType(r4:Parameters);
-        if parameters is r4:Parameters && parameters.'parameter is r4:ParametersParameter[] {
-
-            foreach var item in <r4:ParametersParameter[]>parameters.'parameter {
-                match item.name {
-                    "codingA" => {
-                        codingA = item.valueCoding ?: {};
-                    }
-
-                    "codingB" => {
-                        codingB = item.valueCoding ?: {};
-                    }
-
-                    "version" => {
-                        'version = item.valueString ?: ();
-                    }
-
-                    "system" => {
-                        system = item.valueUri ?: ();
-                    }
-                }
-            }
-        }
-    } else {
-        return r4:createFHIRError(
-            "Empty request payload or invalid json format",
-            r4:ERROR,
-            r4:INVALID_REQUIRED,
-            diagnostic = "Payload should contains ValueSet record and Coding data",
-            httpStatusCode = http:STATUS_BAD_REQUEST);
-    }
-
-    if system is string && codingA is r4:Coding && codingB is r4:Coding {
-        return terminology:subsumes(codingA, codingB, system = system, version = 'version);
-    } else {
-        return r4:createFHIRError(
-            "Missing required input parameters",
-            r4:ERROR,
-            r4:INVALID_REQUIRED,
-            diagnostic = "The request should conain 2 coding concepts and CodeSystem system URL",
-            httpStatusCode = http:STATUS_BAD_REQUEST);
-    }
 }
 
 public isolated function valueSetLookUpPost(http:Request request) returns r4:Parameters|r4:FHIRError {
@@ -400,66 +296,235 @@ public isolated function valueSetLookUpGet(http:Request request, string? id = ()
     return codesystemConceptsToParameters(result);
 }
 
-isolated function prepareRequestSearchParameter(map<string[]> params) returns map<r4:RequestSearchParameter[]> {
-    map<r4:RequestSearchParameter[]> searchParams = {};
-    foreach var 'key in params.keys() {
-        match 'key {
-            "_id" => {
-                searchParams["_id"] = [createRequestSearchParameter("_id", params.get("_id")[0])];
-            }
+public isolated function subsumesGet(http:RequestContext ctx, http:Request request) returns r4:Parameters|r4:FHIRError {
 
-            "name" => {
-                searchParams["name"] = [createRequestSearchParameter("name", params.get("name")[0])];
-            }
+    string? 'version = request.getQueryParamValue("version");
+    r4:uri? system = request.getQueryParamValue("system");
+    r4:code? codeA = request.getQueryParamValue("codeA");
+    r4:code? codeB = request.getQueryParamValue("codeB");
 
-            "title" => {
-                searchParams["title"] = [createRequestSearchParameter("title", params.get("title")[0])];
-            }
-
-            "url" => {
-                searchParams["url"] = [createRequestSearchParameter("url", params.get("url")[0])];
-            }
-
-            "version" => {
-                searchParams["version"] = [createRequestSearchParameter("version", params.get("version")[0])];
-            }
-
-            "description" => {
-                searchParams["description"] = [createRequestSearchParameter("description", params.get("description")[0])];
-            }
-
-            "publisher" => {
-                searchParams["publisher"] = [createRequestSearchParameter("publisher", params.get("publisher")[0])];
-            }
-
-            "status" => {
-                r4:RequestSearchParameter[] tempList = [];
-                foreach var value in params.get("status") {
-                    tempList.push(createRequestSearchParameter("status", value, 'type = r4:REFERENCE));
-                }
-                searchParams["status"] = tempList;
-            }
-
-            "valueSetVersion" => {
-                searchParams["valueSetVersion"] = [createRequestSearchParameter("valueSetVersion", params.get("valueSetVersion")[0])];
-            }
-
-            "filter" => {
-                searchParams["filter"] = [createRequestSearchParameter("filter", params.get("filter")[0])];
-            }
-
-            "_count" => {
-                searchParams["_count"] = [createRequestSearchParameter("_count", params.get("_count")[0], 'type = r4:NUMBER)];
-            }
-
-            "_offset" => {
-                searchParams["_offset"] = [createRequestSearchParameter("_offset", params.get("_offset")[0], 'type = r4:NUMBER)];
-            }
-        }
+    if system is string && codeA is r4:code && codeB is r4:code {
+        return terminology:subsumes(codeA, codeB, system = system, version = 'version);
+    } else {
+        return r4:createFHIRError(
+            "Missing required input parameters",
+            r4:ERROR,
+            r4:INVALID_REQUIRED,
+            diagnostic = "The request should conain 2 code concepts and CodeSystem system URL",
+            httpStatusCode = http:STATUS_BAD_REQUEST);
     }
-    return searchParams;
 }
 
-isolated function createRequestSearchParameter(string name, string value, r4:FHIRSearchParameterType? 'type = r4:STRING, r4:FHIRSearchParameterModifier? modifier = r4:MODIFIER_EXACT) returns r4:RequestSearchParameter {
-    return {name: name, value: value, 'type: r4:STRING, typedValue: {modifier: modifier}};
+public isolated function subsumesPost(http:RequestContext ctx, http:Request request) returns r4:Parameters|r4:FHIRError {
+    string? 'version = ();
+    r4:uri? system = ();
+    r4:Coding? codingA = ();
+    r4:Coding? codingB = ();
+
+    json|http:ClientError jsonPayload = request.getJsonPayload();
+    if jsonPayload is json {
+        r4:Parameters|error parameters = jsonPayload.cloneWithType(r4:Parameters);
+        if parameters is r4:Parameters && parameters.'parameter is r4:ParametersParameter[] {
+
+            foreach var item in <r4:ParametersParameter[]>parameters.'parameter {
+                match item.name {
+                    "codingA" => {
+                        codingA = item.valueCoding ?: {};
+                    }
+
+                    "codingB" => {
+                        codingB = item.valueCoding ?: {};
+                    }
+
+                    "version" => {
+                        'version = item.valueString ?: ();
+                    }
+
+                    "system" => {
+                        system = item.valueUri ?: ();
+                    }
+                }
+            }
+        }
+    } else {
+        return r4:createFHIRError(
+            "Empty request payload or invalid json format",
+            r4:ERROR,
+            r4:INVALID_REQUIRED,
+            diagnostic = "Payload should contains ValueSet record and Coding data",
+            httpStatusCode = http:STATUS_BAD_REQUEST);
+    }
+
+    if system is string && codingA is r4:Coding && codingB is r4:Coding {
+        return terminology:subsumes(codingA, codingB, system = system, version = 'version);
+    } else {
+        return r4:createFHIRError(
+            "Missing required input parameters",
+            r4:ERROR,
+            r4:INVALID_REQUIRED,
+            diagnostic = "The request should conain 2 coding concepts and CodeSystem system URL",
+            httpStatusCode = http:STATUS_BAD_REQUEST);
+    }
+}
+
+public isolated function create(http:Request request) returns error|r4:FHIRError? {
+
+    string typeHeader = "FHIR";
+
+    if request.hasHeader(TYPE_HEADER) {
+        string|http:HeaderNotFoundError header = request.getHeader(TYPE_HEADER);
+
+        if header is string && header.trim() != "" {
+            typeHeader = header;
+        } else {
+            return r4:createFHIRError(
+            string `Value for the ${TYPE_HEADER} is empty`,
+            r4:ERROR,
+            r4:INVALID_REQUIRED,
+            diagnostic = string `Supported values are: FHIR, LOINC and SNOMED`,
+            httpStatusCode = http:STATUS_BAD_REQUEST);
+        }
+
+        if !(typeHeader == "FHIR" || typeHeader == "LOINC" || typeHeader == "SNOMED") {
+            return r4:createFHIRError(
+            string `Unsupported terminology type: ${typeHeader}`,
+            r4:ERROR,
+            r4:INVALID_REQUIRED,
+            diagnostic = string `Supported values are: FHIR, LOINC and SNOMED`,
+            httpStatusCode = http:STATUS_BAD_REQUEST);
+        }
+    } else {
+        return r4:createFHIRError(
+            string `Missing ${TYPE_HEADER} header in the request`,
+            r4:ERROR,
+            r4:INVALID_REQUIRED,
+            diagnostic = string `The request should contains ${TYPE_HEADER} header and supported values are: FHIR, LOINC and SNOMED`,
+            httpStatusCode = http:STATUS_BAD_REQUEST);
+    }
+
+    mime:Entity[]|http:ClientError bodyParts = request.getBodyParts();
+    if bodyParts is mime:Entity[] {
+        foreach var part in bodyParts {
+            if part.getContentType() == "application/zip" {
+                _ = check extractFilesFromZip(part);
+
+                string? system = ();
+                string? version = ();
+                string codesystemPath = string `./extracted/${typeHeader.toLowerAscii()}/codesystems`;
+                if check file:test(codesystemPath, file:EXISTS) {
+                    json[] codesystemJson = check readFiles(codesystemPath);
+                    r4:CodeSystem|error cs = codesystemJson[0].cloneWithType(r4:CodeSystem);
+                    if cs is error {
+                        return r4:createFHIRError(
+                        string `CodeSystem data is not valid`,
+                        r4:ERROR,
+                        r4:INVALID_REQUIRED,
+                        cause = cs,
+                        httpStatusCode = http:STATUS_BAD_REQUEST);
+                    }
+                    r4:FHIRError? result = terminology:addCodeSystem(cs);
+
+                    if result is r4:FHIRError {
+                        return result;
+                    }
+
+                    system = cs.url is r4:uri ? <string>cs.url : "";
+                    'version = cs.version is string ? <string>cs.'version : "";
+                } else {
+                    log:printError(r4:createFHIRError(
+                        string `Cannot find CodeSystem data in the zip file`,
+                        r4:ERROR,
+                        r4:INVALID_REQUIRED,
+                        httpStatusCode = http:STATUS_BAD_REQUEST).toBalString());
+                }
+
+                string codePath = string `./extracted/${typeHeader.toLowerAscii()}/codes`;
+                if system is string && check file:test(codePath, file:EXISTS) {
+                    json[] codes = check readFiles(codePath);
+
+                    r4:CodeSystemConcept[] concepts = [];
+                    foreach var item in codes {
+                        r4:CodeSystemConcept|error concept = item.cloneWithType(r4:CodeSystemConcept);
+                        if concept is r4:CodeSystemConcept {
+                            concepts.push(concept);
+                        } else {
+                            log:printError(r4:createFHIRError(
+                            string `Code data is not valid`,
+                            r4:ERROR,
+                            r4:INVALID_REQUIRED,
+                            cause = concept is error ? concept : (),
+                            httpStatusCode = http:STATUS_BAD_REQUEST).toBalString());
+                        }
+                    }
+
+                    lock {
+                        if finder is FinderImpl {
+                            r4:FHIRError[]? _ = (<Finder>finder).addConcepts(system, concepts.clone(), version);
+                        }
+                    }
+                } else {
+                    log:printError(r4:createFHIRError(
+                        string `Cannot find CodeSystem data in the zip file`,
+                        r4:ERROR,
+                        r4:INVALID_REQUIRED,
+                        httpStatusCode = http:STATUS_BAD_REQUEST).toBalString());
+                }
+
+                string valueSetPath = string `./extracted/${typeHeader.toLowerAscii()}/valuesets`;
+                if check file:test(valueSetPath, file:EXISTS) {
+                    json[] valueSets = check readFiles(valueSetPath);
+                    _ = terminology:addValueSetsAsJson(valueSets);
+                }
+                log:printError(r4:createFHIRError(
+                        string `Cannot find ValueSet data in the zip file`,
+                        r4:ERROR,
+                        r4:INVALID_REQUIRED,
+                        httpStatusCode = http:STATUS_BAD_REQUEST).toBalString());
+
+                file:Error? remove = file:remove("./extracted", file:RECURSIVE);
+                if remove is file:Error {
+                    log:printError(r4:createFHIRError(
+                        string `Cannot remove extracted files`,
+                        r4:ERROR,
+                        r4:INVALID_REQUIRED,
+                        cause = remove,
+                        httpStatusCode = http:STATUS_BAD_REQUEST).toBalString());
+                }
+            } else if part.getContentType() == "application/json" {
+                json[] content = check readFiles(string `./extracted/${typeHeader}/codes`);
+                r4:CodeSystem|error cloned1 = content[0].cloneWithType(r4:CodeSystem);
+
+                if cloned1 is r4:CodeSystem {
+                    return terminology:addCodeSystem(cloned1);
+                } else {
+                    r4:ValueSet|error cloned2 = content.cloneWithType(r4:ValueSet);
+
+                    if cloned2 is r4:ValueSet {
+                        return terminology:addValueSet(cloned2);
+                    } else {
+                        return r4:createFHIRError(
+                    string `Unsupported content`,
+                    r4:ERROR,
+                    r4:INVALID_REQUIRED,
+                    diagnostic = string `Supported types are: CodeSystem, ValueSet"`,
+                    httpStatusCode = http:STATUS_BAD_REQUEST);
+                    }
+                }
+            } else {
+                return r4:createFHIRError(
+                    string `Unsupported content type: ${part.getContentType()}`,
+                    r4:ERROR,
+                    r4:INVALID_REQUIRED,
+                    diagnostic = string `Supported types are: application/zip and "application/json"`,
+                    httpStatusCode = http:STATUS_BAD_REQUEST);
+            }
+        }
+    } else {
+        return r4:createFHIRError(
+            string `Empty request payload`,
+            r4:ERROR,
+            r4:INVALID_REQUIRED,
+            diagnostic = string `Payload should contains a zip file or a json object`,
+            httpStatusCode = http:STATUS_BAD_REQUEST);
+    }
 }

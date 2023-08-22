@@ -1,0 +1,219 @@
+{
+  "code": "66917-6",
+  "display": "Has anyone ever tried to, but not actually, steal something from you by using force or the threat of force like in a stick-up, mugging, or car-jacking [LTVH]",
+  "property": [
+    {
+      "code": "CLASSTYPE",
+      "valueString": "2"
+    },
+    {
+      "code": "VersionLastChanged",
+      "valueString": "2.65"
+    },
+    {
+      "code": "STATUS",
+      "valueString": "ACTIVE"
+    },
+    {
+      "code": "VersionFirstReleased",
+      "valueString": "2.38"
+    },
+    {
+      "code": "CHNG_TYPE",
+      "valueString": "MIN"
+    },
+    {
+      "code": "COMMON_TEST_RANK",
+      "valueString": "0"
+    },
+    {
+      "code": "SHORTNAME",
+      "valueString": "Tried to steal LTVH"
+    },
+    {
+      "code": "LONG_COMMON_NAME",
+      "valueString": "Has anyone ever tried to, but not actually, steal something from you by using force or the threat of force like in a stick-up, mugging, or car-jacking [LTVH]"
+    },
+    {
+      "code": "COMMON_ORDER_RANK",
+      "valueString": "0"
+    },
+    {
+      "code": "UNITSREQUIRED",
+      "valueString": "N"
+    },
+    {
+      "code": "SURVEY_QUEST_TEXT",
+      "valueString": "Has anyone ever tried to--but not actually--steal something from you by using force or the threat of force like in a stick-up, mugging, or car-jacking?"
+    },
+    {
+      "code": "RELATEDNAMES2",
+      "valueString": "Finding; Findings; Ordinal; PhenX; Point in time; QL; Qual; Qualitative; Random; Screen; Tried to steal"
+    },
+    {
+      "code": "CHANGE_REASON_PUBLIC",
+      "valueString": "Updated Method from PhenX to reflect the original source of the content.; Updated the PhenX ID from \"PhenX.\u003cID\u003e\" to \"PX\u003cID\u003e\" in Survey Question Source field to align with the variable identifier used in the PhenX Toolkit."
+    },
+    {
+      "code": "SURVEY_QUEST_SRC",
+      "valueString": "PX181401240000"
+    },
+    {
+      "code": "parent",
+      "valueCoding": {
+        "code": "LP248771-0",
+        "display": "Clinical terms not yet categorized",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "answer-list",
+      "valueString": "LL361-7"
+    },
+    {
+      "code": "COMPONENT",
+      "valueCoding": {
+        "code": "LP129597-3",
+        "display": "Has anyone ever tried to, but not actually, steal something from you by using force or the threat of force like in a stick-up, mugging, or car-jacking",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "PROPERTY",
+      "valueCoding": {
+        "code": "LP6813-2",
+        "display": "Find",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "TIME_ASPCT",
+      "valueCoding": {
+        "code": "LP6960-1",
+        "display": "Pt",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "SYSTEM",
+      "valueCoding": {
+        "code": "LP310005-6",
+        "display": "^Patient",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "SCALE_TYP",
+      "valueCoding": {
+        "code": "LP7751-3",
+        "display": "Ord",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "METHOD_TYP",
+      "valueCoding": {
+        "code": "LP241961-4",
+        "display": "LTVH",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "analyte",
+      "valueCoding": {
+        "code": "LP129597-3",
+        "display": "Has anyone ever tried to, but not actually, steal something from you by using force or the threat of force like in a stick-up, mugging, or car-jacking",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "time-core",
+      "valueCoding": {
+        "code": "LP6960-1",
+        "display": "Pt",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "super-system",
+      "valueCoding": {
+        "code": "LP6985-8",
+        "display": "Patient",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "analyte-core",
+      "valueCoding": {
+        "code": "LP129597-3",
+        "display": "Has anyone ever tried to, but not actually, steal something from you by using force or the threat of force like in a stick-up, mugging, or car-jacking",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "search",
+      "valueCoding": {
+        "code": "LP17763-1",
+        "display": "A",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "category",
+      "valueCoding": {
+        "code": "LP7787-7",
+        "display": "Clinical",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "CLASS",
+      "valueCoding": {
+        "code": "LP95321-3",
+        "display": "PHENX",
+        "system": "http://loinc.org"
+      }
+    }
+  ],
+  "designation": [
+    {
+      "value": "Tried to steal LTVH"
+    },
+    {
+      "language": "es-MX",
+      "value": "¿Alguien ha intentado alguna vez, pero no realmente, robarle algo mediante el uso de la fuerza o la amenaza de la fuerza, como en un atraco, atraco o robo de auto?:Tipo:Punto temporal:^ Paciente:Ordinal:LTVH",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "es-MX",
+      "value": "¿Alguien ha intentado alguna vez, pero no realmente, robarle algo mediante el uso de la fuerza o la amenaza de la fuerza, como en un atraco, atraco o robo de auto?: Paciente:Punto temporal:Tipo:Ordinal:LTVH",
+      "use": {
+        "code": "LONG_COMMON_NAME",
+        "display": "LONG_COMMON_NAME",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "zh-CN",
+      "value": "任何其他人是否在比如持枪抢劫、拦路抢劫、行凶抢劫或汽车抢劫过程中，曾经通过使用暴力或暴力威胁要伤害您而试图但实际上并未从您那里偷盗某种东西:发现:时间点:^患者:序数型:LTVH",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "it-IT",
+      "value": "Qualcuno ha mai provato, ma non è riuscito, a rubare qualcosa da lei utilizzando la forza o la minaccia della forza, come in una rapina, un\u0027aggressione o un furto d\u0027auto:Osservazione:Pt:^Paziente:Ord:LTVH",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    }
+  ]
+}

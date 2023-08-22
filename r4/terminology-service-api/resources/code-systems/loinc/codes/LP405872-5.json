@@ -1,0 +1,22 @@
+{
+  "code": "LP405872-5",
+  "display": "Extremity vessels | MR angiogram | Radiology",
+  "property": [
+    {
+      "code": "parent",
+      "valueCoding": {
+        "code": "LP207287-6",
+        "display": "Extremity\u003eExtremity vessels",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "child",
+      "valueCoding": {
+        "code": "36794-6",
+        "display": "MRA Extremity vessels",
+        "system": "http://loinc.org"
+      }
+    }
+  ]
+}

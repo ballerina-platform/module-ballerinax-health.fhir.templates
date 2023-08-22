@@ -1,0 +1,55 @@
+{
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:1.3.6.1.4.1.12009.10.1.205"
+    }
+  ],
+  "copyright": "This material contains content from LOINC (http://loinc.org). LOINC is copyright ©1995-2023, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc.",
+  "url": "http://loinc.org/vs/LL1036-4",
+  "version": "Beta.1",
+  "name": "Banding",
+  "status": "active",
+  "publisher": "Regenstrief Institute, Inc.",
+  "id": "LL1036-4",
+  "contact": [
+    {
+      "name": "Regenstrief Institute, Inc.",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://loinc.org"
+        }
+      ]
+    }
+  ],
+  "compose": {
+    "include": [
+      {
+        "system": "http://loinc.org",
+        "concept": [
+          {
+            "code": "LA14013-9",
+            "display": "G-banding"
+          },
+          {
+            "code": "LA14014-7",
+            "display": "R-banding"
+          },
+          {
+            "code": "LA14015-4",
+            "display": "Q-banding"
+          },
+          {
+            "code": "LA14016-2",
+            "display": "C-banding"
+          },
+          {
+            "code": "LA14017-0",
+            "display": "T-banding"
+          }
+        ]
+      }
+    ]
+  }
+}

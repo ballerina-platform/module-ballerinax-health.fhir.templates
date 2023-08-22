@@ -1,0 +1,368 @@
+{
+  "code": "57018-4",
+  "display": "Hydrogen/Expired gas [Volume Fraction] in Exhaled gas --3 hours post dose lactulose",
+  "property": [
+    {
+      "code": "CLASSTYPE",
+      "valueString": "1"
+    },
+    {
+      "code": "VersionLastChanged",
+      "valueString": "2.42"
+    },
+    {
+      "code": "STATUS",
+      "valueString": "ACTIVE"
+    },
+    {
+      "code": "VersionFirstReleased",
+      "valueString": "2.29"
+    },
+    {
+      "code": "CHNG_TYPE",
+      "valueString": "MIN"
+    },
+    {
+      "code": "ORDER_OBS",
+      "valueString": "Observation"
+    },
+    {
+      "code": "COMMON_TEST_RANK",
+      "valueString": "0"
+    },
+    {
+      "code": "SHORTNAME",
+      "valueString": "Breath H2 3h p lactulose"
+    },
+    {
+      "code": "LONG_COMMON_NAME",
+      "valueString": "Hydrogen/Expired gas [Volume Fraction] in Exhaled gas --3 hours post dose lactulose"
+    },
+    {
+      "code": "COMMON_ORDER_RANK",
+      "valueString": "0"
+    },
+    {
+      "code": "UNITSREQUIRED",
+      "valueString": "N"
+    },
+    {
+      "code": "RELATEDNAMES2",
+      "valueString": "3h p lactulose; After; Breath; CHEMISTRY.CHALLENGE TESTING; ExG; Exhaled gas; Exhaled gas (\u003dbreath); Gases; H2; Hyd; p dose; Percent; Point in time; PST; QNT; Quan; Quant; Quantitative; Random; Volfr; Volume fraction"
+    },
+    {
+      "code": "EXAMPLE_UNITS",
+      "valueString": "%"
+    },
+    {
+      "code": "DisplayName",
+      "valueString": "Hydrogen/Expired gas 3 Hr post dose lactulose (Exhl gas) [Volume fraction]"
+    },
+    {
+      "code": "EXAMPLE_UCUM_UNITS",
+      "valueString": "%"
+    },
+    {
+      "code": "parent",
+      "valueCoding": {
+        "code": "LP248770-2",
+        "display": "Lab terms not yet categorized",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "COMPONENT",
+      "valueCoding": {
+        "code": "LP306176-1",
+        "display": "Hydrogen/Expired gas^3H post dose lactulose",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "PROPERTY",
+      "valueCoding": {
+        "code": "LP6891-8",
+        "display": "VFr",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "TIME_ASPCT",
+      "valueCoding": {
+        "code": "LP6960-1",
+        "display": "Pt",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "SYSTEM",
+      "valueCoding": {
+        "code": "LP7214-2",
+        "display": "Exhl gas",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "SCALE_TYP",
+      "valueCoding": {
+        "code": "LP7753-9",
+        "display": "Qn",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "analyte",
+      "valueCoding": {
+        "code": "LP286240-9",
+        "display": "Hydrogen/Expired gas",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "time-core",
+      "valueCoding": {
+        "code": "LP6960-1",
+        "display": "Pt",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "system-core",
+      "valueCoding": {
+        "code": "LP7214-2",
+        "display": "Exhl gas",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "challenge",
+      "valueCoding": {
+        "code": "LP96785-8",
+        "display": "3H post dose lactulose",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "analyte-core",
+      "valueCoding": {
+        "code": "LP15643-7",
+        "display": "Hydrogen",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "analyte-divisor",
+      "valueCoding": {
+        "code": "LP65356-5",
+        "display": "Expired gas",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "search",
+      "valueCoding": {
+        "code": "LP173648-9",
+        "display": "Lactulose",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "search",
+      "valueCoding": {
+        "code": "LP32601-4",
+        "display": "dose",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "search",
+      "valueCoding": {
+        "code": "LP32606-3",
+        "display": "post",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "search",
+      "valueCoding": {
+        "code": "LP7253-0",
+        "display": "Gas",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "search",
+      "valueCoding": {
+        "code": "LP20555-6",
+        "display": "post dose",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "search",
+      "valueCoding": {
+        "code": "LP20575-4",
+        "display": "3H post dose",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "search",
+      "valueCoding": {
+        "code": "LP61647-1",
+        "display": "Lactulose",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "category",
+      "valueCoding": {
+        "code": "LP29693-6",
+        "display": "Laboratory",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "CLASS",
+      "valueCoding": {
+        "code": "LP7784-4",
+        "display": "CHAL",
+        "system": "http://loinc.org"
+      }
+    }
+  ],
+  "designation": [
+    {
+      "value": "Breath H2 3h p lactulose"
+    },
+    {
+      "value": "Hydrogen/Expired Gas - 3 hr after lactulose, Exhaled gas"
+    },
+    {
+      "language": "es-MX",
+      "value": "Hidrógeno / gas expirado ^3H después de la dosis de lactulosa:Fracción de volumen:Punto temporal:Gas exhalado:Cuantitativo:",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "es-MX",
+      "value": "Hidrógeno / gas expirado : Gas exhalado : Punto temporal: Fracción de volumen: Cuantitativo:",
+      "use": {
+        "code": "LONG_COMMON_NAME",
+        "display": "LONG_COMMON_NAME",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "zh-CN",
+      "value": "氢/已呼出的气体^在给予剂量乳果糖之后3小时:体积分数:时间点:呼出的气体:定量型:",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "fr-CA",
+      "value": "Hydrogène/Gaz expiré^3 h post dose lactulose:Fraction volumique:Temps ponctuel:Gaz expiré:Quantitatif:",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "pt-BR",
+      "value": "Hidrogênio/Gás expirado^3 hs após dose de lactulose:#N/A:Pt:Gas exalado:Qn:",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "pt-BR",
+      "value": "Breath H2 3H p lactulose",
+      "use": {
+        "code": "SHORTNAME",
+        "display": "SHORTNAME",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "es-ES",
+      "value": "Hidrógeno/Gas espirado^3H pos dosis de lactosa:Fracción de volumen:Punto temporal:Gas espirado:Qn:",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "it-IT",
+      "value": "Idrogeno/Gas scaduto^3h post dose lattulosio:VFr:Pt:Exhl gas:Qn:",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "fr-FR",
+      "value": "Hydrogène expiré T03h après lactulose:Fraction volumique:Ponctuel:Gaz expiré:Numérique:",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "fr-FR",
+      "value": "Hydrogène expiré T03h après lactulose [Fraction volumique] Gaz expiré ; Numérique",
+      "use": {
+        "code": "LONG_COMMON_NAME",
+        "display": "LONG_COMMON_NAME",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "tr-TR",
+      "value": "Hidrojen/Solunarak alınan gaz^3Sa snr laktüloz dozu:HcmFr:Zmlı:Soln atılan gaz:Kant:",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "ru-RU",
+      "value": "Водород/Выдыхаемый газ^3 часа после дозы лактулозы:ОбФр:ТчкВрм:Выд газ:Колич:",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "nl-NL",
+      "value": "waterstof/uitgeademde lucht^180 min na dosis lactulose:volumefractie:moment:uitgeademde lucht:kwantitatief:",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "fr-BE",
+      "value": "Hydrogène/Gaz expiré^3 h post dose lactulose:Fraction volumique:Temps ponctuel:Gaz expiré:Quantitatif:",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    }
+  ]
+}

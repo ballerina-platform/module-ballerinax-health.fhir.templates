@@ -1,0 +1,376 @@
+{
+  "code": "31847-7",
+  "display": "Herpes simplex virus 1 Ag [Presence] in Skin",
+  "property": [
+    {
+      "code": "CLASSTYPE",
+      "valueString": "1"
+    },
+    {
+      "code": "VersionLastChanged",
+      "valueString": "2.56"
+    },
+    {
+      "code": "STATUS",
+      "valueString": "ACTIVE"
+    },
+    {
+      "code": "VersionFirstReleased",
+      "valueString": "2.07"
+    },
+    {
+      "code": "CHNG_TYPE",
+      "valueString": "MIN"
+    },
+    {
+      "code": "ORDER_OBS",
+      "valueString": "Both"
+    },
+    {
+      "code": "COMMON_TEST_RANK",
+      "valueString": "0"
+    },
+    {
+      "code": "SHORTNAME",
+      "valueString": "HSV1 Ag Skin Ql"
+    },
+    {
+      "code": "LONG_COMMON_NAME",
+      "valueString": "Herpes simplex virus 1 Ag [Presence] in Skin"
+    },
+    {
+      "code": "COMMON_ORDER_RANK",
+      "valueString": "0"
+    },
+    {
+      "code": "UNITSREQUIRED",
+      "valueString": "N"
+    },
+    {
+      "code": "RELATEDNAMES2",
+      "valueString": "Antigen; Antigens; Dermatologic; Epidermis; Herp splx; Herpes simplex virus type 1; HSV; HSV1; i; ID; Infectious Disease; InfectiousDisease; Integument; Microbiology; Ordinal; Point in time; PR; QL; Qual; Qualitative; Random; Screen; Skn"
+    },
+    {
+      "code": "CHANGE_REASON_PUBLIC",
+      "valueString": "The PrThr property is used for LOINC terms whose results are reported using an ordered categorical scale, regardless of whether or not an internal threshold was used to make that determination. This change was approved by the Laboratory LOINC Committee in June 2016."
+    },
+    {
+      "code": "DisplayName",
+      "valueString": "HSV 1 Ag Ql (Skin)"
+    },
+    {
+      "code": "parent",
+      "valueCoding": {
+        "code": "LP377763-0",
+        "display": "Herpes simplex virus 1 | Skin | Microbiology",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "COMPONENT",
+      "valueCoding": {
+        "code": "LP38365-0",
+        "display": "Herpes simplex virus 1 Ag",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "PROPERTY",
+      "valueCoding": {
+        "code": "LP217195-9",
+        "display": "PrThr",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "TIME_ASPCT",
+      "valueCoding": {
+        "code": "LP6960-1",
+        "display": "Pt",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "SYSTEM",
+      "valueCoding": {
+        "code": "LP36760-4",
+        "display": "Skin",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "SCALE_TYP",
+      "valueCoding": {
+        "code": "LP7751-3",
+        "display": "Ord",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "analyte",
+      "valueCoding": {
+        "code": "LP38365-0",
+        "display": "Herpes simplex virus 1 Ag",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "time-core",
+      "valueCoding": {
+        "code": "LP6960-1",
+        "display": "Pt",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "system-core",
+      "valueCoding": {
+        "code": "LP36760-4",
+        "display": "Skin",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "analyte-core",
+      "valueCoding": {
+        "code": "LP14821-0",
+        "display": "Herpes simplex virus 1",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "analyte-suffix",
+      "valueCoding": {
+        "code": "LP20666-1",
+        "display": "Ag",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "search",
+      "valueCoding": {
+        "code": "LP14558-8",
+        "display": "Herpes simplex virus",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "search",
+      "valueCoding": {
+        "code": "LP14855-8",
+        "display": "Virus",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "category",
+      "valueCoding": {
+        "code": "LP29693-6",
+        "display": "Laboratory",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "category",
+      "valueCoding": {
+        "code": "LP343406-7",
+        "display": "Microbiology and Antimicrobial susceptibility",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "category",
+      "valueCoding": {
+        "code": "LP415704-8",
+        "display": "InfectiousDisease",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "category",
+      "valueCoding": {
+        "code": "LP7819-8",
+        "display": "Microbiology",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "CLASS",
+      "valueCoding": {
+        "code": "LP7819-8",
+        "display": "MICRO",
+        "system": "http://loinc.org"
+      }
+    }
+  ],
+  "designation": [
+    {
+      "value": "HSV1 Ag Skin Ql"
+    },
+    {
+      "value": "Herpes simplex virus 1 (HSV 1) antigen, Skin"
+    },
+    {
+      "language": "es-MX",
+      "value": "Virus del herpes simplex 1 Ag:Presencia o umbral:Punto temporal:Piel:Ordinal:",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "es-MX",
+      "value": "Virus del herpes simplexx 1 Ag: Piel : Punto temporal: Presencia o umbral: Ordinal:",
+      "use": {
+        "code": "LONG_COMMON_NAME",
+        "display": "LONG_COMMON_NAME",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "zh-CN",
+      "value": "单纯疱疹病毒 1 型 抗原:存在情况或阈值:时间点:皮肤:序数型:",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "es-AR",
+      "value": "[antígeno de] virus herpes simple tipo 1 [Ag].IgM [Inmunoglobulina M]:concentración arbitraria:punto en el tiempo:piel:ordinal:",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "es-AR",
+      "value": "[antígeno de] virus herpes simple tipo 1 [Ag].IgM [Inmunoglobulina M]:concentración arbitraria:punto en el tiempo:piel:ordinal:",
+      "use": {
+        "code": "SHORTNAME",
+        "display": "SHORTNAME",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "fr-CA",
+      "value": "Virus de l\u0027herpès simplex 1 , Ag:Présence-Seuil:Temps ponctuel:Peau:Ordinal:",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "et-EE",
+      "value": "Lihtherpesviiruse 1. tüüp antigeen:PrThr:Pt:Nahk:Ord:",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "pt-BR",
+      "value": "Herpes simplex vírus 1 Ag:ACnc:Pt:Pele:Ord:",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "pt-BR",
+      "value": "HSV1 Ag Skin Ql",
+      "use": {
+        "code": "SHORTNAME",
+        "display": "SHORTNAME",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "es-ES",
+      "value": "Virus Herpes simplex 1 Antígeno:PrThr:Punto temporal:Piel:Ord:",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "ko-KR",
+      "value": "단순 헤르페스 바이러스 1 항원:임의농도:검사시점:피부:순위척도:",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "it-IT",
+      "value": "Herpes simplex, virus 1 , Ag:PrThr:Pt:Pelle:Ord:",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "fr-FR",
+      "value": "Herpes simplex virus 1 Ag:Présence/Seuil:Ponctuel:Peau:Qualitatif:",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "fr-FR",
+      "value": "Herpes simplex virus 1 Ag [Présence/Seuil] Peau ; Qualitatif",
+      "use": {
+        "code": "LONG_COMMON_NAME",
+        "display": "LONG_COMMON_NAME",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "tr-TR",
+      "value": "Herpes simplex virüsü 1 Ag:MevcEşik:Zmlı:Deri:Srl:",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "ru-RU",
+      "value": "Herpes simplex вирус 1 Аг:PrThr:ТчкВрм:Кожа:Пор:",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "nl-NL",
+      "value": "herpes-simplexvirus 1 Ag:aanwezigheid:moment:huid:ordinaal:",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "fr-BE",
+      "value": "Virus de l\u0027herpès simplex 1 Ag:PrThr:Temps ponctuel:Peau:Ordinal:",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    }
+  ]
+}

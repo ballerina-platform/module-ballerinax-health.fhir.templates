@@ -1,0 +1,75 @@
+{
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:1.3.6.1.4.1.12009.10.1.204"
+    }
+  ],
+  "copyright": "This material contains content from LOINC (http://loinc.org). LOINC is copyright ©1995-2023, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc.",
+  "url": "http://loinc.org/vs/LL1035-6",
+  "version": "Beta.1",
+  "name": "ISCN band lvl",
+  "status": "active",
+  "publisher": "Regenstrief Institute, Inc.",
+  "id": "LL1035-6",
+  "contact": [
+    {
+      "name": "Regenstrief Institute, Inc.",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://loinc.org"
+        }
+      ]
+    }
+  ],
+  "compose": {
+    "include": [
+      {
+        "system": "http://loinc.org",
+        "concept": [
+          {
+            "code": "LA14008-9",
+            "display": "400"
+          },
+          {
+            "code": "LA14112-9",
+            "display": "425"
+          },
+          {
+            "code": "LA14113-7",
+            "display": "450"
+          },
+          {
+            "code": "LA14009-7",
+            "display": "500"
+          },
+          {
+            "code": "LA14114-5",
+            "display": "550"
+          },
+          {
+            "code": "LA14115-2",
+            "display": "575"
+          },
+          {
+            "code": "LA14010-5",
+            "display": "600"
+          },
+          {
+            "code": "LA14116-0",
+            "display": "650"
+          },
+          {
+            "code": "LA14011-3",
+            "display": "800"
+          },
+          {
+            "code": "LA14012-1",
+            "display": "850"
+          }
+        ]
+      }
+    ]
+  }
+}
