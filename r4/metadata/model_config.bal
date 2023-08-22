@@ -14,7 +14,7 @@
 // specific language governing permissions and limitations
 // under the License.
 
-import wso2healthcare/healthcare.fhir.r4;
+import ballerinax/health.fhir.r4;
 
 # Configs for server
 #
