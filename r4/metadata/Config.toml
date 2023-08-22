@@ -23,5 +23,3 @@ cors = false
 discoveryEndpoint = "https://api.asgardeo.io/t/bifrost/oauth2/token/.well-known/openid-configuration"
 managementEndpoint = "<MANAGE_ENDPOINT>"
 
-[ballerina.log]
-level = "DEBUG"

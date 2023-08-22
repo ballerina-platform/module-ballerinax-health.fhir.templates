@@ -5,7 +5,7 @@
 This section focuses on how to use this template to implement, configure and deploy FHIR Metadata API of a FHIR server:
 
 ### Prerequisites
-1. Install [Ballerina](https://ballerina.io/learn/install-ballerina/set-up-ballerina/) 2201.1.2 (Swan Lake Update 1) or later
+1. Install [Ballerina](https://ballerina.io/learn/install-ballerina/set-up-ballerina/) 2201.6.0 (Swan Lake Update 6) or later
 
 ### Setup and run in VM or Developer Machine
 
