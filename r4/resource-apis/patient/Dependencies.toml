@@ -364,7 +364,7 @@ dependencies = [
 [[package]]
 org = "ballerinax"
 name = "health.fhir.templates.r4.patient"
-version = "1.0.4-snapshot"
+version = "1.0.4"
 dependencies = [
 	{org = "ballerina", name = "http"},
 	{org = "ballerina", name = "log"},

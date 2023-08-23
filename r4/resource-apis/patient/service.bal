@@ -36,7 +36,7 @@ service / on new fhirr4:Listener(9090, apiConfig) {
 
 
     // Read the current state of the resource
-    isolated resource function Patient fhir/r4/Patient/[string id] (r4:FHIRContext fhirContext) returns @http:Payload {mediaType: ["application/fhir+json", "application/fhir+xml"]} Patient|r4:FHIRError {
+    isolated resource function get fhir/r4/Patient/[string id] (r4:FHIRContext fhirContext) returns @http:Payload {mediaType: ["application/fhir+json", "application/fhir+xml"]} Patient|r4:FHIRError {
         // call the source system apis
         Patient|http:ClientError res = sourceEp->/Patient/[id];
 
@@ -49,7 +49,7 @@ service / on new fhirr4:Listener(9090, apiConfig) {
     }
 
     // Search the resource type based on some filter criteria
-    isolated resource function Bundle fhir/r4/Patient (r4:FHIRContext fhirContext) returns @http:Payload {mediaType: ["application/fhir+json", "application/fhir+xml"]} r4:Bundle|r4:FHIRError {
+    isolated resource function get fhir/r4/Patient (r4:FHIRContext fhirContext) returns @http:Payload {mediaType: ["application/fhir+json", "application/fhir+xml"]} r4:Bundle|r4:FHIRError {
         // url encode the search parameters
         string|r4:FHIRError encodedParams = r4:urlEncodeFhirSearchParameters(fhirContext.getRequestSearchParameters());
         if encodedParams is r4:FHIRError {
@@ -68,7 +68,7 @@ service / on new fhirr4:Listener(9090, apiConfig) {
     }
 
     // Create a new resource with a server assigned id
-    isolated resource function Patient fhir/r4/Patient (r4:FHIRContext fhirContext, international401:Patient payload) returns @http:Payload {mediaType: ["application/fhir+json", "application/fhir+xml"]} Patient|r4:FHIRError {
+    isolated resource function post fhir/r4/Patient (r4:FHIRContext fhirContext, international401:Patient payload) returns @http:Payload {mediaType: ["application/fhir+json", "application/fhir+xml"]} Patient|r4:FHIRError {
         // Passing the Interaction processing to the r4 package with current context.
         Patient|http:ClientError res = sourceEp->/Patient.post(payload);
 
