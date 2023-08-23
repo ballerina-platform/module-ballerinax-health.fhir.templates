@@ -2,7 +2,7 @@
 org = "ballerinax"
 name = "health.fhir.templates.r4.patient"
 version = "1.0.4-snapshot"
-distribution = "2201.5.0"
+distribution = "2201.6.0"
 authors = ["Ballerina"]
 keywords = ["Healthcare", "FHIR", "Patient", "r4", "international"]
 template = true
@@ -14,10 +14,16 @@ observabilityIncluded = true
 [[dependency]]
 org = "ballerinax"
 name = "health.fhir.r4"
-version = "1.0.3"
+version = "4.1.0"
 
 [[dependency]]
 org = "ballerinax"
-name = "health.base"
-version = "1.0.2"
+name = "health.fhirr4"
+version = "1.0.8"
+
+[[dependency]]
+org = "ballerinax"
+name = "health.fhir.r4.international401"
+version = "1.0.0"
+
 
