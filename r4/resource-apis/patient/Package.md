@@ -15,18 +15,20 @@ This template provides a boilerplate code for rapid implementation of FHIR APIs 
 
 ### Dependency List
 
-| Module                            | Version |
-|-----------------------------------|---------|
-| ballerinax/health.fhir.r4         | 1.0.2   |
-| ballerinax/health.base            | 1.0.1   |
+| Module | Version |
+| --- | --- |
+| ballerinax/health.fhir.r4 | 4.1.0 |
+| ballerinax/health.fhirr4 | 1.0.8 |
+| ballerinax/health.fhirr4 | 1.0.8 |
+|
 
 This template includes,
 
-- Ballerina service for 'Patient' FHIR resource with following FHIR interactions.
-- Search
-- Read
-- Create
-- Generated Utility functions per each FHIR profile to handle source system connections
+- Ballerina service for 'FHIR Resource Name' FHIR resource with following FHIR interactions.
+- READ
+- SEARCH
+- CREATE
+- Generated Utility functions to handle context data
 - Pre-engaged FHIR pre-processors and post-processors for built-in FHIR Server capabilities
 
 
@@ -34,7 +36,7 @@ This template includes,
 
 Pull the template from central
 
-    ` bal new -t ballerinax/health.fhir.templates.r4.patient PatientAPI `
+    ` bal new -t wso2healthcare/health.fhir.templates.patient PatientAPI `
 
 ## Implementing Source System Connections
 
@@ -61,9 +63,9 @@ Pull the template from central
 
 - Introduce a new file containing a class which implements functions for FHIR interactions.
 - This class need to implement `PatientSourceConnect` object type
-- It needs to have the same structure as the ` international_patient_connect ` file.
+- It needs to have the same structure as the ` healthcare.fhir_patient_connect ` file.
 - Register the new class in the `service.bal` file.
-- Add and entry to `profileImpl` map as `profileURL:instantiated source connect class`. Eg: `"http://hl7.org/fhir/StructureDefinition/Patient": new InternationalPatientSourceConnect()`
+- Add and entry to `profileImpl` map as `profileURL:instantiated source connect class`. Eg: `"http://hl7.org/fhir/StructureDefinition/Patient": new Healthcare.fhirPatientSourceConnect()`
 - Add profile type to the aggregated resource type. Eg: `public type Patient r4:Patient|<Other_Patient_Profile>;`.
     - Add the new profile URL in `api_config.bal` file.
     - Add as a string inside the `profiles` array.
