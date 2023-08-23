@@ -36,13 +36,7 @@ This template includes,
 
 Pull the template from central
 
-    ` bal new -t wso2healthcare/health.fhir.templates.patient PatientAPI `
-
-## Implementing Source System Connections
-
-- Implement each FHIR interaction in `<resource name>_connect.bal` file which included in the project.
-- You can use relevant client connector, object to initialize the connection to fetch/push data from/to the source system.
-- Method signatures should not be modified and request information will be populated in the `fhirContext` for ease of access.
+    ` bal new -t ballerinax/health.fhir.templates.patient PatientAPI `
 
 ## Run the template
 - Run the Ballerina project created by the service template by executing bal run from the root.
