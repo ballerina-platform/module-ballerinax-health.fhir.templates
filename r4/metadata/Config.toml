@@ -21,5 +21,11 @@ interaction = ["search-type"]
 [configRest.security]
 cors = false
 discoveryEndpoint = "https://api.asgardeo.io/t/bifrost/oauth2/token/.well-known/openid-configuration"
+##configure the following endpoints manually if there is no discovery EP defined
+#tokenEndpoint = "<TOKEN_ENDPOINT>"
+#authorizeEndpoint = "<AUTHZ_ENDPOINT>"
+#introspectEndpoint = "<INTROSPECT_ENDPOINT>"
+#revocationEndpoint = "<REVOCATION_ENDPOINT>"
+#registrationEndpoint = "<DCR_ENDPOINT>"
 managementEndpoint = "<MANAGE_ENDPOINT>"
 
