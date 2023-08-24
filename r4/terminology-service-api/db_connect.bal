@@ -105,7 +105,7 @@ public type Finder readonly & object {
 };
 
 final mysql:Client dbClient = check new (
-    host = "127.0.0.1", user = "root", password = "2@Yanmakes", port = 3306, database = string `${DB_NAME}`
+    host = "127.0.0.1", user = "", password = "", port = 3306, database = string `${DB_NAME}`
 );
 
 public readonly class FinderImpl {
