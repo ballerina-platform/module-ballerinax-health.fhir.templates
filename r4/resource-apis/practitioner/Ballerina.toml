@@ -1,23 +1,10 @@
 [package]
 org = "ballerinax"
-name = "health.fhir.templates.r4.practitioner"
-version = "1.0.4-snapshot"
-distribution = "2201.5.0"
-authors = ["Ballerina"]
-keywords = ["Healthcare", "FHIR", "Practitioner", "r4", "international"]
-template = true
+name = "health.fhir.templates.international401.practitioner"
+version = "2.0.0"
+distribution = "2201.7.0"
+authors = ["Ballerina", "Healthcare", "FHIR"]
+keywords = ["Practitioner", "r4", "health.fhir.templates.international401"]
 repository = "https://github.com/ballerina-platform/module-ballerinax-health.fhir.templates"
-
-[build-options]
-observabilityIncluded = true
-
-[[dependency]]
-org = "ballerinax"
-name = "health.fhir.r4"
-version = "1.0.3"
-
-[[dependency]]
-org = "ballerinax"
-name = "health.base"
-version = "1.0.2"
+template = true
 
