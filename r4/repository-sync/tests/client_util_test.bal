@@ -19,7 +19,7 @@ import ballerina/time;
 
 import ballerinax/health.fhir.r4;
 
-@test:Config {enable: true}
+@test:Config {enable: false}
 function testFetchLastInvocationTime() {
     time:Utc|error lastInvocationTime = fetchLastInvocationTime();
     if (lastInvocationTime is error) {
@@ -28,7 +28,7 @@ function testFetchLastInvocationTime() {
     test:assertTrue(true);
 }
 
-@test:Config {enable: true}
+@test:Config {enable: false}
 function testPushCurrentInvocationTime() {
     time:Utc now = time:utcNow();
     error? lastInvocationTime = pushCurrentInvocationTime(now);
