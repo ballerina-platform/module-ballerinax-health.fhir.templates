@@ -1,0 +1,41 @@
+name: Release FHIR API Templates
+
+on:
+  workflow_dispatch:
+    inputs:
+      bal_central_environment:
+        description: Ballerina Central Environment
+        type: choice
+        options:
+        - STAGE
+        - DEV
+        - PROD
+        required: true
+
+jobs:
+  findpaths:
+    runs-on: ubuntu-latest
+    outputs:
+      subdirectories: ${{ steps.extract_subdirectories.outputs.subdirectories }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Extract subdirectories of /r4/resource-apis and store in an array
+        id: extract_subdirectories
+        run: |
+          dir_array=$(find ./r4/resource-apis -mindepth 1 -maxdepth 1 -type d -exec printf '"%s"' {} \; | jq -s -c .)
+          echo "subdirectories=$dir_array" >> $GITHUB_OUTPUT
+
+  release:
+    needs: [findpaths]
+    if: ${{ needs.findpaths.outputs.subdirectories != '[]' }}}}
+    strategy:
+      matrix:
+        path: ${{ fromJSON(needs.findpaths.outputs.subdirectories) }}
+    uses: ./.github/workflows/build-executor.yml
+    secrets: inherit
+    with:
+      bal_central_environment: ${{ inputs.bal_central_environment }}
+
