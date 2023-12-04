@@ -1,17 +1,14 @@
-
-
 # Observation Template
 
 ## Template Overview
 
 This template provides a boilerplate code for rapid implementation of FHIR APIs and creating, accessing and manipulating FHIR resources.
 
-
 | Module/Element       | Version |
-|---| --- |
+| -------------------- | ------- |
 | FHIR version         | r4 |
 | Implementation Guide | [http://hl7.org/fhir](http://hl7.org/fhir) |
-| Profile URL          |[http://hl7.org/fhir/StructureDefinition/ldlcholesterol](http://hl7.org/fhir/StructureDefinition/ldlcholesterol), [http://hl7.org/fhir/StructureDefinition/vitalsigns](http://hl7.org/fhir/StructureDefinition/vitalsigns), [http://hl7.org/fhir/StructureDefinition/headcircum](http://hl7.org/fhir/StructureDefinition/headcircum), [http://hl7.org/fhir/StructureDefinition/cholesterol](http://hl7.org/fhir/StructureDefinition/cholesterol), [http://hl7.org/fhir/StructureDefinition/bmi](http://hl7.org/fhir/StructureDefinition/bmi), [http://hl7.org/fhir/StructureDefinition/vitalspanel](http://hl7.org/fhir/StructureDefinition/vitalspanel), [http://hl7.org/fhir/StructureDefinition/devicemetricobservation](http://hl7.org/fhir/StructureDefinition/devicemetricobservation), [http://hl7.org/fhir/StructureDefinition/triglyceride](http://hl7.org/fhir/StructureDefinition/triglyceride), [http://hl7.org/fhir/StructureDefinition/resprate](http://hl7.org/fhir/StructureDefinition/resprate), [http://hl7.org/fhir/StructureDefinition/hdlcholesterol](http://hl7.org/fhir/StructureDefinition/hdlcholesterol), [http://hl7.org/fhir/StructureDefinition/bodytemp](http://hl7.org/fhir/StructureDefinition/bodytemp), [http://hl7.org/fhir/StructureDefinition/bodyweight](http://hl7.org/fhir/StructureDefinition/bodyweight), [http://hl7.org/fhir/StructureDefinition/bp](http://hl7.org/fhir/StructureDefinition/bp), [http://hl7.org/fhir/StructureDefinition/heartrate](http://hl7.org/fhir/StructureDefinition/heartrate), [http://hl7.org/fhir/StructureDefinition/Observation](http://hl7.org/fhir/StructureDefinition/Observation), [http://hl7.org/fhir/StructureDefinition/bodyheight](http://hl7.org/fhir/StructureDefinition/bodyheight), [http://hl7.org/fhir/StructureDefinition/oxygensat](http://hl7.org/fhir/StructureDefinition/oxygensat), [http://hl7.org/fhir/StructureDefinition/observation-genetics](http://hl7.org/fhir/StructureDefinition/observation-genetics)|
+| Profile URL          |[http://hl7.org/fhir/StructureDefinition/Observation](http://hl7.org/fhir/StructureDefinition/Observation)|
 
 ### Dependency List
 
@@ -19,9 +16,7 @@ This template provides a boilerplate code for rapid implementation of FHIR APIs 
 - ballerinax/health.fhirr4
 - ballerinax/health.fhir.r4.international401
 
-This template includes,
-
-- Ballerina service for Observation FHIR resource with following FHIR interactions.
+This template includes a Ballerina service for Observation FHIR resource with following FHIR interactions.
 - READ
 - VREAD
 - SEARCH
@@ -31,7 +26,6 @@ This template includes,
 - DELETE
 - HISTORY-INSTANCE
 - HISTORY-TYPE
-- Generated Utility functions to handle context data
 
 ## Prerequisites
 
@@ -40,6 +34,7 @@ Pull the template from central
     ` bal new -t ballerinax/health.fhir.templates.international401.observation ObservationAPI `
 
 ## Run the template
+
 - Run the Ballerina project created by the service template by executing bal run from the root.
 - Once successfully executed, Listener will be started at port 9090. Then you need to invoke the service using the following curl command
     ` $ curl http://localhost:9090/fhir/r4/Observation `
@@ -50,4 +45,4 @@ Pull the template from central
 - Add profile type to the aggregated resource type. Eg: `public type Observation r4:Observation|<Other_Observation_Profile>;`.
     - Add the new profile URL in `api_config.bal` file.
     - Add as a string inside the `profiles` array.
-    - Eg: `profiles: ["http://hl7.org/fhir/StructureDefinition/ldlcholesterol", "new_profile_url"]`
+    - Eg: `profiles: ["http://hl7.org/fhir/StructureDefinition/Observation", "new_profile_url"]`

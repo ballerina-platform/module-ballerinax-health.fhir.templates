@@ -2,9 +2,7 @@
 org = "ballerinax"
 name = "health.fhir.templates.international401.adverseevent"
 version = "2.0.0"
-distribution = "2201.7.0"
-authors = ["Ballerina", "Healthcare", "FHIR"]
-keywords = ["AdverseEvent", "r4", "health.fhir.templates.international401"]
-repository = "https://github.com/ballerina-platform/module-ballerinax-health.fhir.templates"
+distribution = "2201.8.1"
+authors = ["Ballerina"]
+keywords = ["Healthcare", "FHIR", "AdverseEvent", "r4", "health.fhir.templates.international401"]
 template = true
-
