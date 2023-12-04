@@ -145,7 +145,7 @@ final r4:ResourceAPIConfig apiConfig = {
         name: "performer",
         active: true,
         information: {
-            description: "Matches if the practitioner is listed as a performer in any of the "simple" activities.  (For performers of the detailed activities, chain through the activitydetail search parameter.)",
+            description: "Matches if the practitioner is listed as a performer in any of the \"simple\" activities.  (For performers of the detailed activities, chain through the activitydetail search parameter.)",
             builtin: false,
             documentation: "http://hl7.org/fhir/SearchParameter/CarePlan-performer"
         }
