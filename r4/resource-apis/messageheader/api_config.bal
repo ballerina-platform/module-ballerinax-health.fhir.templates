@@ -118,7 +118,7 @@ final r4:ResourceAPIConfig apiConfig = {
         name: "receiver",
         active: true,
         information: {
-            description: "Intended "real-world" recipient for the data",
+            description: "Intended \"real-world\" recipient for the data",
             builtin: false,
             documentation: "http://hl7.org/fhir/SearchParameter/MessageHeader-receiver"
         }
