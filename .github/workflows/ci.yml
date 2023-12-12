@@ -25,7 +25,7 @@ jobs:
       - name: Extract Unique Ballerina Project Paths from Changed Files
         id: unique-project-paths
         env:
-          GITHUB_TOKEN: ${{ secrets.BALLERINA_BOT_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           # Get changed files of PR from github API
           CHANGED_FILES=$(gh api graphql -f query='
