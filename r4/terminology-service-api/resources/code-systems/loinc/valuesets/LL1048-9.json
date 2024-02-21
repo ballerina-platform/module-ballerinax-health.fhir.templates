@@ -1,0 +1,55 @@
+{
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:1.3.6.1.4.1.12009.10.1.216"
+    }
+  ],
+  "copyright": "This material contains content from LOINC (http://loinc.org). LOINC is copyright ©1995-2023, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc.",
+  "url": "http://loinc.org/vs/LL1048-9",
+  "version": "Beta.1",
+  "name": "Days|Months|Weeks|Quarter|As needed",
+  "status": "active",
+  "publisher": "Regenstrief Institute, Inc.",
+  "id": "LL1048-9",
+  "contact": [
+    {
+      "name": "Regenstrief Institute, Inc.",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://loinc.org"
+        }
+      ]
+    }
+  ],
+  "compose": {
+    "include": [
+      {
+        "system": "http://loinc.org",
+        "concept": [
+          {
+            "code": "LA8999-0",
+            "display": "Days"
+          },
+          {
+            "code": "LA9001-4",
+            "display": "Months"
+          },
+          {
+            "code": "LA9000-6",
+            "display": "Weeks"
+          },
+          {
+            "code": "LA14059-2",
+            "display": "Quarter"
+          },
+          {
+            "code": "LA14060-0",
+            "display": "As needed"
+          }
+        ]
+      }
+    ]
+  }
+}

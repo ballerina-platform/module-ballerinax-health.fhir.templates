@@ -1,0 +1,83 @@
+{
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:1.3.6.1.4.1.12009.10.1.248"
+    }
+  ],
+  "copyright": "This material contains content from LOINC (http://loinc.org). LOINC is copyright ©1995-2023, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc.",
+  "url": "http://loinc.org/vs/LL1080-2",
+  "version": "Beta.1",
+  "name": "PhenX06_03_months",
+  "status": "active",
+  "publisher": "Regenstrief Institute, Inc.",
+  "id": "LL1080-2",
+  "contact": [
+    {
+      "name": "Regenstrief Institute, Inc.",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://loinc.org"
+        }
+      ]
+    }
+  ],
+  "compose": {
+    "include": [
+      {
+        "system": "http://loinc.org",
+        "concept": [
+          {
+            "code": "LA14157-4",
+            "display": "Jan."
+          },
+          {
+            "code": "LA14158-2",
+            "display": "Feb."
+          },
+          {
+            "code": "LA14159-0",
+            "display": "Mar."
+          },
+          {
+            "code": "LA14160-8",
+            "display": "Apr."
+          },
+          {
+            "code": "LA14161-6",
+            "display": "May"
+          },
+          {
+            "code": "LA14162-4",
+            "display": "Jun."
+          },
+          {
+            "code": "LA14163-2",
+            "display": "Jul."
+          },
+          {
+            "code": "LA14164-0",
+            "display": "Aug."
+          },
+          {
+            "code": "LA14165-7",
+            "display": "Sep."
+          },
+          {
+            "code": "LA14166-5",
+            "display": "Oct."
+          },
+          {
+            "code": "LA14167-3",
+            "display": "Nov."
+          },
+          {
+            "code": "LA14168-1",
+            "display": "Dec."
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,337 @@
+{
+  "code": "73284-2",
+  "display": "Methocarbamol induced platelet IgM Ab [Presence] in Serum or Plasma by Flow cytometry (FC)",
+  "property": [
+    {
+      "code": "CLASSTYPE",
+      "valueString": "1"
+    },
+    {
+      "code": "VersionLastChanged",
+      "valueString": "2.66"
+    },
+    {
+      "code": "STATUS",
+      "valueString": "ACTIVE"
+    },
+    {
+      "code": "VersionFirstReleased",
+      "valueString": "2.44"
+    },
+    {
+      "code": "CHNG_TYPE",
+      "valueString": "MIN"
+    },
+    {
+      "code": "ORDER_OBS",
+      "valueString": "Both"
+    },
+    {
+      "code": "COMMON_TEST_RANK",
+      "valueString": "0"
+    },
+    {
+      "code": "SHORTNAME",
+      "valueString": "Methocarbamol ind plt IgM SerPl Ql FC"
+    },
+    {
+      "code": "LONG_COMMON_NAME",
+      "valueString": "Methocarbamol induced platelet IgM Ab [Presence] in Serum or Plasma by Flow cytometry (FC)"
+    },
+    {
+      "code": "COMMON_ORDER_RANK",
+      "valueString": "0"
+    },
+    {
+      "code": "RELATEDNAMES2",
+      "valueString": "ABS; Aby; Antby; Anti; Antibodies; Antibody; Autoantibodies; Autoantibody; Carbacot; Circulating platelet ab; Dynamic; FC; Immune globulin M; Immunoglobulin M; ind plt Ab; ind plt IgM; Ordinal; Pl; Plasma; Platelet ab.free; Platelet auto-antibodies; Platelets; Platelt; Plsm; Plt; Point in time; PR; QL; Qual; Qualitative; Random; Robaxin; Screen; Serology; SerP; SerPl; SerPlas; Serum; Serum or plasma; Skelex; SR; Thrombocyte; Thrombocytes"
+    },
+    {
+      "code": "CHANGE_REASON_PUBLIC",
+      "valueString": "The PrThr property is used for LOINC terms whose results are reported using an ordered categorical scale, regardless of whether or not an internal threshold was used to make that determination. This change was approved by the Laboratory LOINC Committee in June 2016."
+    },
+    {
+      "code": "DisplayName",
+      "valueString": "Methocarbamol induced platelet IgM FC Ql"
+    },
+    {
+      "code": "parent",
+      "valueCoding": {
+        "code": "LP248770-2",
+        "display": "Lab terms not yet categorized",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "answer-list",
+      "valueString": "LL360-9"
+    },
+    {
+      "code": "COMPONENT",
+      "valueCoding": {
+        "code": "LP164985-6",
+        "display": "Methocarbamol induced platelet Ab.IgM",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "PROPERTY",
+      "valueCoding": {
+        "code": "LP217195-9",
+        "display": "PrThr",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "TIME_ASPCT",
+      "valueCoding": {
+        "code": "LP6960-1",
+        "display": "Pt",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "SYSTEM",
+      "valueCoding": {
+        "code": "LP7576-4",
+        "display": "Ser/Plas",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "SCALE_TYP",
+      "valueCoding": {
+        "code": "LP7751-3",
+        "display": "Ord",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "METHOD_TYP",
+      "valueCoding": {
+        "code": "LP6274-7",
+        "display": "Flow cytometry",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "analyte",
+      "valueCoding": {
+        "code": "LP164985-6",
+        "display": "Methocarbamol induced platelet Ab.IgM",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "time-core",
+      "valueCoding": {
+        "code": "LP6960-1",
+        "display": "Pt",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "system-core",
+      "valueCoding": {
+        "code": "LP7576-4",
+        "display": "Ser/Plas",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "analyte-core",
+      "valueCoding": {
+        "code": "LP16197-3",
+        "display": "Methocarbamol",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "analyte-suffix",
+      "valueCoding": {
+        "code": "LP172745-4",
+        "display": "induced platelet Ab.IgM",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "search",
+      "valueCoding": {
+        "code": "LP14674-3",
+        "display": "IgM",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "search",
+      "valueCoding": {
+        "code": "LP164983-1",
+        "display": "Methocarbamol induced platelet Ab",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "search",
+      "valueCoding": {
+        "code": "LP16772-3",
+        "display": "Platelet",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "search",
+      "valueCoding": {
+        "code": "LP28760-4",
+        "display": "Platelet Ab",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "search",
+      "valueCoding": {
+        "code": "LP39430-1",
+        "display": "Platelet Ab.IgM",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "search",
+      "valueCoding": {
+        "code": "LP7479-1",
+        "display": "Plas",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "search",
+      "valueCoding": {
+        "code": "LP7567-3",
+        "display": "Ser",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "category",
+      "valueCoding": {
+        "code": "LP29693-6",
+        "display": "Laboratory",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "CLASS",
+      "valueCoding": {
+        "code": "LP7844-6",
+        "display": "SERO",
+        "system": "http://loinc.org"
+      }
+    }
+  ],
+  "designation": [
+    {
+      "value": "Methocarbamol ind plt IgM SerPl Ql FC"
+    },
+    {
+      "value": "Methocarbamol induced platelet IgM, Blood"
+    },
+    {
+      "language": "es-MX",
+      "value": "Ab.IgM plaquetario inducido por metocarbamol:Presencia o umbral:Punto temporal:Suero o Plasma:Ordinal:Citometría de flujo (FC)",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "es-MX",
+      "value": "Ab.IgM plaquetario inducido por metocarbamol: Suero o Plasma : Punto temporal: Presencia o umbral: Ordinal: Citometría de flujo (FC)",
+      "use": {
+        "code": "LONG_COMMON_NAME",
+        "display": "LONG_COMMON_NAME",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "zh-CN",
+      "value": "美索巴莫 诱导型血小板抗体.IgM:存在情况或阈值:时间点:血清/血浆:序数型:流式细胞测量术",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "pt-BR",
+      "value": "Metocarbamol plaquetas induzida Ac.IgM::Pt:Soro/Plas:Ord:Citometria de fluxo",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "es-ES",
+      "value": "Metocarbamol Acs. IgM plaquetario inducido:PrThr:Punto temporal:Suero o Plasma:Ord:Citometria de flujo (FC)",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "it-IT",
+      "value": "Metocarbamolo Ab.IgM piastrine indotti da:PrThr:Pt:Siero/Plasma:Ord:Citometria a flusso",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "fr-FR",
+      "value": "Plaquettes anticorps IgM induits par méthocarbamol:Présence/Seuil:Ponctuel:Sérum/Plasma:Qualitatif:Cytométrie de flux",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "fr-FR",
+      "value": "Plaquettes anticorps IgM induits par méthocarbamol [Présence/Seuil] Sérum/Plasma ; Qualitatif ; Cytométrie de flux",
+      "use": {
+        "code": "LONG_COMMON_NAME",
+        "display": "LONG_COMMON_NAME",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "tr-TR",
+      "value": "Metokarbamol uyarılmış trombosit Ab.IgM:MevcEşik:Zmlı:Ser/Plaz:Srl:Akış sitometri",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "ru-RU",
+      "value": "Метокарбамол индуцированный пластинка Ат.IgM:PrThr:ТчкВрм:Сыв/Плаз:Пор:Проточная цитометрия",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "nl-NL",
+      "value": "methocarbamol geïnduceerd trombocyt As.IgM:aanwezigheid:moment:serum of plasma:ordinaal:flowcytometrie",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    }
+  ]
+}

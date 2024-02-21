@@ -1,0 +1,22 @@
+{
+  "code": "LP391808-5",
+  "display": "hydrOXYzine | XXX | Drug toxicology",
+  "property": [
+    {
+      "code": "parent",
+      "valueCoding": {
+        "code": "LP15171-9",
+        "display": "hydrOXYzine",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "child",
+      "valueCoding": {
+        "code": "60307-6",
+        "display": "hydrOXYzine [Moles/volume] in Specimen",
+        "system": "http://loinc.org"
+      }
+    }
+  ]
+}

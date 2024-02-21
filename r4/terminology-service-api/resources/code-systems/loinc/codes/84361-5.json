@@ -1,0 +1,212 @@
+{
+  "code": "84361-5",
+  "display": "Interdisciplinary Outpatient Note",
+  "property": [
+    {
+      "code": "CLASSTYPE",
+      "valueString": "2"
+    },
+    {
+      "code": "VersionLastChanged",
+      "valueString": "2.58"
+    },
+    {
+      "code": "STATUS",
+      "valueString": "ACTIVE"
+    },
+    {
+      "code": "VersionFirstReleased",
+      "valueString": "2.58"
+    },
+    {
+      "code": "CHNG_TYPE",
+      "valueString": "ADD"
+    },
+    {
+      "code": "ORDER_OBS",
+      "valueString": "Both"
+    },
+    {
+      "code": "COMMON_TEST_RANK",
+      "valueString": "0"
+    },
+    {
+      "code": "SHORTNAME",
+      "valueString": "Interdiscip OP Note"
+    },
+    {
+      "code": "LONG_COMMON_NAME",
+      "valueString": "Interdisciplinary Outpatient Note"
+    },
+    {
+      "code": "COMMON_ORDER_RANK",
+      "valueString": "0"
+    },
+    {
+      "code": "RELATEDNAMES2",
+      "valueString": "DOC.ONT; Document; Encounter; Evaluation and management; Evaluation and management note; Finding; Findings; multidisciplinary; notes; OP; Point in time; Random; Visit note"
+    },
+    {
+      "code": "parent",
+      "valueCoding": {
+        "code": "LP416859-9",
+        "display": "Note | Outpatient | Document ontology",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "document-kind",
+      "valueCoding": {
+        "code": "LP173418-7",
+        "display": "Note",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "document-setting",
+      "valueCoding": {
+        "code": "LP173051-6",
+        "display": "Outpatient",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "document-role",
+      "valueCoding": {
+        "code": "LP173072-2",
+        "display": "Interdisciplinary",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "COMPONENT",
+      "valueCoding": {
+        "code": "LP72988-6",
+        "display": "Note",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "PROPERTY",
+      "valueCoding": {
+        "code": "LP6813-2",
+        "display": "Find",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "TIME_ASPCT",
+      "valueCoding": {
+        "code": "LP6960-1",
+        "display": "Pt",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "SYSTEM",
+      "valueCoding": {
+        "code": "LP32889-5",
+        "display": "Outpatient",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "SCALE_TYP",
+      "valueCoding": {
+        "code": "LP32888-7",
+        "display": "Doc",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "METHOD_TYP",
+      "valueCoding": {
+        "code": "LP32904-2",
+        "display": "Interdisciplinary",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "analyte-core",
+      "valueCoding": {
+        "code": "LP72988-6",
+        "display": "Note",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "category",
+      "valueCoding": {
+        "code": "LP32519-8",
+        "display": "Document ontology",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "CLASS",
+      "valueCoding": {
+        "code": "LP32519-8",
+        "display": "DOC.ONTOLOGY",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "category",
+      "valueCoding": {
+        "code": "LP7787-7",
+        "display": "Clinical",
+        "system": "http://loinc.org"
+      }
+    }
+  ],
+  "designation": [
+    {
+      "value": "Interdiscip OP Note"
+    },
+    {
+      "language": "es-MX",
+      "value": "Nota:Tipo:Punto temporal:Paciente externo:Documento:Interdisciplinary",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "es-MX",
+      "value": "Nota:Paciente externo :Punto temporal:Tipo:Documento:Interdisciplinary",
+      "use": {
+        "code": "LONG_COMMON_NAME",
+        "display": "LONG_COMMON_NAME",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "zh-CN",
+      "value": "记录:发现:时间点:门诊病人:文档型:跨学科",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "it-IT",
+      "value": "Nota:Osservazione:Pt:Paziente esterno:Doc:Multidisciplinare",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "nl-NL",
+      "value": "verslag:bevinding:moment:poliklinisch:document:multidisciplinair",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+    "resourceType": "Parameters",
+    "meta": {
+        "profile": [
+            "http://hl7.org/fhir/StructureDefinition/Parameters"
+        ]
+    },
+    "parameter": [
+        {
+            "name": "result",
+            "valueBoolean": true
+        },
+        {
+            "name": "display",
+            "valueString": "Inactive"
+        },
+        {
+            "name": "definition",
+            "valueString": "This account is inactive and should not be used to track financial information."
+        }
+    ]
+}

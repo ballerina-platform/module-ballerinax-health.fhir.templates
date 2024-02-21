@@ -1,0 +1,59 @@
+{
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:1.3.6.1.4.1.12009.10.1.270"
+    }
+  ],
+  "copyright": "This material contains content from LOINC (http://loinc.org). LOINC is copyright ©1995-2023, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc.",
+  "url": "http://loinc.org/vs/LL1102-4",
+  "version": "Beta.1",
+  "name": "PhenX06_25_age of exposure",
+  "status": "active",
+  "publisher": "Regenstrief Institute, Inc.",
+  "id": "LL1102-4",
+  "contact": [
+    {
+      "name": "Regenstrief Institute, Inc.",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://loinc.org"
+        }
+      ]
+    }
+  ],
+  "compose": {
+    "include": [
+      {
+        "system": "http://loinc.org",
+        "concept": [
+          {
+            "code": "LA14235-8",
+            "display": "Under 5 Years Old"
+          },
+          {
+            "code": "LA14236-6",
+            "display": "5 - 14 years old"
+          },
+          {
+            "code": "LA14237-4",
+            "display": "15 - 24 years old"
+          },
+          {
+            "code": "LA14238-2",
+            "display": "25 - 39 years old"
+          },
+          {
+            "code": "LA14239-0",
+            "display": "40 - 64 years old"
+          },
+          {
+            "code": "LA14240-8",
+            "display": "65 years old or older"
+          }
+        ]
+      }
+    ]
+  }
+}

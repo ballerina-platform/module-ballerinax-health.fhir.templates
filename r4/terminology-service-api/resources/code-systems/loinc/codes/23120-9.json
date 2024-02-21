@@ -1,0 +1,351 @@
+{
+  "code": "23120-9",
+  "display": "Foot and mouth disease virus serotype [Identifier] in Specimen by Immunoassay",
+  "property": [
+    {
+      "code": "CLASSTYPE",
+      "valueString": "1"
+    },
+    {
+      "code": "VersionLastChanged",
+      "valueString": "2.69"
+    },
+    {
+      "code": "STATUS",
+      "valueString": "ACTIVE"
+    },
+    {
+      "code": "VersionFirstReleased",
+      "valueString": "1.0n"
+    },
+    {
+      "code": "CHNG_TYPE",
+      "valueString": "MIN"
+    },
+    {
+      "code": "ORDER_OBS",
+      "valueString": "Both"
+    },
+    {
+      "code": "COMMON_TEST_RANK",
+      "valueString": "0"
+    },
+    {
+      "code": "SHORTNAME",
+      "valueString": "FMDV Sertyp Spec IA"
+    },
+    {
+      "code": "LONG_COMMON_NAME",
+      "valueString": "Foot and mouth disease virus serotype [Identifier] in Specimen by Immunoassay"
+    },
+    {
+      "code": "COMMON_ORDER_RANK",
+      "valueString": "0"
+    },
+    {
+      "code": "RELATEDNAMES2",
+      "valueString": "Aphthovirus; Dis; Diseases; Dz; EIA; ELFA; ELISA; Enzyme immunoassay; FMDV; Foot and mouth disease; IAA; ID; Identity or presence; Infectious Disease; InfectiousDisease; Lower extremity; MEIA; Microbiology; Misc; Miscellaneous; Nominal; Other; Picornavirus; Point in time; Random; Sertyp; Spec; SUDS; To be specified in another part of the message; Unspecified; Vet; Veterinary"
+    },
+    {
+      "code": "CHANGE_REASON_PUBLIC",
+      "valueString": "The EIA method, which was always intended to cover more than just enzyme-linked immunoassay and whose display name for the long common name has always been Immunoassay, was renamed IA in order to eliminate ambiguity about whether the method has a broader meaning than just enzyme-linked immunoassay. Likewise, EIA.rapid was renamed IA.rapid. These changes were approved by the Laboratory LOINC Committee in June 2016."
+    },
+    {
+      "code": "DisplayName",
+      "valueString": "Foot and mouth disease virus serotype IA Nom (Specimen)"
+    },
+    {
+      "code": "parent",
+      "valueCoding": {
+        "code": "LP248770-2",
+        "display": "Lab terms not yet categorized",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "answer-list",
+      "valueString": "LL2281-5"
+    },
+    {
+      "code": "COMPONENT",
+      "valueCoding": {
+        "code": "LP174037-4",
+        "display": "Foot and mouth disease virus serotype",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "PROPERTY",
+      "valueCoding": {
+        "code": "LP6850-4",
+        "display": "Prid",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "TIME_ASPCT",
+      "valueCoding": {
+        "code": "LP6960-1",
+        "display": "Pt",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "SYSTEM",
+      "valueCoding": {
+        "code": "LP7735-6",
+        "display": "XXX",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "SCALE_TYP",
+      "valueCoding": {
+        "code": "LP7750-5",
+        "display": "Nom",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "METHOD_TYP",
+      "valueCoding": {
+        "code": "LP217197-5",
+        "display": "IA",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "analyte",
+      "valueCoding": {
+        "code": "LP174037-4",
+        "display": "Foot and mouth disease virus serotype",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "time-core",
+      "valueCoding": {
+        "code": "LP6960-1",
+        "display": "Pt",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "system-core",
+      "valueCoding": {
+        "code": "LP7735-6",
+        "display": "XXX",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "analyte-core",
+      "valueCoding": {
+        "code": "LP19897-5",
+        "display": "Foot and mouth disease virus",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "analyte-suffix",
+      "valueCoding": {
+        "code": "LP29274-5",
+        "display": "serotype",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "search",
+      "valueCoding": {
+        "code": "LP14855-8",
+        "display": "Virus",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "category",
+      "valueCoding": {
+        "code": "LP29693-6",
+        "display": "Laboratory",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "category",
+      "valueCoding": {
+        "code": "LP415704-8",
+        "display": "InfectiousDisease",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "CLASS",
+      "valueCoding": {
+        "code": "LP7819-8",
+        "display": "MICRO",
+        "system": "http://loinc.org"
+      }
+    }
+  ],
+  "designation": [
+    {
+      "value": "FMDV Sertyp Spec IA"
+    },
+    {
+      "value": "Foot and Mouth Disease virus serotype, Specimen"
+    },
+    {
+      "language": "es-MX",
+      "value": "Serotipo del virus de la fiebre aftosa:Presencia o identidad:Punto temporal:XXX:Nominal:Inmunoensayo",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "es-MX",
+      "value": "Serotipo del virus de la fiebre aftosa: XXX : Punto temporal: Presencia o identidad: Nominal: Inmunoensayo",
+      "use": {
+        "code": "LONG_COMMON_NAME",
+        "display": "LONG_COMMON_NAME",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "zh-CN",
+      "value": "口蹄疫病毒 血清型:存在与否或特征标识:时间点:XXX:名义型:免疫测定法",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "es-AR",
+      "value": "serotipo del virus de la aftosa:presencia o identidad:punto en el tiempo:XXX:Nominal:enzimoinmunoanálisis",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "es-AR",
+      "value": "serotipo del virus de la aftosa:presencia o identidad:punto en el tiempo:XXX:Nominal:enzimoinmunoanálisis",
+      "use": {
+        "code": "SHORTNAME",
+        "display": "SHORTNAME",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "fr-CA",
+      "value": "Aphthovirus , Sérotype:Présence ou identité:Temps ponctuel:XXX:Nominal:IA",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "pt-BR",
+      "value": "Febre aftosa vírus sorotipo:Ident:Pt:XXX:Nom:Imunoensaio",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "pt-BR",
+      "value": "FMDV Sertyp XXX EIA",
+      "use": {
+        "code": "SHORTNAME",
+        "display": "SHORTNAME",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "es-ES",
+      "value": "Virus de la enfermedad pie y boca Serotipo:Presencia o identidad:Punto temporal:XXX:Nom:IA",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "ko-KR",
+      "value": "발입병 바이러스 혈청형:존재:검사시점:XXX:명칭결과:효소면역측정법",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "it-IT",
+      "value": "Afta epizootica, virus ierotipo:Prid:Pt:XXX:Nom:IA",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "fr-FR",
+      "value": "Maladie pied main bouche virus sérotype:Identification:Ponctuel:Milieux divers:Résultat nominal:Immunoanalyse",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "fr-FR",
+      "value": "Maladie pied main bouche virus sérotype [Identification] Milieux divers ; Résultat nominal ; Immunoanalyse",
+      "use": {
+        "code": "LONG_COMMON_NAME",
+        "display": "LONG_COMMON_NAME",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "tr-TR",
+      "value": "Foot and mouth hastalığı virus serotip:MevcKimlik:Zmlı:XXX:Snf:İA",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "ru-RU",
+      "value": "Ног и рта болезнь вирус серотип:ПрИд:ТчкВрм:XXX:Ном:IA",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "nl-NL",
+      "value": "Mond-en-klauwzeervirus serotype:identificator:moment:XXX:nominaal:immunoassay",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "fr-BE",
+      "value": "Aphthovirus Sérotype:Présence ou identité:Temps ponctuel:XXX:Nominal:IA",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    }
+  ]
+}

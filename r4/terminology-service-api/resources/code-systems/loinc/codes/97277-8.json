@@ -1,0 +1,236 @@
+{
+  "code": "97277-8",
+  "display": "Methylone [Presence] in Cord tissue by Confirmatory method",
+  "property": [
+    {
+      "code": "CLASSTYPE",
+      "valueString": "1"
+    },
+    {
+      "code": "VersionLastChanged",
+      "valueString": "2.70"
+    },
+    {
+      "code": "STATUS",
+      "valueString": "ACTIVE"
+    },
+    {
+      "code": "VersionFirstReleased",
+      "valueString": "2.70"
+    },
+    {
+      "code": "CHNG_TYPE",
+      "valueString": "ADD"
+    },
+    {
+      "code": "ORDER_OBS",
+      "valueString": "Both"
+    },
+    {
+      "code": "COMMON_TEST_RANK",
+      "valueString": "0"
+    },
+    {
+      "code": "SHORTNAME",
+      "valueString": "Methylone TissCo Ql Cfm"
+    },
+    {
+      "code": "LONG_COMMON_NAME",
+      "valueString": "Methylone [Presence] in Cord tissue by Confirmatory method"
+    },
+    {
+      "code": "COMMON_ORDER_RANK",
+      "valueString": "0"
+    },
+    {
+      "code": "UNITSREQUIRED",
+      "valueString": "N"
+    },
+    {
+      "code": "RELATEDNAMES2",
+      "valueString": "3,4-Methylenedioxy-N-Methylcathinone; Addiction; Bath salts; bk-MDMA; Cfm; CNFR; CNFRM; Conf; Confirmation; Confirmatory; DRUG/TOXICOLOGY; Drugs; Drugs of abuse; GCMS; Illicit; M1; Ordinal; Point in time; PotentialForAbuse; PR; QL; Qual; Qualitative; Random; Screen"
+    },
+    {
+      "code": "DisplayName",
+      "valueString": "Methylone Confirm Ql (Umb cord tissue)"
+    },
+    {
+      "code": "parent",
+      "valueCoding": {
+        "code": "LP426616-1",
+        "display": "Methylone | Umbilical cord tissue | Drug toxicology",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "answer-list",
+      "valueString": "LL744-4"
+    },
+    {
+      "code": "COMPONENT",
+      "valueCoding": {
+        "code": "LP157704-0",
+        "display": "Methylone",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "PROPERTY",
+      "valueCoding": {
+        "code": "LP217195-9",
+        "display": "PrThr",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "TIME_ASPCT",
+      "valueCoding": {
+        "code": "LP6960-1",
+        "display": "Pt",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "SYSTEM",
+      "valueCoding": {
+        "code": "LP426511-4",
+        "display": "TissCo",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "SCALE_TYP",
+      "valueCoding": {
+        "code": "LP7751-3",
+        "display": "Ord",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "METHOD_TYP",
+      "valueCoding": {
+        "code": "LP6197-0",
+        "display": "Confirm",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "analyte",
+      "valueCoding": {
+        "code": "LP157704-0",
+        "display": "Methylone",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "time-core",
+      "valueCoding": {
+        "code": "LP6960-1",
+        "display": "Pt",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "system-core",
+      "valueCoding": {
+        "code": "LP426511-4",
+        "display": "TissCo",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "analyte-core",
+      "valueCoding": {
+        "code": "LP157704-0",
+        "display": "Methylone",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "category",
+      "valueCoding": {
+        "code": "LP29693-6",
+        "display": "Laboratory",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "category",
+      "valueCoding": {
+        "code": "LP7790-1",
+        "display": "Drug toxicology",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "CLASS",
+      "valueCoding": {
+        "code": "LP7790-1",
+        "display": "DRUG/TOX",
+        "system": "http://loinc.org"
+      }
+    }
+  ],
+  "designation": [
+    {
+      "value": "Methylone TissCo Ql Cfm"
+    },
+    {
+      "value": "Methylone, Umbilical cord tissue"
+    },
+    {
+      "language": "es-MX",
+      "value": "Metilona:PrThr:Punto temporal:Tejido del Cordón Umbilical:Ordinal:Confirmar",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "es-MX",
+      "value": "Metilona:Tejido del Cordón Umbilical :Punto temporal:PrThr:Ordinal:Confirmar",
+      "use": {
+        "code": "LONG_COMMON_NAME",
+        "display": "LONG_COMMON_NAME",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "zh-CN",
+      "value": "亚甲基双氧甲基卡西酮:存在情况或阈值:时间点:脐带组织:序数型:毒理学确认试验",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "es-ES",
+      "value": "Metilona:PrThr:Punto temporal:Tejido de cordón umbilical:Ord:Confirmatorio",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "it-IT",
+      "value": "Metilone:PrThr:Pt:TissCo:Ord:Conferma",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "nl-NL",
+      "value": "methylone:aanwezigheid:moment:weefsel van navelstreng:ordinaal:bevestiging",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    }
+  ]
+}

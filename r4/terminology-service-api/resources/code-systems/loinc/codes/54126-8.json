@@ -1,0 +1,154 @@
+{
+  "code": "54126-8",
+  "display": "My health history [USSG-FHT]",
+  "property": [
+    {
+      "code": "CLASSTYPE",
+      "valueString": "4"
+    },
+    {
+      "code": "VersionLastChanged",
+      "valueString": "2.44"
+    },
+    {
+      "code": "STATUS",
+      "valueString": "ACTIVE"
+    },
+    {
+      "code": "VersionFirstReleased",
+      "valueString": "2.26"
+    },
+    {
+      "code": "CHNG_TYPE",
+      "valueString": "MIN"
+    },
+    {
+      "code": "COMMON_TEST_RANK",
+      "valueString": "0"
+    },
+    {
+      "code": "LONG_COMMON_NAME",
+      "valueString": "My health history [USSG-FHT]"
+    },
+    {
+      "code": "PanelType",
+      "valueString": "Panel"
+    },
+    {
+      "code": "COMMON_ORDER_RANK",
+      "valueString": "0"
+    },
+    {
+      "code": "UNITSREQUIRED",
+      "valueString": "N"
+    },
+    {
+      "code": "RELATEDNAMES2",
+      "valueString": "FHH; Hx; My health Hx; Pan; Panel; Panl; Pnl; Point in time; Random; Survey; SURVEY.USSGFHT; US Surgeon General; US Surgeon General family health portrait; USSGFHT"
+    },
+    {
+      "code": "parent",
+      "valueCoding": {
+        "code": "LP248772-8",
+        "display": "Survey terms not yet categorized",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "COMPONENT",
+      "valueCoding": {
+        "code": "LP76372-9",
+        "display": "My health history",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "PROPERTY",
+      "valueCoding": {
+        "code": "LP6769-6",
+        "display": "-",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "TIME_ASPCT",
+      "valueCoding": {
+        "code": "LP6960-1",
+        "display": "Pt",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "SYSTEM",
+      "valueCoding": {
+        "code": "LP310005-6",
+        "display": "^Patient",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "SCALE_TYP",
+      "valueCoding": {
+        "code": "LP7747-1",
+        "display": "-",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "METHOD_TYP",
+      "valueCoding": {
+        "code": "LP76350-5",
+        "display": "USSG-FHT",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "analyte",
+      "valueCoding": {
+        "code": "LP76372-9",
+        "display": "My health history",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "time-core",
+      "valueCoding": {
+        "code": "LP6960-1",
+        "display": "Pt",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "super-system",
+      "valueCoding": {
+        "code": "LP6985-8",
+        "display": "Patient",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "analyte-core",
+      "valueCoding": {
+        "code": "LP76372-9",
+        "display": "My health history",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "category",
+      "valueCoding": {
+        "code": "LP29696-9",
+        "display": "Survey instruments",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "CLASS",
+      "valueCoding": {
+        "code": "LP76363-8",
+        "display": "PANEL.SURVEY.USSGFHT",
+        "system": "http://loinc.org"
+      }
+    }
+  ]
+}

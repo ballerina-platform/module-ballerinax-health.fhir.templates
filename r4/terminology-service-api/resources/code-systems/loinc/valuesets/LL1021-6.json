@@ -1,0 +1,55 @@
+{
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:1.3.6.1.4.1.12009.10.1.188"
+    }
+  ],
+  "copyright": "This material contains content from LOINC (http://loinc.org). LOINC is copyright ©1995-2023, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc.",
+  "url": "http://loinc.org/vs/LL1021-6",
+  "version": "Beta.1",
+  "name": "[PROMIS] Not at all|Ver litt|Some|Qte lot|Can\u0027t do",
+  "status": "active",
+  "publisher": "Regenstrief Institute, Inc.",
+  "id": "LL1021-6",
+  "contact": [
+    {
+      "name": "Regenstrief Institute, Inc.",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://loinc.org"
+        }
+      ]
+    }
+  ],
+  "compose": {
+    "include": [
+      {
+        "system": "http://loinc.org",
+        "concept": [
+          {
+            "code": "LA6568-5",
+            "display": "Not at all"
+          },
+          {
+            "code": "LA13947-9",
+            "display": "Very little"
+          },
+          {
+            "code": "LA13909-9",
+            "display": "Somewhat"
+          },
+          {
+            "code": "LA11911-7",
+            "display": "Quite a lot"
+          },
+          {
+            "code": "LA13868-7",
+            "display": "Cannot do"
+          }
+        ]
+      }
+    ]
+  }
+}

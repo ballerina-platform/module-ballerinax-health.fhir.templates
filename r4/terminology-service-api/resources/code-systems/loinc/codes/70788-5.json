@@ -1,0 +1,182 @@
+{
+  "code": "70788-5",
+  "display": "I have been able to remember things, like where I left my keys or wallet, in the past 7 days [FACIT]",
+  "property": [
+    {
+      "code": "CLASSTYPE",
+      "valueString": "4"
+    },
+    {
+      "code": "VersionLastChanged",
+      "valueString": "2.66"
+    },
+    {
+      "code": "STATUS",
+      "valueString": "ACTIVE"
+    },
+    {
+      "code": "VersionFirstReleased",
+      "valueString": "2.40"
+    },
+    {
+      "code": "CHNG_TYPE",
+      "valueString": "MIN"
+    },
+    {
+      "code": "COMMON_TEST_RANK",
+      "valueString": "0"
+    },
+    {
+      "code": "LONG_COMMON_NAME",
+      "valueString": "I have been able to remember things, like where I left my keys or wallet, in the past 7 days [FACIT]"
+    },
+    {
+      "code": "COMMON_ORDER_RANK",
+      "valueString": "0"
+    },
+    {
+      "code": "UNITSREQUIRED",
+      "valueString": "N"
+    },
+    {
+      "code": "SURVEY_QUEST_TEXT",
+      "valueString": "I have been able to remember things, like where I left my keys or wallet"
+    },
+    {
+      "code": "EXTERNAL_COPYRIGHT_NOTICE",
+      "valueString": "Copyright © 2010 FACIT.org. Used with permission. All translations, adaptations, symptom indices, computer programs, and scoring algorithms, and any other related documents of the Functional Assessment of Chronic Illness Therapy (FACIT) Measurement System, including the Functional Assessment of Cancer Therapy (FACT), are owned and copyrighted by, and the intellectual property of, David Cella, Ph.D."
+    },
+    {
+      "code": "RELATEDNAMES2",
+      "valueString": "Been able to remember things past 7D; Finding; Findings; Functional Assessment of Chronic Illness Therapy; L; Last; LT; Ordinal; Ql; Qual; Qualitative; Screen; Survey; SURVEY.GNHLTH"
+    },
+    {
+      "code": "CHANGE_REASON_PUBLIC",
+      "valueString": "Updated the LOINC Answer list to LL5215-0. Previous Answer list had the correct Answer strings with incorrect Score values."
+    },
+    {
+      "code": "SURVEY_QUEST_SRC",
+      "valueString": "CogPM1"
+    },
+    {
+      "code": "EXTERNAL_COPYRIGHT_LINK",
+      "valueString": "FACIT"
+    },
+    {
+      "code": "parent",
+      "valueCoding": {
+        "code": "LP248772-8",
+        "display": "Survey terms not yet categorized",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "answer-list",
+      "valueString": "LL5215-0"
+    },
+    {
+      "code": "COMPONENT",
+      "valueCoding": {
+        "code": "LP146981-8",
+        "display": "I have been able to remember things, like where I left my keys or wallet, in the past 7D",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "PROPERTY",
+      "valueCoding": {
+        "code": "LP6813-2",
+        "display": "Find",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "TIME_ASPCT",
+      "valueCoding": {
+        "code": "LP204183-0",
+        "display": "7D",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "SYSTEM",
+      "valueCoding": {
+        "code": "LP310005-6",
+        "display": "^Patient",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "SCALE_TYP",
+      "valueCoding": {
+        "code": "LP7751-3",
+        "display": "Ord",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "METHOD_TYP",
+      "valueCoding": {
+        "code": "LP146110-4",
+        "display": "FACIT",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "analyte",
+      "valueCoding": {
+        "code": "LP146981-8",
+        "display": "I have been able to remember things, like where I left my keys or wallet, in the past 7D",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "time-core",
+      "valueCoding": {
+        "code": "LP204183-0",
+        "display": "7D",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "super-system",
+      "valueCoding": {
+        "code": "LP6985-8",
+        "display": "Patient",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "analyte-core",
+      "valueCoding": {
+        "code": "LP146981-8",
+        "display": "I have been able to remember things, like where I left my keys or wallet, in the past 7D",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "search",
+      "valueCoding": {
+        "code": "LP14589-3",
+        "display": "I",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "CLASS",
+      "valueCoding": {
+        "code": "LP146111-2",
+        "display": "SURVEY.GNHLTH",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "category",
+      "valueCoding": {
+        "code": "LP29696-9",
+        "display": "Survey instruments",
+        "system": "http://loinc.org"
+      }
+    }
+  ]
+}

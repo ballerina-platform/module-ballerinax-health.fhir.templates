@@ -1,0 +1,51 @@
+{
+  "code": "LP304590-5",
+  "display": "Stroke volume/Body surface area",
+  "property": [
+    {
+      "code": "parent",
+      "valueCoding": {
+        "code": "LP29672-0",
+        "display": "CARD.US",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "child",
+      "valueCoding": {
+        "code": "LP408073-7",
+        "display": "Stroke volume/Body surface area | Heart ventricle - left | Cardiac ultrasound",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "parent",
+      "valueCoding": {
+        "code": "LP7805-7",
+        "display": "HEMODYN.MOLEC",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "child",
+      "valueCoding": {
+        "code": "LP416091-9",
+        "display": "Stroke volume/Body surface area | Heart ventricle - left | Specific hemodynamics",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "child",
+      "valueCoding": {
+        "code": "LP416092-7",
+        "display": "Stroke volume/Body surface area | Heart.ventricle Right | Specific hemodynamics",
+        "system": "http://loinc.org"
+      }
+    }
+  ],
+  "designation": [
+    {
+      "value": "Stroke volume/Body surface area"
+    }
+  ]
+}

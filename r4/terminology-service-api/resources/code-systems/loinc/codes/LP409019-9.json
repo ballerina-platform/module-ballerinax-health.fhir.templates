@@ -1,0 +1,14 @@
+{
+  "code": "LP409019-9",
+  "display": "Inspiratory pressure.Airway | Airway | Respiratory measures and Ventilator management",
+  "property": [
+    {
+      "code": "parent",
+      "valueCoding": {
+        "code": "LP188585-6",
+        "display": "Inspiratory pressure.airway",
+        "system": "http://loinc.org"
+      }
+    }
+  ]
+}

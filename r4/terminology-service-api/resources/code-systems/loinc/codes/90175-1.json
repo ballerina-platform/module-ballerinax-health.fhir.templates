@@ -1,0 +1,186 @@
+{
+  "code": "90175-1",
+  "display": "I have trouble remembering where I put things, like my watch or my homework in past 4 weeks [PROMIS.PEDS]",
+  "property": [
+    {
+      "code": "CLASSTYPE",
+      "valueString": "4"
+    },
+    {
+      "code": "VersionLastChanged",
+      "valueString": "2.65"
+    },
+    {
+      "code": "STATUS",
+      "valueString": "ACTIVE"
+    },
+    {
+      "code": "VersionFirstReleased",
+      "valueString": "2.65"
+    },
+    {
+      "code": "CHNG_TYPE",
+      "valueString": "ADD"
+    },
+    {
+      "code": "ORDER_OBS",
+      "valueString": "Observation"
+    },
+    {
+      "code": "COMMON_TEST_RANK",
+      "valueString": "0"
+    },
+    {
+      "code": "LONG_COMMON_NAME",
+      "valueString": "I have trouble remembering where I put things, like my watch or my homework in past 4 weeks [PROMIS.PEDS]"
+    },
+    {
+      "code": "COMMON_ORDER_RANK",
+      "valueString": "0"
+    },
+    {
+      "code": "SURVEY_QUEST_TEXT",
+      "valueString": "In the past 4 weeks - I have trouble remembering where I put things, like my watch or my homework"
+    },
+    {
+      "code": "EXTERNAL_COPYRIGHT_NOTICE",
+      "valueString": "Copyright © 2010 PROMIS Health Organization or other individuals/entities that have contributed information and materials to Assessment Center, and are being used with the permission of the copyright holders. Use of PROMIS instruments (e.g., item banks, short forms, profile measures) are subject to the PROMIS Terms and Conditions available at: http://www.assessmentcenter.net/TandC.aspx"
+    },
+    {
+      "code": "RELATEDNAMES2",
+      "valueString": "4 weeks; Finding; Findings; Last; Ordinal; Patient Reported Outcomes Information System; promise; QL; Qual; Qualitative; Screen; Survey; SURVEY.PROMIS"
+    },
+    {
+      "code": "SURVEY_QUEST_SRC",
+      "valueString": "CaPSPC11_2C"
+    },
+    {
+      "code": "EXTERNAL_COPYRIGHT_LINK",
+      "valueString": "PROMIS"
+    },
+    {
+      "code": "parent",
+      "valueCoding": {
+        "code": "LP248772-8",
+        "display": "Survey terms not yet categorized",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "answer-list",
+      "valueString": "LL5131-9"
+    },
+    {
+      "code": "COMPONENT",
+      "valueCoding": {
+        "code": "LP268535-4",
+        "display": "I have trouble remembering where I put things, like my watch or my homework in past 4W",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "PROPERTY",
+      "valueCoding": {
+        "code": "LP6813-2",
+        "display": "Find",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "TIME_ASPCT",
+      "valueCoding": {
+        "code": "LP6941-1",
+        "display": "4W",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "SYSTEM",
+      "valueCoding": {
+        "code": "LP310005-6",
+        "display": "^Patient",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "SCALE_TYP",
+      "valueCoding": {
+        "code": "LP7751-3",
+        "display": "Ord",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "METHOD_TYP",
+      "valueCoding": {
+        "code": "LP111353-1",
+        "display": "PROMIS.PEDS",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "analyte",
+      "valueCoding": {
+        "code": "LP268535-4",
+        "display": "I have trouble remembering where I put things, like my watch or my homework in past 4W",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "time-core",
+      "valueCoding": {
+        "code": "LP6941-1",
+        "display": "4W",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "super-system",
+      "valueCoding": {
+        "code": "LP6985-8",
+        "display": "Patient",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "analyte-core",
+      "valueCoding": {
+        "code": "LP268535-4",
+        "display": "I have trouble remembering where I put things, like my watch or my homework in past 4W",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "search",
+      "valueCoding": {
+        "code": "LP14589-3",
+        "display": "I",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "search",
+      "valueCoding": {
+        "code": "LP102765-7",
+        "display": "PROMIS",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "CLASS",
+      "valueCoding": {
+        "code": "LP102768-1",
+        "display": "SURVEY.PROMIS",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "category",
+      "valueCoding": {
+        "code": "LP29696-9",
+        "display": "Survey instruments",
+        "system": "http://loinc.org"
+      }
+    }
+  ]
+}

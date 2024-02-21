@@ -1,0 +1,67 @@
+{
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:1.3.6.1.4.1.12009.10.1.201"
+    }
+  ],
+  "copyright": "This material contains content from LOINC (http://loinc.org). LOINC is copyright ©1995-2023, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc.",
+  "url": "http://loinc.org/vs/LL103-3",
+  "version": "Beta.1",
+  "name": "CR_1460_Coding system",
+  "status": "active",
+  "publisher": "Regenstrief Institute, Inc.",
+  "id": "LL103-3",
+  "contact": [
+    {
+      "name": "Regenstrief Institute, Inc.",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://loinc.org"
+        }
+      ]
+    }
+  ],
+  "compose": {
+    "include": [
+      {
+        "system": "http://loinc.org",
+        "concept": [
+          {
+            "code": "LA4510-9",
+            "display": "Treatment Data Not Coded"
+          },
+          {
+            "code": "LA4153-8",
+            "display": "1-Digit Surgery Codes"
+          },
+          {
+            "code": "LA4103-3",
+            "display": "1983-1992 SEER"
+          },
+          {
+            "code": "LA4156-1",
+            "display": "1996 ROADS"
+          },
+          {
+            "code": "LA4141-3",
+            "display": "1998 ROADS Supplement"
+          },
+          {
+            "code": "LA4150-4",
+            "display": "1998 SEER Manual"
+          },
+          {
+            "code": "LA3989-6",
+            "display": "FORDS Manual"
+          },
+          {
+            "code": "LA4728-7",
+            "display": "Other Coding"
+          }
+        ]
+      }
+    ]
+  }
+}

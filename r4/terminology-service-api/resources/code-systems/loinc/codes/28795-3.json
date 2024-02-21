@@ -1,0 +1,267 @@
+{
+  "code": "28795-3",
+  "display": "Right corrective lens Axis near by Lensmeter",
+  "property": [
+    {
+      "code": "CLASSTYPE",
+      "valueString": "2"
+    },
+    {
+      "code": "VersionLastChanged",
+      "valueString": "2.71"
+    },
+    {
+      "code": "STATUS",
+      "valueString": "ACTIVE"
+    },
+    {
+      "code": "VersionFirstReleased",
+      "valueString": "2.00"
+    },
+    {
+      "code": "CHNG_TYPE",
+      "valueString": "NAM"
+    },
+    {
+      "code": "COMMON_TEST_RANK",
+      "valueString": "0"
+    },
+    {
+      "code": "SHORTNAME",
+      "valueString": "R corr lens Axis near by LM"
+    },
+    {
+      "code": "LONG_COMMON_NAME",
+      "valueString": "Right corrective lens Axis near by Lensmeter"
+    },
+    {
+      "code": "COMMON_ORDER_RANK",
+      "valueString": "0"
+    },
+    {
+      "code": "UNITSREQUIRED",
+      "valueString": "N"
+    },
+    {
+      "code": "RELATEDNAMES2",
+      "valueString": "by LM; Corr lens; EYE; EYE.GLASSES; Focimeter; Lensometer; LM; Ophthalmology; Ophtho; Ophthy; Point in time; QNT; Quan; Quant; Quantitative; R; R corr lens; Random; RT"
+    },
+    {
+      "code": "EXAMPLE_UNITS",
+      "valueString": "deg"
+    },
+    {
+      "code": "CHANGE_REASON_PUBLIC",
+      "valueString": "Release 2.71: COMPONENT: Updated from \"Axis N\" to clarify that the concept is about the axis for near vision, and removed the \"1\" because it is implied, whereas the second axis value is specified with a \"2\"; Release 2.68: SYSTEM: Moved LM (Lensmeter) from System to Method for accuracy."
+    },
+    {
+      "code": "EXAMPLE_UCUM_UNITS",
+      "valueString": "deg"
+    },
+    {
+      "code": "parent",
+      "valueCoding": {
+        "code": "LP248771-0",
+        "display": "Clinical terms not yet categorized",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "COMPONENT",
+      "valueCoding": {
+        "code": "LP72120-6",
+        "display": "Axis near",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "PROPERTY",
+      "valueCoding": {
+        "code": "LP6778-7",
+        "display": "Angle",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "TIME_ASPCT",
+      "valueCoding": {
+        "code": "LP6960-1",
+        "display": "Pt",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "SYSTEM",
+      "valueCoding": {
+        "code": "LP418592-4",
+        "display": "Corrective lens.right",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "SCALE_TYP",
+      "valueCoding": {
+        "code": "LP7753-9",
+        "display": "Qn",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "METHOD_TYP",
+      "valueCoding": {
+        "code": "LP418496-8",
+        "display": "Lensmeter",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "analyte",
+      "valueCoding": {
+        "code": "LP72120-6",
+        "display": "Axis near",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "time-core",
+      "valueCoding": {
+        "code": "LP6960-1",
+        "display": "Pt",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "system-core",
+      "valueCoding": {
+        "code": "LP418592-4",
+        "display": "Corrective lens.right",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "analyte-core",
+      "valueCoding": {
+        "code": "LP72120-6",
+        "display": "Axis near",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "search",
+      "valueCoding": {
+        "code": "LP31557-9",
+        "display": "Axis",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "search",
+      "valueCoding": {
+        "code": "LP418590-8",
+        "display": "Corrective lens",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "category",
+      "valueCoding": {
+        "code": "LP190514-2",
+        "display": "Ophthalmology / Optometry",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "CLASS",
+      "valueCoding": {
+        "code": "LP29674-6",
+        "display": "EYE.GLASSES",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "category",
+      "valueCoding": {
+        "code": "LP7787-7",
+        "display": "Clinical",
+        "system": "http://loinc.org"
+      }
+    }
+  ],
+  "designation": [
+    {
+      "value": "R corr lens Axis near by LM"
+    },
+    {
+      "language": "es-MX",
+      "value": "Eje N 1:Ángulo:Punto temporal:Lente correctiva derecha:Cuantitativo:Lensómetro",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "es-MX",
+      "value": "Eje N 1:Lente correctiva derecha :Punto temporal:Ángulo:Cuantitativo:Lensómetro",
+      "use": {
+        "code": "LONG_COMMON_NAME",
+        "display": "LONG_COMMON_NAME",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "zh-CN",
+      "value": "轴向近距:角度:时间点:矫正镜片.右侧:定量型:透镜屈光度计法",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "es-AR",
+      "value": "LM GLASSES.LENS.RIGHT:ángulo:punto en el tiempo:LM GLASSES.LENS.RIGHT:cuantitativo:",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "es-AR",
+      "value": "LM GLASSES.LENS.RIGHT:ángulo:punto en el tiempo:LM GLASSES.LENS.RIGHT:cuantitativo:",
+      "use": {
+        "code": "SHORTNAME",
+        "display": "SHORTNAME",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "pt-BR",
+      "value": "Eixo N 1:Ângulo:Pt:Óculos LM (magnitude limitada).direita:Qn:",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "pt-BR",
+      "value": "eixo N 1 LM glasses lens-R",
+      "use": {
+        "code": "SHORTNAME",
+        "display": "SHORTNAME",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "it-IT",
+      "value": "Asse vicino:Angolo:Pt:Lenti correttive.destra:Qn:Lensmeter",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:1.3.6.1.4.1.12009.10.1.189"
+    }
+  ],
+  "copyright": "This material contains content from LOINC (http://loinc.org). LOINC is copyright ©1995-2023, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc.",
+  "url": "http://loinc.org/vs/LL1022-4",
+  "version": "Beta.1",
+  "name": "[PROMIS] Diffic: WO|W lit|W some|W much|Unab to do",
+  "status": "active",
+  "publisher": "Regenstrief Institute, Inc.",
+  "id": "LL1022-4",
+  "contact": [
+    {
+      "name": "Regenstrief Institute, Inc.",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://loinc.org"
+        }
+      ]
+    }
+  ],
+  "compose": {
+    "include": [
+      {
+        "system": "http://loinc.org",
+        "concept": [
+          {
+            "code": "LA13921-4",
+            "display": "Without any difficulty"
+          },
+          {
+            "code": "LA13918-0",
+            "display": "With a little difficulty"
+          },
+          {
+            "code": "LA13920-6",
+            "display": "With some difficulty"
+          },
+          {
+            "code": "LA13919-8",
+            "display": "With much difficulty"
+          },
+          {
+            "code": "LA13912-3",
+            "display": "Unable to do"
+          }
+        ]
+      }
+    ]
+  }
+}

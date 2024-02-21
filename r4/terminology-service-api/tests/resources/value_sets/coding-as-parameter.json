@@ -1,0 +1,16 @@
+{
+  "resourceType": "Parameters",
+  "meta": {
+    "profile": ["http://hl7.org/fhir/StructureDefinition/Parameters"]
+  },
+  "parameter": [
+    {
+      "name": "coding",
+      "valueCoding": {
+        "system": "http://hl7.org/fhir/account-status",
+        "code": "inactive",
+        "display": "Inactive"
+      }
+    }
+  ]
+}

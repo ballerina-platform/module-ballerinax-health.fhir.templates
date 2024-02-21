@@ -1,0 +1,227 @@
+{
+  "code": "65099-4",
+  "display": "Your child is not very good at remembering peoples date of birth [AQ Adolescent]",
+  "property": [
+    {
+      "code": "CLASSTYPE",
+      "valueString": "2"
+    },
+    {
+      "code": "VersionLastChanged",
+      "valueString": "2.65"
+    },
+    {
+      "code": "STATUS",
+      "valueString": "ACTIVE"
+    },
+    {
+      "code": "VersionFirstReleased",
+      "valueString": "2.36"
+    },
+    {
+      "code": "CHNG_TYPE",
+      "valueString": "MIN"
+    },
+    {
+      "code": "COMMON_TEST_RANK",
+      "valueString": "0"
+    },
+    {
+      "code": "SHORTNAME",
+      "valueString": "Child diff remember birth dates AQ Adol"
+    },
+    {
+      "code": "LONG_COMMON_NAME",
+      "valueString": "Your child is not very good at remembering peoples date of birth [AQ Adolescent]"
+    },
+    {
+      "code": "COMMON_ORDER_RANK",
+      "valueString": "0"
+    },
+    {
+      "code": "UNITSREQUIRED",
+      "valueString": "N"
+    },
+    {
+      "code": "SURVEY_QUEST_TEXT",
+      "valueString": "Your child is not very good at remembering peoples date of birth."
+    },
+    {
+      "code": "RELATEDNAMES2",
+      "valueString": "Child diff remember birth dates; Finding; Findings; Ordinal; PhenX; Point in time; QL; Qual; Qualitative; Random; Screen"
+    },
+    {
+      "code": "CHANGE_REASON_PUBLIC",
+      "valueString": "Updated Method from PhenX to reflect the original source of the content.; Updated the PhenX ID from \"PhenX.\u003cID\u003e\" to \"PX\u003cID\u003e\" in Survey Question Source field to align with the variable identifier used in the PhenX Toolkit."
+    },
+    {
+      "code": "SURVEY_QUEST_SRC",
+      "valueString": "PX120902490000"
+    },
+    {
+      "code": "parent",
+      "valueCoding": {
+        "code": "LP248771-0",
+        "display": "Clinical terms not yet categorized",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "answer-list",
+      "valueString": "LL1336-8"
+    },
+    {
+      "code": "COMPONENT",
+      "valueCoding": {
+        "code": "LP118477-1",
+        "display": "Your child is not very good at remembering peoples date of birth",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "PROPERTY",
+      "valueCoding": {
+        "code": "LP6813-2",
+        "display": "Find",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "TIME_ASPCT",
+      "valueCoding": {
+        "code": "LP6960-1",
+        "display": "Pt",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "SYSTEM",
+      "valueCoding": {
+        "code": "LP310005-6",
+        "display": "^Patient",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "SCALE_TYP",
+      "valueCoding": {
+        "code": "LP7751-3",
+        "display": "Ord",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "METHOD_TYP",
+      "valueCoding": {
+        "code": "LP241985-3",
+        "display": "AQ Adolescent",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "analyte",
+      "valueCoding": {
+        "code": "LP118477-1",
+        "display": "Your child is not very good at remembering peoples date of birth",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "time-core",
+      "valueCoding": {
+        "code": "LP6960-1",
+        "display": "Pt",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "super-system",
+      "valueCoding": {
+        "code": "LP6985-8",
+        "display": "Patient",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "analyte-core",
+      "valueCoding": {
+        "code": "LP118477-1",
+        "display": "Your child is not very good at remembering peoples date of birth",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "search",
+      "valueCoding": {
+        "code": "LP74693-0",
+        "display": "Date",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "search",
+      "valueCoding": {
+        "code": "LP241984-6",
+        "display": "AQ",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "category",
+      "valueCoding": {
+        "code": "LP7787-7",
+        "display": "Clinical",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "CLASS",
+      "valueCoding": {
+        "code": "LP95321-3",
+        "display": "PHENX",
+        "system": "http://loinc.org"
+      }
+    }
+  ],
+  "designation": [
+    {
+      "value": "Child diff remember birth dates AQ Adol"
+    },
+    {
+      "language": "es-MX",
+      "value": "Su hijo no es muy bueno recordando la fecha de nacimiento de las personas.:Tipo:Punto temporal:^ Paciente:Ordinal:AQ Adolescent",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "es-MX",
+      "value": "Su hijo no es muy bueno recordando la fecha de nacimiento de las personas.: Paciente:Punto temporal:Tipo:Ordinal:AQ Adolescent",
+      "use": {
+        "code": "LONG_COMMON_NAME",
+        "display": "LONG_COMMON_NAME",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "zh-CN",
+      "value": "您的孩子并不非常善于记住别人的生日:发现:时间点:^患者:序数型:AQ 青少年版",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "it-IT",
+      "value": "Suo figlio non è molto bravo a ricordare la data di nascita delle persone:Osservazione:Pt:^Paziente:Ord:AQ Adolescent",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    }
+  ]
+}

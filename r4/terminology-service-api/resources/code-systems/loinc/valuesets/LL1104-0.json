@@ -1,0 +1,55 @@
+{
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:1.3.6.1.4.1.12009.10.1.272"
+    }
+  ],
+  "copyright": "This material contains content from LOINC (http://loinc.org). LOINC is copyright ©1995-2023, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc.",
+  "url": "http://loinc.org/vs/LL1104-0",
+  "version": "Beta.1",
+  "name": "PhenX06_27_workspace renovation",
+  "status": "active",
+  "publisher": "Regenstrief Institute, Inc.",
+  "id": "LL1104-0",
+  "contact": [
+    {
+      "name": "Regenstrief Institute, Inc.",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://loinc.org"
+        }
+      ]
+    }
+  ],
+  "compose": {
+    "include": [
+      {
+        "system": "http://loinc.org",
+        "concept": [
+          {
+            "code": "LA32-8",
+            "display": "No"
+          },
+          {
+            "code": "LA14244-0",
+            "display": "Yes, during the past 12 months"
+          },
+          {
+            "code": "LA14245-7",
+            "display": "Yes, 1-3 years ago"
+          },
+          {
+            "code": "LA14246-5",
+            "display": "Yes, more than 3 years ago"
+          },
+          {
+            "code": "LA15599-6",
+            "display": "I don’t know"
+          }
+        ]
+      }
+    ]
+  }
+}
