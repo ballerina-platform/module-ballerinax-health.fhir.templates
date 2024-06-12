@@ -1,0 +1,8 @@
+[package]
+org = "ballerinax"
+name = "health.fhir.templates.r4.v2tofhircustomsvc"
+version = "0.1.0"
+distribution = "2201.9.0"
+
+[build-options]
+observabilityIncluded = true
