@@ -1,0 +1,21 @@
+name: CD - V2 to FHIR Custom Service
+
+on:
+  workflow_dispatch:
+    inputs:
+      bal_central_environment:
+        description: Ballerina Central Environment
+        type: choice
+        options:
+        - STAGE
+        - DEV
+        - PROD
+        required: true
+
+jobs:
+  build:
+     uses: ./.github/workflows/build-executor.yml
+     secrets: inherit
+     with:
+      working_dir: ./r4/v2-to-fhir-custom-mapper-service
+      bal_central_environment: ${{ inputs.bal_central_environment }}      
