@@ -17,5 +17,5 @@ jobs:
      uses: ./.github/workflows/build-executor.yml
      secrets: inherit
      with:
-      working_dir: ./r4/v2-to-fhir-custom-mapper-service
+      working_dir: ./r4/datamappers/v2-to-fhir-custom-mapper-service
       bal_central_environment: ${{ inputs.bal_central_environment }}      

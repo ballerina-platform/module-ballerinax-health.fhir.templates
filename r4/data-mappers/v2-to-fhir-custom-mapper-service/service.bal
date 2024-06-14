@@ -18,7 +18,7 @@ import ballerinax/health.hl7v2commons;
 
 // You can implement custom mapping logic within resource functions for each segment in the HL7v2 message to 
 // convert it to a FHIR resource.
-service /v2tofhir on new http:Listener(9091) {
+service /custom\-hl7v2\-to\-fhir on new http:Listener(9091) {
 
     resource function post segment/nk1(@http:Payload hl7v2commons:Nk1 nk1) returns json|error {
         return {};

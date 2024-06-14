@@ -8,6 +8,7 @@ on:
 
 env:
   R4_RESOURCE_APIS_PATTERN: r4/resource-apis/*/*
+  R4_DATA_MAPPERS_PATTERN: r4/data-mappers/*/*
   R4_PATTERN: r4/*/*
 
 jobs:
@@ -52,6 +53,8 @@ jobs:
           for file in "${CHANGED_FILES_ARRAY[@]}"; do
             if [[ $file == $R4_RESOURCE_APIS_PATTERN ]]; then
               EXTRACTED_PATH=$(echo "$file" | cut -d '/' -f 1-3)
+            elif [[ $file == $R4_DATA_MAPPERS_PATTERN ]]; then
+              EXTRACTED_PATH=$(echo "$file" | cut -d '/' -f 1-3)  
             elif [[ $file == $R4_PATTERN ]]; then
               EXTRACTED_PATH=$(echo "$file" | cut -d '/' -f 1-2)
             fi
