@@ -1,0 +1,14 @@
+{
+  "code": "LP398514-2",
+  "display": "Js^a Ab | Blood product unit | Serum or Plasma | Blood bank",
+  "property": [
+    {
+      "code": "parent",
+      "valueCoding": {
+        "code": "LP398515-9",
+        "display": "Js^a Ab | Blood product unit | Blood bank",
+        "system": "http://loinc.org"
+      }
+    }
+  ]
+}

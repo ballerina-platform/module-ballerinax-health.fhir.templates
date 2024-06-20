@@ -1,0 +1,14 @@
+{
+  "code": "LP374391-3",
+  "display": "Chlamydia trachomatis rRNA | Genital fluid | Microbiology",
+  "property": [
+    {
+      "code": "parent",
+      "valueCoding": {
+        "code": "LP37619-1",
+        "display": "Chlamydia trachomatis rRNA",
+        "system": "http://loinc.org"
+      }
+    }
+  ]
+}

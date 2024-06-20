@@ -1,0 +1,24 @@
+{
+    "resourceType": "OperationOutcome",
+    "meta": {
+        "profile": [
+            "http://hl7.org/fhir/StructureDefinition/OperationOutcome"
+        ]
+    },
+    "issue": [
+        {
+            "severity": "error",
+            "diagnostics": "01ee1fd7-c050-1940-ac33-15e83bd3f8ba : Either ValueSet record or system URL should be provided as input",
+            "code": "required",
+            "details": {
+                "coding": [
+                    {
+                        "system": "http://hl7.org/fhir/issue-type",
+                        "code": "400"
+                    }
+                ],
+                "text": "Can not find a ValueSet"
+            }
+        }
+    ]
+}

@@ -1,0 +1,55 @@
+{
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:1.3.6.1.4.1.12009.10.1.269"
+    }
+  ],
+  "copyright": "This material contains content from LOINC (http://loinc.org). LOINC is copyright ©1995-2023, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc.",
+  "url": "http://loinc.org/vs/LL1101-6",
+  "version": "Beta.1",
+  "name": "PhenX06_24_sunburn skin reaction",
+  "status": "active",
+  "publisher": "Regenstrief Institute, Inc.",
+  "id": "LL1101-6",
+  "contact": [
+    {
+      "name": "Regenstrief Institute, Inc.",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://loinc.org"
+        }
+      ]
+    }
+  ],
+  "compose": {
+    "include": [
+      {
+        "system": "http://loinc.org",
+        "concept": [
+          {
+            "code": "LA14230-9",
+            "display": "A blistering sunburn"
+          },
+          {
+            "code": "LA14231-7",
+            "display": "A sunburn without blisters"
+          },
+          {
+            "code": "LA14232-5",
+            "display": "A mild sunburn that becomes a tan"
+          },
+          {
+            "code": "LA14233-3",
+            "display": "A tan with no sunburn"
+          },
+          {
+            "code": "LA14234-1",
+            "display": "No change in skin color"
+          }
+        ]
+      }
+    ]
+  }
+}

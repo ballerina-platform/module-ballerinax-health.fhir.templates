@@ -1,0 +1,63 @@
+{
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:1.3.6.1.4.1.12009.10.1.192"
+    }
+  ],
+  "copyright": "This material contains content from LOINC (http://loinc.org). LOINC is copyright ©1995-2023, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc.",
+  "url": "http://loinc.org/vs/LL102-5",
+  "version": "Beta.1",
+  "name": "CR_1450_Reason no hormones",
+  "status": "active",
+  "publisher": "Regenstrief Institute, Inc.",
+  "id": "LL102-5",
+  "contact": [
+    {
+      "name": "Regenstrief Institute, Inc.",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://loinc.org"
+        }
+      ]
+    }
+  ],
+  "compose": {
+    "include": [
+      {
+        "system": "http://loinc.org",
+        "concept": [
+          {
+            "code": "LA4002-7",
+            "display": "Hormone Therapy Administered"
+          },
+          {
+            "code": "LA4000-1",
+            "display": "Hormone Rx Not Recommended"
+          },
+          {
+            "code": "LA3999-5",
+            "display": "Hormone RX Contraindicated"
+          },
+          {
+            "code": "LA4394-8",
+            "display": "Reason unknown"
+          },
+          {
+            "code": "LA4389-8",
+            "display": "Refused"
+          },
+          {
+            "code": "LA4001-9",
+            "display": "Hormone Rx Recommended"
+          },
+          {
+            "code": "LA4444-1",
+            "display": "Unknown - Death Cert Only"
+          }
+        ]
+      }
+    ]
+  }
+}

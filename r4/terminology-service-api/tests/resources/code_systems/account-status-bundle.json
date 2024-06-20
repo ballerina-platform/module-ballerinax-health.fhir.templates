@@ -1,0 +1,105 @@
+{
+    "resourceType": "Bundle",
+    "meta": {
+        "lastUpdated": "2023-07-14T05:08:59.725815Z",
+        "profile": [
+            "http://hl7.org/fhir/StructureDefinition/Bundle"
+        ]
+    },
+    "type": "searchset",
+    "total": 1,
+    "entry": [
+        {
+            "resource": {
+                "resourceType": "CodeSystem",
+                "meta": {
+                    "lastUpdated": "2019-11-01T09:29:23.356+11:00",
+                    "profile": [
+                        "http://hl7.org/fhir/StructureDefinition/CodeSystem"
+                    ]
+                },
+                "date": "2019-11-01T09:29:23+11:00",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+                        "valueCode": "pa"
+                    },
+                    {
+                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+                        "valueCode": "trial-use"
+                    },
+                    {
+                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+                        "valueInteger": 2
+                    }
+                ],
+                "valueSet": "http://hl7.org/fhir/ValueSet/account-status",
+                "concept": [
+                    {
+                        "code": "active",
+                        "display": "Active",
+                        "definition": "This account is active and may be used."
+                    },
+                    {
+                        "code": "inactive",
+                        "display": "Inactive",
+                        "definition": "This account is inactive and should not be used to track financial information."
+                    },
+                    {
+                        "code": "entered-in-error",
+                        "display": "Entered in error",
+                        "definition": "This instance should not have been part of this patient's medical record."
+                    },
+                    {
+                        "code": "on-hold",
+                        "display": "On Hold",
+                        "definition": "This account is on hold."
+                    },
+                    {
+                        "code": "unknown",
+                        "display": "Unknown",
+                        "definition": "The account status is unknown."
+                    }
+                ],
+                "description": "Indicates whether the account is available to be used.",
+                "experimental": false,
+                "title": "AccountStatus",
+                "content": "complete",
+                "contact": [
+                    {
+                        "telecom": [
+                            {
+                                "system": "url",
+                                "value": "http://hl7.org/fhir"
+                            },
+                            {
+                                "system": "email",
+                                "value": "fhir@lists.hl7.org"
+                            }
+                        ]
+                    }
+                ],
+                "id": "account-status",
+                "text": {
+                    "status": "generated",
+                    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>AccountStatus</h2><div><p>Indicates whether the account is available to be used.</p>\n</div><p>This code system http://hl7.org/fhir/account-status defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">active<a name=\"account-status-active\"> </a></td><td>Active</td><td>This account is active and may be used.</td></tr><tr><td style=\"white-space:nowrap\">inactive<a name=\"account-status-inactive\"> </a></td><td>Inactive</td><td>This account is inactive and should not be used to track financial information.</td></tr><tr><td style=\"white-space:nowrap\">entered-in-error<a name=\"account-status-entered-in-error\"> </a></td><td>Entered in error</td><td>This instance should not have been part of this patient's medical record.</td></tr><tr><td style=\"white-space:nowrap\">on-hold<a name=\"account-status-on-hold\"> </a></td><td>On Hold</td><td>This account is on hold.</td></tr><tr><td style=\"white-space:nowrap\">unknown<a name=\"account-status-unknown\"> </a></td><td>Unknown</td><td>The account status is unknown.</td></tr></table></div>"
+                },
+                "identifier": [
+                    {
+                        "system": "urn:ietf:rfc:3986",
+                        "value": "urn:oid:2.16.840.1.113883.4.642.4.727"
+                    }
+                ],
+                "caseSensitive": true,
+                "version": "4.0.1",
+                "url": "http://hl7.org/fhir/account-status",
+                "name": "AccountStatus",
+                "publisher": "HL7 (FHIR Project)",
+                "status": "draft"
+            },
+            "search": {
+                "mode": "match"
+            }
+        }
+    ]
+}

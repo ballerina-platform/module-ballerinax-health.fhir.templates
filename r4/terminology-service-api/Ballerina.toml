@@ -1,0 +1,20 @@
+[package]
+org = "thiyan"
+name = "terminology_service_api"
+version = "0.1.0"
+distribution = "2201.6.0"
+template=true
+
+[[dependency]]
+org = "ballerinax"
+name = "health.fhir.r4"
+version = "3.0.5"
+repository = "local"
+
+[build-options]
+observabilityIncluded = true
+
+[[platform.java11.dependency]]
+groupId = "mysql"
+artifactId = "mysql-connector-java"
+version = "8.0.26"

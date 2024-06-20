@@ -1,0 +1,14 @@
+{
+  "code": "LP403235-7",
+  "display": "Quinapril induced platelet IgM | Serum or Plasma | Serology - non-micro",
+  "property": [
+    {
+      "code": "parent",
+      "valueCoding": {
+        "code": "LP165250-4",
+        "display": "Quinapril induced platelet Ab.IgM",
+        "system": "http://loinc.org"
+      }
+    }
+  ]
+}

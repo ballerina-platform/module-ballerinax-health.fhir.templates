@@ -1,0 +1,71 @@
+{
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:1.3.6.1.4.1.12009.10.1.210"
+    }
+  ],
+  "copyright": "This material contains content from LOINC (http://loinc.org). LOINC is copyright ©1995-2023, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc.",
+  "url": "http://loinc.org/vs/LL104-1",
+  "version": "Beta.1",
+  "name": "CR_1470_Protocol eligibility",
+  "status": "active",
+  "publisher": "Regenstrief Institute, Inc.",
+  "id": "LL104-1",
+  "contact": [
+    {
+      "name": "Regenstrief Institute, Inc.",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://loinc.org"
+        }
+      ]
+    }
+  ],
+  "compose": {
+    "include": [
+      {
+        "system": "http://loinc.org",
+        "concept": [
+          {
+            "code": "LA4667-7",
+            "display": "Protocol Not Available"
+          },
+          {
+            "code": "LA4743-6",
+            "display": "On Protocol"
+          },
+          {
+            "code": "LA4642-0",
+            "display": "Patient Ineligible - age, stage"
+          },
+          {
+            "code": "LA4365-8",
+            "display": "Pt. Ineligible - Comorbidity"
+          },
+          {
+            "code": "LA4006-8",
+            "display": "Entered but Withdrawn"
+          },
+          {
+            "code": "LA4024-1",
+            "display": "Eligible but Not Entered, not specified"
+          },
+          {
+            "code": "LA4014-2",
+            "display": "Eligible but Refused"
+          },
+          {
+            "code": "LA4666-9",
+            "display": "Protocol Not Recommended"
+          },
+          {
+            "code": "LA4412-8",
+            "display": "Unknown if on Protocol"
+          }
+        ]
+      }
+    ]
+  }
+}

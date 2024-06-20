@@ -1,0 +1,27 @@
+{
+  "code": "LP147621-9",
+  "display": "Clover sweet Ab.IgE",
+  "property": [
+    {
+      "code": "parent",
+      "valueCoding": {
+        "code": "LP19539-3",
+        "display": "Clover sweet",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "child",
+      "valueCoding": {
+        "code": "LP397731-3",
+        "display": "Sweet Clover IgE | Serum | Allergy",
+        "system": "http://loinc.org"
+      }
+    }
+  ],
+  "designation": [
+    {
+      "value": "Sweet Clover IgE"
+    }
+  ]
+}

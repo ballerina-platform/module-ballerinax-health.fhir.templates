@@ -1,0 +1,27 @@
+{
+  "code": "LP164908-8",
+  "display": "levETIRAcetam induced neutrophil Ab.IgG",
+  "property": [
+    {
+      "code": "parent",
+      "valueCoding": {
+        "code": "LP164907-0",
+        "display": "levETIRAcetam induced neutrophil Ab",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "child",
+      "valueCoding": {
+        "code": "LP402779-5",
+        "display": "levETIRAcetam induced neutrophil IgG | Serum or Plasma | Serology - non-micro",
+        "system": "http://loinc.org"
+      }
+    }
+  ],
+  "designation": [
+    {
+      "value": "levETIRAcetam induced neutrophil IgG"
+    }
+  ]
+}

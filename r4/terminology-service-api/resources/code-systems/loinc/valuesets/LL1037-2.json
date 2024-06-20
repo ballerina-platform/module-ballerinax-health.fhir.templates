@@ -1,0 +1,47 @@
+{
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:1.3.6.1.4.1.12009.10.1.206"
+    }
+  ],
+  "copyright": "This material contains content from LOINC (http://loinc.org). LOINC is copyright ©1995-2023, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc.",
+  "url": "http://loinc.org/vs/LL1037-2",
+  "version": "Beta.1",
+  "name": "Genetic recommendation",
+  "status": "active",
+  "publisher": "Regenstrief Institute, Inc.",
+  "id": "LL1037-2",
+  "contact": [
+    {
+      "name": "Regenstrief Institute, Inc.",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://loinc.org"
+        }
+      ]
+    }
+  ],
+  "compose": {
+    "include": [
+      {
+        "system": "http://loinc.org",
+        "concept": [
+          {
+            "code": "LA14020-4",
+            "display": "Genetic counseling recommended"
+          },
+          {
+            "code": "LA14021-2",
+            "display": "Confirmatory testing recommended"
+          },
+          {
+            "code": "LA14022-0",
+            "display": "Additional testing recommended"
+          }
+        ]
+      }
+    ]
+  }
+}

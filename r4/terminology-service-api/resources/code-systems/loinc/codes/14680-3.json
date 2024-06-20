@@ -1,0 +1,393 @@
+{
+  "code": "14680-3",
+  "display": "Creatine kinase isoenzymes [Interpretation] in Serum or Plasma by Electrophoresis",
+  "property": [
+    {
+      "code": "CLASSTYPE",
+      "valueString": "1"
+    },
+    {
+      "code": "VersionLastChanged",
+      "valueString": "2.73"
+    },
+    {
+      "code": "STATUS",
+      "valueString": "ACTIVE"
+    },
+    {
+      "code": "VersionFirstReleased",
+      "valueString": "1.0k"
+    },
+    {
+      "code": "CHNG_TYPE",
+      "valueString": "MIN"
+    },
+    {
+      "code": "ORDER_OBS",
+      "valueString": "Observation"
+    },
+    {
+      "code": "COMMON_TEST_RANK",
+      "valueString": "7567"
+    },
+    {
+      "code": "SHORTNAME",
+      "valueString": "CK Isos SerPl Elph-Imp"
+    },
+    {
+      "code": "LONG_COMMON_NAME",
+      "valueString": "Creatine kinase isoenzymes [Interpretation] in Serum or Plasma by Electrophoresis"
+    },
+    {
+      "code": "COMMON_ORDER_RANK",
+      "valueString": "0"
+    },
+    {
+      "code": "RELATEDNAMES2",
+      "valueString": "Cardio; Cardiology; Chemistry; CK; CK Isos; CPK; Creatine phosphokinase; Elec; Elect; Electr; Electro; Electrophhrs; Electrophrs; Elp; Elph; Ep; Heart Disease; Impression; Impression/interpretation of study; Impressions; Interp; Interpretation; ISO; Isoen; Isoenzyme; Nominal; Pl; Plasma; Plsm; Point in time; Random; SerP; SerPl; SerPlas; Serum; Serum or plasma; SR"
+    },
+    {
+      "code": "DisplayName",
+      "valueString": "CK isoenzymes Elph [Interp]"
+    },
+    {
+      "code": "parent",
+      "valueCoding": {
+        "code": "LP382928-2",
+        "display": "Creatine kinase isoenzymes | Serum or Plasma | Chemistry - non-challenge",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "COMPONENT",
+      "valueCoding": {
+        "code": "LP32868-9",
+        "display": "Creatine kinase isoenzymes",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "PROPERTY",
+      "valueCoding": {
+        "code": "LP6819-9",
+        "display": "Imp",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "TIME_ASPCT",
+      "valueCoding": {
+        "code": "LP6960-1",
+        "display": "Pt",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "SYSTEM",
+      "valueCoding": {
+        "code": "LP7576-4",
+        "display": "Ser/Plas",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "SCALE_TYP",
+      "valueCoding": {
+        "code": "LP7750-5",
+        "display": "Nom",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "METHOD_TYP",
+      "valueCoding": {
+        "code": "LP6247-3",
+        "display": "Electrophoresis",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "analyte",
+      "valueCoding": {
+        "code": "LP32868-9",
+        "display": "Creatine kinase isoenzymes",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "time-core",
+      "valueCoding": {
+        "code": "LP6960-1",
+        "display": "Pt",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "system-core",
+      "valueCoding": {
+        "code": "LP7576-4",
+        "display": "Ser/Plas",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "analyte-core",
+      "valueCoding": {
+        "code": "LP32868-9",
+        "display": "Creatine kinase isoenzymes",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "search",
+      "valueCoding": {
+        "code": "LP15509-0",
+        "display": "Creatine",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "search",
+      "valueCoding": {
+        "code": "LP15510-8",
+        "display": "Creatine kinase",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "search",
+      "valueCoding": {
+        "code": "LP7479-1",
+        "display": "Plas",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "search",
+      "valueCoding": {
+        "code": "LP7567-3",
+        "display": "Ser",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "category",
+      "valueCoding": {
+        "code": "LP190563-9",
+        "display": "Cardiology",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "category",
+      "valueCoding": {
+        "code": "LP29693-6",
+        "display": "Laboratory",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "category",
+      "valueCoding": {
+        "code": "LP343631-0",
+        "display": "Chemistry and Chemistry - challenge",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "category",
+      "valueCoding": {
+        "code": "LP7786-9",
+        "display": "Chemistry - non-challenge",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "CLASS",
+      "valueCoding": {
+        "code": "LP7786-9",
+        "display": "CHEM",
+        "system": "http://loinc.org"
+      }
+    }
+  ],
+  "designation": [
+    {
+      "value": "CK Isos SerPl Elph-Imp"
+    },
+    {
+      "value": "Creatine Kinase (CK) Isoenzymes, Blood"
+    },
+    {
+      "language": "es-MX",
+      "value": "Isoenzimas de creatina quinasa:Impresión / interpretación del estudio:Punto temporal:Suero o Plasma:Nominal:Electroforesis",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "es-MX",
+      "value": "Isoenzimas de creatina quinasa: Suero o Plasma : Punto temporal: Impresión / interpretación del estudio: Nominal: Electroforesis",
+      "use": {
+        "code": "LONG_COMMON_NAME",
+        "display": "LONG_COMMON_NAME",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "zh-CN",
+      "value": "肌酸激酶同工酶:印象:时间点:血清/血浆:名义型:电泳",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "es-AR",
+      "value": "isoenzimas de creatina cinasa:impresión/interpretación del estudio:punto en el tiempo:suero/plasma:Nominal:electroforesis",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "es-AR",
+      "value": "isoenzimas de creatina cinasa:impresión/interpretación del estudio:punto en el tiempo:suero/plasma:Nominal:electroforesis",
+      "use": {
+        "code": "SHORTNAME",
+        "display": "SHORTNAME",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "fr-CA",
+      "value": "Isoenzymes de la créatine kinase:Impression/interprétation d\u0027étude:Temps ponctuel:Sérum/Plasma:Nominal:Électrophorèse",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "pt-BR",
+      "value": "Creatinoquinase (CPK).Isoenzimas:Imp:Pt:Sor/Plas:Nom:Eletroforese",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "pt-BR",
+      "value": "CK Isos SerPl Elph-Imp",
+      "use": {
+        "code": "SHORTNAME",
+        "display": "SHORTNAME",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "es-ES",
+      "value": "Isoenzimas de creatin-kinasa:Impresión/interpretación del estudio:Punto temporal:Suero o Plasma:Nom:Electroforesis",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "ko-KR",
+      "value": "크레아틴 키나아제 동종효소:해석:검사시점:혈청/혈장:명칭결과:전기영동",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "de-DE",
+      "value": "Creatinkinase-Isoenzyme:Interpretation:Zeitpunkt:Serum oder Plasma:Nominal:Elektrophorese",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "de-DE",
+      "value": "Creatinkinase-Isoenzyme [Interpretation] in Serum oder Plasma mit Elektrophorese",
+      "use": {
+        "code": "LONG_COMMON_NAME",
+        "display": "LONG_COMMON_NAME",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "it-IT",
+      "value": "Creatina chinasi, isoenzimi:Imp:Pt:Siero/Plasma:Nom:Elettroforesi",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "fr-FR",
+      "value": "Créatine kinase isoenzymes:Interprétation:Ponctuel:Sérum/Plasma:Résultat nominal:Électrophorèse",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "fr-FR",
+      "value": "Créatine kinase isoenzymes [Interprétation] Sérum/Plasma ; Résultat nominal ; Électrophorèse",
+      "use": {
+        "code": "LONG_COMMON_NAME",
+        "display": "LONG_COMMON_NAME",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "tr-TR",
+      "value": "Kreatin kinaz isoenzimleri:İzlnm:Zmlı:Ser/Plaz:Snf:Elektroforez",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "ru-RU",
+      "value": "Креатин киназа изоэнзимы:Впчт:ТчкВрм:Сыв/Плаз:Ном:Электрофорез",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "nl-NL",
+      "value": "creatinekinase-iso-enzymen:interpretatie:moment:serum of plasma:nominaal:elektroforese",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "fr-BE",
+      "value": "Isoenzymes de la créatine kinase:Impression/interprétation d\u0027étude:Temps ponctuel:Sérum/Plasma:Nominal:Électrophorèse",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    }
+  ]
+}

@@ -1,0 +1,352 @@
+{
+  "code": "37235-9",
+  "display": "MRA Circle of Willis",
+  "property": [
+    {
+      "code": "CLASSTYPE",
+      "valueString": "2"
+    },
+    {
+      "code": "VersionLastChanged",
+      "valueString": "2.61"
+    },
+    {
+      "code": "STATUS",
+      "valueString": "ACTIVE"
+    },
+    {
+      "code": "VersionFirstReleased",
+      "valueString": "2.14"
+    },
+    {
+      "code": "CHNG_TYPE",
+      "valueString": "MIN"
+    },
+    {
+      "code": "ORDER_OBS",
+      "valueString": "Both"
+    },
+    {
+      "code": "COMMON_TEST_RANK",
+      "valueString": "0"
+    },
+    {
+      "code": "SHORTNAME",
+      "valueString": "MRA Circle of Willis"
+    },
+    {
+      "code": "LONG_COMMON_NAME",
+      "valueString": "MRA Circle of Willis"
+    },
+    {
+      "code": "COMMON_ORDER_RANK",
+      "valueString": "0"
+    },
+    {
+      "code": "UNITSREQUIRED",
+      "valueString": "N"
+    },
+    {
+      "code": "RELATEDNAMES2",
+      "valueString": "Ang; Angio; Angiography; Brain; Cardio; Cardiology; Cranial; Cranium; Document; Finding; Findings; Heart Disease; Imaging; Intracranial; Magnetic Resonance Angiographies; Magnetic resonance imaging; Mitral regurgitation maximum velocity; MR angiography; MRA; MRI; MRI.angio; Neuro; Neurology; Point in time; Rad; Radiology; Random; Skull"
+    },
+    {
+      "code": "CHANGE_REASON_PUBLIC",
+      "valueString": "The scale has been changed from \"Nar\" to \"Doc\" to fit with the CDA model. Changed System from \u0027Circle of Willis\u0027 for conformance with LOINC/RadLex unified model.; Method of \"MRI.angio\" was changed to \"MR.angio\". The LOINC/RadLex Committee agreed to use a subset of the two-letter DICOM modality codes as the primary modality identifier. \"MR.angio\" is an allowed modality + modifier code."
+    },
+    {
+      "code": "HL7_ATTACHMENT_STRUCTURE",
+      "valueString": "IG exists"
+    },
+    {
+      "code": "parent",
+      "valueCoding": {
+        "code": "LP404974-0",
+        "display": "Circle of Willis | MR angiogram | Radiology",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "rad-modality-modality-type",
+      "valueCoding": {
+        "code": "LP206549-0",
+        "display": "MR",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "rad-modality-modality-subtype",
+      "valueCoding": {
+        "code": "LP200068-7",
+        "display": "Angio",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "rad-anatomic-location-imaging-focus",
+      "valueCoding": {
+        "code": "LP200344-2",
+        "display": "Circle of Willis",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "rad-anatomic-location-region-imaged",
+      "valueCoding": {
+        "code": "LP199977-2",
+        "display": "Head",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "rad-anatomic-location-region-imaged",
+      "valueCoding": {
+        "code": "LP199995-4",
+        "display": "Neck",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "COMPONENT",
+      "valueCoding": {
+        "code": "LP33405-9",
+        "display": "Multisection",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "PROPERTY",
+      "valueCoding": {
+        "code": "LP6813-2",
+        "display": "Find",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "TIME_ASPCT",
+      "valueCoding": {
+        "code": "LP6960-1",
+        "display": "Pt",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "SYSTEM",
+      "valueCoding": {
+        "code": "LP200343-4",
+        "display": "Head+Neck\u003eCircle of Willis",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "SCALE_TYP",
+      "valueCoding": {
+        "code": "LP32888-7",
+        "display": "Doc",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "METHOD_TYP",
+      "valueCoding": {
+        "code": "LP206576-3",
+        "display": "MR.angio",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "analyte-core",
+      "valueCoding": {
+        "code": "LP33405-9",
+        "display": "Multisection",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "search",
+      "valueCoding": {
+        "code": "LP231609-1",
+        "display": "(Multisection",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "search",
+      "valueCoding": {
+        "code": "LP230530-0",
+        "display": "Head \u0026\u0026 Neck",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "search",
+      "valueCoding": {
+        "code": "LP33689-8",
+        "display": "Circle of Willis",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "search",
+      "valueCoding": {
+        "code": "LP33999-1",
+        "display": "Head+Neck",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "search",
+      "valueCoding": {
+        "code": "LP7281-1",
+        "display": "Head",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "search",
+      "valueCoding": {
+        "code": "LP7440-3",
+        "display": "Neck",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "search",
+      "valueCoding": {
+        "code": "LP206574-8",
+        "display": "MR",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "category",
+      "valueCoding": {
+        "code": "LP190563-9",
+        "display": "Cardiology",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "category",
+      "valueCoding": {
+        "code": "LP201883-8",
+        "display": "Neurology",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "category",
+      "valueCoding": {
+        "code": "LP29684-5",
+        "display": "Radiology",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "CLASS",
+      "valueCoding": {
+        "code": "LP29684-5",
+        "display": "RAD",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "category",
+      "valueCoding": {
+        "code": "LP7787-7",
+        "display": "Clinical",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "AssociatedObservations",
+      "valueCoding": {
+        "code": "81220-6",
+        "display": "Diagnostic imaging report - recommended C-CDA R2.0 and R2.1 sections",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "AssociatedObservations",
+      "valueCoding": {
+        "code": "72230-6",
+        "display": "Diagnostic imaging report - recommended C-CDA R1.1 sections",
+        "system": "http://loinc.org"
+      }
+    }
+  ],
+  "designation": [
+    {
+      "language": "es-MX",
+      "value": "Multisección:Tipo:Punto temporal:Cabeza + Cuello\u003e Círculo de Willis:Documento:MR.angio",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "es-MX",
+      "value": "Multisección:Cabeza + Cuello\u003e Círculo de Willis :Punto temporal:Tipo:Documento:MR.angio",
+      "use": {
+        "code": "LONG_COMMON_NAME",
+        "display": "LONG_COMMON_NAME",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "zh-CN",
+      "value": "多层:发现:时间点:头部+颈部\u003e大脑动脉环:文档型:MR.血管造影术",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "es-AR",
+      "value": "[secciones múltiples]:hallazgo:punto en el tiempo:polígono de Willis:Narrativo:angiorresonancia magnética",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "es-AR",
+      "value": "[secciones múltiples]:hallazgo:punto en el tiempo:polígono de Willis:Narrativo:angiorresonancia magnética",
+      "use": {
+        "code": "SHORTNAME",
+        "display": "SHORTNAME",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "pt-BR",
+      "value": "Multi cortes:Achado:Pt:Círculo de Willis:Nar:RM.angio",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "pt-BR",
+      "value": "Circle of Willis MRI.Angio",
+      "use": {
+        "code": "SHORTNAME",
+        "display": "SHORTNAME",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "it-IT",
+      "value": "Sezioni multiple:Osservazione:Pt:Testa+Collo\u003ePoligono di Willis:Doc:MR.angio",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    }
+  ]
+}

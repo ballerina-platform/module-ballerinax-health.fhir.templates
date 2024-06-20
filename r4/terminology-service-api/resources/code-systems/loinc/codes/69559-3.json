@@ -1,0 +1,276 @@
+{
+  "code": "69559-3",
+  "display": "Ma1 Ab [Presence] in Cerebral spinal fluid by Immunoblot",
+  "property": [
+    {
+      "code": "CLASSTYPE",
+      "valueString": "1"
+    },
+    {
+      "code": "VersionLastChanged",
+      "valueString": "2.58"
+    },
+    {
+      "code": "STATUS",
+      "valueString": "ACTIVE"
+    },
+    {
+      "code": "VersionFirstReleased",
+      "valueString": "2.40"
+    },
+    {
+      "code": "CHNG_TYPE",
+      "valueString": "MIN"
+    },
+    {
+      "code": "ORDER_OBS",
+      "valueString": "Both"
+    },
+    {
+      "code": "COMMON_TEST_RANK",
+      "valueString": "0"
+    },
+    {
+      "code": "SHORTNAME",
+      "valueString": "Ma1 Ab CSF Ql IB"
+    },
+    {
+      "code": "LONG_COMMON_NAME",
+      "valueString": "Ma1 Ab [Presence] in Cerebral spinal fluid by Immunoblot"
+    },
+    {
+      "code": "COMMON_ORDER_RANK",
+      "valueString": "0"
+    },
+    {
+      "code": "UNITSREQUIRED",
+      "valueString": "N"
+    },
+    {
+      "code": "RELATEDNAMES2",
+      "valueString": "ABS; Aby; Antby; Anti; Antibodies; Antibody; Autoantibodies; Autoantibody; Blt; Cerebral spinal fluid; Cerebrospinal Fl; Immune blot; Immunobl; Immunoblot; Ordinal; Point in time; PR; QL; Qual; Qualitative; Random; RIBA; Screen; Serology; Spinal Fl; Spinal Fld; Spinal Flu; Spinal Fluid; WB; WBLOT; West blot; West blt; Western blot"
+    },
+    {
+      "code": "CHANGE_REASON_PUBLIC",
+      "valueString": "The PrThr property is used for LOINC terms whose results are reported using an ordered categorical scale, regardless of whether or not an internal threshold was used to make that determination. This change was approved by the Laboratory LOINC Committee in June 2016."
+    },
+    {
+      "code": "DisplayName",
+      "valueString": "Ma1 Ab IB Ql (CSF)"
+    },
+    {
+      "code": "parent",
+      "valueCoding": {
+        "code": "LP248770-2",
+        "display": "Lab terms not yet categorized",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "answer-list",
+      "valueString": "LL360-9"
+    },
+    {
+      "code": "COMPONENT",
+      "valueCoding": {
+        "code": "LP139951-0",
+        "display": "Ma1 Ab",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "PROPERTY",
+      "valueCoding": {
+        "code": "LP217195-9",
+        "display": "PrThr",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "TIME_ASPCT",
+      "valueCoding": {
+        "code": "LP6960-1",
+        "display": "Pt",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "SYSTEM",
+      "valueCoding": {
+        "code": "LP7156-5",
+        "display": "CSF",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "SCALE_TYP",
+      "valueCoding": {
+        "code": "LP7751-3",
+        "display": "Ord",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "METHOD_TYP",
+      "valueCoding": {
+        "code": "LP6320-8",
+        "display": "IB",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "analyte",
+      "valueCoding": {
+        "code": "LP139951-0",
+        "display": "Ma1 Ab",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "time-core",
+      "valueCoding": {
+        "code": "LP6960-1",
+        "display": "Pt",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "system-core",
+      "valueCoding": {
+        "code": "LP7156-5",
+        "display": "CSF",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "analyte-core",
+      "valueCoding": {
+        "code": "LP139952-8",
+        "display": "Ma1",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "analyte-suffix",
+      "valueCoding": {
+        "code": "LP20667-9",
+        "display": "Ab",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "category",
+      "valueCoding": {
+        "code": "LP29693-6",
+        "display": "Laboratory",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "CLASS",
+      "valueCoding": {
+        "code": "LP7844-6",
+        "display": "SERO",
+        "system": "http://loinc.org"
+      }
+    }
+  ],
+  "designation": [
+    {
+      "value": "Ma1 Ab CSF Ql IB"
+    },
+    {
+      "value": "Ma1 antibody, Spinal fluid"
+    },
+    {
+      "language": "es-MX",
+      "value": "Ma1 Ab:Presencia o umbral:Punto temporal:Fluído espinal cerebral:Ordinal:Inmunotransferencia",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "es-MX",
+      "value": "Ma1 Ab: Fluído espinal cerebral : Punto temporal: Presencia o umbral: Ordinal: Inmunotransferencia",
+      "use": {
+        "code": "LONG_COMMON_NAME",
+        "display": "LONG_COMMON_NAME",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "zh-CN",
+      "value": "Ma1 抗体:存在情况或阈值:时间点:脑脊液:序数型:免疫印迹法",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "es-ES",
+      "value": "Anticuerpos Ma1 Anticuerpos:PrThr:Punto temporal:Líquido Cefalorraquideo:Ord:Inmunoblot (IB)",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "it-IT",
+      "value": "Ma1 Ab:PrThr:Pt:LCS:Ord:IB",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "fr-FR",
+      "value": "Ma1 anticorps:Présence/Seuil:Ponctuel:Liquide céphalorachidien:Qualitatif:Immunoblot",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "fr-FR",
+      "value": "Ma1 anticorps [Présence/Seuil] Liquide céphalorachidien ; Qualitatif ; Immunoblot",
+      "use": {
+        "code": "LONG_COMMON_NAME",
+        "display": "LONG_COMMON_NAME",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "tr-TR",
+      "value": "Ma1 Ab:MevcEşik:Zmlı:BOS:Srl:IB",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "ru-RU",
+      "value": "Ma1 Ат:PrThr:ТчкВрм:ЦСЖ:Пор:ИБ",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "nl-NL",
+      "value": "Ma1 As:aanwezigheid:moment:liquor cerebrospinalis:ordinaal:immunoblotting",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "code": "LP17715-1",
+  "display": "Schistocytes",
+  "property": [
+    {
+      "code": "parent",
+      "valueCoding": {
+        "code": "LP19268-9",
+        "display": "Erythrocyte shape",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "child",
+      "valueCoding": {
+        "code": "LP287011-3",
+        "display": "Schistocytes/1000 erythrocytes",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "child",
+      "valueCoding": {
+        "code": "LP393421-5",
+        "display": "Schistocytes | Blood | Hematology and Cell counts",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "child",
+      "valueCoding": {
+        "code": "LP287010-5",
+        "display": "Schistocytes/100 cells",
+        "system": "http://loinc.org"
+      }
+    }
+  ],
+  "designation": [
+    {
+      "value": "Schistocytes"
+    }
+  ]
+}

@@ -1,0 +1,346 @@
+{
+  "code": "40407-9",
+  "display": "Uroporphyrin 1 isomer [Moles/time] in 24 hour Urine",
+  "property": [
+    {
+      "code": "CLASSTYPE",
+      "valueString": "1"
+    },
+    {
+      "code": "VersionLastChanged",
+      "valueString": "2.70"
+    },
+    {
+      "code": "STATUS",
+      "valueString": "ACTIVE"
+    },
+    {
+      "code": "VersionFirstReleased",
+      "valueString": "2.15"
+    },
+    {
+      "code": "CHNG_TYPE",
+      "valueString": "MIN"
+    },
+    {
+      "code": "ORDER_OBS",
+      "valueString": "Observation"
+    },
+    {
+      "code": "COMMON_TEST_RANK",
+      "valueString": "0"
+    },
+    {
+      "code": "SHORTNAME",
+      "valueString": "Uropor1 24h Ur-sRate"
+    },
+    {
+      "code": "LONG_COMMON_NAME",
+      "valueString": "Uroporphyrin 1 isomer [Moles/time] in 24 hour Urine"
+    },
+    {
+      "code": "COMMON_ORDER_RANK",
+      "valueString": "0"
+    },
+    {
+      "code": "UNITSREQUIRED",
+      "valueString": "N"
+    },
+    {
+      "code": "RELATEDNAMES2",
+      "valueString": "1 day; 24 hours; 24HR; Chemistry; Hematology; Heme; i; Isom; Octacarboxyl porphyrin; Octacarboxylporphyrin; Octacarboxyphyrin; Porphyria; Porphyria cutanea tarda; QNT; Quan; Quant; Quantitative; sRate; Substance Rate; UA; UR; Urn; Urophorph; Uropor1; Uroporphyrin I"
+    },
+    {
+      "code": "EXAMPLE_UNITS",
+      "valueString": "nmol/24 H"
+    },
+    {
+      "code": "DisplayName",
+      "valueString": "Uroporphyrin 1 isomer (24H U) [Moles/Time]"
+    },
+    {
+      "code": "EXAMPLE_UCUM_UNITS",
+      "valueString": "nmol/(24.h)"
+    },
+    {
+      "code": "parent",
+      "valueCoding": {
+        "code": "LP386526-0",
+        "display": "Uroporphyrin 1 isomer | Urine | Chemistry - non-challenge",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "COMPONENT",
+      "valueCoding": {
+        "code": "LP18653-3",
+        "display": "Uroporphyrin 1 isomer",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "PROPERTY",
+      "valueCoding": {
+        "code": "LP6867-8",
+        "display": "SRat",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "TIME_ASPCT",
+      "valueCoding": {
+        "code": "LP6924-7",
+        "display": "24H",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "SYSTEM",
+      "valueCoding": {
+        "code": "LP7681-2",
+        "display": "Urine",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "SCALE_TYP",
+      "valueCoding": {
+        "code": "LP7753-9",
+        "display": "Qn",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "analyte",
+      "valueCoding": {
+        "code": "LP18653-3",
+        "display": "Uroporphyrin 1 isomer",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "time-core",
+      "valueCoding": {
+        "code": "LP6924-7",
+        "display": "24H",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "system-core",
+      "valueCoding": {
+        "code": "LP7681-2",
+        "display": "Urine",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "analyte-core",
+      "valueCoding": {
+        "code": "LP18653-3",
+        "display": "Uroporphyrin 1 isomer",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "search",
+      "valueCoding": {
+        "code": "LP15161-0",
+        "display": "Uroporphyrin",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "category",
+      "valueCoding": {
+        "code": "LP29693-6",
+        "display": "Laboratory",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "category",
+      "valueCoding": {
+        "code": "LP343631-0",
+        "display": "Chemistry and Chemistry - challenge",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "category",
+      "valueCoding": {
+        "code": "LP415705-5",
+        "display": "Hematology",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "category",
+      "valueCoding": {
+        "code": "LP7786-9",
+        "display": "Chemistry - non-challenge",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "CLASS",
+      "valueCoding": {
+        "code": "LP7786-9",
+        "display": "CHEM",
+        "system": "http://loinc.org"
+      }
+    }
+  ],
+  "designation": [
+    {
+      "value": "Uropor1 24h Ur-sRate"
+    },
+    {
+      "value": "Uroporphyrin 1 isomer, Urine"
+    },
+    {
+      "language": "es-MX",
+      "value": "Isómero de uroporfirina 1:Tasa de sustancia:24H:Orina:Cuantitativo:",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "es-MX",
+      "value": "Isómero de uroporfirina 1: Orina : 24H: Tasa de sustancia: Cuantitativo:",
+      "use": {
+        "code": "LONG_COMMON_NAME",
+        "display": "LONG_COMMON_NAME",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "pl-PL",
+      "value": "uroporfiryna I:Wskaźnik substancji:24H:Mocz:ilościowy:",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "zh-CN",
+      "value": "尿卟啉 I 同分异构体:物质的量速率:24小时:尿液:定量型:",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "fr-CA",
+      "value": "Uroporphyrine 1 isomère:Débit de substance:24 h:Urine:Quantitatif:",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "pt-BR",
+      "value": "Uroporfirina isomero 1:SRat:24H:Urina:Qn:",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "pt-BR",
+      "value": "Uropor1 24H Ur-sRate",
+      "use": {
+        "code": "SHORTNAME",
+        "display": "SHORTNAME",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "es-ES",
+      "value": "Isómero Uroporfirina I:Indice de susbtancia:24 horas:Orina:Qn:",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "ko-KR",
+      "value": "우로포르피린 1 이성질체:물질비:24시간:뇨:정량:",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "it-IT",
+      "value": "Uroporfirina 1, isomero:SRat:24h:Urine:Qn:",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "fr-FR",
+      "value": "Uroporphyrine 1:Moles/Temps:24H:Urine:Numérique:",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "fr-FR",
+      "value": "Uroporphyrine 1 [Moles/Temps] 24H ; Urine ; Numérique",
+      "use": {
+        "code": "LONG_COMMON_NAME",
+        "display": "LONG_COMMON_NAME",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "tr-TR",
+      "value": "Üroporfirin 1 izomer:SubHz:24Sa:İdrar:Kant:",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "ru-RU",
+      "value": "Уропорфирин 1 изомер:МольРасх:24 часа:Моча:Колич:",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "nl-NL",
+      "value": "uroporfyrine 1 isomeer:mol/tijd:24 uur:urine:kwantitatief:",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "fr-BE",
+      "value": "Uroporphyrine 1 isomère:Débit de substance:24 h:Urine:Quantitatif:",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    }
+  ]
+}

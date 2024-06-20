@@ -1,0 +1,27 @@
+{
+  "code": "LP73151-0",
+  "display": "Pressure half time",
+  "property": [
+    {
+      "code": "parent",
+      "valueCoding": {
+        "code": "LP29672-0",
+        "display": "CARD.US",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "child",
+      "valueCoding": {
+        "code": "LP407995-2",
+        "display": "Pressure half time | Aortic valve | Cardiac ultrasound",
+        "system": "http://loinc.org"
+      }
+    }
+  ],
+  "designation": [
+    {
+      "value": "Pressure half time"
+    }
+  ]
+}

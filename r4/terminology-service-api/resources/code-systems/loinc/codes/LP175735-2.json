@@ -1,0 +1,27 @@
+{
+  "code": "LP175735-2",
+  "display": "Serotonin release 0.5 IU/mL heparin.unfractionated",
+  "property": [
+    {
+      "code": "parent",
+      "valueCoding": {
+        "code": "LP193981-0",
+        "display": "Serotonin release 0.5 IU/mL heparin",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "child",
+      "valueCoding": {
+        "code": "LP403955-0",
+        "display": "Serotonin release 0.5 IU/mL heparin.unfractionated | Serum | Serology - non-micro",
+        "system": "http://loinc.org"
+      }
+    }
+  ],
+  "designation": [
+    {
+      "value": "Serotonin release 0.5 IU/mL heparin.unfractionated"
+    }
+  ]
+}

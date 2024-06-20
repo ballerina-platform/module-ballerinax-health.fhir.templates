@@ -1,0 +1,27 @@
+{
+  "code": "LP30146-2",
+  "display": "Head\u003eOptic foramen.right",
+  "property": [
+    {
+      "code": "parent",
+      "valueCoding": {
+        "code": "LP30143-9",
+        "display": "Head\u003eOptic foramen",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "child",
+      "valueCoding": {
+        "code": "LP404811-4",
+        "display": "Optic foramen Right | X-ray | Radiology",
+        "system": "http://loinc.org"
+      }
+    }
+  ],
+  "designation": [
+    {
+      "value": "Optic foramen Right"
+    }
+  ]
+}

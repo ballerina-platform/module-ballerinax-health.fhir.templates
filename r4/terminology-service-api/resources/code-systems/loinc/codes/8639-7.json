@@ -1,0 +1,280 @@
+{
+  "code": "8639-7",
+  "display": "Eye Pupillary distance.binocular",
+  "property": [
+    {
+      "code": "CLASSTYPE",
+      "valueString": "2"
+    },
+    {
+      "code": "VersionLastChanged",
+      "valueString": "2.68"
+    },
+    {
+      "code": "STATUS",
+      "valueString": "ACTIVE"
+    },
+    {
+      "code": "VersionFirstReleased",
+      "valueString": "1.0h(3)"
+    },
+    {
+      "code": "CHNG_TYPE",
+      "valueString": "NAM"
+    },
+    {
+      "code": "COMMON_TEST_RANK",
+      "valueString": "0"
+    },
+    {
+      "code": "SHORTNAME",
+      "valueString": "Eye PD binoc"
+    },
+    {
+      "code": "LONG_COMMON_NAME",
+      "valueString": "Eye Pupillary distance.binocular"
+    },
+    {
+      "code": "COMMON_ORDER_RANK",
+      "valueString": "0"
+    },
+    {
+      "code": "RELATEDNAMES2",
+      "valueString": "Eye; Eyeball; Length; Occular; Oculis; Ophthalmologic; Ophthalmology; Ophtho; Ophthy; Optic globe; PD binoc; Point in time; QNT; Quan; Quant; Quantitative; Random; Vision; Visual"
+    },
+    {
+      "code": "EXAMPLE_UNITS",
+      "valueString": "mm"
+    },
+    {
+      "code": "CHANGE_REASON_PUBLIC",
+      "valueString": "Release 2.68:  SYSTEM: Updated System from Face to Eye for consistency across terms; COMPONENT: Updated Component from Interpupillary to Pupillary distance.binocular for consistency across terms"
+    },
+    {
+      "code": "EXAMPLE_UCUM_UNITS",
+      "valueString": "mm"
+    },
+    {
+      "code": "parent",
+      "valueCoding": {
+        "code": "LP419115-3",
+        "display": "Pupillary distance.binocular | Eye | Ophthalmology and Optometry",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "parent",
+      "valueCoding": {
+        "code": "LP419115-3",
+        "display": "Pupillary distance.binocular | Eye | Ophthalmology and Optometry",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "COMPONENT",
+      "valueCoding": {
+        "code": "LP73218-7",
+        "display": "Pupillary distance.binocular",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "PROPERTY",
+      "valueCoding": {
+        "code": "LP6822-3",
+        "display": "Len",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "TIME_ASPCT",
+      "valueCoding": {
+        "code": "LP6960-1",
+        "display": "Pt",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "SYSTEM",
+      "valueCoding": {
+        "code": "LP7218-3",
+        "display": "Eye",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "SCALE_TYP",
+      "valueCoding": {
+        "code": "LP7753-9",
+        "display": "Qn",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "analyte",
+      "valueCoding": {
+        "code": "LP73218-7",
+        "display": "Pupillary distance.binocular",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "time-core",
+      "valueCoding": {
+        "code": "LP6960-1",
+        "display": "Pt",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "system-core",
+      "valueCoding": {
+        "code": "LP7218-3",
+        "display": "Eye",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "analyte-core",
+      "valueCoding": {
+        "code": "LP73218-7",
+        "display": "Pupillary distance.binocular",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "category",
+      "valueCoding": {
+        "code": "LP190514-2",
+        "display": "Ophthalmology / Optometry",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "category",
+      "valueCoding": {
+        "code": "LP29674-6",
+        "display": "Eyeglasses",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "category",
+      "valueCoding": {
+        "code": "LP29677-9",
+        "display": "Refraction",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "category",
+      "valueCoding": {
+        "code": "LP7787-7",
+        "display": "Clinical",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "category",
+      "valueCoding": {
+        "code": "LP7797-6",
+        "display": "Ophthalmology and Optometry",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "CLASS",
+      "valueCoding": {
+        "code": "LP7797-6",
+        "display": "EYE",
+        "system": "http://loinc.org"
+      }
+    }
+  ],
+  "designation": [
+    {
+      "value": "Eye PD binoc"
+    },
+    {
+      "language": "es-MX",
+      "value": "Distancia pupilar binocular:Len:Punto temporal:Ojo:Cuantitativo:",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "es-MX",
+      "value": "Distancia pupilar binocular:Ojo :Punto temporal:Len:Cuantitativo:",
+      "use": {
+        "code": "LONG_COMMON_NAME",
+        "display": "LONG_COMMON_NAME",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "zh-CN",
+      "value": "瞳距.双眼:长度:时间点:眼睛:定量型:",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "es-AR",
+      "value": "interpupilar:longitud:punto en el tiempo:cara:cuantitativo:",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "es-AR",
+      "value": "interpupilar:longitud:punto en el tiempo:cara:cuantitativo:",
+      "use": {
+        "code": "SHORTNAME",
+        "display": "SHORTNAME",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "pt-BR",
+      "value": "Interpupilar:Comprimento:Pt:Face:Qn:",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "pt-BR",
+      "value": "Interpupillary Face",
+      "use": {
+        "code": "SHORTNAME",
+        "display": "SHORTNAME",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "it-IT",
+      "value": "Distanza pupillare.binoculare:Len:Pt:Occhio:Qn:",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "ru-RU",
+      "value": "Зрачковое расстояние.бинокулярный:Дл:ТчкВрм:Глаз:Колич:",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    }
+  ]
+}

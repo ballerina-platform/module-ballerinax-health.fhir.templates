@@ -1,0 +1,365 @@
+{
+  "code": "30279-4",
+  "display": "Ritonavir [Susceptibility] by Phenotype method",
+  "property": [
+    {
+      "code": "CLASSTYPE",
+      "valueString": "1"
+    },
+    {
+      "code": "VersionLastChanged",
+      "valueString": "2.19"
+    },
+    {
+      "code": "STATUS",
+      "valueString": "ACTIVE"
+    },
+    {
+      "code": "VersionFirstReleased",
+      "valueString": "2.04"
+    },
+    {
+      "code": "CHNG_TYPE",
+      "valueString": "MIN"
+    },
+    {
+      "code": "ORDER_OBS",
+      "valueString": "Observation"
+    },
+    {
+      "code": "COMMON_TEST_RANK",
+      "valueString": "0"
+    },
+    {
+      "code": "SHORTNAME",
+      "valueString": "Ritonavir Islt Phenotyp"
+    },
+    {
+      "code": "LONG_COMMON_NAME",
+      "valueString": "Ritonavir [Susceptibility] by Phenotype method"
+    },
+    {
+      "code": "COMMON_ORDER_RANK",
+      "valueString": "0"
+    },
+    {
+      "code": "UNITSREQUIRED",
+      "valueString": "N"
+    },
+    {
+      "code": "RELATEDNAMES2",
+      "valueString": "ANTIBIOTIC SUSCEPTIBILITIES; AST; ID; Infectious Disease; InfectiousDisease; Islt; Isol; Norvir; Pheno; Phenotype; Phenotypic; Point in time; Random; RTV; Sus; Suscept; Susceptibilities; Susceptibility; Susceptibilty; Virtual Phenotype"
+    },
+    {
+      "code": "DisplayName",
+      "valueString": "Ritonavir Phenotype method [Susc]"
+    },
+    {
+      "code": "parent",
+      "valueCoding": {
+        "code": "LP380354-3",
+        "display": "Ritonavir | Isolate | Antibiotic susceptibilities",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "COMPONENT",
+      "valueCoding": {
+        "code": "LP21314-7",
+        "display": "Ritonavir",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "PROPERTY",
+      "valueCoding": {
+        "code": "LP6870-2",
+        "display": "Susc",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "TIME_ASPCT",
+      "valueCoding": {
+        "code": "LP6960-1",
+        "display": "Pt",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "SYSTEM",
+      "valueCoding": {
+        "code": "LP7370-2",
+        "display": "Isolate",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "SCALE_TYP",
+      "valueCoding": {
+        "code": "LP7752-1",
+        "display": "OrdQn",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "METHOD_TYP",
+      "valueCoding": {
+        "code": "LP28724-0",
+        "display": "Phenotyping",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "analyte",
+      "valueCoding": {
+        "code": "LP21314-7",
+        "display": "Ritonavir",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "time-core",
+      "valueCoding": {
+        "code": "LP6960-1",
+        "display": "Pt",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "system-core",
+      "valueCoding": {
+        "code": "LP7370-2",
+        "display": "Isolate",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "analyte-core",
+      "valueCoding": {
+        "code": "LP21314-7",
+        "display": "Ritonavir",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "category",
+      "valueCoding": {
+        "code": "LP29693-6",
+        "display": "Laboratory",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "category",
+      "valueCoding": {
+        "code": "LP343406-7",
+        "display": "Microbiology and Antimicrobial susceptibility",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "category",
+      "valueCoding": {
+        "code": "LP415704-8",
+        "display": "InfectiousDisease",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "category",
+      "valueCoding": {
+        "code": "LP7755-4",
+        "display": "Antibiotic susceptibilities",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "code": "CLASS",
+      "valueCoding": {
+        "code": "LP7755-4",
+        "display": "ABXBACT",
+        "system": "http://loinc.org"
+      }
+    }
+  ],
+  "designation": [
+    {
+      "value": "Ritonavir Islt Phenotyp"
+    },
+    {
+      "value": "Susceptibility to Ritonavir"
+    },
+    {
+      "language": "es-MX",
+      "value": "Ritonavir:Susceptibilidad (microorganismos):Punto temporal:Aislado:Ordinal Cuantitativo:Susceptibilidad del fenotipo viral",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "es-MX",
+      "value": "Ritonavir: Aislado : Punto temporal: Susceptibilidad (microorganismos): Ordinal Cuantitativo: Susceptibilidad del fenotipo viral",
+      "use": {
+        "code": "LONG_COMMON_NAME",
+        "display": "LONG_COMMON_NAME",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "zh-CN",
+      "value": "利托那韦:抗生素敏感性:时间点:分离株:定量型或序数型:表现型分型",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "es-AR",
+      "value": "ritonavir:susceptibilidad:punto en el tiempo:cepa clínica:ordinal o cuantitativo:fenotipificación",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "es-AR",
+      "value": "ritonavir:susceptibilidad:punto en el tiempo:cepa clínica:ordinal o cuantitativo:fenotipificación",
+      "use": {
+        "code": "SHORTNAME",
+        "display": "SHORTNAME",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "fr-CA",
+      "value": "Ritonavir:Susceptibilité:Temps ponctuel:Isolat:Quantitatif ou ordinal:Phénotypage",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "et-EE",
+      "value": "Ritonaviir:Susc:Pt:Is:OrdQn:Fenotüpiseerimine",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "pt-BR",
+      "value": "Ritonavir:Susc:Pt:Isolado:OrdQn:Fenotipagem",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "pt-BR",
+      "value": "Ritonavir Islt Phenotyp",
+      "use": {
+        "code": "SHORTNAME",
+        "display": "SHORTNAME",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "es-ES",
+      "value": "Ritonavir:Susceptibilidad:Punto temporal:Aislado:Ordinal Cuantitativo:Susceptibilidad al fenotipo viral",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "ko-KR",
+      "value": "리토나비어:감수성:검사시점:분리주:정량 or 순위척도:표현형",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "de-DE",
+      "value": "Ritonavir:Empfindlichkeit (Mikororganismen):Zeitpunkt:Isolat:Ordinal oder Quantitativ:Phänotypisierung",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "de-DE",
+      "value": "Ritonavir [Empfindlichkeit] mit phänotypischer Methode",
+      "use": {
+        "code": "LONG_COMMON_NAME",
+        "display": "LONG_COMMON_NAME",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "it-IT",
+      "value": "Ritonavir:Susc:Pt:Isolato:OrdQn:Fenotipizzazione",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "fr-FR",
+      "value": "Ritonavir:Sensibilité:Ponctuel:Isolat:Alphanumérique:Phénotypage",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "fr-FR",
+      "value": "Ritonavir [Sensibilité] Isolat ; Alphanumérique ; Phénotypage",
+      "use": {
+        "code": "LONG_COMMON_NAME",
+        "display": "LONG_COMMON_NAME",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "tr-TR",
+      "value": "Ritonavir:Duyr:Zmlı:İzolat:SrlKant:Fenotipleme",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "nl-NL",
+      "value": "ritonavir:gevoeligheid:moment:isolaat:ordinaal-kwantitatief:fenotypering",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    },
+    {
+      "language": "fr-BE",
+      "value": "Ritonavir:Susceptibilité:Temps ponctuel:Isolat:Quantitatif ou ordinal:Phénotypage",
+      "use": {
+        "code": "FullySpecifiedName",
+        "display": "FullySpecifiedName",
+        "system": "http://loinc.org"
+      }
+    }
+  ]
+}

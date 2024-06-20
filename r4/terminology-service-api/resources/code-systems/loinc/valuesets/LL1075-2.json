@@ -1,0 +1,107 @@
+{
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:1.3.6.1.4.1.12009.10.1.244"
+    }
+  ],
+  "copyright": "This material contains content from LOINC (http://loinc.org). LOINC is copyright ©1995-2023, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc.",
+  "url": "http://loinc.org/vs/LL1075-2",
+  "version": "Beta.1",
+  "name": "PhenX01_12_relative smoking",
+  "status": "active",
+  "publisher": "Regenstrief Institute, Inc.",
+  "id": "LL1075-2",
+  "contact": [
+    {
+      "name": "Regenstrief Institute, Inc.",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://loinc.org"
+        }
+      ]
+    }
+  ],
+  "compose": {
+    "include": [
+      {
+        "system": "http://loinc.org",
+        "concept": [
+          {
+            "code": "LA15637-4",
+            "display": "Husband or wife"
+          },
+          {
+            "code": "LA15638-2",
+            "display": "Son-in-law or daughter-in-law"
+          },
+          {
+            "code": "LA15639-0",
+            "display": "Biological son or daughter"
+          },
+          {
+            "code": "LA15640-8",
+            "display": "Other relative"
+          },
+          {
+            "code": "LA15641-6",
+            "display": "Adopted son or daughter"
+          },
+          {
+            "code": "LA15642-4",
+            "display": "Roomer or boarder"
+          },
+          {
+            "code": "LA15643-2",
+            "display": "Stepson or stepdaughter"
+          },
+          {
+            "code": "LA15644-0",
+            "display": "Housemate or roommate"
+          },
+          {
+            "code": "LA15645-7",
+            "display": "Brother or sister"
+          },
+          {
+            "code": "LA15646-5",
+            "display": "Unmarried partner"
+          },
+          {
+            "code": "LA15647-3",
+            "display": "Father or mother"
+          },
+          {
+            "code": "LA15648-1",
+            "display": "Foster child"
+          },
+          {
+            "code": "LA15315-7",
+            "display": "Grandchild"
+          },
+          {
+            "code": "LA15649-9",
+            "display": "Other nonrelative"
+          },
+          {
+            "code": "LA15650-7",
+            "display": "Parent-in-law"
+          },
+          {
+            "code": "LA4389-8",
+            "display": "Refused"
+          },
+          {
+            "code": "LA12688-0",
+            "display": "Don\u0027t know"
+          },
+          {
+            "code": "LA15312-4",
+            "display": "Self"
+          }
+        ]
+      }
+    ]
+  }
+}
