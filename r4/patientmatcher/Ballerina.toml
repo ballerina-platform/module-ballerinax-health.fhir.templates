@@ -1,0 +1,29 @@
+[package]
+org = "ballerinax"
+name = "health.fhir.templates.r4.patientmatcher"
+displayName = "R4 Patient Matcher"
+description = "Exposes Patient Matching Function as managed API"
+version = "0.1.0"
+authors = ["Ballerina"]
+keywords = ["Healthcare", "FHIR", "Patient Matching"]
+distribution = "2201.7.0"
+template = true
+repository = "https://github.com/ballerina-platform/module-ballerinax-health.fhir.templates"
+
+[build-options]
+observabilityIncluded = true
+
+[[platform.java11.dependency]]
+groupId = "mysql"
+artifactId = "mysql-connector-java"
+version = "8.0.20"
+
+[persist]
+datastore = "mysql"
+module = "patient_matching_usecase"
+
+[[dependency]]
+org = "ballerinax"
+name = "health.fhir.r4utils.patientmatching"
+version = "0.1.0"
+repository = "local"

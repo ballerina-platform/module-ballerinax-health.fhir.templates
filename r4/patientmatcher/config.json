@@ -1,0 +1,10 @@
+{
+    "fhirpaths": ["Patient.name.given[1]", "Patient.name.family", "Patient.gender", "Patient.birthDate"],
+    "masterPatientIndexColumnNames": ["FirstName", "LastName", "gender", "dob"],
+    "masterPatientIndexTableName": "patient",
+    "masterPatientIndexHost": "sql6.freesqldatabase.com",
+    "masterPatientIndexPort": 3306,
+    "masterPatientIndexDb": "sql6634020",
+    "masterPatientIndexDbUser": "sql6634020",
+    "masterPatientIndexDbPassword": "eRLKBvYzzC"
+}
