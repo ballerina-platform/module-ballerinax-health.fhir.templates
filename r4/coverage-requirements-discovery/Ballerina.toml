@@ -1,0 +1,22 @@
+[package]
+org = "ballerinax"
+name = "health.fhir.templates.crd"
+displayName = "Da Vinci - Coverage Requirements Discovery"
+description = "Exposes Epic FHIR APIs as managed APIs"
+version = "0.0.1"
+authors = ["Ballerina"]
+keywords = ["Healthcare", "FHIR", "CRD", "Da Vinci", "CDS", "Coverage Requirements Discovery"]
+distribution = "2201.8.6"
+template = true
+repository = "https://github.com/ballerina-platform/module-ballerinax-health.fhir.templates"
+
+[build-options]
+observabilityIncluded = true
+
+[[dependency]]
+org = "ballerinax"
+name = "health.fhir.cds"
+version = "0.0.1"
+repository="local"
+
+

@@ -24,4 +24,6 @@ hs_err_pid*
 replay_pid*
 
 # Ballerina
-target
+target/
+
+.vscode/
