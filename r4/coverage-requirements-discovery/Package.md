@@ -28,11 +28,24 @@ Before running this sample, make sure you have the following:
 
 To get started with this sample, follow these steps:
 
-1. Run ```bal new crd_service -t ballerinax/health.cds.templates.cds```
+1. Run ```bal new crd_service -t ballerinax/health.fhir.templates.crd```
 2. Navigate to crd_server folder. 
-3. Complete the decision system connectivity implementation.
+3. Create a Config.toml file in the root level of the project. 
+3. Add the relevant CDS hooks to the Config.toml file. The property name should contains the fully qualified name with package name. Please check the sample below.
+3. Complete the decision system connectivity implementation. The ```impl_decision_system_connection``` file contains placeholder functions that must be implemented to connect with external decision systems. Please follow the instructions in that file itself.
 4. Run the project using the following command:
 
 ```bash
 $ bal run
+```
+
+### Sample Config.toml file
+```
+[[ballerinax.health.fhir.cds.cds_services]]
+hook = "patient-view"
+title = "Static CDS Service Example"
+description = "An example of a CDS Service that returns a static set of cards"
+id = "static-patient-greeter"
+[ballerinax.health.fhir.cds.cds_services.prefetch]
+patientToGreet = "Patient/{{context.patientId}}"
 ```
